@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Товар — Кінезіс</title>
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Unbounded:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="index.html" class="header__logo">
+      <img src="logo.png" alt="Кінезіс" class="header__logo-img" />
+    </a>
+    <nav class="nav" id="nav">
+      <a href="index.html" class="nav__link">Головна</a>
+      <a href="catalog.html" class="nav__link active">Каталог</a>
+      <a href="about.html" class="nav__link">Про нас</a>
+      <a href="contacts.html" class="nav__link">Контакти</a>
+    </nav>
+    <a href="https://t.me/Kineziss_bot" target="_blank" class="btn btn--primary header__cta">Написати в Telegram</a>
+    <button class="burger" id="burger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="container">
+  <div class="breadcrumb" id="breadcrumb">
+    <a href="index.html">Головна</a>
+    <span>/</span>
+    <a href="catalog.html">Каталог</a>
+    <span>/</span>
+    <span id="breadcrumbProduct">Товар</span>
+  </div>
+</div>
+
+<section class="product-page">
+  <div class="container">
+    <div class="product-layout" id="productLayout">
+      <div style="text-align:center;padding:80px 0;color:var(--muted)">Завантаження...</div>
+    </div>
+  </div>
+</section>
+
+<!-- Related products -->
+<section class="section section--tinted">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__label">Також цікаво</span>
+      <h2 class="section__title">Схожі товари</h2>
+    </div>
+    <div class="products__grid" id="relatedGrid"></div>
+  </div>
+</section>
+
+<!-- Telegram CTA -->
+<div class="modal-overlay" id="orderModal">
+  <div class="modal" style="position:relative">
+    <button class="modal__close" id="modalClose">×</button>
+    <div class="modal__icon">🎉</div>
+    <h2>Переходимо до оформлення!</h2>
+    <p>Зараз ви перейдете до нашого Telegram-боту, де зможете підтвердити замовлення та отримати консультацію фахівця.</p>
+    <a id="modalTgLink" href="https://t.me/Kineziss_bot" target="_blank" class="btn btn--primary btn--full btn--lg" style="margin-bottom:12px">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.93 6.78l-1.68 7.93c-.12.54-.45.67-.91.42l-2.5-1.84-1.21 1.16c-.13.13-.25.25-.5.25l.18-2.53 4.6-4.15c.2-.18-.04-.27-.31-.1L7.55 14.34l-2.43-.76c-.53-.16-.54-.53.11-.78l9.5-3.66c.44-.16.82.11.2.64z"/></svg>
+      Відкрити Telegram
+    </a>
+    <button class="btn btn--outline btn--full" id="modalCancelBtn">Залишитися на сайті</button>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <img src="logo.png" alt="Кінезіс" class="footer__logo" />
+      <p>Обладнання для реабілітації та кінезітерапії.</p>
+      <div class="footer__social">
+        <a href="https://t.me/Kineziss_bot" target="_blank" rel="noopener" aria-label="Telegram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.93 6.78l-1.68 7.93c-.12.54-.45.67-.91.42l-2.5-1.84-1.21 1.16c-.13.13-.25.25-.5.25l.18-2.53 4.6-4.15c.2-.18-.04-.27-.31-.1L7.55 14.34l-2.43-.76c-.53-.16-.54-.53.11-.78l9.5-3.66c.44-.16.82.11.2.64z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer__nav">
+      <h4>Навігація</h4>
+      <a href="index.html">Головна</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="about.html">Про нас</a>
+      <a href="contacts.html">Контакти</a>
+    </div>
+    <div class="footer__nav">
+      <h4>Категорії</h4>
+      <a href="catalog.html?cat=mtb">Тренажери МТБ</a>
+      <a href="catalog.html?cat=benches">Лавки та гіперекстензії</a>
+      <a href="catalog.html?cat=massage">Масажні столи</a>
+      <a href="catalog.html?cat=stairs">Бруси та сходи</a>
+    </div>
+    <div class="footer__contact">
+      <h4>Контакти</h4>
+      <a href="tel:+380936246000">+38 (093) 624-60-00 — Вікторія</a><a href="tel:+380992662688">+38 (099) 266-26-88 — Андрій</a>
+      <a href="mailto:sport_ok@ukr.net">sport_ok@ukr.net</a>
+      <a href="https://t.me/Kineziss_bot" target="_blank">Telegram-бот</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container">
+      <span>© 2024 Кінезіс. Усі права захищені.</span>
+      <span>Зроблено в Україні 🇺🇦</span>
+    </div>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="main.js"></script>
+<script>
+(function() {
+  const params = new URLSearchParams(location.search);
+  const id = params.get('id');
+  const product = products.find(p => p.id === id);
+  const layout = document.getElementById('productLayout');
+
+  if (!product) {
+    layout.innerHTML = '<div class="empty-state"><h3>Товар не знайдено</h3><p><a href="catalog.html" class="btn btn--primary">До каталогу</a></p></div>';
+    return;
+  }
+
+  document.title = product.name + ' — Кінезіс';
+  document.getElementById('breadcrumbProduct').textContent = product.name;
+
+  layout.innerHTML = `
+    <div class="product-gallery">
+      <div class="product-gallery__main">
+        <img src="${product.image}" alt="${product.name}" />
+      </div>
+    </div>
+    <div class="product-info">
+      ${product.badge ? `<div class="product-info__badge">${product.badge}</div>` : ''}
+      <h1 class="product-info__name">${product.name}</h1>
+      <p class="product-info__short">${product.short}</p>
+      <div class="product-info__price-block">
+        <div class="product-info__price">${formatPrice(product.price)}</div>
+        <div class="product-info__price-note">Ціна вказана з ПДВ. Доставка по всій Україні.</div>
+      </div>
+      <div class="product-info__actions">
+        <button class="btn btn--orange btn--lg" onclick="showOrderModal('${product.id}', '${product.name.replace(/'/g, "\\'")}')">
+          🛒 Замовити зараз
+        </button>
+        <a href="https://t.me/Kineziss_bot" target="_blank" class="btn btn--outline btn--lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.93 6.78l-1.68 7.93c-.12.54-.45.67-.91.42l-2.5-1.84-1.21 1.16c-.13.13-.25.25-.5.25l.18-2.53 4.6-4.15c.2-.18-.04-.27-.31-.1L7.55 14.34l-2.43-.76c-.53-.16-.54-.53.11-.78l9.5-3.66c.44-.16.82.11.2.64z"/></svg>
+          Запитати в Telegram
+        </a>
+      </div>
+      ${product.specs && product.specs.length ? `
+      <div class="product-info__specs">
+        <div class="product-info__specs-title">Характеристики</div>
+        <ul>${product.specs.map(s => `<li>${s}</li>`).join('')}</ul>
+      </div>` : ''}
+    </div>
+  `;
+
+  // Description block
+  const descSection = document.querySelector('.product-page .container');
+  const descDiv = document.createElement('div');
+  descDiv.className = 'product-description';
+  descDiv.innerHTML = `
+    <h2>Опис товару</h2>
+    <p>${product.description}</p>
+    <div style="display:flex;gap:20px;flex-wrap:wrap;margin-top:24px">
+      <div style="background:var(--teal-light);border-radius:12px;padding:16px 20px;flex:1;min-width:160px">
+        <div style="font-size:22px;margin-bottom:4px">🚚</div>
+        <strong style="display:block;color:var(--dark);font-size:14px">Доставка</strong>
+        <span style="font-size:13px;color:var(--muted)">Нова Пошта або Укрпошта по всій Україні</span>
+      </div>
+      <div style="background:var(--teal-light);border-radius:12px;padding:16px 20px;flex:1;min-width:160px">
+        <div style="font-size:22px;margin-bottom:4px">🔧</div>
+        <strong style="display:block;color:var(--dark);font-size:14px">Монтаж</strong>
+        <span style="font-size:13px;color:var(--muted)">Інструкція та відеоурок у комплекті</span>
+      </div>
+      <div style="background:var(--teal-light);border-radius:12px;padding:16px 20px;flex:1;min-width:160px">
+        <div style="font-size:22px;margin-bottom:4px">🛡️</div>
+        <strong style="display:block;color:var(--dark);font-size:14px">Гарантія</strong>
+        <span style="font-size:13px;color:var(--muted)">12 місяців офіційної гарантії</span>
+      </div>
+    </div>
+  `;
+  descSection.appendChild(descDiv);
+
+  // Related products
+  const related = products.filter(p => p.category === product.category && p.id !== product.id).slice(0, 4);
+  const relGrid = document.getElementById('relatedGrid');
+  if (related.length) {
+    relGrid.innerHTML = related.map(p => productCardHTML(p)).join('');
+  } else {
+    relGrid.closest('section').style.display = 'none';
+  }
+
+  // Modal
+  const modal = document.getElementById('orderModal');
+  const modalClose = document.getElementById('modalClose');
+  const modalCancel = document.getElementById('modalCancelBtn');
+  const modalTgLink = document.getElementById('modalTgLink');
+
+  window.showOrderModal = function(pid, pname) {
+    modalTgLink.href = `${TELEGRAM_BOT}?start=${pid}`;
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+
+  function closeModal() {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  modalClose.addEventListener('click', closeModal);
+  modalCancel.addEventListener('click', closeModal);
+  modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+})();
+</script>
+</body>
+</html>
+
+
+

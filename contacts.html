@@ -1,0 +1,263 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Контакти — Кінезіс</title>
+  <meta name="description" content="Зв'яжіться з Кінезіс — замовте консультацію у Telegram, зателефонуйте або напишіть нам." />
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Unbounded:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="index.html" class="header__logo">
+      <img src="logo.png" alt="Кінезіс" class="header__logo-img" />
+    </a>
+    <nav class="nav" id="nav">
+      <a href="index.html" class="nav__link">Головна</a>
+      <a href="catalog.html" class="nav__link">Каталог</a>
+      <a href="about.html" class="nav__link">Про нас</a>
+      <a href="contacts.html" class="nav__link active">Контакти</a>
+    </nav>
+    <a href="https://t.me/Kineziss_bot" target="_blank" class="btn btn--primary header__cta">Написати в Telegram</a>
+    <button class="burger" id="burger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Головна</a>
+      <span>/</span>
+      <span>Контакти</span>
+    </div>
+    <h1>Контакти</h1>
+    <p>Напишіть нам у Telegram, зателефонуйте або заповніть форму — відповімо швидко</p>
+  </div>
+</section>
+
+<section class="contacts-page">
+  <div class="container">
+    <div class="contacts-grid">
+
+      <!-- FORM -->
+      <div class="contact-form-box">
+        <h2>Залишіть заявку</h2>
+        <p>Вкажіть ваші дані та запитання — наш менеджер зв'яжеться з вами найближчим часом.</p>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="fname">Ваше ім'я *</label>
+            <input type="text" id="fname" name="name" placeholder="Введіть ваше ім'я" required />
+          </div>
+          <div class="form-group">
+            <label for="fphone">Номер телефону *</label>
+            <input type="tel" id="fphone" name="phone" placeholder="+38 (___) ___-__-__" required />
+          </div>
+          <div class="form-group">
+            <label for="fproduct">Товар, що цікавить</label>
+            <select id="fproduct" name="product">
+              <option value="">— Оберіть категорію —</option>
+              <option>Тренажер МТБ (домашній)</option>
+              <option>Тренажер МТБ (професійний)</option>
+              <option>Лавки та гіперекстензії</option>
+              <option>Масажні столи та стільці</option>
+              <option>Реабілітаційні бруси та сходи</option>
+              <option>Аксесуари до МТБ</option>
+              <option>Інше / не знаю</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="fmessage">Повідомлення</label>
+            <textarea id="fmessage" name="message" placeholder="Ваше запитання або коментар..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full btn--lg">
+            Надіслати заявку
+          </button>
+          <p style="font-size:12px;color:var(--muted);margin-top:12px;text-align:center">
+            Натискаючи кнопку, ви погоджуєтесь з обробкою персональних даних
+          </p>
+        </form>
+        <div id="formSuccess" style="display:none;text-align:center;padding:32px 0">
+          <div style="font-size:56px;margin-bottom:12px">✅</div>
+          <h3 style="font-family:'Unbounded',sans-serif;font-size:1.3rem;color:var(--dark);margin-bottom:8px">Заявку отримано!</h3>
+          <p style="color:var(--muted)">Дякуємо! Наш менеджер зв'яжеться з вами найближчим часом. Або одразу напишіть нам у Telegram — це швидше.</p>
+          <a href="https://t.me/Kineziss_bot" target="_blank" class="btn btn--primary mt-4">Відкрити Telegram</a>
+        </div>
+      </div>
+
+      <!-- INFO -->
+      <div class="contact-info">
+        <h2>Як з нами зв'язатися</h2>
+
+        <div class="contact-item">
+          <div class="contact-item__icon">📞</div>
+          <div class="contact-item__text">
+            <strong>Телефон</strong>
+            <a href="tel:+380936246000">+38 (093) 624-60-00 — Вікторія</a>
+            <a href="tel:+380992662688">+38 (099) 266-26-88 — Андрій</a>
+            <span style="font-size:13px;color:var(--muted)">Пн–Пт: 9:00–18:00</span>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item__icon">✉️</div>
+          <div class="contact-item__text">
+            <strong>Email</strong>
+            <a href="mailto:sport_ok@ukr.net">sport_ok@ukr.net</a>
+            <span style="font-size:13px;color:var(--muted)">Відповідаємо протягом 1 робочого дня</span>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item__icon">🏭</div>
+          <div class="contact-item__text">
+            <strong>Виробництво та склад</strong>
+            <span>Україна</span>
+            <span style="font-size:13px;color:var(--muted)">Відправка по всій Україні</span>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item__icon">🚚</div>
+          <div class="contact-item__text">
+            <strong>Доставка</strong>
+            <span>Нова Пошта, Укрпошта</span>
+            <span style="font-size:13px;color:var(--muted)">Строки: 2–5 робочих днів</span>
+          </div>
+        </div>
+
+        <!-- Telegram card -->
+        <div class="telegram-card">
+          <div style="font-size:36px;margin-bottom:10px">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.93 6.78l-1.68 7.93c-.12.54-.45.67-.91.42l-2.5-1.84-1.21 1.16c-.13.13-.25.25-.5.25l.18-2.53 4.6-4.15c.2-.18-.04-.27-.31-.1L7.55 14.34l-2.43-.76c-.53-.16-.54-.53.11-.78l9.5-3.66c.44-.16.82.11.2.64z"/></svg>
+          </div>
+          <h3>Найшвидший спосіб — Telegram</h3>
+          <p>Напишіть нам у бот і отримайте відповідь протягом кількох хвилин. Там же можна оформити замовлення.</p>
+          <a href="https://t.me/Kineziss_bot" target="_blank" class="btn btn--white btn--full">
+            Написати в @Kineziss_bot
+          </a>
+        </div>
+
+        <!-- Working hours -->
+        <div style="background:var(--bg-tint);border-radius:16px;padding:24px;margin-top:20px;border:1px solid var(--border)">
+          <h3 style="font-size:15px;font-weight:700;color:var(--dark);margin-bottom:14px">Графік роботи</h3>
+          <div style="display:flex;flex-direction:column;gap:8px;font-size:14px">
+            <div style="display:flex;justify-content:space-between">
+              <span style="color:var(--body)">Понеділок – П'ятниця</span>
+              <strong style="color:var(--dark)">9:00 – 18:00</strong>
+            </div>
+            <div style="display:flex;justify-content:space-between">
+              <span style="color:var(--body)">Субота</span>
+              <strong style="color:var(--dark)">10:00 – 15:00</strong>
+            </div>
+            <div style="display:flex;justify-content:space-between">
+              <span style="color:var(--body)">Неділя</span>
+              <strong style="color:var(--muted)">Вихідний</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div style="margin-top:72px">
+      <div class="section__head">
+        <span class="section__label">Часті питання</span>
+        <h2 class="section__title">Відповіді на питання</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px">
+        <div style="background:var(--bg-tint);border-radius:16px;padding:24px;border:1px solid var(--border)">
+          <h3 style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:10px">Як оформити замовлення?</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6">Натисніть «Замовити» на сторінці товару — вас перенаправить у наш Telegram-бот, де менеджер підтвердить замовлення та уточнить деталі доставки.</p>
+        </div>
+        <div style="background:var(--bg-tint);border-radius:16px;padding:24px;border:1px solid var(--border)">
+          <h3 style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:10px">Яка гарантія на обладнання?</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6">На все обладнання Кінезіс надається офіційна гарантія 12 місяців. Запасні частини доступні протягом 5 років після покупки.</p>
+        </div>
+        <div style="background:var(--bg-tint);border-radius:16px;padding:24px;border:1px solid var(--border)">
+          <h3 style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:10px">Чи можливе повернення?</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6">Так, відповідно до Закону України «Про захист прав споживачів». Повернення можливе протягом 14 днів при збереженні товарного вигляду.</p>
+        </div>
+        <div style="background:var(--bg-tint);border-radius:16px;padding:24px;border:1px solid var(--border)">
+          <h3 style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:10px">Скільки коштує доставка?</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6">Доставка по тарифах перевізника (Нова Пошта або Укрпошта). Для великих замовлень від 20 000 грн можлива безкоштовна доставка — уточнюйте у менеджера.</p>
+        </div>
+        <div style="background:var(--bg-tint);border-radius:16px;padding:24px;border:1px solid var(--border)">
+          <h3 style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:10px">Чи є монтаж?</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6">У комплекті з тренажером йде детальна інструкція та посилання на відеоурок. Більшість моделей збираються самостійно за 30–60 хвилин.</p>
+        </div>
+        <div style="background:var(--bg-tint);border-radius:16px;padding:24px;border:1px solid var(--border)">
+          <h3 style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:10px">Як оплатити?</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6">Оплата можлива на карту, банківським переказом або накладеним платежем через перевізника. Всі деталі уточнює менеджер у Telegram.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <img src="logo.png" alt="Кінезіс" class="footer__logo" />
+      <p>Обладнання для реабілітації та кінезітерапії.</p>
+      <div class="footer__social">
+        <a href="https://t.me/Kineziss_bot" target="_blank" rel="noopener" aria-label="Telegram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.93 6.78l-1.68 7.93c-.12.54-.45.67-.91.42l-2.5-1.84-1.21 1.16c-.13.13-.25.25-.5.25l.18-2.53 4.6-4.15c.2-.18-.04-.27-.31-.1L7.55 14.34l-2.43-.76c-.53-.16-.54-.53.11-.78l9.5-3.66c.44-.16.82.11.2.64z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer__nav">
+      <h4>Навігація</h4>
+      <a href="index.html">Головна</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="about.html">Про нас</a>
+      <a href="contacts.html">Контакти</a>
+    </div>
+    <div class="footer__nav">
+      <h4>Категорії</h4>
+      <a href="catalog.html?cat=mtb">Тренажери МТБ</a>
+      <a href="catalog.html?cat=benches">Лавки та гіперекстензії</a>
+      <a href="catalog.html?cat=massage">Масажні столи</a>
+      <a href="catalog.html?cat=stairs">Бруси та сходи</a>
+    </div>
+    <div class="footer__contact">
+      <h4>Контакти</h4>
+      <a href="tel:+380936246000">+38 (093) 624-60-00 — Вікторія</a><a href="tel:+380992662688">+38 (099) 266-26-88 — Андрій</a>
+      <a href="mailto:sport_ok@ukr.net">sport_ok@ukr.net</a>
+      <a href="https://t.me/Kineziss_bot" target="_blank">Telegram-бот</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container">
+      <span>© 2024 Кінезіс. Усі права захищені.</span>
+      <span>Зроблено в Україні 🇺🇦</span>
+    </div>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="main.js"></script>
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = document.getElementById('fname').value.trim();
+  const phone = document.getElementById('fphone').value.trim();
+  const product = document.getElementById('fproduct').value;
+  // Redirect to Telegram with pre-filled message
+  const msg = encodeURIComponent(`Нова заявка!\nІм'я: ${name}\nТелефон: ${phone}${product ? '\nТовар: ' + product : ''}`);
+  window.open(`https://t.me/Kineziss_bot?start=contact`, '_blank', 'noopener');
+  this.style.display = 'none';
+  document.getElementById('formSuccess').style.display = 'block';
+});
+</script>
+</body>
+</html>
+
+
+
