@@ -1,220 +1,220 @@
-﻿# ============================================================
-#  Telegram-бот Кінезіс (@Kineziss_bot)
-#  Запуск: клік правою кнопкою → "Запустити за допомогою PowerShell"
-# ============================================================
-
-$TOKEN    = "8873990753:AAHmzAkTR64xftJytnWqaMf-H7PqVEKC6tc"
-$API      = "https://api.telegram.org/bot$TOKEN"
-$StateFile   = "$PSScriptRoot\managers.json"
-$ADMIN_PASS  = "kinezis2024"   # пароль для реєстрації менеджерів
+﻿# Telegram-bot Kinezis (@Kineziss_bot)
+$TOKEN   = "8873990753:AAHmzAkTR64xftJytnWqaMf-H7PqVEKC6tc"
+$API     = "https://api.telegram.org/bot$TOKEN"
+$MgrFile = "C:\Users\user\Kinezis\telegram_bot\managers.json"
+$PASS    = "kinezis2024"
+$SITE    = "https://nastyazakharina.github.io/kinezis"
 
 $Products = @{
-    'mtb1'         = 'Тренажер МТБ-1 (домашній) — 8 500 грн'
-    'mtb2'         = 'Тренажер МТБ-2 (розширений) — 12 900 грн'
-    'mtb4'         = 'Тренажер МТБ-4 (професійний) — 28 500 грн'
-    'mtb601'       = 'Тренажер МТБ-601 — 18 700 грн'
-    'mtb801'       = 'Тренажер МТБ-801 (посилений) — 34 900 грн'
-    'mtb-child'    = 'Тренажер МТБ дитячий — 9 800 грн'
-    'bench1'       = 'Лавка реабілітаційна складна — 5 400 грн'
-    'hyperext1'    = 'Гіперекстензія домашня SW-301 — 4 200 грн'
-    'bench-roman'  = 'Римський стілець реабілітаційний — 3 800 грн'
-    'massage1'     = 'Масажний стіл складний (алюміній) — 7 200 грн'
-    'massage2'     = 'Масажний стіл стаціонарний — 11 500 грн'
-    'massage-chair'= 'Масажне крісло терапевтичне — 4 900 грн'
-    'bars1'        = 'Паралельні бруси реабілітаційні — 15 800 грн'
-    'stairs1'      = 'Реабілітаційні сходи (3 сходинки) — 9 200 грн'
-    'acc-handles'  = 'Набір ручок для МТБ (6 шт.) — 1 200 грн'
-    'acc-carabiner'= 'Карабін для МТБ (4 шт.) — 480 грн'
-    'acc-blocks'   = 'Набір обтяжувачів для МТБ — 890 грн'
-    'acc-mat'      = 'Килимок реабілітаційний — 650 грн'
-    'balance'      = 'Балансувальна дошка — 1 800 грн'
-    'stepper'      = 'Степ-платформа реабілітаційна — 2 200 грн'
-    'walker'       = 'Ходунки реабілітаційні — 1 450 грн'
-    'contact'      = 'Консультація (заявка з форми)'
+    mtb1            = "Тренажер МТБ-1 (домашній) - 8 500 грн"
+    mtb2            = "Тренажер МТБ-2 (розширений) - 12 900 грн"
+    mtb4            = "Тренажер МТБ-4 (професійний) - 28 500 грн"
+    mtb601          = "Тренажер МТБ-601 - 18 700 грн"
+    mtb801          = "Тренажер МТБ-801 (посилений) - 34 900 грн"
+    "mtb-child"     = "Тренажер МТБ дитячий - 9 800 грн"
+    bench1          = "Лавка реабілітаційна складна - 5 400 грн"
+    hyperext1       = "Гіперекстензія SW-301 - 4 200 грн"
+    "bench-roman"   = "Римський стілець реабілітаційний - 3 800 грн"
+    massage1        = "Масажний стіл (алюміній) - 7 200 грн"
+    massage2        = "Масажний стіл стаціонарний - 11 500 грн"
+    "massage-chair" = "Масажне крісло - 4 900 грн"
+    bars1           = "Паралельні бруси - 15 800 грн"
+    stairs1         = "Реабілітаційні сходи - 9 200 грн"
+    "acc-handles"   = "Набір ручок МТБ (6 шт.) - 1 200 грн"
+    "acc-carabiner" = "Карабіни МТБ (4 шт.) - 480 грн"
+    "acc-blocks"    = "Набір обтяжувачів для МТБ - 890 грн"
+    "acc-mat"       = "Килимок реабілітаційний - 650 грн"
+    balance         = "Балансувальна дошка - 1 800 грн"
+    stepper         = "Степ-платформа - 2 200 грн"
+    walker          = "Ходунки реабілітаційні - 1 450 грн"
+    contact         = "Консультація"
 }
 
-# Зберігаємо стани розмов і менеджерів
-$UserStates = @{}
+$States = @{}
 
-function Get-Managers {
-    if (Test-Path $StateFile) {
-        return (Get-Content $StateFile -Raw | ConvertFrom-Json)
-    }
-    return @()
+$FAQ = @{
+    "Як зробити замовлення" = "Оберіть товар у каталозі на сайті та натисніть Замовити. Бот проведе вас через оформлення, менеджер зателефонує для підтвердження."
+    "Яка доставка" = "Доставка по всій Україні Новою Поштою або Укрпоштою. Термін: 1-3 дні після відправки. Вартість доставки за тарифами перевізника."
+    "Яка гарантія" = "На все обладнання надається гарантія 12 місяців. Гарантія покриває виробничі дефекти. Ми українські виробники і несемо повну відповідальність за якість."
+    "Чи можна повернути товар" = "Так, протягом 14 днів з моменту отримання, якщо товар не використовувався та збережена упаковка. Зворотна доставка за рахунок покупця."
+    "Як вибрати тренажер МТБ" = "МТБ-1 - для дому (1 блок), МТБ-2 - розширений (2 блоки), МТБ-4 - для клінік (4 блоки), МТБ-601/801 - посилені версії. Не впевнені? Напишіть нам, підберемо разом!"
+    "Де ви знаходитесь" = "Ми знаходимось у м. Чернігів, але працюємо по всій Україні через Нову Пошту та Укрпошту. Самовивіз можливий за домовленістю."
+    "Як оплатити" = "Оплата після отримання товару (накладений платіж) або передоплата на картку ПриватБанку/Монобанку. Безготівкова оплата для юридичних осіб."
+    "Контакти" = "Вікторія: +38 093 624-60-00`nАндрій: +38 099 266-26-88`nEmail: sport_ok@ukr.net`nРежим роботи: Пн-Сб 9:00-21:00"
 }
 
-function Save-Managers($ids) {
-    $ids | ConvertTo-Json | Set-Content $StateFile -Encoding utf8
+function loadMgr { if (Test-Path $MgrFile) { return @(Get-Content $MgrFile -Raw | ConvertFrom-Json) }; return @() }
+function saveMgr($ids) { $ids | ConvertTo-Json | Set-Content $MgrFile -Encoding utf8 }
+
+function tg($chatId, $text) {
+    $b = @{ chat_id = $chatId; text = $text }
+    try { Invoke-RestMethod "$API/sendMessage" -Method POST -Body $b -TimeoutSec 10 | Out-Null }
+    catch { Write-Host "sendMessage error: $($_.Exception.Message)" }
 }
 
-function Send-Message($chatId, $text, $replyMarkup = $null, $parseMode = "HTML") {
-    $body = @{ chat_id = $chatId; text = $text; parse_mode = $parseMode }
-    if ($replyMarkup) { $body.reply_markup = $replyMarkup | ConvertTo-Json -Depth 10 }
-    try {
-        Invoke-RestMethod -Uri "$API/sendMessage" -Method POST -Body $body -ErrorAction Stop | Out-Null
-    } catch {
-        Write-Host "Помилка sendMessage: $_" -ForegroundColor Red
-    }
+function tgBtn($chatId, $text, $markup) {
+    $b = @{ chat_id = $chatId; text = $text; reply_markup = $markup }
+    try { Invoke-RestMethod "$API/sendMessage" -Method POST -Body $b -TimeoutSec 10 | Out-Null }
+    catch { Write-Host "tgBtn error: $($_.Exception.Message)" }
 }
 
-function Notify-Managers($order) {
-    $managers = Get-Managers
-    if ($managers.Count -eq 0) {
-        Write-Host "⚠️  Немає менеджерів! Надішліть /addmanager $ADMIN_PASS у бот." -ForegroundColor Yellow
-        return
-    }
+function mainMenu($cid) {
+    $kb = "{`"keyboard`":[[{`"text`":`"Каталог товарів`"},{`"text`":`"Часті питання`"}],[{`"text`":`"Доставка та оплата`"},{`"text`":`"Гарантія`"}],[{`"text`":`"Контакти`"},{`"text`":`"Зробити замовлення`"}]],`"resize_keyboard`":true}"
+    tgBtn $cid "Вітаємо у боті Кінезіс! Оберіть що вас цікавить:" $kb
+}
+
+function faqMenu($cid) {
+    $kb = "{`"keyboard`":[[{`"text`":`"Як зробити замовлення`"},{`"text`":`"Яка доставка`"}],[{`"text`":`"Яка гарантія`"},{`"text`":`"Чи можна повернути товар`"}],[{`"text`":`"Як вибрати тренажер МТБ`"},{`"text`":`"Як оплатити`"}],[{`"text`":`"Де ви знаходитесь`"},{`"text`":`"Назад`"}]],`"resize_keyboard`":true}"
+    tgBtn $cid "Оберіть питання:" $kb
+}
+
+function notify($o) {
+    $mgrs = loadMgr
+    if ($mgrs.Count -eq 0) { Write-Host "Немає менеджерів!" -ForegroundColor Yellow; return }
     $now = Get-Date -Format "dd.MM.yyyy HH:mm"
-    $tgLink = if ($order.username) { "`n🔗 @$($order.username)" } else { "" }
-    $text = @"
-🛒 <b>НОВЕ ЗАМОВЛЕННЯ!</b>
-
-📦 $($order.product)
-👤 $($order.name)
-📞 $($order.phone)
-💬 $($order.comment)
-🕐 $now$tgLink
-"@
-    foreach ($mid in $managers) {
-        $inlineBtn = @{
-            inline_keyboard = @(@(@{text="💬 Написати покупцю"; url="tg://user?id=$($order.user_id)"}))
-        }
-        $body = @{
-            chat_id      = $mid
-            text         = $text
-            parse_mode   = "HTML"
-            reply_markup = ($inlineBtn | ConvertTo-Json -Depth 10)
-        }
-        try {
-            Invoke-RestMethod -Uri "$API/sendMessage" -Method POST -Body $body | Out-Null
-        } catch {
-            Write-Host "Помилка сповіщення менеджера $mid: $_" -ForegroundColor Red
-        }
+    $ulink = if ($o.uname) { " | @$($o.uname)" } else { "" }
+    $txt = "НОВЕ ЗАМОВЛЕННЯ з kinezis.com.ua!" + "`n`n"
+    $txt += "Товар: $($o.product)" + "`n"
+    $txt += "Імя: $($o.name)" + "`n"
+    $txt += "Телефон: $($o.phone)" + "`n"
+    $txt += "Коментар: $($o.comment)" + "`n"
+    $txt += "Час: $now$ulink"
+    $btn = "{`"inline_keyboard`":[[{`"text`":`"Написати покупцю`",`"url`":`"tg://user?id=$($o.uid)`"}]]}"
+    foreach ($mid in $mgrs) {
+        $b = @{ chat_id = $mid; text = $txt; reply_markup = $btn }
+        try { Invoke-RestMethod "$API/sendMessage" -Method POST -Body $b -TimeoutSec 10 | Out-Null }
+        catch { Write-Host "Помилка сповіщення $mid" }
     }
 }
 
-function Handle-Update($update) {
-    $msg = $update.message
+function handle($upd) {
+    $msg = $upd.message
     if (-not $msg) { return }
+    $cid   = $msg.chat.id
+    $uid   = $msg.from.id
+    $txt   = if ($msg.text) { $msg.text } else { "" }
+    $uname = $msg.from.username
+    if (-not $States.ContainsKey($uid)) { $States[$uid] = "main" }
 
-    $chatId = $msg.chat.id
-    $userId = $msg.from.id
-    $text   = $msg.text
-    $fname  = $msg.from.first_name
-    $uname  = $msg.from.username
-
-    if (-not $UserStates.ContainsKey($userId)) {
-        $UserStates[$userId] = @{ step = 'main' }
+    # /addmanager
+    if ($txt -match "^/addmanager\s+(.+)$") {
+        if ($Matches[1].Trim() -eq $PASS) {
+            $mgrs = [System.Collections.ArrayList]@(loadMgr)
+            if ($mgrs -notcontains $uid) { $mgrs.Add($uid) | Out-Null; saveMgr $mgrs }
+            tg $cid "Вас додано як менеджера! ID: $uid. Тепер ви отримуватимете замовлення."
+        } else { tg $cid "Неправильний пароль." }
+        return
     }
-    $state = $UserStates[$userId]
 
-    # ── /addmanager ──
-    if ($text -match '^/addmanager (.+)$') {
-        $pass = $Matches[1].Trim()
-        if ($pass -eq $ADMIN_PASS) {
-            $managers = [System.Collections.ArrayList](Get-Managers)
-            if ($managers -notcontains $userId) {
-                $managers.Add($userId) | Out-Null
-                Save-Managers $managers
-                Send-Message $chatId "✅ <b>$fname</b>, вас додано як менеджера!`nВаш ID: <code>$userId</code>`nТепер ви отримуватимете сповіщення про замовлення."
-            } else {
-                Send-Message $chatId "Ви вже зареєстровані як менеджер (ID: $userId)."
-            }
+    # /start
+    if ($txt -match "^/start") {
+        $parts = $txt -split " "
+        $prodId = if ($parts.Count -gt 1) { $parts[1] } else { "" }
+        $prod = if ($Products.ContainsKey($prodId)) { $Products[$prodId] } else { $null }
+        if ($prod -and $prodId -ne "contact") {
+            $States[$uid] = "ask_name|$prod"
+            tg $cid "Вітаємо в Кінезіс! Ви обрали: $prod`n`nВведіть ваше імя:"
         } else {
-            Send-Message $chatId "Неправильний пароль."
+            $States[$uid] = "main"
+            mainMenu $cid
         }
         return
     }
 
-    # ── /start ──
-    if ($text -match '^/start') {
-        $parts = $text -split ' '
-        $pid = if ($parts.Count -gt 1) { $parts[1] } else { $null }
-        $product = if ($pid -and $Products.ContainsKey($pid)) { $Products[$pid] } else { $null }
+    $state = $States[$uid]
 
-        if ($product -and $pid -ne 'contact') {
-            $UserStates[$userId] = @{ step='ask_name'; product=$product; pid=$pid }
-            Send-Message $chatId "👋 Вітаємо в <b>Кінезіс</b>!`n`nВи хочете замовити:`n📦 <b>$product</b>`n`nВведіть ваше <b>ім'я</b>:"
-        } else {
-            $UserStates[$userId] = @{ step='main' }
-            $kb = '{"inline_keyboard":[[{"text":"🛒 Відкрити каталог","url":"https://nastyazakharina.github.io/kinezis/catalog.html"}],[{"text":"📞 Вікторія","url":"tel:+380936246000"},{"text":"📞 Андрій","url":"tel:+380992662688"}]]}'
-            $body = @{ chat_id=$chatId; text="👋 Вітаємо в боті <b>Кінезіс</b>!`n`n🏥 Реабілітаційне обладнання українського виробництва:`n• Тренажери МТБ (система Бубновського)`n• Масажні столи та стільці`n• Реабілітаційні лавки та гіперекстензії`n• Паралельні бруси та сходи`n`nОберіть дію:"; parse_mode="HTML"; reply_markup=$kb }
-            Invoke-RestMethod -Uri "$API/sendMessage" -Method POST -Body $body | Out-Null
-        }
+    # Order flow
+    if ($state -match "^ask_name\|(.+)$") {
+        $prod = $Matches[1]
+        $States[$uid] = "ask_phone|$prod|$($txt.Trim())"
+        $kb = "{`"keyboard`":[[{`"text`":`"Поділитися номером`",`"request_contact`":true}]],`"resize_keyboard`":true,`"one_time_keyboard`":true}"
+        tgBtn $cid "Дякую, $($txt.Trim())! Введіть номер телефону або натисніть кнопку:" $kb
         return
     }
 
-    # ── Кроки замовлення ──
-    switch ($state.step) {
-        'ask_name' {
-            $state.name = $text.Trim()
-            $state.step = 'ask_phone'
-            $kb = '{"keyboard":[[{"text":"📱 Поділитися номером","request_contact":true}]],"resize_keyboard":true,"one_time_keyboard":true}'
-            $body = @{ chat_id=$chatId; text="Дякуємо, <b>$($state.name)</b>! 👍`n`nВведіть ваш <b>номер телефону</b> або натисніть кнопку:"; parse_mode="HTML"; reply_markup=$kb }
-            Invoke-RestMethod -Uri "$API/sendMessage" -Method POST -Body $body | Out-Null
-        }
-        'ask_phone' {
-            $phone = if ($msg.contact) { $msg.contact.phone_number } else { $text.Trim() }
-            $state.phone = $phone
-            $state.step = 'ask_comment'
-            $kb = '{"keyboard":[[{"text":"Пропустити"}]],"resize_keyboard":true,"one_time_keyboard":true}'
-            $body = @{ chat_id=$chatId; text="Є питання або побажання? Або натисніть <b>Пропустити</b>:"; parse_mode="HTML"; reply_markup=$kb }
-            Invoke-RestMethod -Uri "$API/sendMessage" -Method POST -Body $body | Out-Null
-        }
-        'ask_comment' {
-            $state.comment = if ($text -eq 'Пропустити') { 'немає' } else { $text.Trim() }
-            $state.username = $uname
-            $state.user_id  = $userId
-            Notify-Managers $state
-            $kb = '{"keyboard":[[{"text":"🛒 Каталог товарів"}],[{"text":"📞 Контакти"},{"text":"❓ Допомога"}]],"resize_keyboard":true}'
-            $body = @{ chat_id=$chatId; text="✅ <b>Замовлення прийнято!</b>`n`n📦 $($state.product)`n`nМенеджер зв`'яжеться з вами найближчим часом.`n`n📞 Вікторія: +38 (093) 624-60-00`n📞 Андрій: +38 (099) 266-26-88`n`nДякуємо, що обрали <b>Кінезіс</b>! 💚"; parse_mode="HTML"; reply_markup=$kb }
-            Invoke-RestMethod -Uri "$API/sendMessage" -Method POST -Body $body | Out-Null
-            $UserStates[$userId] = @{ step='main' }
-        }
-        default {
-            $tl = $text.ToLower()
-            if ($tl -match 'каталог') {
-                $kb = '{"inline_keyboard":[[{"text":"🌐 Відкрити каталог","url":"https://nastyazakharina.github.io/kinezis/catalog.html"}]]}'
-                $body = @{ chat_id=$chatId; text="Переглядайте наш каталог:"; reply_markup=$kb }
-                Invoke-RestMethod -Uri "$API/sendMessage" -Method POST -Body $body | Out-Null
-            } elseif ($tl -match 'контакт|телефон') {
-                Send-Message $chatId "📞 <b>Контакти Кінезіс:</b>`n`n👩 Вікторія: +38 (093) 624-60-00`n👨 Андрій: +38 (099) 266-26-88`n📧 sport_ok@ukr.net"
-            } elseif ($tl -match 'допомог') {
-                Send-Message $chatId "ℹ️ <b>Як замовити:</b>`n`n1️⃣ Зайдіть на kinezis.com.ua`n2️⃣ Оберіть товар → «Замовити»`n3️⃣ Введіть ім`'я та телефон тут`n4️⃣ Менеджер підтвердить замовлення`n`n📦 Доставка: Нова Пошта або Укрпошта"
-            } else {
-                $kb = '{"inline_keyboard":[[{"text":"🛒 Переглянути каталог","url":"https://nastyazakharina.github.io/kinezis/catalog.html"}]]}'
-                $body = @{ chat_id=$chatId; text="Вітаємо! Я бот Кінезіс 🤖 Переглядайте каталог і замовляйте прямо тут."; reply_markup=$kb }
-                Invoke-RestMethod -Uri "$API/sendMessage" -Method POST -Body $body | Out-Null
-            }
+    if ($state -match "^ask_phone\|(.+)\|(.+)$") {
+        $prod = $Matches[1]; $name = $Matches[2]
+        $phone = if ($msg.contact) { $msg.contact.phone_number } else { $txt.Trim() }
+        $States[$uid] = "ask_comment|$prod|$name|$phone"
+        $kb = "{`"keyboard`":[[{`"text`":`"Пропустити`"}]],`"resize_keyboard`":true,`"one_time_keyboard`":true}"
+        tgBtn $cid "Є питання або побажання? Напишіть або натисніть Пропустити:" $kb
+        return
+    }
+
+    if ($state -match "^ask_comment\|(.+)\|(.+)\|(.+)$") {
+        $prod = $Matches[1]; $name = $Matches[2]; $phone = $Matches[3]
+        $comment = if ($txt -eq "Пропустити") { "немає" } else { $txt }
+        notify @{ product=$prod; name=$name; phone=$phone; comment=$comment; uid=$uid; uname=$uname }
+        $States[$uid] = "main"
+        tg $cid "Замовлення прийнято! Менеджер звяжеться найближчим часом.`nВікторія: +38 093 624-60-00`nАндрій: +38 099 266-26-88`nДякуємо що обрали Кінезіс!"
+        mainMenu $cid
+        return
+    }
+
+    # Menu buttons
+    if ($txt -eq "Назад") { $States[$uid] = "main"; mainMenu $cid; return }
+
+    if ($txt -eq "Каталог товарів") {
+        $kb = "{`"inline_keyboard`":[[{`"text`":`"Відкрити каталог`",`"url`":`"$SITE/catalog.html`"}]]}"
+        tgBtn $cid "Переглядайте весь асортимент на сайті:" $kb
+        return
+    }
+
+    if ($txt -eq "Часті питання") { faqMenu $cid; return }
+
+    if ($txt -eq "Зробити замовлення") {
+        $kb = "{`"inline_keyboard`":[[{`"text`":`"Відкрити каталог`",`"url`":`"$SITE/catalog.html`"}]]}"
+        tgBtn $cid "Перейдіть до каталогу, оберіть товар і натисніть Замовити - бот оформить все автоматично:" $kb
+        return
+    }
+
+    if ($txt -eq "Доставка та оплата") {
+        tg $cid "Доставка по всій Украіні Новою Поштою або Укрпоштою (1-3 дні).`n`nОплата:`n- Накладений платіж (після отримання)`n- Передоплата на картку ПриватБанк / Монобанк`n- Безготівкова оплата для юросіб"
+        return
+    }
+
+    if ($txt -eq "Гарантія") {
+        tg $cid "Гарантія 12 місяців на все обладнання.`nПовернення протягом 14 днів (якщо товар не використовувався).`nМи украінські виробники і несемо повну відповідальність за якість."
+        return
+    }
+
+    if ($txt -eq "Контакти") {
+        tg $cid "Вікторія: +38 093 624-60-00`nАндрій: +38 099 266-26-88`nEmail: sport_ok@ukr.net`nРежим роботи: Пн-Сб 9:00-21:00`nm.Chernihiv, Украіна"
+        return
+    }
+
+    # FAQ answers
+    foreach ($key in $FAQ.Keys) {
+        if ($txt -eq $key) {
+            tg $cid $FAQ[$key]
+            return
         }
     }
+
+    # Default
+    $States[$uid] = "main"
+    mainMenu $cid
 }
 
-# ── ГОЛОВНИЙ ЦИКЛ ──
-Write-Host "✅ Бот @Kineziss_bot запущено!" -ForegroundColor Green
-$managers = Get-Managers
-if ($managers.Count -eq 0) {
-    Write-Host "⚠️  Менеджерів ще немає." -ForegroundColor Yellow
-    Write-Host "   Вікторія та Андрій мають написати боту: /addmanager $ADMIN_PASS" -ForegroundColor Yellow
-} else {
-    Write-Host "👥 Менеджери: $($managers -join ', ')" -ForegroundColor Cyan
-}
-Write-Host "Очікую замовлення... (Ctrl+C для зупинки)" -ForegroundColor Gray
+Write-Host "Бот @Kineziss_bot запущений!" -ForegroundColor Green
+Write-Host "Менеджери: $(loadMgr)" -ForegroundColor Cyan
+Write-Host "Очікування повідомлень... (Ctrl+C для зупинки)" -ForegroundColor Gray
 
 $offset = 0
 while ($true) {
     try {
-        $resp = Invoke-RestMethod -Uri "$API/getUpdates" -Method GET `
-            -Body @{ offset=$offset; timeout=25; allowed_updates='["message"]' } `
-            -TimeoutSec 30 -ErrorAction Stop
-        if ($resp.ok -and $resp.result) {
-            foreach ($upd in $resp.result) {
-                Handle-Update $upd
+        $r = Invoke-RestMethod "$API/getUpdates" -Method GET `
+            -Body @{ offset=$offset; timeout=20; allowed_updates='["message"]' } `
+            -TimeoutSec 30
+        if ($r.ok -and $r.result.Count -gt 0) {
+            foreach ($upd in $r.result) {
+                handle $upd
                 $offset = $upd.update_id + 1
+                Write-Host "$(Get-Date -Format 'HH:mm:ss') update $($upd.update_id)" -ForegroundColor Gray
             }
         }
     } catch {
-        Write-Host "Помилка з'єднання: $_ — повтор через 5 сек..." -ForegroundColor Yellow
+        Write-Host "Помилка: $($_.Exception.Message) - повтор через 5с" -ForegroundColor Yellow
         Start-Sleep 5
     }
 }
-
