@@ -415,7 +415,7 @@ ul { list-style: none; }
   gap: 40px;
   padding-bottom: 48px;
 }
-.footer__logo { height: 44px; width: auto; margin-bottom: 16px; filter: brightness(10); }
+.footer__logo { height: 44px; width: auto; margin-bottom: 16px; filter: brightness(0) invert(1); }
 .footer__brand p { font-size: 14px; line-height: 1.7; max-width: 240px; }
 .footer__social { display: flex; gap: 12px; margin-top: 16px; }
 .footer__social a {
