@@ -419,6 +419,12 @@ ul { list-style: none; }
 .footer__logo { height: 44px; width: auto; margin-bottom: 16px; filter: brightness(0) invert(1); }
 .footer__logo-text { display: block; font-family: 'Unbounded', sans-serif; font-size: 22px; font-weight: 700; color: #fff; margin-bottom: 16px; letter-spacing: -0.5px; }
 .hero__svg { width: 100%; max-width: 460px; height: auto; }
+.delivery-banner { background: #fff7ed; border-bottom: 1px solid #fed7aa; }
+.delivery-banner__inner { display: flex; align-items: center; gap: 14px; padding: 14px 24px; }
+.delivery-banner__icon { font-size: 28px; flex-shrink: 0; }
+.delivery-banner__inner div { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.delivery-banner__inner strong { font-size: 15px; color: #1a1a1a; }
+.delivery-banner__inner span { font-size: 14px; color: #6b7280; }
 .footer__brand p { font-size: 14px; line-height: 1.7; max-width: 240px; }
 .footer__social { display: flex; gap: 12px; margin-top: 16px; }
 .footer__social a {
