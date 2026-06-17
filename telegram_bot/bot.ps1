@@ -65,19 +65,43 @@ $States = @{}
 
 $FAQ = @{
     "Як зробити замовлення"    = "Оберіть товар у каталозі на сайті та натисніть Замовити. Бот проведе через оформлення, менеджер зателефонує для підтвердження."
-    "Яка доставка"             = "Доставка по всій Україні Новою Поштою або Укрпоштою. Термін: 1-3 дні після відправки. Вартість за тарифами перевізника."
-    "Яка гарантія"             = "На все обладнання надається гарантія 12 місяців. Ми несемо повну відповідальність за якість."
+    "Яка доставка"             = "Доставка по всій Україні Новою Поштою або Укрпоштою. Термін: 2–5 робочих днів після відправки. Вартість за тарифами перевізника."
+    "Яка гарантія"             = "На все обладнання надається гарантія 12 місяців. Запасні частини доступні протягом 5 років."
     "Чи можна повернути товар" = "Так, протягом 14 днів з моменту отримання, якщо товар не використовувався та збережена упаковка."
     "Як вибрати тренажер МТБ" = "МТБ-1 — для дому (1 блок), МТБ-2 — розширений (2 блоки), МТБ-4 — для клінік (4 блоки). Не впевнені? Напишіть — підберемо разом!"
     "Де ви знаходитесь"       = "м. Чернігів, але працюємо по всій Україні через Нову Пошту та Укрпошту. Самовивіз — за домовленістю."
     "Як оплатити"              = "Накладений платіж (після отримання) або передоплата на картку ПриватБанку / Монобанку. Безготівкова оплата для юридичних осіб."
-    "Контакти"                 = "Вікторія: +38 093 624-60-00`nАндрій: +38 099 266-26-88`nEmail: sport_ok@ukr.net`nРежим роботи: Пн-Сб 9:00-21:00"
+    "Контакти"                 = "📞 Вікторія: +38 093 624-60-00`n📞 Андрій: +38 099 266-26-88`n📧 sport_ok@ukr.net`n🕐 Пн–Пт: 9:00–18:00, Сб: 10:00–15:00, Нд: вихідний"
 }
 
 # ── Helpers ──────────────────────────────────────────────────────────────────
 
 function loadMgr { if (Test-Path $MgrFile) { return @(Get-Content $MgrFile -Raw | ConvertFrom-Json) }; return @() }
 function saveMgr($ids) { $ids | ConvertTo-Json | Set-Content $MgrFile -Encoding utf8 }
+
+function isWorkingHours {
+    $now    = Get-Date
+    $hour   = $now.Hour
+    $minute = $now.Minute
+    $day    = $now.DayOfWeek   # 0=Sunday, 1=Monday ... 6=Saturday
+    $time   = $hour + $minute / 60.0
+    if ($day -eq 0) { return $false }                        # неділя — вихідний
+    if ($day -ge 1 -and $day -le 5) { return $time -ge 9 -and $time -lt 18 }  # Пн–Пт 9–18
+    if ($day -eq 6) { return $time -ge 10 -and $time -lt 15 }                 # Сб 10–15
+    return $false
+}
+
+function greetingText($firstName) {
+    $name = if ($firstName) { ", $firstName" } else { "" }
+    if (isWorkingHours) {
+        return "Доброго дня$name! Вас вітає магазин Кінезіс 👋 Ми онлайн і готові допомогти. Оберіть що вас цікавить:"
+    } else {
+        return ("Доброго дня$name! Вас вітає магазин Кінезіс.`n`n" +
+                "Зараз ми не в мережі — відповідаємо:`n" +
+                "🕐 Пн–Пт: 9:00–18:00`n🕐 Сб: 10:00–15:00`n`n" +
+                "Залиште питання — менеджер відповість у найближчий робочий час. Оберіть що вас цікавить:")
+    }
+}
 
 function loadMap {
     if (Test-Path $MapFile) { return (Get-Content $MapFile -Raw | ConvertFrom-Json) }
@@ -109,9 +133,10 @@ function tgBtn($chatId, $text, $markup) {
     catch { Write-Host "tgBtn error: $($_.Exception.Message)"; return $null }
 }
 
-function mainMenu($cid) {
+function mainMenu($cid) { mainMenuWithText $cid "Оберіть що вас цікавить:" }
+function mainMenuWithText($cid, $text) {
     $kb = "{`"keyboard`":[[{`"text`":`"Каталог товарів`"},{`"text`":`"Часті питання`"}],[{`"text`":`"Доставка та оплата`"},{`"text`":`"Гарантія`"}],[{`"text`":`"Контакти`"},{`"text`":`"Зробити замовлення`"}]],`"resize_keyboard`":true}"
-    tgBtn $cid "Вітаємо у боті Кінезіс! Оберіть що вас цікавить:" $kb
+    tgBtn $cid $text $kb
 }
 
 function faqMenu($cid) {
@@ -174,8 +199,16 @@ function handle($upd) {
         $key = "$uid`_$replyToId"
         $targetUserId = $map.$key
         if ($targetUserId) {
-            tg $targetUserId "Менеджер Кінезіс відповідає:`n`n$txt"
+            $mgrName = if ($msg.from.first_name) { $msg.from.first_name } else { "Менеджер" }
+            # Відправляємо відповідь клієнту з ім'ям менеджера
+            tg $targetUserId "💬 $mgrName з Кінезіс відповідає:`n`n$txt"
             tg $cid "✅ Відповідь надіслано клієнту"
+            # Сповіщаємо решту менеджерів що вже відповіли
+            foreach ($mid in $mgrs) {
+                if ($mid -ne $uid) {
+                    tg $mid "ℹ️ $mgrName вже відповів цьому клієнту."
+                }
+            }
             return
         }
     }
@@ -201,15 +234,17 @@ function handle($upd) {
 
     # /start [product_id]
     if ($txt -match "^/start") {
-        $parts  = $txt -split " "
-        $prodId = if ($parts.Count -gt 1) { $parts[1] } else { "" }
-        $prod   = if ($Products.ContainsKey($prodId)) { $Products[$prodId] } else { $null }
+        $parts     = $txt -split " "
+        $prodId    = if ($parts.Count -gt 1) { $parts[1] } else { "" }
+        $prod      = if ($Products.ContainsKey($prodId)) { $Products[$prodId] } else { $null }
+        $firstName = $msg.from.first_name
         if ($prod -and $prodId -ne "contact") {
             $States[$uid] = "ask_name|$prod"
-            tg $cid "Вітаємо в Кінезіс! Ви обрали: $prod`n`nВведіть ваше ім'я:"
+            $greeting = if (isWorkingHours) { "Доброго дня! Вас вітає магазин Кінезіс 👋" } else { "Доброго дня! Вас вітає магазин Кінезіс." }
+            tg $cid "$greeting`n`nВи обрали: $prod`n`nВведіть ваше ім'я:"
         } else {
             $States[$uid] = "main"
-            mainMenu $cid
+            mainMenuWithText $cid (greetingText $firstName)
         }
         return
     }
@@ -291,11 +326,16 @@ function handle($upd) {
     $States[$uid] = "main"
     if ($txt -and $txt.Length -gt 0) {
         forwardToManagers $uid $uname $txt
-        tg $cid ("Дякуємо за звернення! Вибачте за незручності — ми відповідаємо у робочі години: Пн–Сб з 9:00 до 21:00.`n`n" +
-                 "Як тільки наш менеджер побачить ваше питання — обов'язково відповість.`n`n" +
-                 "Якщо хочете — можете залишити номер телефону, і ми передзвонимо самі. " +
-                 "Просто напишіть його наступним повідомленням 👇`n`n" +
-                 "Або телефонуйте прямо зараз:`n📞 +38 093 624-60-00 — Вікторія`n📞 +38 099 266-26-88 — Андрій")
+        if (isWorkingHours) {
+            tg $cid ("Дякуємо за питання! Менеджер побачить його і відповість найближчим часом.`n`n" +
+                     "Або телефонуйте прямо зараз:`n📞 +38 093 624-60-00 — Вікторія`n📞 +38 099 266-26-88 — Андрій")
+        } else {
+            tg $cid ("Дякуємо за звернення! Зараз ми не в мережі.`n`n" +
+                     "Відповідаємо: Пн–Пт 9:00–18:00, Сб 10:00–15:00.`n" +
+                     "Менеджер відповість як тільки розпочне роботу.`n`n" +
+                     "Хочете щоб ми передзвонили? Залиште номер телефону наступним повідомленням 👇`n`n" +
+                     "Або телефонуйте: 📞 +38 093 624-60-00")
+        }
     }
     mainMenu $cid
 }
