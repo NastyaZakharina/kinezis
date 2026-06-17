@@ -118,9 +118,8 @@ ul { list-style: none; }
 /* ---- HERO ---- */
 .hero {
   position: relative;
-  min-height: 88vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  min-height: 60vh;
+  display: flex;
   align-items: center;
   overflow: hidden;
   background: linear-gradient(135deg, #f0f8f8 0%, #fdf6f0 100%);
