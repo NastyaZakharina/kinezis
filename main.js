@@ -12,11 +12,23 @@ if (header) {
 const burger = document.getElementById('burger');
 const nav = document.getElementById('nav');
 if (burger && nav) {
+  function closeNav() {
+    nav.classList.remove('open');
+    burger.classList.remove('open');
+    document.body.classList.remove('nav-open');
+  }
   burger.addEventListener('click', () => {
-    nav.classList.toggle('open');
-    burger.classList.toggle('open');
+    const isOpen = nav.classList.contains('open');
+    if (isOpen) { closeNav(); } else {
+      nav.classList.add('open');
+      burger.classList.add('open');
+      document.body.classList.add('nav-open');
+    }
   });
-  nav.querySelectorAll('.nav__link').forEach(l => l.addEventListener('click', () => nav.classList.remove('open')));
+  nav.querySelectorAll('.nav__link').forEach(l => l.addEventListener('click', closeNav));
+  document.addEventListener('click', e => {
+    if (nav.classList.contains('open') && !nav.contains(e.target) && !burger.contains(e.target)) closeNav();
+  });
 }
 
 // Active nav link
