@@ -864,6 +864,17 @@ ul { list-style: none; }
 }
 .page-hero p { font-size: 16px; color: var(--muted); }
 
+/* Partners */
+.partner-logo {
+  color: #b0b0b0;
+  transition: color .3s, transform .2s;
+  cursor: default;
+}
+.partner-logo:hover {
+  color: var(--teal);
+  transform: translateY(-3px);
+}
+
 /* ============================================================
    RESPONSIVE
    ============================================================ */
