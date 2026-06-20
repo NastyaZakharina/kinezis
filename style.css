@@ -870,12 +870,17 @@ body.nav-open { overflow: hidden; }
 
 /* Partners */
 .partner-logo {
-  color: #b0b0b0;
-  transition: color .3s, transform .2s;
-  cursor: default;
+  transition: transform .2s;
 }
-.partner-logo:hover {
-  color: var(--teal);
+.partner-logo img {
+  filter: grayscale(100%) opacity(60%);
+  transition: filter .3s, transform .2s;
+  object-fit: contain;
+  max-width: 140px;
+  max-height: 60px;
+}
+.partner-logo:hover img {
+  filter: grayscale(0%) opacity(100%);
   transform: translateY(-3px);
 }
 
