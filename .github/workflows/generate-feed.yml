@@ -6,6 +6,7 @@ on:
     paths:
       - 'data.js'
       - 'scripts/generate-feed.js'
+      - 'scripts/generate-merchant-feed.js'
   workflow_dispatch:
 
 jobs:
@@ -19,13 +20,15 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Generate hotline.xml
-        run: node scripts/generate-feed.js
+      - name: Generate feeds
+        run: |
+          node scripts/generate-feed.js
+          node scripts/generate-merchant-feed.js
 
-      - name: Commit hotline.xml
+      - name: Commit feeds
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add hotline.xml
-          git diff --cached --quiet || git commit -m "Auto-update hotline.xml feed [skip ci]"
+          git add hotline.xml merchant.xml
+          git diff --cached --quiet || git commit -m "Auto-update hotline.xml and merchant.xml [skip ci]"
           git push
