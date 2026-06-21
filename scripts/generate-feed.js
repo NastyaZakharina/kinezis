@@ -6,17 +6,10 @@ const dataContent = fs.readFileSync(path.join(__dirname, '..', 'data.js'), 'utf-
 
 // Evaluate data.js in a sandboxed context with stubs for browser globals
 const vm = require('vm');
-const ctx = {
-  products: [],
-  categories: {},
-  TELEGRAM_BOT: '',
-  window: { open: () => {} },
-  console,
-};
+const ctx = { TELEGRAM_BOT: '', window: { open: () => {} }, console, __out: {} };
 vm.createContext(ctx);
-vm.runInContext(dataContent, ctx);
-
-const { products } = ctx;
+vm.runInContext(dataContent + '\n__out.products = products;\n__out.categories = categories;', ctx);
+const { products } = ctx.__out;
 
 const categoryIds = {
   mtb: 1,
