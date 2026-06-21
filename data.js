@@ -598,3 +598,4 @@ function orderOnTelegram(productId, productName) {
   const message = encodeURIComponent(`Хочу замовити: ${productName} (арт. ${productId})`);
   window.open(`${TELEGRAM_BOT}?start=${productId}`, '_blank', 'noopener');
 }
+
