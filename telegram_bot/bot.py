@@ -17,9 +17,10 @@ if not TOKEN:
 
 DATA_DIR    = Path('data')
 DATA_DIR.mkdir(exist_ok=True)
-MGR_FILE    = DATA_DIR / 'managers.json'
-ORDERS_FILE = DATA_DIR / 'orders.csv'
-MAP_FILE    = DATA_DIR / 'user_map.json'
+MGR_FILE      = DATA_DIR / 'managers.json'
+ORDERS_FILE   = DATA_DIR / 'orders.csv'
+MAP_FILE      = DATA_DIR / 'user_map.json'
+CONTACTS_FILE = DATA_DIR / 'contacts.csv'
 
 ASK_NAME, ASK_PHONE, ASK_COMMENT = range(3)
 
@@ -132,6 +133,24 @@ def save_order(product, name, phone, comment, uid, uname):
                     product, name, phone, uid,
                     f'@{uname}' if uname else '', comment])
 
+def save_contact(uid, uname, first_name):
+    existing = set()
+    if CONTACTS_FILE.exists():
+        with open(CONTACTS_FILE, newline='', encoding='utf-8') as f:
+            for row in csv.DictReader(f):
+                existing.add(row.get('Telegram_ID', ''))
+    if str(uid) in existing:
+        return
+    write_header = not CONTACTS_FILE.exists()
+    with open(CONTACTS_FILE, 'a', newline='', encoding='utf-8') as f:
+        w = csv.writer(f)
+        if write_header:
+            w.writerow(['Дата першого контакту', "Ім'я", 'Username', 'Telegram_ID'])
+        w.writerow([datetime.now().strftime('%d.%m.%Y %H:%M'),
+                    first_name or '',
+                    f'@{uname}' if uname else '',
+                    uid])
+
 def is_working_hours():
     now = datetime.now()
     h, wd = now.hour + now.minute / 60, now.weekday()
@@ -184,6 +203,8 @@ async def forward_question(app, uid, uname, text):
 # ── Handlers ──────────────────────────────────────────────────────────────────
 
 async def cmd_start(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
+    u = update.effective_user
+    save_contact(u.id, u.username, u.first_name)
     prod_id = ctx.args[0] if ctx.args else ''
     product = PRODUCTS.get(prod_id)
     if product:
@@ -266,38 +287,44 @@ async def cmd_listorders(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
 async def cmd_clients(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     if update.effective_user.id not in load_managers():
         return
-    if not ORDERS_FILE.exists():
-        await update.message.reply_text('📭 Замовлень ще немає.')
-        return
 
     cutoff = datetime.now() - timedelta(days=30)
-    active, inactive = [], []
 
-    with open(ORDERS_FILE, newline='', encoding='utf-8') as f:
-        reader = csv.DictReader(f)
-        seen = {}
-        for row in reader:
-            try:
-                dt = datetime.strptime(row['Дата'], '%d.%m.%Y %H:%M')
-            except:
-                continue
-            key = row['Телефон'] or row['Telegram_ID']
-            if key not in seen or dt > seen[key]['dt']:
-                seen[key] = {'dt': dt, 'row': row}
+    # --- Замовлення ---
+    orders_active, orders_inactive = [], []
+    if ORDERS_FILE.exists():
+        with open(ORDERS_FILE, newline='', encoding='utf-8') as f:
+            seen = {}
+            for row in csv.DictReader(f):
+                try:
+                    dt = datetime.strptime(row['Дата'], '%d.%m.%Y %H:%M')
+                except:
+                    continue
+                key = row['Телефон'] or row['Telegram_ID']
+                if key not in seen or dt > seen[key]['dt']:
+                    seen[key] = {'dt': dt, 'row': row}
+            for entry in seen.values():
+                name_key = "Ім'я"
+                rec = f"• {entry['row'][name_key]} | {entry['row']['Телефон']} | {entry['row']['Telegram_ID']} | {entry['dt'].strftime('%d.%m.%Y')}"
+                if entry['dt'] >= cutoff:
+                    orders_active.append(rec)
+                else:
+                    orders_inactive.append(rec)
 
-        for key, entry in seen.items():
-            name_key = "Ім'я"
-            rec = f"• {entry['row'][name_key]} | {entry['row']['Телефон']} | {entry['row']['Telegram_ID']} | {entry['dt'].strftime('%d.%m.%Y')}"
-            if entry['dt'] >= cutoff:
-                active.append(rec)
-            else:
-                inactive.append(rec)
+    # --- Контакти (всі хто писав, але ще не замовляв) ---
+    contacts = []
+    if CONTACTS_FILE.exists():
+        with open(CONTACTS_FILE, newline='', encoding='utf-8') as f:
+            for row in csv.DictReader(f):
+                contacts.append(f"• {row.get(\"Ім'я\", '')} {row.get('Username', '')} | {row.get('Telegram_ID', '')} | {row.get('Дата першого контакту', '')}")
 
-    text = f'👥 КЛІЄНТИ (унікальних: {len(active)+len(inactive)})\n\n'
-    text += f'🟢 Активні (останні 30 днів) — {len(active)}:\n'
-    text += ('\n'.join(active) if active else 'немає') + '\n\n'
-    text += f'⚪️ Неактивні — {len(inactive)}:\n'
-    text += ('\n'.join(inactive) if inactive else 'немає')
+    text = f'👥 КЛІЄНТИ\n\n'
+    text += f'🛒 Замовлення активні (30 днів) — {len(orders_active)}:\n'
+    text += ('\n'.join(orders_active) if orders_active else 'немає') + '\n\n'
+    text += f'⚪️ Замовлення старіші — {len(orders_inactive)}:\n'
+    text += ('\n'.join(orders_inactive) if orders_inactive else 'немає') + '\n\n'
+    text += f'💬 Всі хто писав боту — {len(contacts)}:\n'
+    text += ('\n'.join(contacts) if contacts else 'немає')
 
     if len(text) > 4000:
         text = text[:4000] + '\n\n... (список обрізано, скористайтесь /export)'
@@ -307,18 +334,28 @@ async def cmd_clients(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
 async def cmd_export(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     if update.effective_user.id not in load_managers():
         return
-    if not ORDERS_FILE.exists():
+    today = datetime.now().strftime('%d.%m.%Y')
+    if ORDERS_FILE.exists():
+        await update.message.reply_document(
+            document=open(ORDERS_FILE, 'rb'),
+            filename='kinezis_orders.csv',
+            caption=f'📊 Замовлення Кінезіс — {today}'
+        )
+    else:
         await update.message.reply_text('📭 Замовлень ще немає.')
-        return
-    await update.message.reply_document(
-        document=open(ORDERS_FILE, 'rb'),
-        filename='kinezis_orders.csv',
-        caption=f'📊 Всі замовлення Кінезіс — {datetime.now().strftime("%d.%m.%Y")}'
-    )
+    if CONTACTS_FILE.exists():
+        await update.message.reply_document(
+            document=open(CONTACTS_FILE, 'rb'),
+            filename='kinezis_contacts.csv',
+            caption=f'👥 Всі контакти (хто писав боту) — {today}'
+        )
+    else:
+        await update.message.reply_text('📭 Контактів ще немає.')
 
 async def handle_text(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
-    uid = update.effective_user.id
-    txt = update.message.text
+    u = update.effective_user
+    uid, txt = u.id, update.message.text
+    save_contact(uid, u.username, u.first_name)
 
     # Менеджер відповідає через Reply
     if uid in load_managers() and update.message.reply_to_message:
