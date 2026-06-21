@@ -68,6 +68,27 @@ function productCardHTML(p) {
   `;
 }
 
+// Breadcrumb JSON-LD (schema.org) — auto-generated from .breadcrumb div
+(function() {
+  const bc = document.querySelector('.breadcrumb');
+  if (!bc) return;
+  const links = bc.querySelectorAll('a');
+  const spans = bc.querySelectorAll('span:last-child');
+  const items = [];
+  links.forEach((a, i) => {
+    items.push({ '@type': 'ListItem', position: i + 1, name: a.textContent.trim(), item: a.href });
+  });
+  const lastSpan = bc.querySelector('span:last-of-type');
+  if (lastSpan) {
+    items.push({ '@type': 'ListItem', position: items.length + 1, name: lastSpan.textContent.trim() });
+  }
+  if (items.length < 2) return;
+  const script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.text = JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items });
+  document.head.appendChild(script);
+})();
+
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
