@@ -316,7 +316,9 @@ async def cmd_clients(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     if CONTACTS_FILE.exists():
         with open(CONTACTS_FILE, newline='', encoding='utf-8') as f:
             for row in csv.DictReader(f):
-                contacts.append(f"• {row.get(\"Ім'я\", '')} {row.get('Username', '')} | {row.get('Telegram_ID', '')} | {row.get('Дата першого контакту', '')}")
+                name_col = "Ім'я"
+                date_col = 'Дата першого контакту'
+                contacts.append(f"• {row.get(name_col, '')} {row.get('Username', '')} | {row.get('Telegram_ID', '')} | {row.get(date_col, '')}")
 
     text = f'👥 КЛІЄНТИ\n\n'
     text += f'🛒 Замовлення активні (30 днів) — {len(orders_active)}:\n'
