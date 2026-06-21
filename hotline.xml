@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE yml_catalog SYSTEM "shops.dtd">
+<yml_catalog date="21.06.2026 08:50">
+  <shop>
+    <name>Кінезіс</name>
+    <company>Кінезіс</company>
+    <url>https://kinezis.com.ua</url>
+    <phone>+380992662688</phone>
+    <currencies>
+      <currency id="UAH" rate="1"/>
+    </currencies>
+    <categories>
+      <category id="1">Тренажери МТБ</category>
+      <category id="2">Лавки та гіперекстензії</category>
+      <category id="3">Масажні столи та стільці</category>
+      <category id="4">Бруси та сходи</category>
+      <category id="5">Аксесуари до МТБ</category>
+      <category id="6">Інше реабілітаційне обладнання</category>
+    </categories>
+    <offers>
+
+    </offers>
+  </shop>
+</yml_catalog>
