@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import os, json, csv, logging
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from telegram import (Update, ReplyKeyboardMarkup, InlineKeyboardMarkup,
                       InlineKeyboardButton, KeyboardButton)
@@ -263,6 +263,58 @@ async def cmd_listorders(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
         count = max(0, len(ORDERS_FILE.read_text('utf-8').strip().split('\n')) - 1)
     await update.message.reply_text(f'📊 Всього замовлень збережено: {count}')
 
+async def cmd_clients(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
+    if update.effective_user.id not in load_managers():
+        return
+    if not ORDERS_FILE.exists():
+        await update.message.reply_text('📭 Замовлень ще немає.')
+        return
+
+    cutoff = datetime.now() - timedelta(days=30)
+    active, inactive = [], []
+
+    with open(ORDERS_FILE, newline='', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        seen = {}
+        for row in reader:
+            try:
+                dt = datetime.strptime(row['Дата'], '%d.%m.%Y %H:%M')
+            except:
+                continue
+            key = row['Телефон'] or row['Telegram_ID']
+            if key not in seen or dt > seen[key]['dt']:
+                seen[key] = {'dt': dt, 'row': row}
+
+        for key, entry in seen.items():
+            rec = f"• {entry['row'][\"Ім'я\"]} | {entry['row']['Телефон']} | {entry['row']['Telegram_ID']} | {entry['dt'].strftime('%d.%m.%Y')}"
+            if entry['dt'] >= cutoff:
+                active.append(rec)
+            else:
+                inactive.append(rec)
+
+    text = f'👥 КЛІЄНТИ (унікальних: {len(active)+len(inactive)})\n\n'
+    text += f'🟢 Активні (останні 30 днів) — {len(active)}:\n'
+    text += ('\n'.join(active) if active else 'немає') + '\n\n'
+    text += f'⚪️ Неактивні — {len(inactive)}:\n'
+    text += ('\n'.join(inactive) if inactive else 'немає')
+
+    if len(text) > 4000:
+        text = text[:4000] + '\n\n... (список обрізано, скористайтесь /export)'
+
+    await update.message.reply_text(text)
+
+async def cmd_export(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
+    if update.effective_user.id not in load_managers():
+        return
+    if not ORDERS_FILE.exists():
+        await update.message.reply_text('📭 Замовлень ще немає.')
+        return
+    await update.message.reply_document(
+        document=open(ORDERS_FILE, 'rb'),
+        filename='kinezis_orders.csv',
+        caption=f'📊 Всі замовлення Кінезіс — {datetime.now().strftime("%d.%m.%Y")}'
+    )
+
 async def handle_text(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     uid = update.effective_user.id
     txt = update.message.text
@@ -329,6 +381,8 @@ def main():
     app.add_handler(conv)
     app.add_handler(CommandHandler('addmanager', cmd_addmanager))
     app.add_handler(CommandHandler('listorders', cmd_listorders))
+    app.add_handler(CommandHandler('clients', cmd_clients))
+    app.add_handler(CommandHandler('export', cmd_export))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_text))
     print('✅ Бот @Kineziss_bot запущений (Python)!')
     app.run_polling(drop_pending_updates=True)
