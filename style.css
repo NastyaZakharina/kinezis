@@ -905,9 +905,9 @@ ul { list-style: none; }
 
 @media (max-width: 768px) {
   .header__cta { display: none; }
-  .nav { display: none; position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: #fff; flex-direction: column; align-items: stretch; padding: 88px 24px 24px; z-index: 9999; gap: 8px; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+  .nav { display: none; position: fixed; left: 0; right: 0; top: 72px; background: #fff; flex-direction: column; align-items: stretch; padding: 12px 16px 20px; z-index: 9999; gap: 2px; box-shadow: 0 8px 24px rgba(0,0,0,.12); border-top: 3px solid var(--teal); }
   .nav.open { display: flex; }
-  .nav__link { padding: 14px 16px; font-size: 17px; border-radius: 10px; }
+  .nav__link { padding: 13px 16px; font-size: 16px; border-radius: 10px; font-weight: 500; }
   .burger { display: flex; }
   .categories__grid { grid-template-columns: 1fr; }
   .products__grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
@@ -927,6 +927,7 @@ ul { list-style: none; }
   .hero__stats { gap: 20px; }
   .section { padding: 56px 0; }
   .contact-form-box { padding: 24px 20px; }
+  .partner-logo { width: calc(50% - 12px); height: 64px; }
 }
 
 /* ---- UTILITIES ---- */

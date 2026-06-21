@@ -9,9 +9,11 @@ from telegram.ext import (Application, CommandHandler, MessageHandler,
 
 logging.basicConfig(format='%(asctime)s %(levelname)s %(message)s', level=logging.INFO)
 
-TOKEN = os.environ.get('BOT_TOKEN', '8873990753:AAHmzAkTR64xftJytnWqaMf-H7PqVEKC6tc')
+TOKEN = os.environ.get('BOT_TOKEN')
 PASS  = os.environ.get('MGR_PASS', 'kinezis2024')
-SITE  = 'https://nastyazakharina.github.io/kinezis'
+SITE  = 'https://kinezis.com.ua'
+if not TOKEN:
+    raise ValueError("BOT_TOKEN environment variable is not set")
 
 DATA_DIR    = Path('data')
 DATA_DIR.mkdir(exist_ok=True)
