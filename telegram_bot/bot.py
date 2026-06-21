@@ -286,7 +286,8 @@ async def cmd_clients(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
                 seen[key] = {'dt': dt, 'row': row}
 
         for key, entry in seen.items():
-            rec = f"• {entry['row'][\"Ім'я\"]} | {entry['row']['Телефон']} | {entry['row']['Telegram_ID']} | {entry['dt'].strftime('%d.%m.%Y')}"
+            name_key = "Ім'я"
+            rec = f"• {entry['row'][name_key]} | {entry['row']['Телефон']} | {entry['row']['Telegram_ID']} | {entry['dt'].strftime('%d.%m.%Y')}"
             if entry['dt'] >= cutoff:
                 active.append(rec)
             else:
