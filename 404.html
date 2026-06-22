@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Сторінку не знайдено — Кінезіс</title>
+<meta name="robots" content="noindex"/>
+<link rel="icon" href="logo.png" type="image/png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Unbounded:wght@600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+<script>
+  // Auto-redirect to catalog after 3 seconds
+  setTimeout(function() { window.location.href = '/catalog.html'; }, 3000);
+</script>
+</head>
+<body>
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="index.html" class="header__logo"><img src="logo.png" alt="Кінезіс" class="header__logo-img"/></a>
+    <nav class="nav" id="nav">
+      <a href="index.html" class="nav__link">Головна</a>
+      <a href="catalog.html" class="nav__link">Каталог</a>
+      <a href="contacts.html" class="nav__link">Контакти</a>
+    </nav>
+    <a href="https://t.me/Kineziss_bot" target="_blank" class="btn btn--primary header__cta">Написати в Telegram</a>
+    <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="section" style="min-height:60vh;display:flex;align-items:center">
+  <div class="container" style="text-align:center">
+    <div style="font-size:80px;margin-bottom:16px">🔍</div>
+    <h1 style="font-size:32px;margin-bottom:12px">Сторінку не знайдено</h1>
+    <p style="color:var(--muted);font-size:17px;margin-bottom:8px">Можливо, посилання застаріло або товар перемістився.</p>
+    <p style="color:var(--muted);margin-bottom:32px">Переходимо до каталогу через <strong id="countdown">3</strong> секунди...</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+      <a href="catalog.html" class="btn btn--primary btn--lg">Перейти до каталогу</a>
+      <a href="index.html" class="btn btn--outline btn--lg">На головну</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand"><span class="footer__logo-text">Кінезіс</span><p>Обладнання для реабілітації та кінезітерапії.</p></div>
+    <div class="footer__contact"><h4>Контакти</h4><a href="tel:+380992662688">+38 (099) 266-26-88</a><a href="https://t.me/Kineziss_bot">Telegram</a></div>
+  </div>
+  <div class="footer__bottom"><div class="container"><span>© 2026 Кінезіс.</span></div></div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+  var n = 3;
+  var el = document.getElementById('countdown');
+  var t = setInterval(function() {
+    n--;
+    if (el) el.textContent = n;
+    if (n <= 0) clearInterval(t);
+  }, 1000);
+</script>
+</body>
+</html>
