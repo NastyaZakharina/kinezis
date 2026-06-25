@@ -874,20 +874,20 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f0f2f2;
-  border-radius: 10px;
-  padding: 10px 14px;
+  background: #d8dcde;
+  border-radius: 12px;
+  padding: 14px 20px;
   transition: transform .2s, background .3s;
 }
 .partner-logo img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: grayscale(20%) opacity(80%);
+  filter: grayscale(10%) opacity(95%);
   transition: filter .3s, transform .2s;
 }
 .partner-logo:hover {
-  background: #fff;
+  background: #c6cdd1;
 }
 .partner-logo:hover img {
   filter: grayscale(0%) opacity(100%);
