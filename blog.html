@@ -69,290 +69,376 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<div class="container" style="padding-top:48px;padding-bottom:80px">
-  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:28px">
+<div class="container" style="padding-top:40px;padding-bottom:80px">
 
-    <a href="blog/kinesiotherapy.html" class="blog-card"><div class="blog-card__body">
+  <!-- FILTER BAR -->
+  <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px" id="blog-filters">
+    <button class="blog-filter blog-filter--active" data-cat="all">Всі <span class="blog-filter__count">40</span></button>
+    <button class="blog-filter" data-cat="hrebet">Хребет і спина <span class="blog-filter__count">10</span></button>
+    <button class="blog-filter" data-cat="sugloby">Суглоби і травми <span class="blog-filter__count">10</span></button>
+    <button class="blog-filter" data-cat="nevro">Неврологія <span class="blog-filter__count">4</span></button>
+    <button class="blog-filter" data-cat="metodyka">Методика і обладнання <span class="blog-filter__count">5</span></button>
+    <button class="blog-filter" data-cat="sertse">Серце і судини <span class="blog-filter__count">3</span></button>
+    <button class="blog-filter" data-cat="dity">Діти <span class="blog-filter__count">3</span></button>
+    <button class="blog-filter" data-cat="special">Особливі стани <span class="blog-filter__count">5</span></button>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:28px" id="blog-grid">
+
+    <a href="blog/kinesiotherapy.html" class="blog-card" data-cat="metodyka">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#0d9488">Методика</span>
         <h2>Що таке кінезітерапія і як вона лікує хребет</h2>
         <p>Дізнайтесь, чому рух — найкращі ліки, і як метод Бубновського допомагає при болях у спині та суглобах.</p>
         <span class="blog-card__read">Читати →</span>
       </div>
     </a>
 
-    <a href="blog/how-to-choose-mtb.html" class="blog-card"><div class="blog-card__body">
+    <a href="blog/how-to-choose-mtb.html" class="blog-card" data-cat="metodyka">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#0d9488">Методика</span>
         <h2>МТБ-1, МТБ-2 або МТБ-4: як вибрати тренажер для дому та клініки</h2>
         <p>Порівняння моделей тренажерів МТБ: чим відрізняються, для кого підходять і яку обрати саме вам.</p>
         <span class="blog-card__read">Читати →</span>
       </div>
     </a>
 
-    <a href="blog/back-pain.html" class="blog-card"><div class="blog-card__body">
-        <h2>Біль у спині: чому виникає і що з цим робити</h2>
-        <p>Причини болю в хребті, коли потрібен лікар і як реабілітаційні вправи допомагають повернутися до нормального життя.</p>
-        <span class="blog-card__read">Читати →</span>
-      </div>
-    </a>
-
-    <a href="blog/knee-rehab.html" class="blog-card"><div class="blog-card__body">
-        <h2>Реабілітація після операції на коліні: що потрібно знати</h2>
-        <p>Етапи відновлення після операції на колінному суглобі, роль лікувальної фізкультури та необхідне обладнання.</p>
-        <span class="blog-card__read">Читати →</span>
-      </div>
-    </a>
-
-    <a href="blog/scoliosis.html" class="blog-card"><div class="blog-card__body">
-        <h2>Сколіоз у дітей та підлітків: як виявити і що робити</h2>
-        <p>Ознаки сколіозу, ступені викривлення хребта і роль лікувальної фізкультури у корекції постави дитини.</p>
-        <span class="blog-card__read">Читати →</span>
-      </div>
-    </a>
-
-    <a href="blog/massage-table.html" class="blog-card"><div class="blog-card__body">
-        <h2>Як вибрати масажний стіл: на що звернути увагу</h2>
-        <p>Складний, стаціонарний або електричний? Порівнюємо типи масажних столів і пояснюємо, який підійде саме вам.</p>
-        <span class="blog-card__read">Читати →</span>
-      </div>
-    </a>
-
-    <a href="blog/osteochondrosis.html" class="blog-card"><div class="blog-card__body">
-        <h2>Остеохондроз: чому болить хребет і як допомагає рух</h2>
-        <p>Що відбувається з хребтом при остеохондрозі, чому знеболювальні не вирішують проблему і як кінезітерапія допомагає.</p>
-        <span class="blog-card__read">Читати →</span>
-      </div>
-    </a>
-
-    <a href="blog/stroke-rehab.html" class="blog-card"><div class="blog-card__body">
-        <h2>Реабілітація після інсульту: перші кроки до відновлення</h2>
-        <p>Чому рання реабілітація є ключовою після інсульту, яке обладнання використовується і на що розраховувати на різних етапах.</p>
-        <span class="blog-card__read">Читати →</span>
-      </div>
-    </a>
-
-    <a href="blog/hip-fracture.html" class="blog-card"><div class="blog-card__body">
-        <h2>Реабілітація після перелому шийки стегна: повернення до руху</h2>
-        <p>Чому рання мобілізація рятує життя після перелому шийки стегна, етапи відновлення і яке обладнання потрібне вдома.</p>
-        <span class="blog-card__read">Читати →</span>
-      </div>
-    </a>
-
-    <a href="blog/flat-feet.html" class="blog-card"><div class="blog-card__body">
-        <h2>Плоскостопість у дітей: як виявити і чим допомогти</h2>
-        <p>Коли плоска стопа — норма, а коли привід звернутись до ортопеда. Простий домашній тест і вправи для формування склепіння.</p>
-        <span class="blog-card__read">Читати →</span>
-      </div>
-    </a>
-
-    <a href="blog/cerebral-palsy.html" class="blog-card"><div class="blog-card__body">
-        <h2>ДЦП: як рухова реабілітація допомагає дітям</h2>
-        <p>Форми ДЦП, основні методи реабілітації, роль батьків і яке обладнання використовується для розвитку рухових функцій.</p>
-        <span class="blog-card__read">Читати →</span>
-      </div>
-    </a>
-
-    <a href="blog/mtb-exercises.html" class="blog-card"><div class="blog-card__body">
+    <a href="blog/mtb-exercises.html" class="blog-card" data-cat="metodyka">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#0d9488">Методика</span>
         <h2>Базові вправи на тренажері МТБ: з чого починати</h2>
         <p>Які вправи виконують на МТБ, чим він відрізняється від звичайних тренажерів і як правильно починати заняття без ризику.</p>
         <span class="blog-card__read">Читати →</span>
       </div>
     </a>
 
-    <a href="blog/active-aging.html" class="blog-card"><div class="blog-card__body">
-        <h2>Фізична активність після 60: рухатись, щоб жити довше</h2>
-        <p>Що відбувається з тілом без руху після 60 і що дає регулярна активність. Безпечний старт і вправи для людей старшого віку.</p>
+    <a href="blog/massage-table.html" class="blog-card" data-cat="metodyka">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#0d9488">Методика</span>
+        <h2>Як вибрати масажний стіл: на що звернути увагу</h2>
+        <p>Складний, стаціонарний або електричний? Порівнюємо типи масажних столів і пояснюємо, який підійде саме вам.</p>
         <span class="blog-card__read">Читати →</span>
       </div>
     </a>
 
-    <a href="blog/hip-replacement.html" class="blog-card"><div class="blog-card__body">
-        <h2>Ендопротезування кульшового суглоба: що після операції</h2>
-        <p>Етапи відновлення після заміни суглоба, допустимі навантаження, обмеження і обладнання для домашньої реабілітації.</p>
-        <span class="blog-card__read">Читати →</span>
-      </div>
-    </a>
-
-    <a href="blog/osteochondrosis.html" class="blog-card"><div class="blog-card__body">
-        <h2>Остеохондроз: чому болить спина і що з цим робити</h2>
-        <p>Чому нерухомість погіршує стан дисків, які вправи реально допомагають і як зупинити прогресування хвороби.</p>
-        <span class="blog-card__read">Читати →</span>
-      </div>
-    </a>
-
-    <a href="blog/cardiac-rehab.html" class="blog-card"><div class="blog-card__body">
-        <h2>Реабілітація після інфаркту: повернення до активного життя</h2>
-        <p>Чому фізична активність після інфаркту знижує ризик повторного нападу і як правильно тренуватись серцю.</p>
-        <span class="blog-card__read">Читати →</span>
-      </div>
-    </a>
-
-    <a href="blog/ligament-sprain.html" class="blog-card"><div class="blog-card__body">
-        <h2>Розтягнення зв'язок: від першої допомоги до відновлення</h2>
-        <p>Протокол RICE, ступені пошкодження та чотири фази реабілітації — все, що потрібно знати після травми суглоба.</p>
-        <span class="blog-card__read">Читати →</span>
-      </div>
-    </a>
-
-    <a href="blog/arthritis-exercises.html" class="blog-card"><div class="blog-card__body">
-        <h2>Артрит та артроз: як рух допомагає суглобам</h2>
-        <p>Вправи при артриті та артрозі — чому вони ефективніші за таблетки і як займатись безпечно без загострень.</p>
-        <span class="blog-card__read">Читати →</span>
-      </div>
-    </a>
-
-    <a href="blog/posture-correction.html" class="blog-card"><div class="blog-card__body">
-        <h2>Корекція постави: вправи, що дійсно працюють</h2>
-        <p>Чому постава не виправляється силою волі, які м'язи відповідають за правильне положення тіла і як їх зміцнити.</p>
-        <span class="blog-card__read">Читати →</span>
-      </div>
-    </a>
-
-    <a href="blog/neck-pain.html" class="blog-card"><div class="blog-card__body">
-        <h2>Болі в шиї та плечах: причини і вправи</h2>
-        <p>Чому болить шия після роботи за комп'ютером, як відрізнити м'язову напругу від серйозної патології і що з цим робити.</p>
-        <span class="blog-card__read">Читати →</span>
-      </div>
-    </a>
-
-    <a href="blog/spine-surgery.html" class="blog-card"><div class="blog-card__body">
-        <h2>Реабілітація після операції на хребті</h2>
-        <p>Що дозволено і що заборонено після дискектомії або спондилодезу, етапи відновлення і безпечні вправи.</p>
-        <span class="blog-card__read">Читати →</span>
-      </div>
-    </a>
-
-    <a href="blog/osteoporosis.html" class="blog-card"><div class="blog-card__body">
-        <h2>Остеопороз: вправи для зміцнення кісток</h2>
-        <p>Як фізична активність збільшує кісткову масу, які вправи ефективні і чого уникати при остеопорозі.</p>
-        <span class="blog-card__read">Читати →</span>
-      </div>
-    </a>
-
-    <a href="blog/parkinson.html" class="blog-card"><div class="blog-card__body">
-        <h2>Хвороба Паркінсона: чому рух — це ліки</h2>
-        <p>Як регулярні тренування сповільнюють прогресування Паркінсона, які вправи найефективніші і як організувати домашні заняття.</p>
-        <span class="blog-card__read">Читати →</span>
-      </div>
-    </a>
-
-    <a href="blog/children-posture.html" class="blog-card"><div class="blog-card__body">
-        <h2>Правильна постава у дітей: вправи та профілактика</h2>
-        <p>60–70% школярів мають порушення постави. Як перевірити поставу дитини і які вправи допоможуть виправити сутулість і сколіоз.</p>
-        <span class="blog-card__read">Читати →</span>
-      </div>
-    </a>
-
-    <a href="blog/diabetes-rehab.html" class="blog-card"><div class="blog-card__body">
-        <h2>Цукровий діабет 2 типу: вправи як лікування</h2>
-        <p>Як фізична активність знижує рівень цукру в крові, які вправи найефективніші і як безпечно тренуватись при діабеті.</p>
-        <span class="blog-card__read">Читати →</span>
-      </div>
-    </a>
-
-    <a href="blog/shoulder-rehab.html" class="blog-card"><div class="blog-card__body">
-        <h2>Реабілітація плечового суглоба після травми та операції</h2>
-        <p>Три фази відновлення плеча, вправи на тренажері МТБ, чого уникати і коли повертатись до активності.</p>
-        <span class="blog-card__read">Читати →</span>
-      </div>
-    </a>
-
-    <a href="blog/herniated-disc.html" class="blog-card"><div class="blog-card__body">
-        <h2>Міжхребцева грижа: лікування рухом без операції</h2>
-        <p>80–90% пацієнтів з грижею диска одужують без хірургії. Безпечні вправи, заборони та коли все ж потрібна операція.</p>
-        <span class="blog-card__read">Читати →</span>
-      </div>
-    </a>
-
-    <a href="blog/office-syndrome.html" class="blog-card"><div class="blog-card__body">
-        <h2>Офісний синдром: болі від сидячої роботи</h2>
-        <p>Правило 30-30-3, мікровправи за столом, ергономіка робочого місця та домашні тренування для тих, хто сидить цілий день.</p>
-        <span class="blog-card__read">Читати →</span>
-      </div>
-    </a>
-
-    <a href="blog/ankle-rehab.html" class="blog-card"><div class="blog-card__body">
-        <h2>Реабілітація гомілковостопного суглоба після травми</h2>
-        <p>Протокол PRICE, ступені пошкодження зв'язок та чотири фази відновлення — від першої допомоги до повернення до спорту.</p>
-        <span class="blog-card__read">Читати →</span>
-      </div>
-    </a>
-
-    <a href="blog/sports-injury.html" class="blog-card"><div class="blog-card__body">
-        <h2>Спортивні травми: повернення у спорт</h2>
-        <p>Принцип оптимального навантаження, критерії готовності до повернення у спорт і типові помилки спортсменів після травми.</p>
-        <span class="blog-card__read">Читати →</span>
-      </div>
-    </a>
-
-    <a href="blog/post-covid.html" class="blog-card"><div class="blog-card__body">
-        <h2>Постковідна реабілітація</h2>
-        <p>Задишка, слабкість, «мозковий туман» після COVID-19 — програма відновлення по тижнях і роль тренажера МТБ.</p>
-        <span class="blog-card__read">Читати →</span>
-      </div>
-    </a>
-
-    <a href="blog/home-gym.html" class="blog-card"><div class="blog-card__body">
+    <a href="blog/home-gym.html" class="blog-card" data-cat="metodyka">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#0d9488">Методика</span>
         <h2>Домашній реабілітаційний зал</h2>
         <p>Скільки потрібно місця, який тренажер МТБ обрати, що ще знадобиться — реальні приклади домашніх залів.</p>
         <span class="blog-card__read">Читати →</span>
       </div>
     </a>
 
-    <a href="blog/lumbalgia.html" class="blog-card"><div class="blog-card__body">
+    <a href="blog/back-pain.html" class="blog-card" data-cat="hrebet">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#ea580c">Хребет і спина</span>
+        <h2>Біль у спині: чому виникає і що з цим робити</h2>
+        <p>Причини болю в хребті, коли потрібен лікар і як реабілітаційні вправи допомагають повернутися до нормального життя.</p>
+        <span class="blog-card__read">Читати →</span>
+      </div>
+    </a>
+
+    <a href="blog/osteochondrosis.html" class="blog-card" data-cat="hrebet">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#ea580c">Хребет і спина</span>
+        <h2>Остеохондроз: чому болить хребет і як допомагає рух</h2>
+        <p>Що відбувається з хребтом при остеохондрозі, чому знеболювальні не вирішують проблему і як кінезітерапія допомагає.</p>
+        <span class="blog-card__read">Читати →</span>
+      </div>
+    </a>
+
+    <a href="blog/herniated-disc.html" class="blog-card" data-cat="hrebet">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#ea580c">Хребет і спина</span>
+        <h2>Міжхребцева грижа: лікування рухом без операції</h2>
+        <p>80–90% пацієнтів з грижею диска одужують без хірургії. Безпечні вправи, заборони та коли все ж потрібна операція.</p>
+        <span class="blog-card__read">Читати →</span>
+      </div>
+    </a>
+
+    <a href="blog/lumbalgia.html" class="blog-card" data-cat="hrebet">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#ea580c">Хребет і спина</span>
         <h2>Люмбаго і люмбалгія</h2>
         <p>В чому різниця, чому рух — найкращі ліки, і які вправи допоможуть при хронічному болю в попереку.</p>
         <span class="blog-card__read">Читати →</span>
       </div>
     </a>
 
-    <a href="blog/tendinitis.html" class="blog-card"><div class="blog-card__body">
-        <h2>Тендиніт і тендинопатія</h2>
-        <p>Чому спокій не лікує тендинопатію і як ексцентричні вправи відновлюють сухожилля ахілла, коліна та плеча.</p>
+    <a href="blog/neck-pain.html" class="blog-card" data-cat="hrebet">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#ea580c">Хребет і спина</span>
+        <h2>Болі в шиї та плечах: причини і вправи</h2>
+        <p>Чому болить шия після роботи за комп'ютером, як відрізнити м'язову напругу від серйозної патології і що з цим робити.</p>
         <span class="blog-card__read">Читати →</span>
       </div>
     </a>
 
-    <a href="blog/immobilization.html" class="blog-card"><div class="blog-card__body">
-        <h2>Відновлення після гіпсу</h2>
-        <p>Три фази реабілітації та типові помилки при відновленні після іммобілізації — чому «час» без руху не допомагає.</p>
+    <a href="blog/spine-surgery.html" class="blog-card" data-cat="hrebet">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#ea580c">Хребет і спина</span>
+        <h2>Реабілітація після операції на хребті</h2>
+        <p>Що дозволено і що заборонено після дискектомії або спондилодезу, етапи відновлення і безпечні вправи.</p>
         <span class="blog-card__read">Читати →</span>
       </div>
     </a>
 
-    <a href="blog/varicosis.html" class="blog-card"><div class="blog-card__body">
-        <h2>Вправи при варикозі</h2>
-        <p>Яка фізична активність корисна при варикозному розширенні вен, а яка шкідлива — конкретні вправи і обмеження.</p>
+    <a href="blog/posture-correction.html" class="blog-card" data-cat="hrebet">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#ea580c">Хребет і спина</span>
+        <h2>Корекція постави: вправи, що дійсно працюють</h2>
+        <p>Чому постава не виправляється силою волі, які м'язи відповідають за правильне положення тіла і як їх зміцнити.</p>
         <span class="blog-card__read">Читати →</span>
       </div>
     </a>
 
-    <a href="blog/weight-rehab.html" class="blog-card"><div class="blog-card__body">
-        <h2>Реабілітація при зайвій вазі</h2>
-        <p>Як розірвати коло болів і бездіяльності при зайвій вазі — безпечні вправи без ударного навантаження на суглоби.</p>
-        <span class="blog-card__read">Читати →</span>
-      </div>
-    </a>
-
-    <a href="blog/spine-fracture.html" class="blog-card"><div class="blog-card__body">
+    <a href="blog/spine-fracture.html" class="blog-card" data-cat="hrebet">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#ea580c">Хребет і спина</span>
         <h2>Компресійний перелом хребця</h2>
         <p>Три ступені тяжкості, три фази реабілітації, заборонені рухи і профілактика повторного перелому при остеопорозі.</p>
         <span class="blog-card__read">Читати →</span>
       </div>
     </a>
 
-    <a href="blog/multiple-sclerosis.html" class="blog-card"><div class="blog-card__body">
+    <a href="blog/osteoporosis.html" class="blog-card" data-cat="hrebet">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#ea580c">Хребет і спина</span>
+        <h2>Остеопороз: вправи для зміцнення кісток</h2>
+        <p>Як фізична активність збільшує кісткову масу, які вправи ефективні і чого уникати при остеопорозі.</p>
+        <span class="blog-card__read">Читати →</span>
+      </div>
+    </a>
+
+    <a href="blog/office-syndrome.html" class="blog-card" data-cat="hrebet">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#ea580c">Хребет і спина</span>
+        <h2>Офісний синдром: болі від сидячої роботи</h2>
+        <p>Правило 30-30-3, мікровправи за столом, ергономіка робочого місця та домашні тренування для тих, хто сидить цілий день.</p>
+        <span class="blog-card__read">Читати →</span>
+      </div>
+    </a>
+
+    <a href="blog/knee-rehab.html" class="blog-card" data-cat="sugloby">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#2563eb">Суглоби і травми</span>
+        <h2>Реабілітація після операції на коліні: що потрібно знати</h2>
+        <p>Етапи відновлення після операції на колінному суглобі, роль лікувальної фізкультури та необхідне обладнання.</p>
+        <span class="blog-card__read">Читати →</span>
+      </div>
+    </a>
+
+    <a href="blog/hip-fracture.html" class="blog-card" data-cat="sugloby">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#2563eb">Суглоби і травми</span>
+        <h2>Реабілітація після перелому шийки стегна: повернення до руху</h2>
+        <p>Чому рання мобілізація рятує життя після перелому шийки стегна, етапи відновлення і яке обладнання потрібне вдома.</p>
+        <span class="blog-card__read">Читати →</span>
+      </div>
+    </a>
+
+    <a href="blog/hip-replacement.html" class="blog-card" data-cat="sugloby">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#2563eb">Суглоби і травми</span>
+        <h2>Ендопротезування кульшового суглоба: що після операції</h2>
+        <p>Етапи відновлення після заміни суглоба, допустимі навантаження, обмеження і обладнання для домашньої реабілітації.</p>
+        <span class="blog-card__read">Читати →</span>
+      </div>
+    </a>
+
+    <a href="blog/ligament-sprain.html" class="blog-card" data-cat="sugloby">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#2563eb">Суглоби і травми</span>
+        <h2>Розтягнення зв'язок: від першої допомоги до відновлення</h2>
+        <p>Протокол RICE, ступені пошкодження та чотири фази реабілітації — все, що потрібно знати після травми суглоба.</p>
+        <span class="blog-card__read">Читати →</span>
+      </div>
+    </a>
+
+    <a href="blog/arthritis-exercises.html" class="blog-card" data-cat="sugloby">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#2563eb">Суглоби і травми</span>
+        <h2>Артрит та артроз: як рух допомагає суглобам</h2>
+        <p>Вправи при артриті та артрозі — чому вони ефективніші за таблетки і як займатись безпечно без загострень.</p>
+        <span class="blog-card__read">Читати →</span>
+      </div>
+    </a>
+
+    <a href="blog/shoulder-rehab.html" class="blog-card" data-cat="sugloby">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#2563eb">Суглоби і травми</span>
+        <h2>Реабілітація плечового суглоба після травми та операції</h2>
+        <p>Три фази відновлення плеча, вправи на тренажері МТБ, чого уникати і коли повертатись до активності.</p>
+        <span class="blog-card__read">Читати →</span>
+      </div>
+    </a>
+
+    <a href="blog/ankle-rehab.html" class="blog-card" data-cat="sugloby">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#2563eb">Суглоби і травми</span>
+        <h2>Реабілітація гомілковостопного суглоба після травми</h2>
+        <p>Протокол PRICE, ступені пошкодження зв'язок та чотири фази відновлення — від першої допомоги до повернення до спорту.</p>
+        <span class="blog-card__read">Читати →</span>
+      </div>
+    </a>
+
+    <a href="blog/tendinitis.html" class="blog-card" data-cat="sugloby">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#2563eb">Суглоби і травми</span>
+        <h2>Тендиніт і тендинопатія</h2>
+        <p>Чому спокій не лікує тендинопатію і як ексцентричні вправи відновлюють сухожилля ахілла, коліна та плеча.</p>
+        <span class="blog-card__read">Читати →</span>
+      </div>
+    </a>
+
+    <a href="blog/immobilization.html" class="blog-card" data-cat="sugloby">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#2563eb">Суглоби і травми</span>
+        <h2>Відновлення після гіпсу</h2>
+        <p>Три фази реабілітації та типові помилки при відновленні після іммобілізації — чому «час» без руху не допомагає.</p>
+        <span class="blog-card__read">Читати →</span>
+      </div>
+    </a>
+
+    <a href="blog/sports-injury.html" class="blog-card" data-cat="sugloby">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#2563eb">Суглоби і травми</span>
+        <h2>Спортивні травми: повернення у спорт</h2>
+        <p>Принцип оптимального навантаження, критерії готовності до повернення у спорт і типові помилки спортсменів після травми.</p>
+        <span class="blog-card__read">Читати →</span>
+      </div>
+    </a>
+
+    <a href="blog/stroke-rehab.html" class="blog-card" data-cat="nevro">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#7c3aed">Неврологія</span>
+        <h2>Реабілітація після інсульту: перші кроки до відновлення</h2>
+        <p>Чому рання реабілітація є ключовою після інсульту, яке обладнання використовується і на що розраховувати на різних етапах.</p>
+        <span class="blog-card__read">Читати →</span>
+      </div>
+    </a>
+
+    <a href="blog/parkinson.html" class="blog-card" data-cat="nevro">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#7c3aed">Неврологія</span>
+        <h2>Хвороба Паркінсона: чому рух — це ліки</h2>
+        <p>Як регулярні тренування сповільнюють прогресування Паркінсона, які вправи найефективніші і як організувати домашні заняття.</p>
+        <span class="blog-card__read">Читати →</span>
+      </div>
+    </a>
+
+    <a href="blog/multiple-sclerosis.html" class="blog-card" data-cat="nevro">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#7c3aed">Неврологія</span>
         <h2>Розсіяний склероз і рух</h2>
         <p>Чому рух уповільнює РС, правило Утгоффа, рекомендовані вправи при різних стадіях розсіяного склерозу.</p>
         <span class="blog-card__read">Читати →</span>
       </div>
     </a>
 
-    <a href="blog/postpartum.html" class="blog-card"><div class="blog-card__body">
+    <a href="blog/cerebral-palsy.html" class="blog-card" data-cat="nevro">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#7c3aed">Неврологія</span>
+        <h2>ДЦП: як рухова реабілітація допомагає дітям</h2>
+        <p>Форми ДЦП, основні методи реабілітації, роль батьків і яке обладнання використовується для розвитку рухових функцій.</p>
+        <span class="blog-card__read">Читати →</span>
+      </div>
+    </a>
+
+    <a href="blog/cardiac-rehab.html" class="blog-card" data-cat="sertse">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#dc2626">Серце і судини</span>
+        <h2>Реабілітація після інфаркту: повернення до активного життя</h2>
+        <p>Чому фізична активність після інфаркту знижує ризик повторного нападу і як правильно тренуватись серцю.</p>
+        <span class="blog-card__read">Читати →</span>
+      </div>
+    </a>
+
+    <a href="blog/varicosis.html" class="blog-card" data-cat="sertse">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#dc2626">Серце і судини</span>
+        <h2>Вправи при варикозі</h2>
+        <p>Яка фізична активність корисна при варикозному розширенні вен, а яка шкідлива — конкретні вправи і обмеження.</p>
+        <span class="blog-card__read">Читати →</span>
+      </div>
+    </a>
+
+    <a href="blog/diabetes-rehab.html" class="blog-card" data-cat="sertse">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#dc2626">Серце і судини</span>
+        <h2>Цукровий діабет 2 типу: вправи як лікування</h2>
+        <p>Як фізична активність знижує рівень цукру в крові, які вправи найефективніші і як безпечно тренуватись при діабеті.</p>
+        <span class="blog-card__read">Читати →</span>
+      </div>
+    </a>
+
+    <a href="blog/scoliosis.html" class="blog-card" data-cat="dity">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#16a34a">Діти</span>
+        <h2>Сколіоз у дітей та підлітків: як виявити і що робити</h2>
+        <p>Ознаки сколіозу, ступені викривлення хребта і роль лікувальної фізкультури у корекції постави дитини.</p>
+        <span class="blog-card__read">Читати →</span>
+      </div>
+    </a>
+
+    <a href="blog/flat-feet.html" class="blog-card" data-cat="dity">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#16a34a">Діти</span>
+        <h2>Плоскостопість у дітей: як виявити і чим допомогти</h2>
+        <p>Коли плоска стопа — норма, а коли привід звернутись до ортопеда. Простий домашній тест і вправи для формування склепіння.</p>
+        <span class="blog-card__read">Читати →</span>
+      </div>
+    </a>
+
+    <a href="blog/children-posture.html" class="blog-card" data-cat="dity">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#16a34a">Діти</span>
+        <h2>Правильна постава у дітей: вправи та профілактика</h2>
+        <p>60–70% школярів мають порушення постави. Як перевірити поставу дитини і які вправи допоможуть виправити сутулість і сколіоз.</p>
+        <span class="blog-card__read">Читати →</span>
+      </div>
+    </a>
+
+    <a href="blog/active-aging.html" class="blog-card" data-cat="special">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#0369a1">Особливі стани</span>
+        <h2>Фізична активність після 60: рухатись, щоб жити довше</h2>
+        <p>Що відбувається з тілом без руху після 60 і що дає регулярна активність. Безпечний старт і вправи для людей старшого віку.</p>
+        <span class="blog-card__read">Читати →</span>
+      </div>
+    </a>
+
+    <a href="blog/post-covid.html" class="blog-card" data-cat="special">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#0369a1">Особливі стани</span>
+        <h2>Постковідна реабілітація</h2>
+        <p>Задишка, слабкість, «мозковий туман» після COVID-19 — програма відновлення по тижнях і роль тренажера МТБ.</p>
+        <span class="blog-card__read">Читати →</span>
+      </div>
+    </a>
+
+    <a href="blog/weight-rehab.html" class="blog-card" data-cat="special">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#0369a1">Особливі стани</span>
+        <h2>Реабілітація при зайвій вазі</h2>
+        <p>Як розірвати коло болів і бездіяльності при зайвій вазі — безпечні вправи без ударного навантаження на суглоби.</p>
+        <span class="blog-card__read">Читати →</span>
+      </div>
+    </a>
+
+    <a href="blog/postpartum.html" class="blog-card" data-cat="special">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#0369a1">Особливі стани</span>
         <h2>Відновлення після пологів</h2>
         <p>Діастаз, болі в спині, слабкість тазового дна — коли починати вправи і що категорично заборонено при діастазі.</p>
         <span class="blog-card__read">Читати →</span>
       </div>
     </a>
 
-    <a href="blog/war-rehab.html" class="blog-card"><div class="blog-card__body">
+    <a href="blog/war-rehab.html" class="blog-card" data-cat="special">
+      <div class="blog-card__body">
+        <span class="blog-tag" style="--tag:#0369a1">Особливі стани</span>
         <h2>Реабілітація ветеранів</h2>
         <p>Поранення, контузія, ампутація — як кінезітерапія і тренажери МТБ допомагають ветеранам повернути рухову функцію.</p>
         <span class="blog-card__read">Читати →</span>
@@ -361,6 +447,71 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   </div>
 </div>
+
+<style>
+.blog-filter {
+  padding: 8px 16px;
+  border-radius: 100px;
+  border: 1.5px solid var(--border);
+  background: #fff;
+  color: var(--dark);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all .2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.blog-filter:hover { border-color: var(--teal); color: var(--teal); }
+.blog-filter--active { background: var(--teal); border-color: var(--teal); color: #fff; }
+.blog-filter--active .blog-filter__count { background: rgba(255,255,255,.25); color: #fff; }
+.blog-filter__count {
+  background: var(--bg-tint);
+  border-radius: 100px;
+  padding: 1px 7px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.blog-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--tag, #0d9488);
+  margin-bottom: 10px;
+}
+.blog-card {
+  border-left: 3px solid var(--tag-color, #e5e7eb);
+}
+.blog-card[data-cat="metodyka"] { --tag-color: #0d9488; }
+.blog-card[data-cat="hrebet"]   { --tag-color: #ea580c; }
+.blog-card[data-cat="sugloby"]  { --tag-color: #2563eb; }
+.blog-card[data-cat="nevro"]    { --tag-color: #7c3aed; }
+.blog-card[data-cat="sertse"]   { --tag-color: #dc2626; }
+.blog-card[data-cat="dity"]     { --tag-color: #16a34a; }
+.blog-card[data-cat="special"]  { --tag-color: #0369a1; }
+.blog-card { border-left: 3px solid var(--tag-color); }
+</style>
+
+<script>
+(function(){
+  var btns = document.querySelectorAll('.blog-filter');
+  var cards = document.querySelectorAll('#blog-grid .blog-card');
+  btns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var cat = this.dataset.cat;
+      btns.forEach(function(b){ b.classList.remove('blog-filter--active'); });
+      this.classList.add('blog-filter--active');
+      cards.forEach(function(c){
+        c.style.display = (cat === 'all' || c.dataset.cat === cat) ? '' : 'none';
+      });
+    });
+  });
+})();
+</script>
 
 <section class="cta-banner">
   <div class="container cta-banner__inner">
