@@ -277,11 +277,25 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   const name = document.getElementById('fname').value.trim();
   const phone = document.getElementById('fphone').value.trim();
   const product = document.getElementById('fproduct').value;
-  // Redirect to Telegram with pre-filled message
-  const msg = encodeURIComponent(`Нова заявка!\nІм'я: ${name}\nТелефон: ${phone}${product ? '\nТовар: ' + product : ''}`);
-  window.open(`https://t.me/Kineziss_bot?start=contact`, '_blank', 'noopener');
-  this.style.display = 'none';
-  document.getElementById('formSuccess').style.display = 'block';
+  const message = document.getElementById('fmessage').value.trim();
+
+  // GA event
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'generate_lead', { event_category: 'contact_form', event_label: product || 'no_product' });
+  }
+
+  // Send to Railway bot endpoint
+  const FORM_ENDPOINT = window.KINEZIS_FORM_URL || '';
+  if (FORM_ENDPOINT) {
+    fetch(FORM_ENDPOINT + '/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, phone, product, message })
+    }).catch(() => {});
+  }
+
+  // Redirect to thank-you page
+  window.location.href = 'thank-you.html';
 });
 </script>
 </body>
