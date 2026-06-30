@@ -84,7 +84,7 @@ FAQ = {
     'Як вибрати тренажер МТБ': 'МТБ-1 — для дому (1 блок), МТБ-2 — розширений (2 блоки), МТБ-4 — для клінік (4 блоки). Не впевнені? Напишіть — підберемо разом!',
     'Де ви знаходитесь': 'м. Чернігів, але працюємо по всій Україні. Самовивіз — за домовленістю.',
     'Як оплатити': 'Накладений платіж (після отримання) або передоплата на картку ПриватБанку / Монобанку. Безготівкова оплата для юридичних осіб.',
-    'Контакти': '📞 Вікторія: +38 093 624-60-00\n📞 Андрій: +38 099 266-26-88\n📧 sport_ok@ukr.net\n🕐 Пн–Пт: 9:00–18:00, Сб: 10:00–15:00',
+    'Контакти': '📞 Андрій: +38 099 266-26-88\n📧 sport_ok@ukr.net\n🕐 Пн–Пт: 9:00–18:00, Сб: 10:00–15:00',
 }
 
 MAIN_KB = ReplyKeyboardMarkup([
@@ -253,7 +253,7 @@ async def ask_comment(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     await notify_order(ctx.application, order)
     await update.message.reply_text(
         "✅ Замовлення прийнято! Менеджер зв'яжеться найближчим часом.\n\n"
-        "Вікторія: +38 093 624-60-00\nАндрій: +38 099 266-26-88\n\nДякуємо що обрали Кінезіс!",
+        "Андрій: +38 099 266-26-88\n\nДякуємо що обрали Кінезіс!",
         reply_markup=MAIN_KB
     )
     return ConversationHandler.END
@@ -392,7 +392,7 @@ async def handle_text(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text('🛡️ Гарантія 12 місяців. Повернення протягом 14 днів.'); return
     if txt == 'Контакти':
         await update.message.reply_text(
-            '📞 Вікторія: +38 093 624-60-00\n📞 Андрій: +38 099 266-26-88\n'
+            '📞 Андрій: +38 099 266-26-88\n'
             '📧 sport_ok@ukr.net\n🕐 Пн–Пт: 9:00–18:00, Сб: 10:00–15:00'); return
     if txt in FAQ:
         await update.message.reply_text(FAQ[txt]); return
@@ -400,11 +400,11 @@ async def handle_text(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     # Невідоме — пересилаємо менеджерам
     await forward_question(ctx.application, uid, update.effective_user.username, txt)
     if is_working_hours():
-        reply = 'Дякуємо за питання! Менеджер відповість найближчим часом.\n\n📞 +38 093 624-60-00'
+        reply = 'Дякуємо за питання! Менеджер відповість найближчим часом.\n\n📞 +38 099 266-26-88'
     else:
         reply = ('Дякуємо за звернення! Зараз ми не в мережі.\n\n'
                  'Відповідаємо: Пн–Пт 9:00–18:00, Сб 10:00–15:00.\n\n'
-                 'Хочете щоб передзвонили? Напишіть номер телефону 👇\n\n📞 +38 093 624-60-00')
+                 'Хочете щоб передзвонили? Напишіть номер телефону 👇\n\n📞 +38 099 266-26-88')
     await update.message.reply_text(reply, reply_markup=MAIN_KB)
 
 def make_http_handler(tg_app):
