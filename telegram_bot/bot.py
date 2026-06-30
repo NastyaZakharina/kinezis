@@ -468,6 +468,18 @@ def start_http():
     logging.info(f'HTTP server on port {port}')
     server.serve_forever()
 
+def start_ping():
+    import time, urllib.request
+    port = int(os.environ.get('PORT', 8080))
+    url = f'http://localhost:{port}/contact'
+    time.sleep(30)  # wait for HTTP server to start
+    while True:
+        try:
+            urllib.request.urlopen(url, timeout=5)
+        except Exception:
+            pass
+        time.sleep(600)  # ping every 10 minutes
+
 def main():
     app = Application.builder().token(TOKEN).build()
     conv = ConversationHandler(
@@ -486,9 +498,9 @@ def main():
     app.add_handler(CommandHandler('clients', cmd_clients))
     app.add_handler(CommandHandler('export', cmd_export))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_text))
-    # Start HTTP server in background thread
-    t = threading.Thread(target=start_http, daemon=True)
-    t.start()
+    # Start HTTP server and keep-alive ping in background threads
+    threading.Thread(target=start_http, daemon=True).start()
+    threading.Thread(target=start_ping, daemon=True).start()
     print('✅ Бот @Kineziss_bot запущений (Python)!')
     app.run_polling(drop_pending_updates=True)
 
