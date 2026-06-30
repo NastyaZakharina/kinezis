@@ -290,7 +290,8 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     fetch(FORM_ENDPOINT + '/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, phone, product, message })
+      body: JSON.stringify({ name, phone, product, message }),
+      keepalive: true
     }).catch(() => {});
   }
 
