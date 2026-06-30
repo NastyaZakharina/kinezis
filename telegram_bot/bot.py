@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import os, json, csv, logging, asyncio, threading
+import os, json, csv, logging, threading
 from datetime import datetime, timedelta
 from pathlib import Path
 from http.server import BaseHTTPRequestHandler, HTTPServer
@@ -407,15 +407,33 @@ async def handle_text(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
                  'Хочете щоб передзвонили? Напишіть номер телефону 👇\n\n📞 +38 099 266-26-88')
     await update.message.reply_text(reply, reply_markup=MAIN_KB)
 
-def make_http_handler(tg_app):
+def tg_send(text):
+    """Send message to all managers via Telegram API directly (sync, thread-safe)."""
+    import urllib.request
+    for mid in load_managers():
+        try:
+            payload = json.dumps({'chat_id': mid, 'text': text}).encode()
+            req = urllib.request.Request(
+                f'https://api.telegram.org/bot{TOKEN}/sendMessage',
+                data=payload,
+                headers={'Content-Type': 'application/json'}
+            )
+            urllib.request.urlopen(req, timeout=5)
+        except Exception as e:
+            logging.warning(f'tg_send {mid}: {e}')
+
+def make_http_handler():
     class Handler(BaseHTTPRequestHandler):
         def log_message(self, *a): pass
 
-        def do_OPTIONS(self):
-            self.send_response(200)
-            self.send_header('Access-Control-Allow-Origin', 'https://kinezis.com.ua')
+        def _cors(self):
+            self.send_header('Access-Control-Allow-Origin', '*')
             self.send_header('Access-Control-Allow-Methods', 'POST, OPTIONS')
             self.send_header('Access-Control-Allow-Headers', 'Content-Type')
+
+        def do_OPTIONS(self):
+            self.send_response(200)
+            self._cors()
             self.end_headers()
 
         def do_POST(self):
@@ -432,29 +450,21 @@ def make_http_handler(tg_app):
                         f"Ім'я: {name}\nТелефон: {phone}"
                         + (f'\nТовар: {product}' if product else '')
                         + (f'\nПовідомлення: {message}' if message else ''))
-                save_order(product or '—', name, phone, message or '—',
-                           'web', None)
-                asyncio.run_coroutine_threadsafe(
-                    _notify_text(tg_app, text), tg_app.bot._loop
-                )
+                save_order(product or '—', name, phone, message or '—', 'web', None)
+                tg_send(text)
                 self.send_response(200)
-                self.send_header('Access-Control-Allow-Origin', 'https://kinezis.com.ua')
+                self._cors()
                 self.send_header('Content-Type', 'application/json')
                 self.end_headers()
                 self.wfile.write(b'{"ok":true}')
             except Exception as ex:
                 logging.warning(f'contact endpoint: {ex}')
-                self.send_response(500); self.end_headers()
+                self.send_response(500); self._cors(); self.end_headers()
     return Handler
 
-async def _notify_text(app, text):
-    for mid in load_managers():
-        try: await app.bot.send_message(mid, text)
-        except Exception as e: logging.warning(f'web-notify {mid}: {e}')
-
-def start_http(tg_app):
+def start_http():
     port = int(os.environ.get('PORT', 8080))
-    server = HTTPServer(('0.0.0.0', port), make_http_handler(tg_app))
+    server = HTTPServer(('0.0.0.0', port), make_http_handler())
     logging.info(f'HTTP server on port {port}')
     server.serve_forever()
 
@@ -477,7 +487,7 @@ def main():
     app.add_handler(CommandHandler('export', cmd_export))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_text))
     # Start HTTP server in background thread
-    t = threading.Thread(target=start_http, args=(app,), daemon=True)
+    t = threading.Thread(target=start_http, daemon=True)
     t.start()
     print('✅ Бот @Kineziss_bot запущений (Python)!')
     app.run_polling(drop_pending_updates=True)
