@@ -661,6 +661,21 @@ ul { list-style: none; }
 }
 .product-description p { font-size: 16px; color: var(--body); line-height: 1.8; margin-bottom: 16px; }
 
+/* FAQ on product page */
+.product-faq { padding: 48px 0 0; }
+.faq-list { display: flex; flex-direction: column; gap: 10px; }
+.faq-item { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.faq-item__q {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  padding: 18px 22px; font-weight: 600; font-size: 15px; color: var(--dark);
+  cursor: pointer; list-style: none; user-select: none;
+}
+.faq-item__q::-webkit-details-marker { display: none; }
+.faq-item__q::after { content: '+'; font-size: 20px; font-weight: 400; flex-shrink: 0; color: var(--teal); transition: transform .2s; }
+.faq-item[open] .faq-item__q::after { transform: rotate(45deg); }
+.faq-item[open] { background: var(--bg-tint); }
+.faq-item__a { padding: 0 22px 18px; font-size: 14px; color: var(--muted); line-height: 1.7; margin: 0; }
+
 /* ============================================================
    ABOUT PAGE
    ============================================================ */

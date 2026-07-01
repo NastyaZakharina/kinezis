@@ -208,6 +208,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   `;
   descSection.appendChild(descDiv);
 
+  // FAQ block
+  const faqDiv = document.createElement('div');
+  faqDiv.className = 'product-faq';
+  faqDiv.innerHTML = `
+    <h2 style="font-family:'Unbounded',sans-serif;font-size:clamp(18px,2.5vw,24px);font-weight:700;margin:0 0 24px">Часті запитання</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary class="faq-item__q">Чи підходить тренажер після операції або при захворюванні хребта?</summary>
+        <p class="faq-item__a">Так, тренажери МТБ розроблені саме для реабілітації після операцій, грижі, остеохондрозу та інших захворювань. Перед початком занять рекомендуємо проконсультуватись з лікарем. Наш фахівець у Telegram також підкаже програму вправ під ваш стан.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-item__q">Скільки часу займає збирання?</summary>
+        <p class="faq-item__a">У комплекті є детальна інструкція з монтажу. МТБ-1 збирається за 30–60 хвилин однією людиною. МТБ-4 та складніші моделі — за 1–2 години, бажано вдвох. Якщо виникають труднощі — пишіть у Telegram, допоможемо онлайн.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-item__q">Яке навантаження витримує тренажер?</summary>
+        <p class="faq-item__a">Тренажери МТБ розраховані на навантаження до 150 кг і щоденне використання в умовах реабілітаційних клінік. Рама виготовлена зі сталевого профілю, вузли кріплення посилені. Гарантія — 12 місяців.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-item__q">Як відбувається доставка і скільки коштує?</summary>
+        <p class="faq-item__a">Доставляємо «Новою Поштою» або «Укрпоштою» по всій Україні. По Чернігову — безкоштовна доставка від 20 000 грн. Терміни доставки — 1–3 робочі дні після відправлення. Точну вартість доставки розраховуємо при оформленні замовлення.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-item__q">Чи можна повернути або обміняти товар?</summary>
+        <p class="faq-item__a">Так, протягом 14 днів відповідно до Закону України «Про захист прав споживачів» — за умови збереження товарного вигляду та комплектації. Детальніше у <a href="return-policy.html" style="color:var(--teal)">політиці повернення</a>.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-item__q">Чи є відеоінструкції з вправ?</summary>
+        <p class="faq-item__a">Після покупки наш фахівець у Telegram надішле базову програму вправ. Також рекомендуємо розділ <a href="blog.html" style="color:var(--teal)">Блог</a> — там понад 50 статей з конкретними вправами для різних діагнозів.</p>
+      </details>
+    </div>
+  `;
+  descSection.appendChild(faqDiv);
+
   // Related products
   const related = products.filter(p => p.category === product.category && p.id !== product.id).slice(0, 4);
   const relGrid = document.getElementById('relatedGrid');
