@@ -422,10 +422,10 @@ async def cmd_clients(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
 async def callback_sold(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     """Manager pressed 'Sold — send program' inline button."""
     query = update.callback_query
-    await query.answer()
     if query.from_user.id not in load_managers():
-        await query.answer('❌ Тільки для менеджерів', show_alert=True)
+        await query.answer('❌ Спочатку виконайте /addmanager', show_alert=True)
         return
+    await query.answer()
     try:
         _, client_id, product_id = query.data.split(':', 2)
         client_id = int(client_id)
