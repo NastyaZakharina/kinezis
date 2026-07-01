@@ -5,8 +5,8 @@ from pathlib import Path
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from telegram import (Update, ReplyKeyboardMarkup, InlineKeyboardMarkup,
                       InlineKeyboardButton, KeyboardButton)
-from telegram.ext import (Application, CommandHandler, MessageHandler,
-                          ConversationHandler, filters, ContextTypes)
+from telegram.ext import (Application, CommandHandler, CallbackQueryHandler,
+                          MessageHandler, ConversationHandler, filters, ContextTypes)
 
 logging.basicConfig(format='%(asctime)s %(levelname)s %(message)s', level=logging.INFO)
 
@@ -75,6 +75,82 @@ PRODUCTS = {
     'mtb26': 'Ручка на трицепс MTB-26',
     'mtb27': "Подовжувач м'який MTB-27",
 }
+
+PROGRAMS = {
+    'mtb': (
+        "🏋️ *Базова програма вправ на тренажері МТБ*\n\n"
+        "Виконуйте вранці або вдень, 3–4 рази на тиждень.\n"
+        "Починайте з мінімального опору — 5–10 кг.\n\n"
+        "*1. Тяга верхнього блоку до грудей* (широчайші м'язи спини)\n"
+        "Сядьте або стоячи, тягніть до грудей. 3 сети × 15 повторень\n\n"
+        "*2. Тяга нижнього блоку лежачи на спині* (хребет, поперек)\n"
+        "Ляжте на підлогу ногами до тренажера, тягніть до живота. 3 × 15\n\n"
+        "*3. Жим ногами лежачи* (стегна, сідниці, коліна)\n"
+        "Ляжте на спину, упирайтесь ногами у рукоятку. 3 × 20\n\n"
+        "*4. Розведення рук стоячи* (плечі, грудь)\n"
+        "Стоячи між блоками, розводьте руки в сторони. 3 × 12\n\n"
+        "*5. Розтяжка* — після кожного заняття 5–10 хвилин\n\n"
+        "❗ *Важливо:* рухи повільні, без ривків. Дихання не затримувати.\n\n"
+        "Питання — пишіть сюди, підкажемо! 📞 +38 099 266-26-88"
+    ),
+    'bench': (
+        "🛋️ *Базова програма вправ на реабілітаційній лавці*\n\n"
+        "3–4 рази на тиждень, починайте з легкого навантаження.\n\n"
+        "*1. Гіперекстензія* (зміцнення м'язів спини)\n"
+        "Лягайте животом, піднімайте корпус до прямої лінії. 3 × 15\n\n"
+        "*2. Підйом ніг лежачи на спині* (прес, поперек)\n"
+        "Пряма спина, ноги піднімайте на 45°. 3 × 15\n\n"
+        "*3. Планка* (кор, стабілізація хребта)\n"
+        "30–60 секунд × 3 підходи\n\n"
+        "*4. Скручування* (прес)\n"
+        "На лавці, кут 30°. 3 × 20\n\n"
+        "*5. Розтяжка хребта* — «кішка-корова» на підлозі після кожного заняття\n\n"
+        "❗ *При болях у спині:* виключіть вправи 2 і 4 до консультації з лікарем.\n\n"
+        "Питання — пишіть! 📞 +38 099 266-26-88"
+    ),
+    'massage': (
+        "🛏️ *Рекомендації з використання масажного столу*\n\n"
+        "Масажний стіл — це робочий інструмент терапевта. Але є вправи які можна виконувати самостійно:\n\n"
+        "*1. Релаксація на животі* (розвантаження хребта)\n"
+        "5–10 хвилин лежачи на животі без подушки — знімає навантаження з поперека.\n\n"
+        "*2. Розтяжка грудного відділу*\n"
+        "Ляжте на живіт, руки вперед, піднімайте плечі. 10–15 разів.\n\n"
+        "*3. Масаж спини партнером або масажистом* — 2 рази на тиждень\n\n"
+        "Рекомендуємо поєднувати зі статтями нашого блогу:\n"
+        "kinezis.com.ua/blog.html\n\n"
+        "Питання — пишіть! 📞 +38 099 266-26-88"
+    ),
+    'bars': (
+        "🦯 *Базова програма вправ на паралельних брусах і сходах*\n\n"
+        "Ідеально для відновлення після операцій, інсульту, травм ніг.\n"
+        "Починайте під наглядом або притримуючись за опору.\n\n"
+        "*1. Ходьба між брусами* (відновлення ходи)\n"
+        "Починайте з 5 хвилин, 2 рази на день. Поступово збільшуйте.\n\n"
+        "*2. Перенесення ваги з ноги на ногу* (рівновага)\n"
+        "Стоячи між брусами, 3 × 20 разів\n\n"
+        "*3. Підйом на носки* (литкові м'язи)\n"
+        "Тримаючись за бруси. 3 × 20\n\n"
+        "*4. Напівприсідання* (колінні, стегнові суглоби)\n"
+        "До кута 90°. 3 × 10–15\n\n"
+        "*5. Підйом по сходах* (якщо є сходи)\n"
+        "Починайте з 1 сходинки туди-назад, поступово додавайте\n\n"
+        "❗ Не поспішайте. Якість важливіша за кількість.\n\n"
+        "Питання — пишіть! 📞 +38 099 266-26-88"
+    ),
+}
+
+def get_program(product_id):
+    """Return exercise program text for a given product_id."""
+    pid = product_id.lower()
+    if any(pid.startswith(k) for k in ('mtb', 'mtv')):
+        return PROGRAMS['mtb']
+    if pid.startswith('bench') or 'hyperext' in pid or 'roman' in pid or pid.startswith('svs'):
+        return PROGRAMS['bench']
+    if pid.startswith('massage'):
+        return PROGRAMS['massage']
+    if pid.startswith('bars') or pid.startswith('stairs'):
+        return PROGRAMS['bars']
+    return None
 
 FAQ = {
     'Як зробити замовлення': 'Оберіть товар у каталозі на сайті та натисніть Замовити. Бот проведе через оформлення, менеджер зателефонує для підтвердження.',
@@ -171,7 +247,8 @@ def make_greeting(first_name=''):
 
 async def notify_order(app, order):
     now = datetime.now().strftime('%d.%m.%Y %H:%M')
-    uinfo = f'@{order["uname"]}' if order.get('uname') else f'ID: {order["uid"]}'
+    uid = order.get('uid', 'web')
+    uinfo = f'@{order["uname"]}' if order.get('uname') else f'ID: {uid}'
     text = (f'🛒 НОВЕ ЗАМОВЛЕННЯ!\n\n'
             f'Товар: {order["product"]}\n'
             f"Ім'я: {order['name']}\n"
@@ -179,9 +256,15 @@ async def notify_order(app, order):
             f'Коментар: {order["comment"]}\n'
             f'Клієнт: {uinfo}\n'
             f'Час: {now}')
-    btn = InlineKeyboardMarkup([[
-        InlineKeyboardButton('✍️ Написати клієнту', url=f'tg://user?id={order["uid"]}')
-    ]])
+
+    product_id = order.get('product_id', '')
+    buttons = []
+    if str(uid) != 'web':
+        buttons.append(InlineKeyboardButton('✍️ Написати клієнту', url=f'tg://user?id={uid}'))
+    if str(uid) != 'web' and product_id and get_program(product_id):
+        buttons.append(InlineKeyboardButton('✅ Продано — надіслати програму', callback_data=f'sold:{uid}:{product_id}'))
+    btn = InlineKeyboardMarkup([buttons]) if buttons else None
+
     for mid in load_managers():
         try: await app.bot.send_message(mid, text, reply_markup=btn)
         except Exception as e: logging.warning(f'notify {mid}: {e}')
@@ -210,6 +293,7 @@ async def cmd_start(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     product = PRODUCTS.get(prod_id)
     if product:
         ctx.user_data['product'] = product
+        ctx.user_data['product_id'] = prod_id
         hi = 'Доброго дня! Вас вітає магазин Кінезіс 👋' if is_working_hours() else 'Доброго дня! Вас вітає магазин Кінезіс.'
         await update.message.reply_text(
             f'{hi}\n\nВи обрали: {product}\n\nВведіть ваше ім\'я:',
@@ -248,7 +332,8 @@ async def ask_phone(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
 async def ask_comment(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     comment = '—' if update.message.text == 'Пропустити' else update.message.text
     uid, uname = update.effective_user.id, update.effective_user.username
-    order = {**ctx.user_data, 'comment': comment, 'uid': uid, 'uname': uname}
+    order = {**ctx.user_data, 'comment': comment, 'uid': uid, 'uname': uname,
+             'product_id': ctx.user_data.get('product_id', '')}
     save_order(order['product'], order['name'], order['phone'], comment, uid, uname)
     await notify_order(ctx.application, order)
     await update.message.reply_text(
@@ -333,6 +418,69 @@ async def cmd_clients(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
         text = text[:4000] + '\n\n... (список обрізано, скористайтесь /export)'
 
     await update.message.reply_text(text)
+
+async def callback_sold(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
+    """Manager pressed 'Sold — send program' inline button."""
+    query = update.callback_query
+    await query.answer()
+    if query.from_user.id not in load_managers():
+        await query.answer('❌ Тільки для менеджерів', show_alert=True)
+        return
+    try:
+        _, client_id, product_id = query.data.split(':', 2)
+        client_id = int(client_id)
+    except Exception:
+        await query.edit_message_reply_markup(reply_markup=None)
+        return
+    program = get_program(product_id)
+    if not program:
+        await query.answer('Програма для цього товару не знайдена', show_alert=True)
+        return
+    product_name = PRODUCTS.get(product_id, product_id)
+    intro = f'🎉 Вітаємо з покупкою *{product_name}*!\n\nОсь ваша базова програма вправ:\n\n'
+    try:
+        await ctx.bot.send_message(client_id, intro + program, parse_mode='Markdown')
+        await query.edit_message_reply_markup(reply_markup=InlineKeyboardMarkup([[
+            InlineKeyboardButton('✅ Програму надіслано клієнту', callback_data='noop')
+        ]]))
+        logging.info(f'Program sent to client {client_id} for product {product_id}')
+    except Exception as e:
+        await query.answer(f'Помилка: {e}', show_alert=True)
+        logging.warning(f'send program to {client_id}: {e}')
+
+async def callback_noop(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
+    await update.callback_query.answer()
+
+async def cmd_sold(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
+    """Manual: /sold [client_chat_id] [product_id]
+    Use when client ordered via web form (no bot chat_id from order flow)."""
+    if update.effective_user.id not in load_managers():
+        return
+    if not ctx.args or len(ctx.args) < 2:
+        await update.message.reply_text(
+            '📖 Використання:\n/sold [chat_id клієнта] [product_id]\n\n'
+            'Наприклад: /sold 123456789 mtb1\n\n'
+            'Chat ID клієнта видно в /clients або в деталях замовлення.')
+        return
+    try:
+        client_id = int(ctx.args[0])
+        product_id = ctx.args[1]
+    except ValueError:
+        await update.message.reply_text('❌ Невірний формат. Chat ID має бути числом.')
+        return
+    program = get_program(product_id)
+    if not program:
+        await update.message.reply_text(
+            f'❌ Програму для "{product_id}" не знайдено.\n'
+            'Доступні: mtb1, mtb2, mtb4, bench1, massage1, bars1, stairs1 тощо')
+        return
+    product_name = PRODUCTS.get(product_id, product_id)
+    intro = f'🎉 Вітаємо з покупкою *{product_name}*!\n\nОсь ваша базова програма вправ:\n\n'
+    try:
+        await ctx.bot.send_message(client_id, intro + program, parse_mode='Markdown')
+        await update.message.reply_text(f'✅ Програму надіслано клієнту (ID: {client_id})')
+    except Exception as e:
+        await update.message.reply_text(f'❌ Помилка: {e}\nМожливо клієнт не писав боту.')
 
 async def cmd_export(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     if update.effective_user.id not in load_managers():
@@ -497,6 +645,9 @@ def main():
     app.add_handler(CommandHandler('listorders', cmd_listorders))
     app.add_handler(CommandHandler('clients', cmd_clients))
     app.add_handler(CommandHandler('export', cmd_export))
+    app.add_handler(CommandHandler('sold', cmd_sold))
+    app.add_handler(CallbackQueryHandler(callback_sold, pattern=r'^sold:'))
+    app.add_handler(CallbackQueryHandler(callback_noop, pattern=r'^noop$'))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_text))
     # Start HTTP server and keep-alive ping in background threads
     threading.Thread(target=start_http, daemon=True).start()
