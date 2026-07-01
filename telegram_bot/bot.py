@@ -508,19 +508,25 @@ async def handle_text(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     uid, txt = u.id, update.message.text
     save_contact(uid, u.username, u.first_name)
 
-    # Менеджер відповідає через Reply
-    if uid in load_managers() and update.message.reply_to_message:
-        key = f'{uid}_{update.message.reply_to_message.message_id}'
-        target = load_map().get(key)
-        if target:
-            mgr_name = update.effective_user.first_name or 'Менеджер'
-            await ctx.bot.send_message(target, f'💬 {mgr_name} з Кінезіс відповідає:\n\n{txt}')
-            await update.message.reply_text('✅ Відповідь надіслано клієнту')
-            for mid in load_managers():
-                if mid != uid:
-                    try: await ctx.bot.send_message(mid, f'ℹ️ {mgr_name} вже відповів цьому клієнту.')
-                    except: pass
-            return
+    # Менеджер — не пересилаємо його повідомлення як клієнтські
+    if uid in load_managers():
+        if update.message.reply_to_message:
+            key = f'{uid}_{update.message.reply_to_message.message_id}'
+            target = load_map().get(key)
+            if target:
+                mgr_name = update.effective_user.first_name or 'Менеджер'
+                await ctx.bot.send_message(target, f'💬 {mgr_name} з Кінезіс відповідає:\n\n{txt}')
+                await update.message.reply_text('✅ Відповідь надіслано клієнту')
+                for mid in load_managers():
+                    if mid != uid:
+                        try: await ctx.bot.send_message(mid, f'ℹ️ {mgr_name} вже відповів цьому клієнту.')
+                        except: pass
+            else:
+                await update.message.reply_text(
+                    '⚠️ Клієнта для цього Reply не знайдено — можливо сесія застаріла.\n'
+                    'Напишіть клієнту напряму через кнопку «Написати клієнту».')
+        # Менеджер написав просто так — ігноруємо, не пересилаємо
+        return
 
     if txt == 'Назад':
         await update.message.reply_text('Головне меню:', reply_markup=MAIN_KB); return
