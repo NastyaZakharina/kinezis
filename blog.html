@@ -689,6 +689,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </a>
 
   </div>
+
+  <!-- PAGINATION -->
+  <div id="blog-pagination" style="display:flex;justify-content:center;align-items:center;gap:8px;margin-top:48px;flex-wrap:wrap"></div>
+
 </div>
 
 <style>
@@ -741,18 +745,78 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>
 (function(){
+  var PER_PAGE = 12;
+  var currentCat = 'all';
+  var currentPage = 1;
+
   var btns = document.querySelectorAll('.blog-filter');
-  var cards = document.querySelectorAll('#blog-grid .blog-card');
+  var allCards = Array.from(document.querySelectorAll('#blog-grid .blog-card'));
+  var paginationEl = document.getElementById('blog-pagination');
+
+  function getVisible() {
+    return allCards.filter(function(c){
+      return currentCat === 'all' || c.dataset.cat === currentCat;
+    });
+  }
+
+  function renderPage() {
+    var visible = getVisible();
+    var totalPages = Math.ceil(visible.length / PER_PAGE);
+    if (currentPage > totalPages) currentPage = 1;
+    var start = (currentPage - 1) * PER_PAGE;
+    var end = start + PER_PAGE;
+
+    allCards.forEach(function(c){ c.style.display = 'none'; });
+    visible.slice(start, end).forEach(function(c){ c.style.display = ''; });
+
+    renderPagination(totalPages);
+    window.scrollTo({ top: document.getElementById('blog-filters').offsetTop - 80, behavior: 'smooth' });
+  }
+
+  function renderPagination(totalPages) {
+    paginationEl.innerHTML = '';
+    if (totalPages <= 1) return;
+
+    function makeBtn(label, page, active, disabled) {
+      var b = document.createElement('button');
+      b.textContent = label;
+      b.style.cssText = 'min-width:40px;height:40px;padding:0 14px;border-radius:8px;border:1.5px solid ' +
+        (active ? 'var(--teal)' : 'var(--border)') +
+        ';background:' + (active ? 'var(--teal)' : '#fff') +
+        ';color:' + (active ? '#fff' : (disabled ? 'var(--muted)' : 'var(--dark)')) +
+        ';font-size:14px;font-weight:' + (active ? '600' : '400') +
+        ';cursor:' + (disabled ? 'default' : 'pointer') + ';transition:.15s';
+      if (!disabled && !active) {
+        b.addEventListener('click', function(){ currentPage = page; renderPage(); });
+        b.addEventListener('mouseenter', function(){ this.style.borderColor='var(--teal)'; this.style.color='var(--teal)'; });
+        b.addEventListener('mouseleave', function(){ this.style.borderColor='var(--border)'; this.style.color='var(--dark)'; });
+      }
+      return b;
+    }
+
+    paginationEl.appendChild(makeBtn('←', currentPage - 1, false, currentPage === 1));
+    if (!paginationEl.lastChild.disabled) paginationEl.lastChild.addEventListener('click', function(){ currentPage--; renderPage(); });
+
+    for (var i = 1; i <= totalPages; i++) {
+      paginationEl.appendChild(makeBtn(String(i), i, i === currentPage, false));
+    }
+
+    var nextBtn = makeBtn('→', currentPage + 1, false, currentPage === totalPages);
+    if (currentPage < totalPages) nextBtn.addEventListener('click', function(){ currentPage++; renderPage(); });
+    paginationEl.appendChild(nextBtn);
+  }
+
   btns.forEach(function(btn){
     btn.addEventListener('click', function(){
-      var cat = this.dataset.cat;
+      currentCat = this.dataset.cat;
+      currentPage = 1;
       btns.forEach(function(b){ b.classList.remove('blog-filter--active'); });
       this.classList.add('blog-filter--active');
-      cards.forEach(function(c){
-        c.style.display = (cat === 'all' || c.dataset.cat === cat) ? '' : 'none';
-      });
+      renderPage();
     });
   });
+
+  renderPage();
 })();
 </script>
 
