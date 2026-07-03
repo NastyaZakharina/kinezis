@@ -78,6 +78,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+<!-- Callback Modal -->
+<div class="modal-overlay" id="callbackModal">
+  <div class="modal" style="position:relative">
+    <button class="modal__close" id="callbackClose">×</button>
+    <div class="modal__icon">📞</div>
+    <h2>Замовити дзвінок</h2>
+    <p>Залиште номер — передзвонимо протягом 30 хвилин у робочий час (пн–пт, 9:00–18:00)</p>
+    <form action="https://formsubmit.co/sport_ok@ukr.net" method="POST" style="display:flex;flex-direction:column;gap:12px;margin-top:16px">
+      <input type="hidden" name="_subject" value="Замовлення дзвінка з сайту Кінезіс">
+      <input type="hidden" name="_next" value="https://kinezis.com.ua/thank-you.html">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="product" id="callbackProduct" value="">
+      <input type="text" name="name" placeholder="Ваше ім'я" required style="padding:12px 16px;border:1.5px solid var(--border);border-radius:10px;font-size:15px;font-family:inherit;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--border)'">
+      <input type="tel" name="phone" placeholder="+38 0__ ___ __ __" required style="padding:12px 16px;border:1.5px solid var(--border);border-radius:10px;font-size:15px;font-family:inherit;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--border)'">
+      <button type="submit" class="btn btn--primary btn--full btn--lg">📞 Передзвоніть мені</button>
+    </form>
+    <p style="text-align:center;margin-top:14px;font-size:13px;color:var(--muted)">Або зателефонуйте самі: <a href="tel:+380992662688" style="color:var(--teal);font-weight:600">+38 (099) 266-26-88</a></p>
+  </div>
+</div>
+
 <!-- Telegram CTA -->
 <div class="modal-overlay" id="orderModal">
   <div class="modal" style="position:relative">
@@ -172,6 +192,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.93 6.78l-1.68 7.93c-.12.54-.45.67-.91.42l-2.5-1.84-1.21 1.16c-.13.13-.25.25-.5.25l.18-2.53 4.6-4.15c.2-.18-.04-.27-.31-.1L7.55 14.34l-2.43-.76c-.53-.16-.54-.53.11-.78l9.5-3.66c.44-.16.82.11.2.64z"/></svg>
           Запитати в Telegram
         </a>
+        <button class="btn btn--outline btn--lg" onclick="showCallbackModal('${product.id}','${product.name.replace(/'/g,"\\'")}')">
+          📞 Замовити дзвінок
+        </button>
       </div>
       ${product.specs && product.specs.length ? `
       <div class="product-info__specs">
@@ -180,6 +203,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>` : ''}
     </div>
   `;
+
+  // Product schema markup
+  const schema = document.createElement('script');
+  schema.type = 'application/ld+json';
+  schema.textContent = JSON.stringify({
+    "@context":"https://schema.org","@type":"Product",
+    "name": product.name,
+    "description": product.short,
+    "image": product.image,
+    "brand":{"@type":"Brand","name":"Кінезіс"},
+    "offers":{"@type":"Offer","price": product.price,"priceCurrency":"UAH",
+      "availability":"https://schema.org/InStock",
+      "url": "https://kinezis.com.ua/product.html?id=" + product.id,
+      "seller":{"@type":"Organization","name":"Кінезіс","url":"https://kinezis.com.ua"}}
+  });
+  document.head.appendChild(schema);
 
   // Description block
   const descSection = document.querySelector('.product-page .container');
@@ -207,6 +246,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   `;
   descSection.appendChild(descDiv);
+
+  // YouTube section
+  const ytDiv = document.createElement('div');
+  ytDiv.style.cssText = 'margin-top:40px';
+  ytDiv.innerHTML = `
+    <h2 style="font-family:'Unbounded',sans-serif;font-size:clamp(16px,2vw,20px);font-weight:700;margin:0 0 16px">Відеоогляди тренажерів</h2>
+    <div style="background:var(--bg-tint);border:1px solid var(--border);border-radius:16px;padding:28px 32px;display:flex;align-items:center;gap:24px;flex-wrap:wrap">
+      <div style="font-size:48px;line-height:1">▶️</div>
+      <div style="flex:1;min-width:200px">
+        <strong style="display:block;margin-bottom:6px">Відеоогляди на YouTube від Сіверспорт</strong>
+        <p style="color:var(--muted);font-size:14px;margin:0 0 16px">Дивіться відео про тренажери МТБ, вправи і реабілітаційні програми на нашому YouTube-каналі</p>
+        <a href="https://www.youtube.com/@siversport" target="_blank" rel="noopener" class="btn btn--outline" style="text-decoration:none">Перейти на YouTube →</a>
+      </div>
+    </div>
+  `;
+  descSection.appendChild(ytDiv);
 
   // FAQ block
   const faqDiv = document.createElement('div');
@@ -256,6 +311,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   const modalClose = document.getElementById('modalClose');
   const modalCancel = document.getElementById('modalCancelBtn');
   const modalTgLink = document.getElementById('modalTgLink');
+
+  // Callback modal
+  const callbackModal = document.getElementById('callbackModal');
+  document.getElementById('callbackClose').addEventListener('click', () => {
+    callbackModal.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+  callbackModal.addEventListener('click', e => { if (e.target === callbackModal) { callbackModal.classList.remove('open'); document.body.style.overflow = ''; }});
+  window.showCallbackModal = function(pid, pname) {
+    document.getElementById('callbackProduct').value = pname;
+    callbackModal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
 
   window.showOrderModal = function(pid, pname) {
     modalTgLink.href = `${TELEGRAM_BOT}?start=${pid}`;
