@@ -85,14 +85,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="modal__icon">📞</div>
     <h2>Замовити дзвінок</h2>
     <p>Залиште номер — передзвонимо протягом 30 хвилин у робочий час (пн–пт, 9:00–18:00)</p>
-    <form action="https://formsubmit.co/sport_ok@ukr.net" method="POST" style="display:flex;flex-direction:column;gap:12px;margin-top:16px">
-      <input type="hidden" name="_subject" value="Замовлення дзвінка з сайту Кінезіс">
-      <input type="hidden" name="_next" value="https://kinezis.com.ua/thank-you.html">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="product" id="callbackProduct" value="">
-      <input type="text" name="name" placeholder="Ваше ім'я" required style="padding:12px 16px;border:1.5px solid var(--border);border-radius:10px;font-size:15px;font-family:inherit;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--border)'">
-      <input type="tel" name="phone" placeholder="+38 0__ ___ __ __" required style="padding:12px 16px;border:1.5px solid var(--border);border-radius:10px;font-size:15px;font-family:inherit;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--border)'">
-      <button type="submit" class="btn btn--primary btn--full btn--lg">📞 Передзвоніть мені</button>
+    <form id="callbackForm" style="display:flex;flex-direction:column;gap:12px;margin-top:16px">
+      <input type="hidden" id="callbackProduct" value="">
+      <input type="text" id="callbackName" placeholder="Ваше ім'я" required style="padding:12px 16px;border:1.5px solid var(--border);border-radius:10px;font-size:15px;font-family:inherit;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--border)'">
+      <input type="tel" id="callbackPhone" placeholder="+38 0__ ___ __ __" required style="padding:12px 16px;border:1.5px solid var(--border);border-radius:10px;font-size:15px;font-family:inherit;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--border)'">
+      <button type="submit" id="callbackSubmitBtn" class="btn btn--primary btn--full btn--lg">📞 Передзвоніть мені</button>
+      <p id="callbackMsg" style="text-align:center;font-size:14px;display:none"></p>
     </form>
     <p style="text-align:center;margin-top:14px;font-size:13px;color:var(--muted)">Або зателефонуйте самі: <a href="tel:+380992662688" style="color:var(--teal);font-weight:600">+38 (099) 266-26-88</a></p>
   </div>
@@ -321,9 +319,47 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   callbackModal.addEventListener('click', e => { if (e.target === callbackModal) { callbackModal.classList.remove('open'); document.body.style.overflow = ''; }});
   window.showCallbackModal = function(pid, pname) {
     document.getElementById('callbackProduct').value = pname;
+    document.getElementById('callbackName').value = '';
+    document.getElementById('callbackPhone').value = '';
+    document.getElementById('callbackMsg').style.display = 'none';
+    document.getElementById('callbackSubmitBtn').disabled = false;
+    document.getElementById('callbackSubmitBtn').textContent = '📞 Передзвоніть мені';
     callbackModal.classList.add('open');
     document.body.style.overflow = 'hidden';
   };
+
+  document.getElementById('callbackForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('callbackName').value.trim();
+    const phone = document.getElementById('callbackPhone').value.trim();
+    const product = document.getElementById('callbackProduct').value;
+    const btn = document.getElementById('callbackSubmitBtn');
+    const msg = document.getElementById('callbackMsg');
+    btn.disabled = true;
+    btn.textContent = 'Надсилаємо...';
+    const text = `📞 ЗАМОВЛЕННЯ ДЗВІНКА\n\nІм'я: ${name}\nТелефон: ${phone}\nТовар: ${product}`;
+    fetch('https://api.telegram.org/bot8873990753:AAHmzAkTR64xftJytnWqaMf-H7PqVEKC6tc/sendMessage', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({chat_id: '6280298796', text: text})
+    }).then(r => r.json()).then(data => {
+      if (data.ok) {
+        msg.style.display = 'block';
+        msg.style.color = 'var(--teal)';
+        msg.textContent = '✅ Заявку отримано! Передзвонимо протягом 30 хвилин.';
+        btn.style.display = 'none';
+        setTimeout(() => { callbackModal.classList.remove('open'); document.body.style.overflow = ''; }, 3000);
+      } else {
+        throw new Error();
+      }
+    }).catch(() => {
+      msg.style.display = 'block';
+      msg.style.color = '#dc2626';
+      msg.textContent = '❌ Помилка. Зателефонуйте: +38 (099) 266-26-88';
+      btn.disabled = false;
+      btn.textContent = '📞 Передзвоніть мені';
+    });
+  });
 
   window.showOrderModal = function(pid, pname) {
     modalTgLink.href = `${TELEGRAM_BOT}?start=${pid}`;
