@@ -78,18 +78,25 @@ window.saveOrderToFirestore = async function(type, product, phone) {
 window.toggleWishlist = async function(productId, btn) {
   const user = window.__kinezisUser;
   if (!user) { window.location.href = 'login.html?next=' + encodeURIComponent(location.pathname + location.search); return; }
-  const ref = doc(db, 'users', user.uid);
-  const snap = await getDoc(ref);
-  const list = (snap.exists() && snap.data().wishlist) ? [...snap.data().wishlist] : [];
-  const idx = list.indexOf(productId);
-  if (idx >= 0) {
-    list.splice(idx, 1);
-    if (btn) { btn.textContent = '♡ Зберегти'; btn.style.color = ''; }
-  } else {
-    list.push(productId);
-    if (btn) { btn.textContent = '♥ Збережено'; btn.style.color = '#e53e3e'; }
+  if (btn) btn.disabled = true;
+  try {
+    const ref = doc(db, 'users', user.uid);
+    const snap = await getDoc(ref);
+    const list = (snap.exists() && snap.data().wishlist) ? [...snap.data().wishlist] : [];
+    const idx = list.indexOf(productId);
+    if (idx >= 0) {
+      list.splice(idx, 1);
+      if (btn) { btn.textContent = '♡ Зберегти'; btn.style.color = ''; }
+    } else {
+      list.push(productId);
+      if (btn) { btn.textContent = '♥ Збережено'; btn.style.color = '#e53e3e'; }
+    }
+    await setDoc(ref, { wishlist: list }, { merge: true });
+  } catch(e) {
+    console.error('Wishlist error:', e);
+  } finally {
+    if (btn) btn.disabled = false;
   }
-  await setDoc(ref, { wishlist: list }, { merge: true });
 };
 
 window.isInWishlist = async function(productId) {
