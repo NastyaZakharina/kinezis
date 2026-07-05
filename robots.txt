@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin.html
+Disallow: /cabinet.html
+Disallow: /login.html
+Disallow: /thank-you.html
+
+Sitemap: https://kinezis.com.ua/sitemap.xml
