@@ -4,9 +4,8 @@
     {
       "name": "Kinezis Website",
       "runtimeExecutable": "C:\\Program Files\\Git\\usr\\bin\\perl.exe",
-      "runtimeArgs": ["C:\\Users\\user\\AppData\\Local\\Temp\\kinezis_server.pl"],
-      "port": 3000,
-      "autoPort": true
+      "runtimeArgs": ["C:\\Users\\user\\Kinezis\\serve.pl"],
+      "port": 3000
     }
   ]
 }
