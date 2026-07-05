@@ -60,7 +60,7 @@ function productCardHTML(p) {
           </div>
           <div class="product-card__actions">
             <a href="product.html?id=${p.id}" class="btn btn--outline btn--sm">Детальніше</a>
-            <button class="btn btn--primary btn--sm" onclick="orderOnTelegram('${p.id}', '${p.name.replace(/'/g, "\\'")}')">Замовити</button>
+            <button class="btn btn--primary btn--sm" onclick="addToCart('${p.id}','${p.name.replace(/'/g,"\\'")}',${p.price})">В кошик</button>
           </div>
         </div>
       </div>

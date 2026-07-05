@@ -153,6 +153,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script src="data.js"></script>
 <script src="main.js"></script>
+<script src="cart.js"></script>
 <script>
 (function() {
   const params = new URLSearchParams(location.search);
@@ -183,8 +184,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="product-info__price-note">Ціна вказана з ПДВ. Доставка по всій Україні.</div>
       </div>
       <div class="product-info__actions">
+        <button class="btn btn--primary btn--lg" onclick="addToCart('${product.id}','${product.name.replace(/'/g,"\\'")}',${product.price})">
+          🛒 В кошик
+        </button>
         <button class="btn btn--orange btn--lg" onclick="showOrderModal('${product.id}', '${product.name.replace(/'/g, "\\'")}')">
-          🛒 Замовити зараз
+          Замовити зараз
         </button>
         <a href="https://t.me/Kineziss_bot" target="_blank" class="btn btn--outline btn--lg">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.93 6.78l-1.68 7.93c-.12.54-.45.67-.91.42l-2.5-1.84-1.21 1.16c-.13.13-.25.25-.5.25l.18-2.53 4.6-4.15c.2-.18-.04-.27-.31-.1L7.55 14.34l-2.43-.76c-.53-.16-.54-.53.11-.78l9.5-3.66c.44-.16.82.11.2.64z"/></svg>
@@ -294,6 +298,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   `;
   descSection.appendChild(faqDiv);
+
+  // Cross-sell
+  if (typeof renderCrossSell === 'function') renderCrossSell(product);
 
   // Related products
   const related = products.filter(p => p.category === product.category && p.id !== product.id).slice(0, 4);
