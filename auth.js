@@ -14,9 +14,16 @@ const db = getFirestore(app);
 window.__kinezisAuth = auth;
 window.__kinezisDb = db;
 
-onAuthStateChanged(auth, user => {
+onAuthStateChanged(auth, async user => {
   injectHeaderBtn(user);
   window.__kinezisUser = user || null;
+  if (user) {
+    const ref = doc(db, 'users', user.uid);
+    const snap = await getDoc(ref);
+    const update = { email: user.email };
+    if (user.displayName && (!snap.exists() || !snap.data().name)) update.name = user.displayName;
+    await setDoc(ref, update, { merge: true });
+  }
 });
 
 function injectHeaderBtn(user) {
