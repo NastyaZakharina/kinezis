@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Адмін — Кінезіс</title>
+<meta name="robots" content="noindex, nofollow"/>
+<link rel="icon" href="logo.png" type="image/png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Unbounded:wght@400;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+<style>
+.admin-page { min-height: 100vh; background: var(--bg-tint); padding: 32px 0 80px; }
+.admin-header { background: var(--dark); color: #fff; padding: 16px 0; margin-bottom: 32px; }
+.admin-header .container { display: flex; align-items: center; justify-content: space-between; }
+.admin-header h1 { font-family: 'Unbounded', sans-serif; font-size: 18px; font-weight: 700; }
+.admin-header a { color: rgba(255,255,255,.7); font-size: 14px; text-decoration: none; }
+.admin-header a:hover { color: #fff; }
+
+.admin-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+@media(max-width:900px){ .admin-grid { grid-template-columns: 1fr; } }
+
+.admin-card { background: #fff; border-radius: 20px; border: 1px solid var(--border); padding: 24px; }
+.admin-card-title { font-family: 'Unbounded', sans-serif; font-size: 15px; font-weight: 700; color: var(--dark); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+
+/* Stats */
+.admin-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+.admin-stat { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 20px; text-align: center; }
+.admin-stat__num { font-family: 'Unbounded', sans-serif; font-size: 32px; font-weight: 700; color: var(--teal); }
+.admin-stat__label { font-size: 13px; color: var(--muted); margin-top: 4px; }
+
+/* Search */
+.admin-search { display: flex; gap: 10px; margin-bottom: 20px; }
+.admin-search input { flex: 1; padding: 11px 14px; border: 1.5px solid var(--border); border-radius: 10px; font-size: 14px; font-family: inherit; outline: none; transition: border-color .2s; }
+.admin-search input:focus { border-color: var(--teal); }
+.admin-search button { padding: 11px 20px; background: var(--teal); color: #fff; border: none; border-radius: 10px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer; white-space: nowrap; }
+
+/* Users table */
+.users-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.users-table th { text-align: left; padding: 10px 12px; font-size: 12px; font-weight: 600; color: var(--muted); border-bottom: 1px solid var(--border); text-transform: uppercase; letter-spacing: .5px; }
+.users-table td { padding: 12px; border-bottom: 1px solid var(--border); color: var(--dark); vertical-align: middle; }
+.users-table tr:last-child td { border-bottom: none; }
+.users-table tr:hover td { background: var(--bg-tint); }
+
+.tier-badge { display: inline-block; padding: 3px 10px; border-radius: 100px; font-size: 11px; font-weight: 700; }
+.tier-novachok { background: #f0fdf4; color: #166534; }
+.tier-postiynyi { background: #fef9c3; color: #854d0e; }
+.tier-vip { background: #fdf4ff; color: #7e22ce; }
+
+/* Points editor */
+.points-editor { display: flex; align-items: center; gap: 8px; }
+.points-editor input { width: 70px; padding: 6px 10px; border: 1.5px solid var(--border); border-radius: 8px; font-size: 14px; font-family: inherit; outline: none; text-align: center; }
+.points-editor button { padding: 6px 14px; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; font-family: inherit; cursor: pointer; }
+.btn-add { background: var(--teal-light); color: var(--teal); }
+.btn-add:hover { background: var(--teal); color: #fff; }
+.btn-set { background: var(--orange-light); color: var(--orange); }
+.btn-set:hover { background: var(--orange); color: #fff; }
+
+/* Orders list */
+.order-row { display: flex; align-items: flex-start; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--border); }
+.order-row:last-child { border-bottom: none; }
+.order-row__icon { font-size: 24px; flex-shrink: 0; }
+.order-row__info { flex: 1; }
+.order-row__product { font-weight: 600; font-size: 14px; color: var(--dark); }
+.order-row__meta { font-size: 13px; color: var(--muted); margin-top: 2px; }
+.order-status { display: inline-block; padding: 3px 10px; border-radius: 100px; font-size: 11px; font-weight: 700; cursor: pointer; }
+.status-new { background: #fef3c7; color: #92400e; }
+.status-processing { background: #dbeafe; color: #1e40af; }
+.status-done { background: #d1fae5; color: #065f46; }
+
+/* Toast */
+.admin-toast { position: fixed; bottom: 24px; right: 24px; background: var(--teal); color: #fff; padding: 12px 20px; border-radius: 12px; font-size: 14px; font-weight: 600; z-index: 9999; display: none; box-shadow: 0 4px 20px rgba(0,0,0,.15); }
+.admin-toast.show { display: block; }
+
+/* Auth gate */
+.auth-gate { min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+.auth-gate-card { background: #fff; border-radius: 20px; padding: 40px; text-align: center; max-width: 400px; box-shadow: 0 8px 40px rgba(0,0,0,.1); }
+</style>
+</head>
+<body>
+
+<!-- Auth gate — shown while checking -->
+<div class="auth-gate" id="authGate">
+  <div class="auth-gate-card">
+    <div style="font-size:48px;margin-bottom:16px">🔐</div>
+    <h2 style="margin-bottom:8px">Перевірка доступу...</h2>
+    <p style="color:var(--muted);font-size:14px">Тільки для адміністраторів</p>
+  </div>
+</div>
+
+<!-- Admin content — hidden until auth confirmed -->
+<div id="adminContent" style="display:none">
+  <div class="admin-header">
+    <div class="container">
+      <h1>⚙️ Адмін-панель Кінезіс</h1>
+      <div style="display:flex;gap:20px;align-items:center">
+        <span id="adminEmail" style="font-size:13px;opacity:.7"></span>
+        <a href="index.html">← На сайт</a>
+        <a href="#" onclick="doLogout()" style="color:#ff6b6b">Вийти</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="admin-page">
+    <div class="container">
+
+      <!-- Stats -->
+      <div class="admin-stats">
+        <div class="admin-stat">
+          <div class="admin-stat__num" id="statTotalUsers">—</div>
+          <div class="admin-stat__label">Зареєстрованих</div>
+        </div>
+        <div class="admin-stat">
+          <div class="admin-stat__num" id="statTotalOrders">—</div>
+          <div class="admin-stat__label">Всього заявок</div>
+        </div>
+        <div class="admin-stat">
+          <div class="admin-stat__num" id="statVipUsers">—</div>
+          <div class="admin-stat__label">VIP клієнтів</div>
+        </div>
+      </div>
+
+      <div class="admin-grid">
+
+        <!-- Users -->
+        <div class="admin-card" style="grid-column:1/-1">
+          <div class="admin-card-title">👥 Клієнти та бали лояльності</div>
+          <div class="admin-search">
+            <input type="text" id="searchInput" placeholder="Пошук за ім'ям або email..." oninput="filterUsers()"/>
+            <button onclick="loadUsers()">🔄 Оновити</button>
+          </div>
+          <div style="overflow-x:auto">
+            <table class="users-table">
+              <thead>
+                <tr>
+                  <th>Клієнт</th>
+                  <th>Телефон</th>
+                  <th>Рівень</th>
+                  <th>Бали</th>
+                  <th>Нарахувати / встановити</th>
+                </tr>
+              </thead>
+              <tbody id="usersTableBody">
+                <tr><td colspan="5" style="color:var(--muted);text-align:center;padding:24px">Завантаження...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Recent orders -->
+        <div class="admin-card">
+          <div class="admin-card-title">📋 Останні заявки</div>
+          <div id="recentOrdersList"><div style="color:var(--muted);font-size:14px">Завантаження...</div></div>
+        </div>
+
+        <!-- Add client manually -->
+        <div class="admin-card">
+          <div class="admin-card-title">➕ Додати клієнта вручну</div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div>
+              <label style="font-size:13px;font-weight:600;color:var(--muted);display:block;margin-bottom:6px">Ім'я</label>
+              <input id="manualName" type="text" placeholder="Андрій Коваленко" style="width:100%;padding:10px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:14px;font-family:inherit;outline:none"/>
+            </div>
+            <div>
+              <label style="font-size:13px;font-weight:600;color:var(--muted);display:block;margin-bottom:6px">Телефон</label>
+              <input id="manualPhone" type="tel" placeholder="+38 099 266 26 88" style="width:100%;padding:10px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:14px;font-family:inherit;outline:none"/>
+            </div>
+            <div>
+              <label style="font-size:13px;font-weight:600;color:var(--muted);display:block;margin-bottom:6px">Початкові бали</label>
+              <input id="manualPoints" type="number" placeholder="0" min="0" style="width:100%;padding:10px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:14px;font-family:inherit;outline:none"/>
+            </div>
+            <div>
+              <label style="font-size:13px;font-weight:600;color:var(--muted);display:block;margin-bottom:6px">Нотатка (необов'язково)</label>
+              <input id="manualNote" type="text" placeholder="Купив МТБ-2 у липні" style="width:100%;padding:10px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:14px;font-family:inherit;outline:none"/>
+            </div>
+            <button onclick="addManualClient()" style="padding:12px;background:var(--teal);color:#fff;border:none;border-radius:10px;font-size:14px;font-weight:600;font-family:inherit;cursor:pointer">Додати клієнта</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="admin-toast" id="toast"></div>
+
+<script type="module">
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js';
+import { getAuth, onAuthStateChanged, signOut } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js';
+import { getFirestore, collection, getDocs, doc, getDoc, updateDoc, addDoc, setDoc, orderBy, query, limit, serverTimestamp } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js';
+import { FIREBASE_CONFIG } from './firebase-config.js';
+
+// ── ADMIN EMAILS — add yours here ──────────────────────────────────────────
+const ADMIN_EMAILS = [
+  'a.zakharina.spilnoagency@gmail.com',
+  'nastiazakharina@gmail.com',
+  'sport_ok@ukr.net',
+];
+
+const app = initializeApp(FIREBASE_CONFIG);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+let allUsers = [];
+
+onAuthStateChanged(auth, async user => {
+  if (!user || !ADMIN_EMAILS.includes(user.email)) {
+    document.getElementById('authGate').innerHTML = '<div class="auth-gate-card"><div style="font-size:48px;margin-bottom:16px">🚫</div><h2>Доступ заборонено</h2><p style="color:var(--muted);margin:12px 0">Ця сторінка тільки для адміністраторів</p><a href="index.html" class="btn btn--primary" style="display:inline-block;margin-top:8px">На головну</a></div>';
+    return;
+  }
+  document.getElementById('authGate').style.display = 'none';
+  document.getElementById('adminContent').style.display = '';
+  document.getElementById('adminEmail').textContent = user.email;
+  await loadAll();
+});
+
+async function loadAll() {
+  await Promise.all([loadUsers(), loadOrders()]);
+}
+
+window.loadUsers = async function() {
+  const snap = await getDocs(collection(db, 'users'));
+  allUsers = [];
+  snap.forEach(d => allUsers.push({ id: d.id, ...d.data() }));
+  allUsers.sort((a, b) => (b.points || 0) - (a.points || 0));
+  document.getElementById('statTotalUsers').textContent = allUsers.length;
+  document.getElementById('statVipUsers').textContent = allUsers.filter(u => (u.points || 0) >= 150).length;
+  renderUsers(allUsers);
+};
+
+function getTier(pts) {
+  if (pts >= 150) return { name: 'VIP', cls: 'tier-vip', emoji: '👑' };
+  if (pts >= 50)  return { name: 'Постійний', cls: 'tier-postiynyi', emoji: '⭐' };
+  return { name: 'Новачок', cls: 'tier-novachok', emoji: '🌱' };
+}
+
+function renderUsers(list) {
+  const body = document.getElementById('usersTableBody');
+  if (!list.length) {
+    body.innerHTML = '<tr><td colspan="5" style="color:var(--muted);text-align:center;padding:24px">Клієнтів не знайдено</td></tr>';
+    return;
+  }
+  body.innerHTML = list.map(u => {
+    const pts = u.points || 0;
+    const tier = getTier(pts);
+    return `<tr>
+      <td>
+        <div style="font-weight:600;color:var(--dark)">${u.name || '—'}</div>
+        <div style="font-size:12px;color:var(--muted)">${u.email || ''}</div>
+        ${u.note ? '<div style="font-size:11px;color:var(--teal);margin-top:2px">📝 ' + u.note + '</div>' : ''}
+      </td>
+      <td style="font-size:13px;color:var(--muted)">${u.phone || '—'}</td>
+      <td><span class="tier-badge ${tier.cls}">${tier.emoji} ${tier.name}</span></td>
+      <td><strong style="font-size:16px;color:var(--teal)">${pts}</strong></td>
+      <td>
+        <div class="points-editor">
+          <input type="number" id="pts_${u.id}" value="10" min="0" max="9999"/>
+          <button class="btn-add" onclick="addPoints('${u.id}', '${(u.name||'').replace(/'/g,"\\'")}')">+Додати</button>
+          <button class="btn-set" onclick="setPoints('${u.id}', '${(u.name||'').replace(/'/g,"\\'")}')">Встановити</button>
+        </div>
+      </td>
+    </tr>`;
+  }).join('');
+}
+
+window.filterUsers = function() {
+  const q = document.getElementById('searchInput').value.toLowerCase();
+  const filtered = allUsers.filter(u =>
+    (u.name || '').toLowerCase().includes(q) ||
+    (u.email || '').toLowerCase().includes(q) ||
+    (u.phone || '').includes(q)
+  );
+  renderUsers(filtered);
+};
+
+window.addPoints = async function(uid, name) {
+  const delta = parseInt(document.getElementById('pts_' + uid).value) || 0;
+  const ref = doc(db, 'users', uid);
+  const snap = await getDoc(ref);
+  const cur = (snap.exists() && snap.data().points) ? snap.data().points : 0;
+  await updateDoc(ref, { points: cur + delta });
+  showToast('✅ ' + (name||'Клієнт') + ': +' + delta + ' балів (всього ' + (cur + delta) + ')');
+  loadUsers();
+};
+
+window.setPoints = async function(uid, name) {
+  const val = parseInt(document.getElementById('pts_' + uid).value) || 0;
+  await updateDoc(doc(db, 'users', uid), { points: val });
+  showToast('✅ ' + (name||'Клієнт') + ': встановлено ' + val + ' балів');
+  loadUsers();
+};
+
+async function loadOrders() {
+  const snap = await getDocs(query(collection(db, 'orders'), orderBy('createdAt', 'desc'), limit(20)));
+  let orders = [];
+  snap.forEach(d => orders.push({ id: d.id, ...d.data() }));
+  document.getElementById('statTotalOrders').textContent = orders.length;
+  const el = document.getElementById('recentOrdersList');
+  if (!orders.length) { el.innerHTML = '<div style="color:var(--muted);font-size:14px">Заявок ще немає</div>'; return; }
+  el.innerHTML = orders.map(o => {
+    const date = o.createdAt ? new Date(o.createdAt.seconds * 1000).toLocaleDateString('uk-UA') : '—';
+    const status = o.status || 'new';
+    const statusMap = { new: ['status-new', 'Нова'], processing: ['status-processing', 'В обробці'], done: ['status-done', 'Виконано'] };
+    const [cls, label] = statusMap[status] || statusMap.new;
+    return `<div class="order-row">
+      <div class="order-row__icon">${o.type === 'callback' ? '📞' : '🛍️'}</div>
+      <div class="order-row__info">
+        <div class="order-row__product">${o.product || 'Консультація'}</div>
+        <div class="order-row__meta">${date}${o.phone ? ' · ' + o.phone : ''}</div>
+      </div>
+      <select class="order-status ${cls}" onchange="updateOrderStatus('${o.id}', this)">
+        <option value="new" ${status==='new'?'selected':''}>Нова</option>
+        <option value="processing" ${status==='processing'?'selected':''}>В обробці</option>
+        <option value="done" ${status==='done'?'selected':''}>Виконано</option>
+      </select>
+    </div>`;
+  }).join('');
+}
+
+window.updateOrderStatus = async function(oid, select) {
+  const val = select.value;
+  await updateDoc(doc(db, 'orders', oid), { status: val });
+  const cls = { new:'status-new', processing:'status-processing', done:'status-done' }[val] || 'status-new';
+  select.className = 'order-status ' + cls;
+  showToast('Статус оновлено');
+};
+
+window.addManualClient = async function() {
+  const name = document.getElementById('manualName').value.trim();
+  const phone = document.getElementById('manualPhone').value.trim();
+  const points = parseInt(document.getElementById('manualPoints').value) || 0;
+  const note = document.getElementById('manualNote').value.trim();
+  if (!name && !phone) { showToast('❌ Введіть хоча б ім\'я або телефон'); return; }
+  const id = 'manual_' + Date.now();
+  await setDoc(doc(db, 'users', id), { name, phone, points, note, email: '', manual: true, createdAt: serverTimestamp() });
+  showToast('✅ Клієнта ' + name + ' додано з ' + points + ' балами');
+  document.getElementById('manualName').value = '';
+  document.getElementById('manualPhone').value = '';
+  document.getElementById('manualPoints').value = '';
+  document.getElementById('manualNote').value = '';
+  loadUsers();
+};
+
+window.doLogout = async function() { await signOut(auth); window.location.href = 'login.html'; };
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(t._t);
+  t._t = setTimeout(() => t.classList.remove('show'), 3000);
+}
+</script>
+</body>
+</html>
