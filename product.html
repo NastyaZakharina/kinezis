@@ -361,11 +361,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     const msg = document.getElementById('callbackMsg');
     btn.disabled = true;
     btn.textContent = 'Надсилаємо...';
-    const text = `📞 ЗАМОВЛЕННЯ ДЗВІНКА\n\nІм'я: ${name}\nТелефон: ${phone}\nТовар: ${product}`;
+    const text = `📞 ЗАМОВЛЕННЯ ДЗВІНКА\n\nІм'я: ${name}\nТелефон: ${phone}\nТовар: ${product}\nЧас: ${new Date().toLocaleString('uk-UA')}`;
+    const adminUrl = 'https://kinezis.com.ua/admin.html';
     fetch('https://api.telegram.org/bot8873990753:AAHmzAkTR64xftJytnWqaMf-H7PqVEKC6tc/sendMessage', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({chat_id: '690819904', text: text})
+      body: JSON.stringify({
+        chat_id: '690819904',
+        text: text,
+        reply_markup: {
+          inline_keyboard: [[
+            { text: '✅ Виконано — відкрити адмін', url: adminUrl },
+            { text: '📞 Зателефонувати', url: `tel:${phone}` }
+          ]]
+        }
+      })
     }).then(r => r.json()).then(data => {
       if (data.ok) {
         // Save to Firestore + loyalty points
