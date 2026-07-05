@@ -963,11 +963,30 @@ ul { list-style: none; }
   .about-card { padding: 24px 18px; border-radius: 16px !important; }
 }
 
-/* ---- BLOG ARTICLE MOBILE ---- */
+/* ---- GLOBAL MOBILE GRID FIXES ---- */
 @media (max-width: 600px) {
+  /* Blog article 2-col grids */
   .article-body [style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
   .article-body [style*="grid-template-columns: 1fr 1fr"] { grid-template-columns: 1fr !important; }
+  /* Blog article 3-col grids (e.g. home-gym.html) */
+  .article-body [style*="grid-template-columns:1fr 1fr 1fr"] { grid-template-columns: 1fr !important; }
   .blog-article__header { padding: 32px 20px !important; }
+
+  /* compare.html, certificates.html, return-policy.html — 3-col grids */
+  [style*="grid-template-columns:repeat(3,1fr)"] { grid-template-columns: 1fr !important; }
+  [style*="grid-template-columns:1fr 1fr 1fr"] { grid-template-columns: 1fr !important; }
+
+  /* cases.html — 2-col case layouts with gap:40px */
+  [style*="grid-template-columns:1fr 1fr"][style*="gap:40px"] { grid-template-columns: 1fr !important; }
+  [style*="grid-template-columns:1fr 1fr"][style*="gap: 40px"] { grid-template-columns: 1fr !important; }
+
+  /* about.html — photo gallery 2-col */
+  [style*="grid-template-columns:repeat(2,1fr)"] { grid-template-columns: 1fr !important; }
+
+  /* Large inline paddings on small screens */
+  [style*="padding:48px"] { padding: 24px 18px !important; }
+  [style*="padding:40px 48px"] { padding: 24px 18px !important; }
+  [style*="padding:36px 40px"] { padding: 24px 18px !important; }
 }
 
 /* ---- MODAL MOBILE ---- */
