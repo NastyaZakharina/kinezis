@@ -185,22 +185,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="product-info__price-note">Ціна вказана з ПДВ. Доставка по всій Україні.</div>
       </div>
       <div class="product-info__actions">
-        <button class="btn btn--primary btn--lg" onclick="addToCart('${product.id}','${product.name.replace(/'/g,"\\'")}',${product.price})">
-          🛒 В кошик
-        </button>
-        <button class="btn btn--orange btn--lg" onclick="showOrderModal('${product.id}', '${product.name.replace(/'/g, "\\'")}')">
-          Замовити зараз
-        </button>
-        <a href="https://t.me/Kineziss_bot" target="_blank" class="btn btn--outline btn--lg">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.93 6.78l-1.68 7.93c-.12.54-.45.67-.91.42l-2.5-1.84-1.21 1.16c-.13.13-.25.25-.5.25l.18-2.53 4.6-4.15c.2-.18-.04-.27-.31-.1L7.55 14.34l-2.43-.76c-.53-.16-.54-.53.11-.78l9.5-3.66c.44-.16.82.11.2.64z"/></svg>
-          Запитати в Telegram
-        </a>
-        <button class="btn btn--outline btn--lg" onclick="showCallbackModal('${product.id}','${product.name.replace(/'/g,"\\'")}')">
-          📞 Замовити дзвінок
-        </button>
-        <button class="btn btn--outline btn--lg" id="wishlistBtn" onclick="toggleWishlist('${product.id}', this)" style="color:var(--muted)">
-          ♡ Зберегти
-        </button>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <button class="btn btn--primary btn--lg" style="flex:1;min-width:160px" onclick="addToCart('${product.id}','${product.name.replace(/'/g,"\\'")}',${product.price})">
+            🛒 В кошик
+          </button>
+          <button class="btn btn--orange btn--lg" style="flex:1;min-width:160px" onclick="showOrderModal('${product.id}', '${product.name.replace(/'/g, "\\'")}')">
+            Замовити зараз
+          </button>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
+          <a href="https://t.me/Kineziss_bot" target="_blank" class="btn btn--outline btn--sm" style="display:flex;align-items:center;gap:6px">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.93 6.78l-1.68 7.93c-.12.54-.45.67-.91.42l-2.5-1.84-1.21 1.16c-.13.13-.25.25-.5.25l.18-2.53 4.6-4.15c.2-.18-.04-.27-.31-.1L7.55 14.34l-2.43-.76c-.53-.16-.54-.53.11-.78l9.5-3.66c.44-.16.82.11.2.64z"/></svg>
+            Запитати в Telegram
+          </a>
+          <button class="btn btn--outline btn--sm" onclick="showCallbackModal('${product.id}','${product.name.replace(/'/g,"\\'")}')">
+            📞 Замовити дзвінок
+          </button>
+          <button class="btn btn--outline btn--sm" id="wishlistBtn" onclick="toggleWishlist('${product.id}', this)" style="color:var(--muted)">
+            ♡ Зберегти
+          </button>
+        </div>
       </div>
       ${product.specs && product.specs.length ? `
       <div class="product-info__specs">

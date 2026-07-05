@@ -89,7 +89,7 @@ window.toggleWishlist = async function(productId, btn) {
     list.push(productId);
     if (btn) { btn.textContent = '♥ Збережено'; btn.style.color = '#e53e3e'; }
   }
-  await updateDoc(ref, { wishlist: list });
+  await setDoc(ref, { wishlist: list }, { merge: true });
 };
 
 window.isInWishlist = async function(productId) {
