@@ -953,6 +953,29 @@ ul { list-style: none; }
   .partner-logo { width: calc(50% - 12px); height: 64px; }
 }
 
+/* ---- ABOUT CARD RESPONSIVE ---- */
+.about-card { padding: 56px 60px; }
+@media (max-width: 768px) {
+  .about-card { padding: 32px 24px; }
+  .about-card h2 { font-size: 1.4rem; }
+}
+@media (max-width: 480px) {
+  .about-card { padding: 24px 18px; border-radius: 16px !important; }
+}
+
+/* ---- BLOG ARTICLE MOBILE ---- */
+@media (max-width: 600px) {
+  .article-body [style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
+  .article-body [style*="grid-template-columns: 1fr 1fr"] { grid-template-columns: 1fr !important; }
+  .blog-article__header { padding: 32px 20px !important; }
+}
+
+/* ---- MODAL MOBILE ---- */
+@media (max-width: 480px) {
+  .modal { padding: 28px 20px !important; margin: 16px !important; }
+  .modal h2 { font-size: 1.2rem !important; }
+}
+
 /* ---- UTILITIES ---- */
 .text-center { text-align: center; }
 .mt-4 { margin-top: 16px; }
