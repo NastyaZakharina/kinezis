@@ -933,24 +933,47 @@ ul { list-style: none; }
   .nav__link { padding: 13px 16px; font-size: 16px; border-radius: 10px; font-weight: 500; }
   .burger { display: flex; }
   .categories__grid { grid-template-columns: 1fr; }
-  .products__grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+  .products__grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
   .how__steps { flex-direction: column; }
   .how__arrow { display: none; }
   .footer__inner { grid-template-columns: 1fr; }
   .footer__bottom .container { flex-direction: column; gap: 8px; text-align: center; }
+  .footer__bottom .container span[style] { flex-wrap: wrap; justify-content: center; }
   .catalog-layout { grid-template-columns: 1fr; }
   .catalog-sidebar { position: static; }
   .cta-banner__inner { flex-direction: column; text-align: center; }
   .product-info__actions { flex-direction: column; }
   .product-info__actions .btn { width: 100%; justify-content: center; }
+  /* Contacts page */
+  .contacts-grid { grid-template-columns: 1fr; gap: 32px; }
+  /* Reviews */
+  .reviews__grid { grid-template-columns: 1fr !important; }
+  /* Hero stats */
+  .hero__stats { flex-wrap: wrap; gap: 16px; }
+  .hero__stat { min-width: 120px; }
+  /* Product page */
+  .product-layout { grid-template-columns: 1fr !important; }
+  .product-gallery { max-width: 100%; }
 }
 
 @media (max-width: 480px) {
   .hero__title { font-size: 1.8rem; }
   .hero__stats { gap: 20px; }
-  .section { padding: 56px 0; }
+  .section { padding: 40px 0; }
   .contact-form-box { padding: 24px 20px; }
   .partner-logo { width: calc(50% - 12px); height: 64px; }
+  /* Products grid 1 col on very small */
+  .products__grid { grid-template-columns: 1fr; }
+  /* Cabinet */
+  .cabinet-layout { flex-direction: column !important; }
+  .cabinet-sidebar { width: 100% !important; }
+  /* Blog filter buttons wrap */
+  #blog-filters { gap: 6px; }
+  #blog-filters button { font-size: 12px; padding: 6px 12px; }
+  /* Footer links stack */
+  .footer__bottom .container span[style] { flex-direction: column; gap: 8px; }
+  /* Page hero */
+  .page-hero h1 { font-size: 1.6rem; }
 }
 
 /* ---- ABOUT CARD RESPONSIVE ---- */
