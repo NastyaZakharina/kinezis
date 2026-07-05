@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HWBDHK3FPX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-HWBDHK3FPX');</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MN3MS74H');</script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Особистий кабінет — Кінезіс</title>
+<meta name="robots" content="noindex, nofollow"/>
+<link rel="icon" href="logo.png" type="image/png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Unbounded:wght@400;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+<style>
+/* Cabinet layout */
+.cabinet { display: grid; grid-template-columns: 260px 1fr; gap: 32px; padding: 40px 0 80px; min-height: 70vh; }
+@media(max-width:768px){ .cabinet { grid-template-columns: 1fr; } }
+
+/* Sidebar */
+.cabinet-sidebar { background: #fff; border-radius: 20px; border: 1px solid var(--border); padding: 28px; height: fit-content; position: sticky; top: 90px; }
+.cabinet-avatar { width: 72px; height: 72px; border-radius: 50%; background: var(--teal-light); display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 700; color: var(--teal); margin: 0 auto 12px; font-family: 'Unbounded', sans-serif; }
+.cabinet-avatar img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+.cabinet-username { text-align: center; font-weight: 700; font-size: 16px; color: var(--dark); margin-bottom: 4px; }
+.cabinet-email { text-align: center; font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+.cabinet-nav { display: flex; flex-direction: column; gap: 4px; }
+.cabinet-nav-item { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 10px; border: none; background: none; font-family: inherit; font-size: 14px; font-weight: 500; color: var(--body); cursor: pointer; width: 100%; text-align: left; transition: all .2s; }
+.cabinet-nav-item:hover { background: var(--bg-tint); color: var(--teal); }
+.cabinet-nav-item.active { background: var(--teal-light); color: var(--teal); font-weight: 600; }
+.cabinet-nav-item .nav-icon { font-size: 18px; width: 24px; text-align: center; flex-shrink: 0; }
+.cabinet-logout { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); width: 100%; padding-left: 12px; padding-right: 12px; color: #dc2626 !important; }
+.cabinet-logout:hover { background: #fee2e2 !important; }
+
+/* Content panels */
+.cabinet-content { display: flex; flex-direction: column; gap: 24px; }
+.cabinet-panel { display: none; }
+.cabinet-panel.active { display: block; }
+.cabinet-section { background: #fff; border-radius: 20px; border: 1px solid var(--border); padding: 28px; }
+.cabinet-section-title { font-family: 'Unbounded', sans-serif; font-size: 16px; font-weight: 700; color: var(--dark); margin-bottom: 20px; }
+
+/* Profile form */
+.profile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media(max-width:480px){ .profile-grid { grid-template-columns: 1fr; } }
+.profile-field { display: flex; flex-direction: column; gap: 6px; }
+.profile-label { font-size: 13px; font-weight: 600; color: var(--muted); }
+.profile-input { padding: 11px 14px; border: 1.5px solid var(--border); border-radius: 10px; font-size: 14px; font-family: inherit; outline: none; transition: border-color .2s; }
+.profile-input:focus { border-color: var(--teal); }
+.profile-input:disabled { background: var(--bg-tint); color: var(--muted); cursor: default; }
+
+/* Loyalty */
+.loyalty-card { background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%); border-radius: 20px; padding: 28px; color: #fff; margin-bottom: 24px; }
+.loyalty-tier { font-size: 13px; opacity: .8; margin-bottom: 4px; }
+.loyalty-tier-name { font-family: 'Unbounded', sans-serif; font-size: 22px; font-weight: 700; margin-bottom: 16px; }
+.loyalty-points { font-size: 36px; font-weight: 700; margin-bottom: 4px; }
+.loyalty-points-label { font-size: 13px; opacity: .8; }
+.loyalty-progress { background: rgba(255,255,255,.2); border-radius: 100px; height: 8px; margin: 16px 0 8px; overflow: hidden; }
+.loyalty-progress-bar { height: 100%; background: #fff; border-radius: 100px; transition: width .6s ease; }
+.loyalty-progress-text { font-size: 12px; opacity: .75; }
+.loyalty-discount { background: rgba(255,255,255,.15); border-radius: 12px; padding: 12px 16px; margin-top: 16px; font-size: 14px; }
+.loyalty-tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+@media(max-width:480px){ .loyalty-tiers { grid-template-columns: 1fr; } }
+.loyalty-tier-card { background: var(--bg-tint); border: 1px solid var(--border); border-radius: 14px; padding: 16px; text-align: center; }
+.loyalty-tier-card.current { border-color: var(--teal); background: var(--teal-light); }
+.loyalty-tier-emoji { font-size: 28px; margin-bottom: 8px; }
+.loyalty-tier-card-name { font-weight: 700; font-size: 14px; color: var(--dark); margin-bottom: 4px; }
+.loyalty-tier-card-pts { font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+.loyalty-tier-card-bonus { font-size: 13px; font-weight: 600; color: var(--teal); }
+
+/* Orders */
+.order-card { border: 1px solid var(--border); border-radius: 14px; padding: 18px 20px; transition: box-shadow .2s; }
+.order-card:hover { box-shadow: var(--shadow); }
+.order-card__header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; flex-wrap: wrap; gap: 8px; }
+.order-card__date { font-size: 13px; color: var(--muted); }
+.order-card__status { font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 100px; }
+.status-new { background: #fef3c7; color: #92400e; }
+.status-processing { background: #dbeafe; color: #1e40af; }
+.status-done { background: #d1fae5; color: #065f46; }
+.order-card__product { font-weight: 600; font-size: 15px; color: var(--dark); margin-bottom: 4px; }
+.order-card__meta { font-size: 13px; color: var(--muted); }
+.orders-empty { text-align: center; padding: 48px 20px; color: var(--muted); }
+.orders-empty-icon { font-size: 48px; margin-bottom: 12px; }
+
+/* Wishlist */
+.wishlist-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+.wishlist-item { border: 1px solid var(--border); border-radius: 14px; overflow: hidden; transition: box-shadow .2s; }
+.wishlist-item:hover { box-shadow: var(--shadow); }
+.wishlist-item img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
+.wishlist-item__body { padding: 14px; }
+.wishlist-item__name { font-size: 13px; font-weight: 600; color: var(--dark); margin-bottom: 6px; line-height: 1.4; }
+.wishlist-item__price { font-size: 15px; font-weight: 700; color: var(--teal); margin-bottom: 10px; }
+.wishlist-item__actions { display: flex; gap: 8px; }
+.wishlist-item__actions .btn { flex: 1; font-size: 12px; padding: 8px; }
+.wishlist-empty { text-align: center; padding: 48px 20px; color: var(--muted); }
+
+/* Stats row */
+.stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+@media(max-width:480px){ .stats-row { grid-template-columns: 1fr; } }
+.stat-card { background: var(--bg-tint); border: 1px solid var(--border); border-radius: 14px; padding: 20px; text-align: center; }
+.stat-card__num { font-family: 'Unbounded', sans-serif; font-size: 28px; font-weight: 700; color: var(--teal); margin-bottom: 4px; }
+.stat-card__label { font-size: 13px; color: var(--muted); }
+
+/* Notification toast */
+.profile-saved { background: #d1fae5; color: #065f46; border-radius: 10px; padding: 10px 14px; font-size: 13px; font-weight: 600; display: none; margin-top: 12px; }
+.profile-saved.show { display: block; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MN3MS74H" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="index.html" class="header__logo"><img src="logo.png" alt="Кінезіс" class="header__logo-img"/></a>
+    <nav class="nav" id="nav">
+      <a href="index.html" class="nav__link">Головна</a>
+      <a href="catalog.html" class="nav__link">Каталог</a>
+      <a href="blog.html" class="nav__link">Блог</a>
+      <a href="cases.html" class="nav__link">Кейси</a>
+      <a href="about.html" class="nav__link">Про нас</a>
+      <a href="contacts.html" class="nav__link">Контакти</a>
+    </nav>
+    <a href="https://t.me/Kineziss_bot" target="_blank" class="btn btn--primary header__cta">Написати в Telegram</a>
+    <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="page-hero" style="background:linear-gradient(135deg,#1a2a3a 0%,#2e5a8a 100%);padding:40px 0">
+  <div class="container">
+    <h1 class="page-hero__title" style="font-size:clamp(22px,4vw,36px)">Особистий кабінет</h1>
+  </div>
+</div>
+
+<section class="section" style="padding-top:32px">
+  <div class="container">
+    <div class="cabinet">
+
+      <!-- Sidebar -->
+      <aside class="cabinet-sidebar">
+        <div class="cabinet-avatar" id="avatarEl">?</div>
+        <div class="cabinet-username" id="sidebarName">Завантаження...</div>
+        <div class="cabinet-email" id="sidebarEmail"></div>
+        <nav class="cabinet-nav">
+          <button class="cabinet-nav-item active" onclick="showPanel('overview')">
+            <span class="nav-icon">🏠</span> Огляд
+          </button>
+          <button class="cabinet-nav-item" onclick="showPanel('profile')">
+            <span class="nav-icon">👤</span> Профіль
+          </button>
+          <button class="cabinet-nav-item" onclick="showPanel('orders')">
+            <span class="nav-icon">📋</span> Мої заявки
+            <span id="ordersBadge" style="margin-left:auto;background:var(--teal);color:#fff;font-size:11px;font-weight:700;padding:2px 7px;border-radius:100px;display:none"></span>
+          </button>
+          <button class="cabinet-nav-item" onclick="showPanel('wishlist')">
+            <span class="nav-icon">❤️</span> Вішліст
+            <span id="wishlistBadge" style="margin-left:auto;background:var(--teal);color:#fff;font-size:11px;font-weight:700;padding:2px 7px;border-radius:100px;display:none"></span>
+          </button>
+          <button class="cabinet-nav-item" onclick="showPanel('loyalty')">
+            <span class="nav-icon">🎁</span> Лояльність
+          </button>
+          <button class="cabinet-nav-item cabinet-logout" onclick="doLogout()">
+            <span class="nav-icon">🚪</span> Вийти
+          </button>
+        </nav>
+      </aside>
+
+      <!-- Content -->
+      <div class="cabinet-content">
+
+        <!-- Overview -->
+        <div class="cabinet-panel active" id="panel-overview">
+          <div class="cabinet-section">
+            <div class="cabinet-section-title">Вітаємо, <span id="overviewName">...</span>! 👋</div>
+            <div class="stats-row">
+              <div class="stat-card">
+                <div class="stat-card__num" id="statOrders">—</div>
+                <div class="stat-card__label">Заявок</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card__num" id="statWishlist">—</div>
+                <div class="stat-card__label">У вішлісті</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card__num" id="statPoints">—</div>
+                <div class="stat-card__label">Балів</div>
+              </div>
+            </div>
+          </div>
+          <div class="cabinet-section" id="overviewTierCard" style="background:linear-gradient(135deg,var(--teal) 0%,var(--teal-dark) 100%);border:none;color:#fff">
+            <div style="font-size:13px;opacity:.8;margin-bottom:4px">Ваш рівень лояльності</div>
+            <div style="font-family:'Unbounded',sans-serif;font-size:20px;font-weight:700;margin-bottom:8px" id="overviewTierName">—</div>
+            <div style="font-size:14px;opacity:.9" id="overviewTierDesc"></div>
+          </div>
+          <div class="cabinet-section">
+            <div class="cabinet-section-title">Останні заявки</div>
+            <div id="recentOrders"><div style="color:var(--muted);font-size:14px">Завантаження...</div></div>
+          </div>
+        </div>
+
+        <!-- Profile -->
+        <div class="cabinet-panel" id="panel-profile">
+          <div class="cabinet-section">
+            <div class="cabinet-section-title">Особисті дані</div>
+            <div class="profile-grid">
+              <div class="profile-field">
+                <label class="profile-label">Ім'я</label>
+                <input class="profile-input" type="text" id="profileName" placeholder="Ваше ім'я"/>
+              </div>
+              <div class="profile-field">
+                <label class="profile-label">Телефон</label>
+                <input class="profile-input" type="tel" id="profilePhone" placeholder="+38 0__ ___ __ __"/>
+              </div>
+              <div class="profile-field" style="grid-column:1/-1">
+                <label class="profile-label">Email</label>
+                <input class="profile-input" type="email" id="profileEmail" disabled/>
+              </div>
+            </div>
+            <button class="btn btn--primary" style="margin-top:20px" onclick="saveProfile()">Зберегти зміни</button>
+            <div class="profile-saved" id="profileSavedMsg">✅ Збережено!</div>
+          </div>
+          <div class="cabinet-section" style="margin-top:0">
+            <div class="cabinet-section-title">Зміна пароля</div>
+            <div class="profile-grid">
+              <div class="profile-field">
+                <label class="profile-label">Новий пароль</label>
+                <input class="profile-input" type="password" id="newPassword" placeholder="Мінімум 6 символів"/>
+              </div>
+              <div class="profile-field">
+                <label class="profile-label">Підтвердження</label>
+                <input class="profile-input" type="password" id="confirmPassword" placeholder="Повторіть пароль"/>
+              </div>
+            </div>
+            <button class="btn btn--outline" style="margin-top:16px" onclick="changePassword()">Змінити пароль</button>
+            <div id="pwMsg" style="font-size:13px;margin-top:8px;display:none"></div>
+          </div>
+        </div>
+
+        <!-- Orders -->
+        <div class="cabinet-panel" id="panel-orders">
+          <div class="cabinet-section">
+            <div class="cabinet-section-title">Мої заявки</div>
+            <div id="ordersList"><div style="color:var(--muted);font-size:14px">Завантаження...</div></div>
+          </div>
+        </div>
+
+        <!-- Wishlist -->
+        <div class="cabinet-panel" id="panel-wishlist">
+          <div class="cabinet-section">
+            <div class="cabinet-section-title">Вішліст</div>
+            <div id="wishlistContent"><div style="color:var(--muted);font-size:14px">Завантаження...</div></div>
+          </div>
+        </div>
+
+        <!-- Loyalty -->
+        <div class="cabinet-panel" id="panel-loyalty">
+          <div class="loyalty-card" id="loyaltyCard">
+            <div class="loyalty-tier" id="loyaltyTierLabel">Рівень</div>
+            <div class="loyalty-tier-name" id="loyaltyTierName">—</div>
+            <div class="loyalty-points" id="loyaltyPoints">0</div>
+            <div class="loyalty-points-label">балів</div>
+            <div class="loyalty-progress"><div class="loyalty-progress-bar" id="loyaltyBar" style="width:0%"></div></div>
+            <div class="loyalty-progress-text" id="loyaltyNext"></div>
+            <div class="loyalty-discount" id="loyaltyDiscountText"></div>
+          </div>
+
+          <div class="cabinet-section">
+            <div class="cabinet-section-title">Рівні лояльності</div>
+            <div class="loyalty-tiers">
+              <div class="loyalty-tier-card" id="tier-novachok">
+                <div class="loyalty-tier-emoji">🌱</div>
+                <div class="loyalty-tier-card-name">Новачок</div>
+                <div class="loyalty-tier-card-pts">0 — 49 балів</div>
+                <div class="loyalty-tier-card-bonus">Стандартні ціни</div>
+              </div>
+              <div class="loyalty-tier-card" id="tier-postiynyi">
+                <div class="loyalty-tier-emoji">⭐</div>
+                <div class="loyalty-tier-card-name">Постійний</div>
+                <div class="loyalty-tier-card-pts">50 — 149 балів</div>
+                <div class="loyalty-tier-card-bonus">Знижка 3%</div>
+              </div>
+              <div class="loyalty-tier-card" id="tier-vip">
+                <div class="loyalty-tier-emoji">👑</div>
+                <div class="loyalty-tier-card-name">VIP</div>
+                <div class="loyalty-tier-card-pts">150+ балів</div>
+                <div class="loyalty-tier-card-bonus">Знижка 5% + пріоритет</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cabinet-section">
+            <div class="cabinet-section-title">Як нараховуються бали</div>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <div style="display:flex;align-items:center;gap:14px;padding:12px 16px;background:var(--bg-tint);border-radius:12px">
+                <span style="font-size:24px">📞</span>
+                <div><strong style="display:block;font-size:14px">Заявка на дзвінок</strong><span style="font-size:13px;color:var(--muted)">+10 балів за кожну заявку</span></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:14px;padding:12px 16px;background:var(--bg-tint);border-radius:12px">
+                <span style="font-size:24px">🛍️</span>
+                <div><strong style="display:block;font-size:14px">Замовлення через Telegram</strong><span style="font-size:13px;color:var(--muted)">+20 балів за оформлення</span></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:14px;padding:12px 16px;background:var(--bg-tint);border-radius:12px">
+                <span style="font-size:24px">👤</span>
+                <div><strong style="display:block;font-size:14px">Заповнений профіль</strong><span style="font-size:13px;color:var(--muted)">+5 балів одразу</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /cabinet-content -->
+    </div><!-- /cabinet -->
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand"><span class="footer__logo-text">Кінезіс</span><p>Обладнання для реабілітації та кінезітерапії. Виробляємо в Україні.</p></div>
+    <div class="footer__nav"><h4>Навігація</h4><a href="index.html">Головна</a><a href="catalog.html">Каталог</a><a href="blog.html">Блог</a><a href="about.html">Про нас</a><a href="contacts.html">Контакти</a></div>
+    <div class="footer__contact"><h4>Контакти</h4><a href="tel:+380992662688">+38 (099) 266-26-88 — Андрій</a><a href="mailto:sport_ok@ukr.net">sport_ok@ukr.net</a></div>
+  </div>
+  <div class="footer__bottom"><div class="container"><span>© 2026 Кінезіс. Усі права захищені.</span><span>Зроблено в Україні 🇺🇦</span></div></div>
+</footer>
+
+<script src="data.js"></script>
+<script src="main.js"></script>
+<script src="cart.js"></script>
+
+<script type="module">
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js';
+import { getAuth, onAuthStateChanged, updatePassword, EmailAuthProvider, reauthenticateWithCredential, signOut } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js';
+import { getFirestore, doc, getDoc, updateDoc, collection, query, where, orderBy, getDocs, serverTimestamp } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js';
+import { FIREBASE_CONFIG } from './firebase-config.js';
+
+const app = initializeApp(FIREBASE_CONFIG);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+let currentUser = null;
+let userData = null;
+
+// Redirect if not logged in
+onAuthStateChanged(auth, async user => {
+  if (!user) { window.location.href = 'login.html?next=cabinet.html'; return; }
+  currentUser = user;
+  await loadUserData();
+  renderAll();
+});
+
+async function loadUserData() {
+  const snap = await getDoc(doc(db, 'users', currentUser.uid));
+  userData = snap.exists() ? snap.data() : { name: currentUser.displayName || '', phone: '', email: currentUser.email, points: 0 };
+}
+
+function getTier(points) {
+  if (points >= 150) return { name: 'VIP', emoji: '👑', id: 'vip', discount: 5, next: null, nextPts: 0 };
+  if (points >= 50)  return { name: 'Постійний клієнт', emoji: '⭐', id: 'postiynyi', discount: 3, next: 'VIP', nextPts: 150 };
+  return { name: 'Новачок', emoji: '🌱', id: 'novachok', discount: 0, next: 'Постійний клієнт', nextPts: 50 };
+}
+
+function formatPrice(n) {
+  return n.toLocaleString('uk-UA') + ' грн';
+}
+
+function renderAll() {
+  const name = userData.name || currentUser.displayName || currentUser.email.split('@')[0];
+  const points = userData.points || 0;
+  const tier = getTier(points);
+
+  // Sidebar
+  const avatarEl = document.getElementById('avatarEl');
+  if (currentUser.photoURL) {
+    avatarEl.innerHTML = '<img src="' + currentUser.photoURL + '" alt=""/>';
+  } else {
+    avatarEl.textContent = name.charAt(0).toUpperCase();
+  }
+  document.getElementById('sidebarName').textContent = name;
+  document.getElementById('sidebarEmail').textContent = currentUser.email;
+
+  // Overview
+  document.getElementById('overviewName').textContent = name.split(' ')[0];
+  document.getElementById('overviewTierName').textContent = tier.emoji + ' ' + tier.name;
+  document.getElementById('overviewTierDesc').textContent = tier.discount > 0
+    ? 'Ваша знижка: ' + tier.discount + '% на все обладнання'
+    : 'Накопичуйте бали щоб отримати знижку';
+
+  // Stats
+  document.getElementById('statPoints').textContent = points;
+
+  // Profile
+  document.getElementById('profileName').value = userData.name || currentUser.displayName || '';
+  document.getElementById('profilePhone').value = userData.phone || '';
+  document.getElementById('profileEmail').value = currentUser.email;
+
+  // Loyalty card
+  document.getElementById('loyaltyTierLabel').textContent = 'Ваш рівень';
+  document.getElementById('loyaltyTierName').textContent = tier.emoji + ' ' + tier.name;
+  document.getElementById('loyaltyPoints').textContent = points;
+  if (tier.next) {
+    const pct = Math.round((points / tier.nextPts) * 100);
+    document.getElementById('loyaltyBar').style.width = Math.min(pct, 100) + '%';
+    document.getElementById('loyaltyNext').textContent = 'До рівня ' + tier.next + ': ' + (tier.nextPts - points) + ' балів';
+  } else {
+    document.getElementById('loyaltyBar').style.width = '100%';
+    document.getElementById('loyaltyNext').textContent = 'Максимальний рівень досягнуто!';
+  }
+  document.getElementById('loyaltyDiscountText').textContent = tier.discount > 0
+    ? '🎉 Ваша знижка ' + tier.discount + '% — повідомте менеджера при замовленні'
+    : '💡 Отримайте знижку 3%, накопичивши 50 балів';
+
+  // Mark current tier
+  ['novachok','postiynyi','vip'].forEach(id => {
+    const el = document.getElementById('tier-' + id);
+    if (el) el.classList.toggle('current', id === tier.id);
+  });
+
+  // Load orders and wishlist
+  loadOrders(points);
+  loadWishlist();
+}
+
+async function loadOrders(currentPoints) {
+  const q = query(collection(db, 'orders'), where('userId', '==', currentUser.uid), orderBy('createdAt', 'desc'));
+  let orders = [];
+  try {
+    const snap = await getDocs(q);
+    snap.forEach(d => orders.push({ id: d.id, ...d.data() }));
+  } catch(e) { console.warn('orders index needed', e); }
+
+  document.getElementById('statOrders').textContent = orders.length;
+  const badge = document.getElementById('ordersBadge');
+  if (orders.length > 0) { badge.textContent = orders.length; badge.style.display = ''; }
+
+  const statusMap = { new: 'status-new', processing: 'status-processing', done: 'status-done' };
+  const statusLabel = { new: 'Нова', processing: 'В обробці', done: 'Виконано' };
+
+  const renderOrders = (container, list) => {
+    if (!list.length) {
+      container.innerHTML = '<div class="orders-empty"><div class="orders-empty-icon">📋</div><p>Заявок ще немає</p><a href="catalog.html" class="btn btn--primary" style="margin-top:12px;display:inline-block">Переглянути каталог</a></div>';
+      return;
+    }
+    container.innerHTML = list.map(o => {
+      const date = o.createdAt ? new Date(o.createdAt.seconds * 1000).toLocaleDateString('uk-UA') : '—';
+      const status = o.status || 'new';
+      return '<div class="order-card">' +
+        '<div class="order-card__header">' +
+          '<div class="order-card__date">' + date + '</div>' +
+          '<span class="order-card__status ' + (statusMap[status] || 'status-new') + '">' + (statusLabel[status] || 'Нова') + '</span>' +
+        '</div>' +
+        '<div class="order-card__product">' + (o.product || 'Заявка на консультацію') + '</div>' +
+        '<div class="order-card__meta">Тип: ' + (o.type === 'callback' ? 'Дзвінок' : 'Telegram замовлення') + (o.phone ? ' · ' + o.phone : '') + '</div>' +
+      '</div>';
+    }).join('');
+  };
+
+  renderOrders(document.getElementById('ordersList'), orders);
+  renderOrders(document.getElementById('recentOrders'), orders.slice(0, 3));
+}
+
+async function loadWishlist() {
+  const snap = await getDoc(doc(db, 'users', currentUser.uid));
+  const wishlist = (snap.exists() && snap.data().wishlist) ? snap.data().wishlist : [];
+  document.getElementById('statWishlist').textContent = wishlist.length;
+  const badge = document.getElementById('wishlistBadge');
+  if (wishlist.length > 0) { badge.textContent = wishlist.length; badge.style.display = ''; }
+
+  const el = document.getElementById('wishlistContent');
+  if (!wishlist.length) {
+    el.innerHTML = '<div class="wishlist-empty"><div style="font-size:48px;margin-bottom:12px">❤️</div><p>Вішліст порожній</p><a href="catalog.html" class="btn btn--primary" style="margin-top:12px;display:inline-block">До каталогу</a></div>';
+    return;
+  }
+  if (typeof products !== 'undefined') {
+    const items = wishlist.map(id => products.find(p => p.id === id)).filter(Boolean);
+    el.innerHTML = '<div class="wishlist-grid">' + items.map(p => {
+      const n = p.name.replace(/'/g, "\\'");
+      return '<div class="wishlist-item">' +
+        '<img src="' + p.image + '" alt="' + p.name + '" loading="lazy"/>' +
+        '<div class="wishlist-item__body">' +
+          '<div class="wishlist-item__name">' + p.name + '</div>' +
+          '<div class="wishlist-item__price">' + p.price.toLocaleString('uk-UA') + ' грн</div>' +
+          '<div class="wishlist-item__actions">' +
+            '<a href="product.html?id=' + p.id + '" class="btn btn--outline btn--sm">Детальніше</a>' +
+            '<button class="btn btn--primary btn--sm" onclick="addToCart(\'' + p.id + '\',\'' + n + '\',' + p.price + ')">В кошик</button>' +
+          '</div>' +
+        '</div>' +
+      '</div>';
+    }).join('') + '</div>';
+  }
+}
+
+window.showPanel = function(name) {
+  document.querySelectorAll('.cabinet-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.cabinet-nav-item').forEach(b => b.classList.remove('active'));
+  document.getElementById('panel-' + name).classList.add('active');
+  event.currentTarget.classList.add('active');
+};
+
+window.saveProfile = async function() {
+  const name = document.getElementById('profileName').value.trim();
+  const phone = document.getElementById('profilePhone').value.trim();
+  if (!name) return;
+  const wasEmpty = !userData.name && !userData.phone;
+  await updateDoc(doc(db, 'users', currentUser.uid), { name, phone });
+  userData.name = name; userData.phone = phone;
+  // Bonus points for completing profile
+  if (wasEmpty && name && phone) {
+    const newPts = (userData.points || 0) + 5;
+    await updateDoc(doc(db, 'users', currentUser.uid), { points: newPts });
+    userData.points = newPts;
+    renderAll();
+  }
+  const msg = document.getElementById('profileSavedMsg');
+  msg.classList.add('show');
+  setTimeout(() => msg.classList.remove('show'), 3000);
+};
+
+window.changePassword = async function() {
+  const np = document.getElementById('newPassword').value;
+  const cp = document.getElementById('confirmPassword').value;
+  const msg = document.getElementById('pwMsg');
+  msg.style.display = 'block';
+  if (np.length < 6) { msg.style.color = '#dc2626'; msg.textContent = 'Мінімум 6 символів'; return; }
+  if (np !== cp) { msg.style.color = '#dc2626'; msg.textContent = 'Паролі не співпадають'; return; }
+  try {
+    await updatePassword(currentUser, np);
+    msg.style.color = '#065f46'; msg.textContent = '✅ Пароль змінено';
+    document.getElementById('newPassword').value = '';
+    document.getElementById('confirmPassword').value = '';
+  } catch(e) {
+    msg.style.color = '#dc2626';
+    msg.textContent = e.code === 'auth/requires-recent-login' ? 'Увійдіть заново для зміни пароля' : 'Помилка зміни пароля';
+  }
+};
+
+window.doLogout = async function() {
+  await signOut(auth);
+  window.location.href = 'index.html';
+};
+
+// Expose addPoints for external use (callback form, telegram orders)
+window.addLoyaltyPoints = async function(pts) {
+  if (!currentUser) return;
+  const snap = await getDoc(doc(db, 'users', currentUser.uid));
+  if (snap.exists()) {
+    const cur = snap.data().points || 0;
+    await updateDoc(doc(db, 'users', currentUser.uid), { points: cur + pts });
+  }
+};
+</script>
+</body>
+</html>

@@ -154,6 +154,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script src="data.js"></script>
 <script src="main.js"></script>
 <script src="cart.js"></script>
+<script type="module" src="auth.js"></script>
 <script>
 (function() {
   const params = new URLSearchParams(location.search);
@@ -196,6 +197,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </a>
         <button class="btn btn--outline btn--lg" onclick="showCallbackModal('${product.id}','${product.name.replace(/'/g,"\\'")}')">
           📞 Замовити дзвінок
+        </button>
+        <button class="btn btn--outline btn--lg" id="wishlistBtn" onclick="toggleWishlist('${product.id}', this)" style="color:var(--muted)">
+          ♡ Зберегти
         </button>
       </div>
       ${product.specs && product.specs.length ? `
@@ -302,6 +306,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   // Cross-sell
   if (typeof renderCrossSell === 'function') renderCrossSell(product);
 
+  // Wishlist state — update button once auth loads
+  setTimeout(async () => {
+    if (typeof isInWishlist === 'function') {
+      const inList = await isInWishlist(product.id);
+      const wBtn = document.getElementById('wishlistBtn');
+      if (wBtn && inList) { wBtn.textContent = '♥ Збережено'; wBtn.style.color = '#e53e3e'; }
+    }
+  }, 1500);
+
   // Related products
   const related = products.filter(p => p.category === product.category && p.id !== product.id).slice(0, 4);
   const relGrid = document.getElementById('relatedGrid');
@@ -351,6 +364,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       body: JSON.stringify({chat_id: '690819904', text: text})
     }).then(r => r.json()).then(data => {
       if (data.ok) {
+        // Save to Firestore + loyalty points
+        if (typeof saveOrderToFirestore === 'function') {
+          saveOrderToFirestore('callback', product, phone);
+        }
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
           'event': 'callback_form_submit',
@@ -377,6 +394,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     modalTgLink.href = `${TELEGRAM_BOT}?start=${pid}`;
     modal.classList.add('open');
     document.body.style.overflow = 'hidden';
+    if (typeof saveOrderToFirestore === 'function') {
+      saveOrderToFirestore('telegram', pname, '');
+    }
   };
 
   function closeModal() {
