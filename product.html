@@ -348,6 +348,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         msg.style.color = 'var(--teal)';
         msg.textContent = '✅ Заявку отримано! Передзвонимо протягом 30 хвилин.';
         btn.style.display = 'none';
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({'event': 'callback_form_submit', 'product_name': product});
         setTimeout(() => { callbackModal.classList.remove('open'); document.body.style.overflow = ''; }, 3000);
       } else {
         throw new Error();
