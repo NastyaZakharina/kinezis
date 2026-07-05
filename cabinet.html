@@ -156,6 +156,11 @@
           <button class="cabinet-nav-item" onclick="showPanel('loyalty')">
             <span class="nav-icon">🎁</span> Лояльність
           </button>
+          <div id="adminNavBtn" style="display:none;margin-top:8px;padding-top:12px;border-top:1px solid var(--border)">
+            <a href="admin.html" class="cabinet-nav-item" style="background:var(--dark);color:#fff;border-radius:10px;text-decoration:none;display:flex;align-items:center;gap:10px;padding:10px 12px">
+              <span class="nav-icon">⚙️</span> Адмін-панель
+            </a>
+          </div>
           <button class="cabinet-nav-item cabinet-logout" onclick="doLogout()">
             <span class="nav-icon">🚪</span> Вийти
           </button>
@@ -334,10 +339,15 @@ const db = getFirestore(app);
 let currentUser = null;
 let userData = null;
 
+const ADMIN_EMAILS = ['a.zakharina.spilnoagency@gmail.com', 'nastiazakharina@gmail.com', 'sport_ok@ukr.net'];
+
 // Redirect if not logged in
 onAuthStateChanged(auth, async user => {
   if (!user) { window.location.href = 'login.html?next=cabinet.html'; return; }
   currentUser = user;
+  if (ADMIN_EMAILS.includes(user.email)) {
+    document.getElementById('adminNavBtn').style.display = 'block';
+  }
   await loadUserData();
   renderAll();
 });
