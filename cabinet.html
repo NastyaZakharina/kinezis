@@ -15,7 +15,6 @@
 <style>
 /* Cabinet layout */
 .cabinet { display: grid; grid-template-columns: 260px 1fr; gap: 32px; padding: 40px 0 80px; min-height: 70vh; }
-@media(max-width:768px){ .cabinet { grid-template-columns: 1fr; } }
 
 /* Sidebar */
 .cabinet-sidebar { background: #fff; border-radius: 20px; border: 1px solid var(--border); padding: 28px; height: fit-content; position: sticky; top: 90px; }
@@ -30,6 +29,87 @@
 .cabinet-nav-item .nav-icon { font-size: 18px; width: 24px; text-align: center; flex-shrink: 0; }
 .cabinet-logout { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); width: 100%; padding-left: 12px; padding-right: 12px; color: #dc2626 !important; }
 .cabinet-logout:hover { background: #fee2e2 !important; }
+
+/* ── Mobile layout ── */
+@media(max-width:768px){
+  .cabinet { grid-template-columns: 1fr; gap: 0; padding: 16px 0 60px; }
+
+  /* Sidebar becomes a compact profile header */
+  .cabinet-sidebar {
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    padding: 16px;
+    position: static;
+    margin-bottom: 0;
+  }
+
+  /* Profile row: avatar + name/email side by side */
+  .cabinet-profile-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  .cabinet-avatar {
+    width: 52px; height: 52px;
+    font-size: 20px;
+    margin: 0;
+    flex-shrink: 0;
+  }
+  .cabinet-username { text-align: left; font-size: 15px; margin-bottom: 2px; }
+  .cabinet-email { text-align: left; font-size: 12px; margin-bottom: 0; }
+
+  /* Nav becomes horizontal scrollable tabs */
+  .cabinet-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 6px;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+  }
+  .cabinet-nav::-webkit-scrollbar { display: none; }
+
+  .cabinet-nav-item {
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 14px;
+    border-radius: 12px;
+    font-size: 11px;
+    white-space: nowrap;
+    width: auto;
+    flex-shrink: 0;
+    border: 1.5px solid var(--border);
+    background: var(--bg-tint);
+  }
+  .cabinet-nav-item.active {
+    background: var(--teal-light);
+    border-color: var(--teal);
+    color: var(--teal);
+  }
+  .cabinet-nav-item .nav-icon { font-size: 20px; width: auto; }
+
+  /* Hide badges inside mobile nav (space too tight) */
+  #ordersBadge, #wishlistBadge { display: none !important; }
+
+  /* Logout: text-only small */
+  .cabinet-logout {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+    color: #dc2626 !important;
+    border-color: #fecaca !important;
+  }
+
+  /* Admin nav compact */
+  #adminNavBtn { margin-top: 0; padding-top: 0; border-top: none; }
+  #adminNavBtn a { padding: 8px 14px; font-size: 11px; flex-direction: column; gap: 4px; border-radius: 12px; }
+
+  /* Content area */
+  .cabinet-content { gap: 12px; margin-top: 12px; }
+  .cabinet-section { padding: 18px 16px; border-radius: 14px; }
+  .cabinet-section-title { font-size: 14px; margin-bottom: 14px; }
+}
 
 /* Content panels */
 .cabinet-content { display: flex; flex-direction: column; gap: 24px; }
@@ -135,9 +215,13 @@
 
       <!-- Sidebar -->
       <aside class="cabinet-sidebar">
-        <div class="cabinet-avatar" id="avatarEl">?</div>
-        <div class="cabinet-username" id="sidebarName">Завантаження...</div>
-        <div class="cabinet-email" id="sidebarEmail"></div>
+        <div class="cabinet-profile-row">
+          <div class="cabinet-avatar" id="avatarEl">?</div>
+          <div>
+            <div class="cabinet-username" id="sidebarName">Завантаження...</div>
+            <div class="cabinet-email" id="sidebarEmail"></div>
+          </div>
+        </div>
         <nav class="cabinet-nav">
           <button class="cabinet-nav-item active" onclick="showPanel('overview')">
             <span class="nav-icon">🏠</span> Огляд
