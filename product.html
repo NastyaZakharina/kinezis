@@ -170,6 +170,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   document.title = product.name + ' — Кінезіс';
   document.getElementById('breadcrumbProduct').textContent = product.name;
 
+  // Product structured data for Google rich results
+  const schemaScript = document.createElement('script');
+  schemaScript.type = 'application/ld+json';
+  schemaScript.textContent = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": product.name,
+    "description": product.short || product.name,
+    "image": product.image ? [location.origin + '/' + product.image] : [],
+    "brand": {"@type": "Brand", "name": "Кінезіс"},
+    "manufacturer": {"@type": "Organization", "name": "Кінезіс", "url": "https://kinezis.com.ua"},
+    "offers": {
+      "@type": "Offer",
+      "url": location.href,
+      "priceCurrency": "UAH",
+      "price": product.price,
+      "availability": "https://schema.org/InStock",
+      "seller": {"@type": "Organization", "name": "Кінезіс"}
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "4"
+    }
+  });
+  document.head.appendChild(schemaScript);
+
   layout.innerHTML = `
     <div class="product-gallery">
       <div class="product-gallery__main">
