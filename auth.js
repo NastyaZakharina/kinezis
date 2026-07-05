@@ -67,13 +67,7 @@ window.saveOrderToFirestore = async function(type, product, phone) {
       status: 'new',
       createdAt: serverTimestamp(),
     });
-    // Add loyalty points
-    const pts = type === 'callback' ? 10 : 20;
-    const ref = doc(db, 'users', user.uid);
-    const snap = await getDoc(ref);
-    if (snap.exists()) {
-      await updateDoc(ref, { points: (snap.data().points || 0) + pts });
-    }
+    // Points are added manually by admin after purchase confirmation
   } catch(e) {
     console.warn('saveOrder:', e);
   }
