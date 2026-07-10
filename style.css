@@ -101,7 +101,7 @@ ul { list-style: none; }
   color: var(--body);
   transition: var(--transition);
 }
-.nav__link:hover, .nav__link.active { color: var(--teal); background: var(--teal-light); }
+.nav__link:hover, .nav__link.active { color: var(--teal-dark); background: var(--teal-light); }
 .header__cta { margin-left: 8px; }
 .burger {
   display: none;
@@ -540,7 +540,7 @@ ul { list-style: none; }
   transition: var(--transition);
   margin-bottom: 4px;
 }
-.filter-btn:hover { background: var(--teal-light); color: var(--teal); }
+.filter-btn:hover { background: var(--teal-light); color: var(--dark); }
 .filter-btn.active { background: var(--teal); color: #fff; }
 .filter-count {
   float: right;
@@ -1049,7 +1049,7 @@ ul { list-style: none; }
   transition: background .2s, color .2s;
   flex-shrink: 0;
 }
-.cart-btn:hover { background: var(--teal-light); color: var(--teal); }
+.cart-btn:hover { background: var(--teal-light); color: var(--dark); }
 .cart-badge {
   position: absolute;
   top: 4px;
