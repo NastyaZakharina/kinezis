@@ -59,26 +59,24 @@
   .cabinet-username { text-align: left; font-size: 15px; margin-bottom: 2px; }
   .cabinet-email { text-align: left; font-size: 12px; margin-bottom: 0; }
 
-  /* Nav becomes horizontal scrollable tabs */
+  /* Nav becomes 3-column grid */
   .cabinet-nav {
-    flex-direction: row;
-    overflow-x: auto;
-    gap: 6px;
-    padding-bottom: 4px;
-    scrollbar-width: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    overflow-x: visible;
   }
-  .cabinet-nav::-webkit-scrollbar { display: none; }
 
   .cabinet-nav-item {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 4px;
-    padding: 8px 14px;
+    padding: 10px 6px;
     border-radius: 12px;
     font-size: 11px;
     white-space: nowrap;
-    width: auto;
-    flex-shrink: 0;
+    width: 100%;
     border: 1.5px solid var(--border);
     background: var(--bg-tint);
   }
@@ -89,21 +87,22 @@
   }
   .cabinet-nav-item .nav-icon { font-size: 20px; width: auto; }
 
-  /* Hide badges inside mobile nav (space too tight) */
-  #ordersBadge, #wishlistBadge { display: none !important; }
-
-  /* Logout: text-only small */
+  /* Logout spans full width */
   .cabinet-logout {
-    margin-top: 0;
+    grid-column: 1 / -1;
+    margin-top: 4px;
     padding-top: 0;
     border-top: none;
+    flex-direction: row;
+    justify-content: center;
     color: #dc2626 !important;
     border-color: #fecaca !important;
+    background: #fff5f5 !important;
   }
 
-  /* Admin nav compact */
-  #adminNavBtn { margin-top: 0; padding-top: 0; border-top: none; }
-  #adminNavBtn a { padding: 8px 14px; font-size: 11px; flex-direction: column; gap: 4px; border-radius: 12px; }
+  /* Admin nav spans full width */
+  #adminNavBtn { margin-top: 0; padding-top: 0; border-top: none; grid-column: 1 / -1; }
+  #adminNavBtn a { padding: 10px 14px; font-size: 12px; flex-direction: row; gap: 8px; border-radius: 12px; justify-content: center; }
 
   /* Content area */
   .cabinet-content { gap: 12px; margin-top: 12px; }
