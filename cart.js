@@ -78,7 +78,7 @@ function showCartNotification(name) {
   if (!n) {
     n = document.createElement('div');
     n.id = 'cartNotif';
-    n.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--teal);color:#fff;padding:12px 24px;border-radius:40px;font-size:14px;font-weight:600;z-index:10000;box-shadow:0 4px 20px rgba(0,0,0,.2);transition:opacity .3s;white-space:nowrap;max-width:90vw;text-align:center';
+    n.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--teal);color:#fff;padding:12px 24px;border-radius:40px;font-size:14px;font-weight:600;z-index:10000;box-shadow:0 4px 20px rgba(0,0,0,.2);transition:opacity .3s;white-space:normal;word-break:break-word;max-width:min(90vw,400px);text-align:center';
     document.body.appendChild(n);
   }
   const short = name.length > 40 ? name.slice(0, 40) + '...' : name;

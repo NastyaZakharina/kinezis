@@ -176,7 +176,7 @@
 
 /* Stats row */
 .stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-@media(max-width:480px){ .stats-row { grid-template-columns: 1fr; } }
+@media(max-width:480px){ .stats-row { grid-template-columns: repeat(3,1fr); gap:8px; } .stat-card { padding:12px 8px; } .stat-card__num { font-size:22px; } }
 .stat-card { background: var(--bg-tint); border: 1px solid var(--border); border-radius: 14px; padding: 20px; text-align: center; }
 .stat-card__num { font-family: 'Unbounded', sans-serif; font-size: 28px; font-weight: 700; color: var(--teal); margin-bottom: 4px; }
 .stat-card__label { font-size: 13px; color: var(--muted); }
