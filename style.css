@@ -253,9 +253,10 @@ ul { list-style: none; }
   border-radius: var(--radius-lg);
   padding: 32px 28px;
   transition: var(--transition);
+  text-align: center;
 }
 .why__card:hover { border-color: var(--teal); box-shadow: var(--shadow-md); transform: translateY(-4px); }
-.why__icon { font-size: 36px; margin-bottom: 16px; }
+.why__icon { font-size: 36px; margin-bottom: 16px; text-align: center; }
 .why__card h3 { font-size: 17px; font-weight: 700; color: var(--dark); margin-bottom: 10px; }
 .why__card p { font-size: 15px; color: var(--muted); line-height: 1.6; }
 
