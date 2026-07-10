@@ -1069,12 +1069,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
 (function(){
   var PER_PAGE = 12;
-  var currentCat = 'all';
-  var currentPage = 1;
+  var saved = JSON.parse(sessionStorage.getItem('blogState') || '{}');
+  var currentCat = saved.cat || 'all';
+  var currentPage = saved.page || 1;
 
   var btns = document.querySelectorAll('.blog-filter');
   var allCards = Array.from(document.querySelectorAll('#blog-grid .blog-card'));
   var paginationEl = document.getElementById('blog-pagination');
+
+  function saveState() {
+    sessionStorage.setItem('blogState', JSON.stringify({ cat: currentCat, page: currentPage }));
+  }
 
   function getVisible() {
     return allCards.filter(function(c){
@@ -1082,7 +1087,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
   }
 
-  function renderPage() {
+  function renderPage(doScroll) {
     var visible = getVisible();
     var totalPages = Math.ceil(visible.length / PER_PAGE);
     if (currentPage > totalPages) currentPage = 1;
@@ -1093,7 +1098,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     visible.slice(start, end).forEach(function(c){ c.style.display = ''; });
 
     renderPagination(totalPages);
-    window.scrollTo({ top: document.getElementById('blog-filters').offsetTop - 80, behavior: 'smooth' });
+    if (doScroll) {
+      window.scrollTo({ top: document.getElementById('blog-filters').offsetTop - 80, behavior: 'smooth' });
+    }
+    saveState();
   }
 
   function renderPagination(totalPages) {
@@ -1110,7 +1118,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         ';font-size:14px;font-weight:' + (active ? '600' : '400') +
         ';cursor:' + (disabled ? 'default' : 'pointer') + ';transition:.15s';
       if (!disabled && !active) {
-        b.addEventListener('click', function(){ currentPage = page; renderPage(); });
+        b.addEventListener('click', function(){ currentPage = page; renderPage(true); });
         b.addEventListener('mouseenter', function(){ this.style.borderColor='var(--teal)'; this.style.color='var(--teal)'; });
         b.addEventListener('mouseleave', function(){ this.style.borderColor='var(--border)'; this.style.color='var(--dark)'; });
       }
@@ -1118,14 +1126,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
 
     paginationEl.appendChild(makeBtn('<', currentPage - 1, false, currentPage === 1));
-    if (!paginationEl.lastChild.disabled) paginationEl.lastChild.addEventListener('click', function(){ currentPage--; renderPage(); });
+    if (!paginationEl.lastChild.disabled) paginationEl.lastChild.addEventListener('click', function(){ currentPage--; renderPage(true); });
 
     for (var i = 1; i <= totalPages; i++) {
       paginationEl.appendChild(makeBtn(String(i), i, i === currentPage, false));
     }
 
     var nextBtn = makeBtn('>', currentPage + 1, false, currentPage === totalPages);
-    if (currentPage < totalPages) nextBtn.addEventListener('click', function(){ currentPage++; renderPage(); });
+    if (currentPage < totalPages) nextBtn.addEventListener('click', function(){ currentPage++; renderPage(true); });
     paginationEl.appendChild(nextBtn);
   }
 
@@ -1135,11 +1143,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       currentPage = 1;
       btns.forEach(function(b){ b.classList.remove('blog-filter--active'); });
       this.classList.add('blog-filter--active');
-      renderPage();
+      renderPage(true);
     });
   });
 
-  renderPage();
+  // restore active filter button
+  btns.forEach(function(b){
+    if (b.dataset.cat === currentCat) b.classList.add('blog-filter--active');
+  });
+
+  renderPage(false);
 })();
 </script>
 
