@@ -1,657 +1,958 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
   <channel>
-    <title>Kinezis</title>
+    <title>Кінезіс — реабілітаційне обладнання</title>
     <link>https://kinezis.com.ua</link>
-    <description>Тренажери МТБ та реабілітаційне обладнання</description>    <item>
+    <description>Тренажери МТБ, лавки, масажні столи та аксесуари для реабілітації</description>
+    <item>
       <g:id>mtb1</g:id>
-      <g:title>Тренажер МТБ-1 зі шведською стінкою (60x60)</g:title>
-      <g:description>МТБ-1 зі шведською стінкою — комбінована установка для кінезітерапії та гімнастики. Профіль 60x60 мм. Підходить для домашнього кабінету.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=mtb1</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/mtb_1-scaled.jpg</g:image_link>
-      <g:price>52500.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>РўСЂРµРЅР°Р¶РµСЂ РњРўР‘-1 Р·С– С€РІРµРґСЃСЊРєРѕСЋ СЃС‚С–РЅРєРѕСЋ (60Г—60)</g:title>
+      <g:description>РњРўР‘-1 Р·С– С€РІРµРґСЃСЊРєРѕСЋ СЃС‚С–РЅРєРѕСЋ вЂ” РєРѕРјР±С–РЅРѕРІР°РЅР° СѓСЃС‚Р°РЅРѕРІРєР° РґР»СЏ РєС–РЅРµР·С–С‚РµСЂР°РїС–С— С‚Р° РіС–РјРЅР°СЃС‚РёРєРё. РџСЂРѕС„С–Р»СЊ 60Г—60 РјРј Р·Р°Р±РµР·РїРµС‡СѓС” Р¶РѕСЂСЃС‚РєС–СЃС‚СЊ РєРѕРЅСЃС‚СЂСѓРєС†С–С—, Р° С€РІРµРґСЃСЊРєР° СЃС‚С–РЅРєР° СЂРѕР·С€РёСЂСЋС” РјРѕР¶Р»РёРІРѕСЃС‚С– РґР»СЏ РІРїСЂР°РІ РЅР° СЂРѕР·С‚СЏР¶РєСѓ С‚Р° РЅР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ. РџС–РґС…РѕРґРёС‚СЊ РґР»СЏ РґРѕРјР°С€РЅСЊРѕРіРѕ РєР°Р±С–РЅРµС‚Сѓ. РџСЂРѕС„С–Р»СЊ: 60Г—60 РјРј. РќР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ: 5вЂ“80 РєРі. РЁРІРµРґСЃСЊРєР° СЃС‚С–РЅРєР° РІРєР»СЋС‡РµРЅР°. Р’Р°РіР°: 35 РєРі</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtb_1-scaled.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>52500 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499824</g:google_product_category>
       <g:product_type>Тренажери МТБ</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>mtv1-40</g:id>
-      <g:title>Тренажер МТВ-1 Проф (профіль 40x40)</g:title>
-      <g:description>МТВ-1 на профілі 40x40 мм — бюджетна модифікація одноблочного тренажера для початківців. Компактний та простий у монтажі.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=mtv1-40</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/mtv-1-profil-40_40.jpg</g:image_link>
-      <g:price>27500.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>РўСЂРµРЅР°Р¶РµСЂ РњРўР’-1 РџСЂРѕС„ (РїСЂРѕС„С–Р»СЊ 40Г—40)</g:title>
+      <g:description>РњРўР’-1 РЅР° РїСЂРѕС„С–Р»С– 40Г—40 РјРј вЂ” Р±СЋРґР¶РµС‚РЅР° РјРѕРґРёС„С–РєР°С†С–СЏ РѕРґРЅРѕР±Р»РѕС‡РЅРѕРіРѕ С‚СЂРµРЅР°Р¶РµСЂР°. РџС–РґС…РѕРґРёС‚СЊ РґР»СЏ РїРѕС‡Р°С‚РєС–РІС†С–РІ С‚Р° РґР»СЏ РІРёРєРѕСЂРёСЃС‚Р°РЅРЅСЏ Р· РЅРµРІРµР»РёРєРёРј РЅР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏРј. РљРѕРјРїР°РєС‚РЅРёР№ С‚Р° РїСЂРѕСЃС‚РёР№ Сѓ РјРѕРЅС‚Р°Р¶С–. РџСЂРѕС„С–Р»СЊ: 40Г—40 РјРј. РќР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ: 5вЂ“60 РєРі. РћРґРёРЅ Р±Р»РѕРє</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtv-1-profil-40_40.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>27500 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499824</g:google_product_category>
       <g:product_type>Тренажери МТБ</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>mtv1-reg</g:id>
-      <g:title>Тренажер МТВ-1 з регульованим блоком (60x60)</g:title>
-      <g:description>МТВ-1 з регульованим блоком дозволяє змінювати висоту точки кріплення троса. Профіль 60x60 мм.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=mtv1-reg</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/mtv-1-reg.blok.jpg</g:image_link>
-      <g:price>33000.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>РўСЂРµРЅР°Р¶РµСЂ РњРўР’-1 Р· СЂРµРіСѓР»СЊРѕРІР°РЅРёРј Р±Р»РѕРєРѕРј (60Г—60)</g:title>
+      <g:description>РњРўР’-1 Р· СЂРµРіСѓР»СЊРѕРІР°РЅРёРј Р±Р»РѕРєРѕРј РґРѕР·РІРѕР»СЏС” Р·РјС–РЅСЋРІР°С‚Рё РІРёСЃРѕС‚Сѓ С‚РѕС‡РєРё РєСЂС–РїР»РµРЅРЅСЏ С‚СЂРѕСЃР°, СЂРѕР·С€РёСЂСЋСЋС‡Рё РєС–Р»СЊРєС–СЃС‚СЊ РґРѕСЃС‚СѓРїРЅРёС… РІРїСЂР°РІ. РџСЂРѕС„С–Р»СЊ 60Г—60 РјРј Р·Р°Р±РµР·РїРµС‡СѓС” РїС–РґРІРёС‰РµРЅСѓ Р¶РѕСЂСЃС‚РєС–СЃС‚СЊ РєРѕРЅСЃС‚СЂСѓРєС†С–С—. РџСЂРѕС„С–Р»СЊ: 60Г—60 РјРј. Р РµРіСѓР»СЊРѕРІР°РЅРёР№ Р±Р»РѕРє. РќР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ: 5вЂ“80 РєРі</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtv-1-reg.blok.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>33000 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499824</g:google_product_category>
       <g:product_type>Тренажери МТБ</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>mtb1-prof</g:id>
-      <g:title>Тренажер МТБ-1 Проф з регульованим блоком (60x60)</g:title>
-      <g:description>МТБ-1 Проф — одноблочний тренажер з регульованим блоком на посиленому профілі 60x60 мм для реабілітаційних центрів.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=mtb1-prof</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/mtb-1-prof80.jpg</g:image_link>
-      <g:price>30000.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>РўСЂРµРЅР°Р¶РµСЂ РњРўР‘-1 РџСЂРѕС„ Р· СЂРµРіСѓР»СЊРѕРІР°РЅРёРј Р±Р»РѕРєРѕРј (60Г—60)</g:title>
+      <g:description>РњРўР‘-1 РџСЂРѕС„ вЂ” РѕРґРЅРѕР±Р»РѕС‡РЅРёР№ С‚СЂРµРЅР°Р¶РµСЂ Р· СЂРµРіСѓР»СЊРѕРІР°РЅРёРј Р±Р»РѕРєРѕРј РЅР° РїРѕСЃРёР»РµРЅРѕРјСѓ РїСЂРѕС„С–Р»С– 60Г—60 РјРј. РџС–РґРІРёС‰РµРЅР° Р¶РѕСЂСЃС‚РєС–СЃС‚СЊ СЂР°РјРё РґРѕР·РІРѕР»СЏС” РїСЂР°С†СЋРІР°С‚Рё Р· Р±С–Р»СЊС€РёРјРё РЅР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏРјРё, СЂРµРєРѕРјРµРЅРґРѕРІР°РЅРёР№ РґР»СЏ СЂРµР°Р±С–Р»С–С‚Р°С†С–Р№РЅРёС… С†РµРЅС‚СЂС–РІ. РџСЂРѕС„С–Р»СЊ: 60Г—60 РјРј. РќР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ: РґРѕ 100 РєРі. Р РµРіСѓР»СЊРѕРІР°РЅРёР№ Р±Р»РѕРє</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtb-1-prof80.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>30000 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499824</g:google_product_category>
       <g:product_type>Тренажери МТБ</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>mtb1-shvedska</g:id>
-      <g:title>Тренажер Бубновського зі шведською стінкою (60x60)</g:title>
-      <g:description>Тренажер за методом Бубновського зі шведською стінкою — повноцінна реабілітаційна установка для клінік та великих кабінетів.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=mtb1-shvedska</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/kzs013shl_mtb-3-scaled.jpg</g:image_link>
-      <g:price>116600.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>РўСЂРµРЅР°Р¶РµСЂ Р‘СѓР±РЅРѕРІСЃСЊРєРѕРіРѕ Р·С– С€РІРµРґСЃСЊРєРѕСЋ СЃС‚С–РЅРєРѕСЋ (60Г—60)</g:title>
+      <g:description>РўСЂРµРЅР°Р¶РµСЂ Р·Р° РјРµС‚РѕРґРѕРј Р‘СѓР±РЅРѕРІСЃСЊРєРѕРіРѕ Р·С– С€РІРµРґСЃСЊРєРѕСЋ СЃС‚С–РЅРєРѕСЋ вЂ” РїРѕРІРЅРѕС†С–РЅРЅР° СЂРµР°Р±С–Р»С–С‚Р°С†С–Р№РЅР° СѓСЃС‚Р°РЅРѕРІРєР° РґР»СЏ РєР»С–РЅС–Рє С‚Р° РІРµР»РёРєРёС… РєР°Р±С–РЅРµС‚С–РІ. РџСЂРѕС„С–Р»СЊ 60Г—60 РјРј, СЂРѕР·С€РёСЂРµРЅР° С„СѓРЅРєС†С–РѕРЅР°Р»СЊРЅС–СЃС‚СЊ РґР»СЏ РіСЂСѓРїРѕРІРёС… С‚Р° С–РЅРґРёРІС–РґСѓР°Р»СЊРЅРёС… Р·Р°РЅСЏС‚СЊ. РЁРІРµРґСЃСЊРєР° СЃС‚С–РЅРєР° С–РЅС‚РµРіСЂРѕРІР°РЅР°. РџСЂРѕС„С–Р»СЊ: 60Г—60 РјРј. Р”Р»СЏ РєР»С–РЅС–Рє. Р’РёСЃРѕС‚Р°: 220 СЃРј</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/kzs013shl_mtb-3-scaled.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>116600 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499824</g:google_product_category>
       <g:product_type>Тренажери МТБ</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>mtb2</g:id>
-      <g:title>Тренажер МТБ-2 (профіль 60x60)</g:title>
-      <g:description>МТБ-2 — двоблочний тренажер з верхнім та нижнім блоком для лікування захворювань хребта, суглобів і реабілітації.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=mtb2</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/mtb-2-prof80.jpg</g:image_link>
-      <g:price>62500.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>РўСЂРµРЅР°Р¶РµСЂ РњРўР‘-2 (РїСЂРѕС„С–Р»СЊ 60Г—60)</g:title>
+      <g:description>РњРўР‘-2 вЂ” РґРІРѕР±Р»РѕС‡РЅРёР№ С‚СЂРµРЅР°Р¶РµСЂ Р· РІРµСЂС…РЅС–Рј С‚Р° РЅРёР¶РЅС–Рј Р±Р»РѕРєРѕРј. Р”РѕР·РІРѕР»СЏС” РІРёРєРѕРЅСѓРІР°С‚Рё Р·РЅР°С‡РЅРѕ Р±С–Р»СЊС€Рµ РІРїСЂР°РІ РїРѕСЂС–РІРЅСЏРЅРѕ Р· РѕРґРЅРѕР±Р»РѕС‡РЅРѕСЋ РјРѕРґРµР»Р»СЋ, РїС–РґС…РѕРґРёС‚СЊ РґР»СЏ Р»С–РєСѓРІР°РЅРЅСЏ Р·Р°С…РІРѕСЂСЋРІР°РЅСЊ С…СЂРµР±С‚Р°, СЃСѓРіР»РѕР±С–РІ С– Р·Р°РіР°Р»СЊРЅРѕС— СЂРµР°Р±С–Р»С–С‚Р°С†С–С—. РџСЂРѕС„С–Р»СЊ: 60Г—60 РјРј. Р”РІР° Р±Р»РѕРєРё. РќР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ: 5вЂ“120 РєРі. Р’Р°РіР°: 38 РєРі</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtb-2-prof80.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>62500 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499824</g:google_product_category>
       <g:product_type>Тренажери МТБ</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>mtb2-40</g:id>
-      <g:title>Тренажер МТБ-2 (профіль 40x40)</g:title>
-      <g:description>МТБ-2 на профілі 40x40 мм — доступна двоблочна версія для початківців або обмеженого простору.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=mtb2-40</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/mtv-2-profil-40_40.jpg</g:image_link>
-      <g:price>57500.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>РўСЂРµРЅР°Р¶РµСЂ РњРўР‘-2 (РїСЂРѕС„С–Р»СЊ 40Г—40)</g:title>
+      <g:description>РњРўР‘-2 РЅР° РїСЂРѕС„С–Р»С– 40Г—40 РјРј вЂ” РґРѕСЃС‚СѓРїРЅР° РґРІРѕР±Р»РѕС‡РЅР° РІРµСЂСЃС–СЏ РґР»СЏ С‚РёС…, С…С‚Рѕ Р»РёС€Рµ РїРѕС‡РёРЅР°С” Р·Р°Р№РјР°С‚РёСЃСЊ РєС–РЅРµР·С–С‚РµСЂР°РїС–С”СЋ Р°Р±Рѕ РѕР±РјРµР¶РµРЅРёР№ Сѓ РїСЂРѕСЃС‚РѕСЂС–. Р—Р±РµСЂС–РіР°С” РІРµСЃСЊ С„СѓРЅРєС†С–РѕРЅР°Р» РґРІРѕР±Р»РѕС‡РЅРѕРіРѕ С‚СЂРµРЅР°Р¶РµСЂР°. РџСЂРѕС„С–Р»СЊ: 40Г—40 РјРј. Р”РІР° Р±Р»РѕРєРё. РќР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ: РґРѕ 80 РєРі</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtv-2-profil-40_40.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>57500 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499824</g:google_product_category>
       <g:product_type>Тренажери МТБ</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>mtv2-reg</g:id>
-      <g:title>Тренажер МТВ-2 з регульованим блоком (60x60)</g:title>
-      <g:description>МТВ-2 з регульованими блоками — вдосконалена двоблочна модель. Блоки переміщуються по вертикалі.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=mtv2-reg</g:link>
-      <g:image_link>https://images.prom.ua/fwMnsep7KyVDkFcSETFUC5QVTBR4pSol_DxQ2LEswrc=/5493371859_trenazher-dlya-kineziterapiyi.jpg</g:image_link>
-      <g:price>68500.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>РўСЂРµРЅР°Р¶РµСЂ РњРўР’-2 Р· СЂРµРіСѓР»СЊРѕРІР°РЅРёРј Р±Р»РѕРєРѕРј (60Г—60)</g:title>
+      <g:description>РњРўР’-2 Р· СЂРµРіСѓР»СЊРѕРІР°РЅРёРјРё Р±Р»РѕРєР°РјРё вЂ” РІРґРѕСЃРєРѕРЅР°Р»РµРЅР° РґРІРѕР±Р»РѕС‡РЅР° РјРѕРґРµР»СЊ. Р—Р°РІРґСЏРєРё РјРѕР¶Р»РёРІРѕСЃС‚С– РїРµСЂРµРјС–С‰РµРЅРЅСЏ Р±Р»РѕРєС–РІ РїРѕ РІРµСЂС‚РёРєР°Р»СЊРЅРёС… РЅР°РїСЂСЏРјР»СЏСЋС‡РёС…, РєС–Р»СЊРєС–СЃС‚СЊ РґРѕСЃС‚СѓРїРЅРёС… РІРїСЂР°РІ Р·РЅР°С‡РЅРѕ Р·СЂРѕСЃС‚Р°С”. РџСЂРѕС„С–Р»СЊ: 60Г—60 РјРј. Р РµРіСѓР»СЊРѕРІР°РЅС– Р±Р»РѕРєРё. РќР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ: РґРѕ 120 РєРі</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtb-2-reg80-1.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>68500 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499824</g:google_product_category>
       <g:product_type>Тренажери МТБ</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>mtb4</g:id>
-      <g:title>Тренажер МТБ-4 (профіль 60x60)</g:title>
-      <g:description>МТБ-4 — чотириблочний тренажер для реабілітаційних центрів. Можливість роботи двох пацієнтів одночасно.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=mtb4</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/mtb-4-prof80.jpg</g:image_link>
-      <g:price>126600.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>РўСЂРµРЅР°Р¶РµСЂ РњРўР‘-4 (РїСЂРѕС„С–Р»СЊ 60Г—60)</g:title>
+      <g:description>РњРўР‘-4 вЂ” РїСЂРѕС„С–РЅСЃС‚СЂСѓРјРµРЅС‚ РґР»СЏ РєС–РЅРµР·С–С‚РµСЂР°РїРµРІС‚С–РІ. Р§РѕС‚РёСЂРё РЅРµР·Р°Р»РµР¶РЅС– Р±Р»РѕРєРё, РїС–РґРІРёС‰РµРЅР° РІР°РЅС‚Р°Р¶РѕРїС–РґР№РѕРјРЅС–СЃС‚СЊ, РјРѕР¶Р»РёРІС–СЃС‚СЊ РѕРґРЅРѕС‡Р°СЃРЅРѕС— СЂРѕР±РѕС‚Рё РґРІРѕС… РїР°С†С–С”РЅС‚С–РІ. РћР±РѕРІ'СЏР·РєРѕРІРµ РѕР±Р»Р°РґРЅР°РЅРЅСЏ РґР»СЏ РєРѕР¶РЅРѕРіРѕ СЂРµР°Р±С–Р»С–С‚Р°С†С–Р№РЅРѕРіРѕ С†РµРЅС‚СЂСѓ. РџСЂРѕС„С–Р»СЊ: 60Г—60 РјРј. Р§РѕС‚РёСЂРё Р±Р»РѕРєРё. РќР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ: РґРѕ 200 РєРі. Р’Р°РіР°: 85 РєРі</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtb-4-prof80.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>126600 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499824</g:google_product_category>
       <g:product_type>Тренажери МТБ</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>mtb4-reg</g:id>
-      <g:title>Тренажер МТБ-4 з регульованим блоком (60x60)</g:title>
-      <g:description>МТБ-4 з регульованими блоками — максимальний функціонал для великих реабілітаційних клінік.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=mtb4-reg</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/mtb-4-reg-scaled.jpg</g:image_link>
-      <g:price>138600.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>РўСЂРµРЅР°Р¶РµСЂ РњРўР‘-4 Р· СЂРµРіСѓР»СЊРѕРІР°РЅРёРј Р±Р»РѕРєРѕРј (60Г—60)</g:title>
+      <g:description>РќР°Р№Р±С–Р»СЊС€ С„СѓРЅРєС†С–РѕРЅР°Р»СЊРЅР° С‡РѕС‚РёСЂРёР±Р»РѕС‡РЅР° РјРѕРґРµР»СЊ вЂ” СѓСЃС– Р±Р»РѕРєРё СЂРµРіСѓР»СЋСЋС‚СЊСЃСЏ РїРѕ РІРёСЃРѕС‚С–. РџС–РґС…РѕРґРёС‚СЊ РґР»СЏ РєР»С–РЅС–Рє РґРµ РІР°Р¶Р»РёРІР° РіРЅСѓС‡РєС–СЃС‚СЊ РЅР°Р»Р°С€С‚СѓРІР°РЅРЅСЏ РїС–Рґ СЂС–Р·РЅРёС… РїР°С†С–С”РЅС‚С–РІ Р· СЂС–Р·РЅРёРјРё РїРѕС‚СЂРµР±Р°РјРё. РџСЂРѕС„С–Р»СЊ: 60Г—60 РјРј. 4 СЂРµРіСѓР»СЊРѕРІР°РЅС– Р±Р»РѕРєРё. Р”Р»СЏ РІРµР»РёРєРёС… РєР»С–РЅС–Рє</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtb-4-reg-scaled.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>138600 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499824</g:google_product_category>
       <g:product_type>Тренажери МТБ</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>bench1</g:id>
-      <g:title>Лавка реабілітаційна складна MTB-31</g:title>
-      <g:description>MTB-31 — багатофункціональна реабілітаційна лавка з регульованим кутом спинки для роботи з тренажером МТБ.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=bench1</g:link>
-      <g:image_link>https://images.prom.ua/IKoqDfRB0X8FI3eIU2nSJj91GXOYgClfl5jqpphZn-8=/5701824407_lavka-dlya-reabilitatsiyi.jpg</g:image_link>
-      <g:price>6500.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>Р›Р°РІРєР° СЂРµР°Р±С–Р»С–С‚Р°С†С–Р№РЅР° СЃРєР»Р°РґРЅР° MTB-31</g:title>
+      <g:description>MTB-31 вЂ” Р±Р°РіР°С‚РѕС„СѓРЅРєС†С–РѕРЅР°Р»СЊРЅР° СЂРµР°Р±С–Р»С–С‚Р°С†С–Р№РЅР° Р»Р°РІРєР° Р· СЂРµРіСѓР»СЊРѕРІР°РЅРёРј РєСѓС‚РѕРј СЃРїРёРЅРєРё. Р’РёРєРѕСЂРёСЃС‚РѕРІСѓС”С‚СЊСЃСЏ РґР»СЏ РІРїСЂР°РІ РЅР° С…СЂРµР±РµС‚, РЅРѕРіРё С‚Р° С‡РµСЂРµРІРЅРёР№ РїСЂРµСЃ, РїС–РґС…РѕРґРёС‚СЊ РґР»СЏ СЂРѕР±РѕС‚Рё Р· С‚СЂРµРЅР°Р¶РµСЂРѕРј РњРўР‘. РќР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ: РґРѕ 180 РєРі. РљСѓС‚ РЅР°С…РёР»Сѓ: 0вЂ“80В°. Р’Р°РіР°: 18 РєРі. Р РѕР·РјС–СЂРё: 120Г—45Г—50 СЃРј</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtb-31v2.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>6500 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499825</g:google_product_category>
       <g:product_type>Лавки та гіперекстензії</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>bench-mtb30</g:id>
-      <g:title>Лавка реабілітаційна пряма MTB-30</g:title>
-      <g:description>MTB-30 — горизонтальна реабілітаційна лавка без регулювань для вправ з тренажером МТБ та масажу.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=bench-mtb30</g:link>
-      <g:image_link>https://images.prom.ua/bkCe_N4lSk3A-HAw4Zd83uFb_OcMy78f4YduFSbIdsA=/5701938127_lavka-pryama-mtb-30.jpg</g:image_link>
-      <g:price>3000.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>Р›Р°РІРєР° СЂРµР°Р±С–Р»С–С‚Р°С†С–Р№РЅР° РїСЂСЏРјР° MTB-30</g:title>
+      <g:description>MTB-30 вЂ” РіРѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅР° СЂРµР°Р±С–Р»С–С‚Р°С†С–Р№РЅР° Р»Р°РІРєР° Р±РµР· СЂРµРіСѓР»СЋРІР°РЅСЊ. РќР°РґС–Р№РЅР° С‚Р° РїСЂРѕСЃС‚Р° Сѓ РІРёРєРѕСЂРёСЃС‚Р°РЅРЅС–, РїС–РґС…РѕРґРёС‚СЊ РґР»СЏ С€РёСЂРѕРєРѕРіРѕ РєРѕР»Р° РІРїСЂР°РІ Р· С‚СЂРµРЅР°Р¶РµСЂРѕРј РњРўР‘ С‚Р° РјР°СЃР°Р¶РЅРёС… РїСЂРѕС†РµРґСѓСЂ. РќР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ: РґРѕ 180 РєРі. Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅР°. Р”Р»СЏ СЂРѕР±РѕС‚Рё Р· РњРўР‘</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtb-30v2.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>3000 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499825</g:google_product_category>
       <g:product_type>Лавки та гіперекстензії</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>bench-vitjag</g:id>
-      <g:title>Лавка для витягування хребта MTB-009</g:title>
-      <g:description>MTB-009 — лавка для декомпресійних вправ при грижах та протрузіях хребта. Регульований кут нахилу.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=bench-vitjag</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/mtb-009v1.jpg</g:image_link>
-      <g:price>19800.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>Р›Р°РІРєР° РґР»СЏ РІРёС‚СЏРіСѓРІР°РЅРЅСЏ С…СЂРµР±С‚Р° MTB-009</g:title>
+      <g:description>MTB-009 вЂ” СЂРµР°Р±С–Р»С–С‚Р°С†С–Р№РЅР° Р»Р°РІРєР° РґР»СЏ РІРёС‚СЏРіСѓРІР°РЅРЅСЏ С…СЂРµР±С‚Р°. Р”РѕР·РІРѕР»СЏС” РІРёРєРѕРЅСѓРІР°С‚Рё РґРµРєРѕРјРїСЂРµСЃС–Р№РЅС– РІРїСЂР°РІРё, С‰Рѕ Р·РЅС–РјР°СЋС‚СЊ РЅР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ Р· РјС–Р¶С…СЂРµР±С†РµРІРёС… РґРёСЃРєС–РІ. РќРµР·Р°РјС–РЅРЅР° РїСЂРё РіСЂРёР¶Р°С… С‚Р° РїСЂРѕС‚СЂСѓР·С–СЏС…. Р”РµРєРѕРјРїСЂРµСЃС–СЏ С…СЂРµР±С‚Р°. Р РµРіСѓР»СЊРѕРІР°РЅРёР№ РєСѓС‚. РќР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ: РґРѕ 150 РєРі</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtb-009v1.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>19800 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499825</g:google_product_category>
       <g:product_type>Лавки та гіперекстензії</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>hyperext1</g:id>
-      <g:title>Гіперекстензія домашня SW-301</g:title>
-      <g:description>SW-301 — гіперекстензія для вправ на поперековий відділ хребта. 5 рівнів регулювання висоти.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=hyperext1</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/sw301.jpg</g:image_link>
-      <g:price>5900.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>Р“С–РїРµСЂРµРєСЃС‚РµРЅР·С–СЏ РґРѕРјР°С€РЅСЏ SW-301</g:title>
+      <g:description>SW-301 вЂ” Р·СЂСѓС‡РЅР° С‚Р° РЅР°РґС–Р№РЅР° РіС–РїРµСЂРµРєСЃС‚РµРЅР·С–СЏ РґР»СЏ РІРїСЂР°РІ РЅР° РїРѕРїРµСЂРµРєРѕРІРёР№ РІС–РґРґС–Р» С…СЂРµР±С‚Р° С‚Р° Рј'СЏР·Рё-СЂРѕР·РіРёРЅР°С‡С– СЃРїРёРЅРё. Р РµРіСѓР»СЊРѕРІР°РЅР° РІРёСЃРѕС‚Р° РєСЂС–РїР»РµРЅРЅСЏ РЅС–Рі РґРѕР·РІРѕР»СЏС” РїС–РґР»Р°С€С‚СѓРІР°С‚Рё С‚СЂРµРЅР°Р¶РµСЂ РїС–Рґ Р·СЂС–СЃС‚ РєРѕСЂРёСЃС‚СѓРІР°С‡Р°. РќР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ: РґРѕ 150 РєРі. Р’РёСЃРѕС‚Р° СЂРµРіСѓР»СЋРІР°РЅРЅСЏ: 5 СЂС–РІРЅС–РІ. Р’Р°РіР°: 15 РєРі</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/sw301.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>5900 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499825</g:google_product_category>
       <g:product_type>Лавки та гіперекстензії</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>bench-sw300</g:id>
-      <g:title>Лавка для преса комбінована SW-300</g:title>
-      <g:description>SW-300 — лавка з фіксатором ніг для вправ на прес. Регульований кут нахилу спинки.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=bench-sw300</g:link>
-      <g:image_link>https://images.prom.ua/NyB9yulXc21b7K-VXOVGdjiHkjJ53_tGSoS8aNc2ui8=/4349634412_lavka-dlya-presa.jpg</g:image_link>
-      <g:price>4000.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>Р›Р°РІРєР° РґР»СЏ РїСЂРµСЃР° РєРѕРјР±С–РЅРѕРІР°РЅР° SW-300</g:title>
+      <g:description>SW-300 вЂ” Р±Р°РіР°С‚РѕС„СѓРЅРєС†С–РѕРЅР°Р»СЊРЅР° Р»Р°РІРєР° Р· С„С–РєСЃР°С‚РѕСЂРѕРј РЅС–Рі РґР»СЏ РІРёРєРѕРЅР°РЅРЅСЏ РІРїСЂР°РІ РЅР° РїСЂРµСЃ С‚Р° С–РЅС€РёС… Р±Р°Р·РѕРІРёС… СЂСѓС…С–РІ. Р РµРіСѓР»СЊРѕРІР°РЅРёР№ РєСѓС‚ РЅР°С…РёР»Сѓ СЃРїРёРЅРєРё РґР°С” Р·РјРѕРіСѓ РІР°СЂС–СЋРІР°С‚Рё С–РЅС‚РµРЅСЃРёРІРЅС–СЃС‚СЊ РЅР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ. Р РµРіСѓР»СЊРѕРІР°РЅРёР№ РєСѓС‚. Р¤С–РєСЃР°С‚РѕСЂ РЅС–Рі. РќР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ: РґРѕ 150 РєРі</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/sw300.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>4000 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499825</g:google_product_category>
       <g:product_type>Лавки та гіперекстензії</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>bench-sw303</g:id>
-      <g:title>Лавка атлетична універсальна SW-303</g:title>
-      <g:description>SW-303 — лавка з 5 положеннями спинки та 3 положеннями сидіння. Навантаження до 300 кг.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=bench-sw303</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/sw303.jpg</g:image_link>
-      <g:price>7000.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>Р›Р°РІРєР° Р°С‚Р»РµС‚РёС‡РЅР° СѓРЅС–РІРµСЂСЃР°Р»СЊРЅР° SW-303</g:title>
+      <g:description>SW-303 вЂ” СѓРЅС–РІРµСЂСЃР°Р»СЊРЅР° Р°С‚Р»РµС‚РёС‡РЅР° Р»Р°РІРєР° Р· 5 РїРѕР»РѕР¶РµРЅРЅСЏРјРё СЃРїРёРЅРєРё С‚Р° 3 РїРѕР»РѕР¶РµРЅРЅСЏРјРё СЃРёРґС–РЅРЅСЏ. РџС–РґС…РѕРґРёС‚СЊ РґР»СЏ РІРїСЂР°РІ С–Р· РЅР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏРј, СЂРµР°Р±С–Р»С–С‚Р°С†С–Р№РЅРёС… РєРѕРјРїР»РµРєСЃС–РІ С‚Р° СЃРёР»РѕРІРёС… С‚СЂРµРЅСѓРІР°РЅСЊ. 5 РїРѕР»РѕР¶РµРЅСЊ СЃРїРёРЅРєРё. РќР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ: РґРѕ 300 РєРі. РЈРЅС–РІРµСЂСЃР°Р»СЊРЅР°</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/sw303.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>7000 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499825</g:google_product_category>
       <g:product_type>Лавки та гіперекстензії</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>bench-sw308</g:id>
-      <g:title>Лавка профі SW-308</g:title>
-      <g:description>SW-308 — професійна лавка для реабілітаційних центрів та фітнес-залів. Навантаження до 400 кг.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=bench-sw308</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/sw308.jpg</g:image_link>
-      <g:price>6600.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>Р›Р°РІРєР° РїСЂРѕС„С– SW-308</g:title>
+      <g:description>SW-308 вЂ” РїСЂРѕС„РµСЃС–Р№РЅР° Р»Р°РІРєР° РґР»СЏ СЂРµР°Р±С–Р»С–С‚Р°С†С–Р№РЅРёС… С†РµРЅС‚СЂС–РІ С‚Р° С„С–С‚РЅРµСЃ-Р·Р°Р»С–РІ. РЁРёСЂРѕРєРµ Рј'СЏРєРµ Р»РѕР¶Рµ, РїРѕСЃРёР»РµРЅР° СЂР°РјР° С‚Р° РЅР°РґС–Р№РЅС– С„С–РєСЃР°С‚РѕСЂРё Р·Р°Р±РµР·РїРµС‡СѓСЋС‚СЊ Р±РµР·РїРµРєСѓ С‚Р° РєРѕРјС„РѕСЂС‚ РїС–Рґ С‡Р°СЃ РЅР°РІР°РЅС‚Р°Р¶РµРЅСЊ. РќР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ: РґРѕ 400 РєРі. РџРѕСЃРёР»РµРЅР° СЂР°РјР°. Р”Р»СЏ РєР»С–РЅС–Рє</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/sw308.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>6600 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499825</g:google_product_category>
       <g:product_type>Лавки та гіперекстензії</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>bench-roman</g:id>
-      <g:title>Римський стілець реабілітаційний SVS-112</g:title>
-      <g:description>SVS-112 — реабілітаційний римський стілець для відновлення після операцій на попереку.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=bench-roman</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/svs-112-scaled.jpg</g:image_link>
-      <g:price>11900.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>Р РёРјСЃСЊРєРёР№ СЃС‚С–Р»РµС†СЊ СЂРµР°Р±С–Р»С–С‚Р°С†С–Р№РЅРёР№ SVS-112</g:title>
+      <g:description>SVS-112 вЂ” СЂРµР°Р±С–Р»С–С‚Р°С†С–Р№РЅРёР№ СЂРёРјСЃСЊРєРёР№ СЃС‚С–Р»РµС†СЊ Р· Рј'СЏРєРёРјРё СѓРїРѕСЂР°РјРё РґР»СЏ РЅС–Рі С‚Р° СЃС‚РµРіРѕРЅ. Р†РґРµР°Р»СЊРЅРѕ РїС–РґС…РѕРґРёС‚СЊ РґР»СЏ РІС–РґРЅРѕРІР»РµРЅРЅСЏ РїС–СЃР»СЏ РѕРїРµСЂР°С†С–Р№ РЅР° РїРѕРїРµСЂРµРєСѓ С‚Р° Р·РјС–С†РЅРµРЅРЅСЏ СЂРѕР·РіРёРЅР°С‡С–РІ СЃРїРёРЅРё. РќР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ: РґРѕ 140 РєРі. РњР°С‚РµСЂС–Р°Р»: СЃС‚Р°Р»СЊ + РµРєРѕС€РєС–СЂР°. Р’Р°РіР°: 12 РєРі</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/svs-112-scaled.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>11900 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499825</g:google_product_category>
       <g:product_type>Лавки та гіперекстензії</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>bench-svs113</g:id>
-      <g:title>Римський стілець регульований SVS-113</g:title>
-      <g:description>SVS-113 — римський стілець з регулюванням кута нахилу корпусу та висоти упорів.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=bench-svs113</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/svs-113-scaled.jpg</g:image_link>
-      <g:price>14750.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>Р РёРјСЃСЊРєРёР№ СЃС‚С–Р»РµС†СЊ СЂРµРіСѓР»СЊРѕРІР°РЅРёР№ SVS-113</g:title>
+      <g:description>SVS-113 вЂ” РІРґРѕСЃРєРѕРЅР°Р»РµРЅР° РІРµСЂСЃС–СЏ СЂРёРјСЃСЊРєРѕРіРѕ СЃС‚С–Р»СЊС†СЏ Р· СЂРµРіСѓР»СЋРІР°РЅРЅСЏРј РєСѓС‚Р° РЅР°С…РёР»Сѓ РєРѕСЂРїСѓСЃСѓ С‚Р° РІРёСЃРѕС‚Рё СѓРїРѕСЂС–РІ. Р”РѕР·РІРѕР»СЏС” С‚РѕС‡РЅРѕ РїС–РґР»Р°С€С‚РѕРІСѓРІР°С‚Рё РЅР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ РІС–РґРїРѕРІС–РґРЅРѕ РґРѕ СЃС‚Р°РЅСѓ РїР°С†С–С”РЅС‚Р°. Р РµРіСѓР»СЊРѕРІР°РЅРёР№ РєСѓС‚. РќР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ: РґРѕ 150 РєРі. Р”Р»СЏ РєР»С–РЅС–Рє</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/svs-113-scaled.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>14750 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499825</g:google_product_category>
       <g:product_type>Лавки та гіперекстензії</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>bench-svs119</g:id>
-      <g:title>Гіперекстензія горизонтальна SVS-119</g:title>
-      <g:description>SVS-119 — горизонтальна гіперекстензія. Навантаження на сідничні м'язи та довгі розгиначі спини.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=bench-svs119</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/svs-1191-scaled.jpg</g:image_link>
-      <g:price>12000.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>Р“С–РїРµСЂРµРєСЃС‚РµРЅР·С–СЏ РіРѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅР° SVS-119</g:title>
+      <g:description>SVS-119 вЂ” РіРѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅР° РіС–РїРµСЂРµРєСЃС‚РµРЅР·С–СЏ, РґРµ РєРѕСЂРїСѓСЃ СЂРѕР·РјС–С‰СѓС”С‚СЊСЃСЏ РїР°СЂР°Р»РµР»СЊРЅРѕ РїС–РґР»РѕР·С–. РўР°РєРёР№ РєСѓС‚ Р·Р°Р±РµР·РїРµС‡СѓС” СЃРїРµС†РёС„С–С‡РЅРµ РЅР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ РЅР° СЃС–РґРЅРёС‡РЅС– Рј'СЏР·Рё С‚Р° РґРѕРІРіС– СЂРѕР·РіРёРЅР°С‡С– СЃРїРёРЅРё. Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅРµ РїРѕР»РѕР¶РµРЅРЅСЏ. РќР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ: РґРѕ 150 РєРі. РњР°С‚РµСЂС–Р°Р»: СЃС‚Р°Р»СЊ</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/svs-1191-scaled.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>12000 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499825</g:google_product_category>
       <g:product_type>Лавки та гіперекстензії</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>bench-svs127</g:id>
-      <g:title>Гіперекстензія зворотна SVS-127</g:title>
-      <g:description>SVS-127 — зворотна гіперекстензія. Розвантаження хребта, зміцнення сідниць та задньої поверхні стегон.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=bench-svs127</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/svs-1271-scaled.jpg</g:image_link>
-      <g:price>12000.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>Р“С–РїРµСЂРµРєСЃС‚РµРЅР·С–СЏ Р·РІРѕСЂРѕС‚РЅР° SVS-127</g:title>
+      <g:description>SVS-127 вЂ” Р·РІРѕСЂРѕС‚РЅР° РіС–РїРµСЂРµРєСЃС‚РµРЅР·С–СЏ, РґРµ С„С–РєСЃСѓС”С‚СЊСЃСЏ С‚РѕСЂСЃ Р° РїС–РґС–Р№РјР°СЋС‚СЊСЃСЏ РЅРѕРіРё. РўР°РєРёР№ СЂСѓС… РµС„РµРєС‚РёРІРЅРѕ СЂРѕР·РІР°РЅС‚Р°Р¶СѓС” С…СЂРµР±РµС‚ С‚Р° Р·РјС–С†РЅСЋС” СЃС–РґРЅРёС†С– С– Р·Р°РґРЅСЋ РїРѕРІРµСЂС…РЅСЋ СЃС‚РµРіРѕРЅ. Р—РІРѕСЂРѕС‚РЅРёР№ СЂСѓС…. РќР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ: РґРѕ 120 РєРі. Р”Р»СЏ СЂРµР°Р±С–Р»С–С‚Р°С†С–С— РїРѕРїРµСЂРµРєР°</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/svs-1271-scaled.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>12000 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499825</g:google_product_category>
       <g:product_type>Лавки та гіперекстензії</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>bench-svs108</g:id>
-      <g:title>Гіперекстензія регульована SVS-108</g:title>
-      <g:description>SVS-108 — регульована гіперекстензія 45 градусів. Класична конструкція з м'якими валиками для фіксації ніг.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=bench-svs108</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/svs-108v1.jpg</g:image_link>
-      <g:price>16600.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>Р“С–РїРµСЂРµРєСЃС‚РµРЅР·С–СЏ СЂРµРіСѓР»СЊРѕРІР°РЅР° SVS-108</g:title>
+      <g:description>SVS-108 вЂ” СЂРµРіСѓР»СЊРѕРІР°РЅР° РіС–РїРµСЂРµРєСЃС‚РµРЅР·С–СЏ Р· РєСѓС‚РѕРј РЅР°С…РёР»Сѓ 45В°. РљР»Р°СЃРёС‡РЅР° РєРѕРЅСЃС‚СЂСѓРєС†С–СЏ Р· Рј'СЏРєРёРјРё РІР°Р»РёРєР°РјРё РґР»СЏ С„С–РєСЃР°С†С–С— РЅС–Рі, РЅР°РґС–Р№РЅР° С‚Р° РїСЂРѕСЃС‚Р° Сѓ РІРёРєРѕСЂРёСЃС‚Р°РЅРЅС–. РџС–РґС…РѕРґРёС‚СЊ РґР»СЏ РєР»С–РЅС–Рє С‚Р° РґРѕРјР°С€РЅСЊРѕРіРѕ РІРёРєРѕСЂРёСЃС‚Р°РЅРЅСЏ. РљСѓС‚: 45В°. РќР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ: РґРѕ 150 РєРі. Рњ'СЏРєС– РІР°Р»РёРєРё</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/svs-108v1.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>16600 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499825</g:google_product_category>
       <g:product_type>Лавки та гіперекстензії</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>bench-svs145</g:id>
-      <g:title>Лавка регульована SVS-145</g:title>
-      <g:description>SVS-145 — лавка з незалежним регулюванням кута спинки та сидіння. Навантаження до 200 кг.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=bench-svs145</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/svs-145-scaled.jpg</g:image_link>
-      <g:price>14780.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>Р›Р°РІРєР° СЂРµРіСѓР»СЊРѕРІР°РЅР° SVS-145</g:title>
+      <g:description>SVS-145 вЂ” СЃСѓС‡Р°СЃРЅР° СЂРµРіСѓР»СЊРѕРІР°РЅР° Р»Р°РІРєР° Р· РЅРµР·Р°Р»РµР¶РЅРёРј СЂРµРіСѓР»СЋРІР°РЅРЅСЏРј РєСѓС‚Р° СЃРїРёРЅРєРё С‚Р° СЃРёРґС–РЅРЅСЏ. РЁРёСЂРѕРєРёР№ РґС–Р°РїР°Р·РѕРЅ РїРѕР»РѕР¶РµРЅСЊ РґРѕР·РІРѕР»СЏС” РІРёРєРѕСЂРёСЃС‚РѕРІСѓРІР°С‚Рё С—С— РґР»СЏ РґРµСЃСЏС‚РєС–РІ СЂС–Р·РЅРёС… РІРїСЂР°РІ Сѓ СЂРµР°Р±С–Р»С–С‚Р°С†С–Р№РЅРѕРјСѓ РїСЂРѕС†РµСЃС–. Р РµРіСѓР»СЊРѕРІР°РЅР° СЃРїРёРЅРєР° С– СЃРёРґС–РЅРЅСЏ. РќР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ: РґРѕ 200 РєРі. Р”Р»СЏ РєР»С–РЅС–Рє</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/svs-145-scaled.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>14780 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499825</g:google_product_category>
       <g:product_type>Лавки та гіперекстензії</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>massage1</g:id>
-      <g:title>Масажний стіл складний (алюміній) MTB-051</g:title>
-      <g:description>MTB-051 — алюмінієвий складний масажний стіл з регульованою висотою 60-85 см. Вага 11 кг.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=massage1</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/mtb-051.jpg</g:image_link>
-      <g:price>11200.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>РњР°СЃР°Р¶РЅРёР№ СЃС‚С–Р» СЃРєР»Р°РґРЅРёР№ (Р°Р»СЋРјС–РЅС–Р№) MTB-051</g:title>
+      <g:description>MTB-051 вЂ” Р°Р»СЋРјС–РЅС–С”РІРёР№ СЃРєР»Р°РґРЅРёР№ РјР°СЃР°Р¶РЅРёР№ СЃС‚С–Р» Р· СЂРµРіСѓР»СЊРѕРІР°РЅРѕСЋ РІРёСЃРѕС‚РѕСЋ. РџС–РґС…РѕРґРёС‚СЊ РґР»СЏ РјР°СЃР°Р¶РёСЃС‚С–РІ, С„С–Р·С–РѕС‚РµСЂР°РїРµРІС‚С–РІ С‚Р° СЂРµР°Р±С–Р»С–С‚РѕР»РѕРіС–РІ. Р›РµРіРєРѕ С‚СЂР°РЅСЃРїРѕСЂС‚СѓС”С‚СЊСЃСЏ Сѓ СЃРєР»Р°РґРµРЅРѕРјСѓ СЃС‚Р°РЅС–. Р’РёСЃРѕС‚Р°: 60вЂ“85 СЃРј (СЂРµРіСѓР»СЊРѕРІР°РЅР°). РќР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ: РґРѕ 250 РєРі. Р’Р°РіР°: 11 РєРі. РњР°С‚РµСЂС–Р°Р»: Р°Р»СЋРјС–РЅС–Р№</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtb-051.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>11200 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>491</g:google_product_category>
       <g:product_type>Масажні столи та стільці</g:product_type>
+      <g:google_product_category>491</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>massage2</g:id>
-      <g:title>Масажний стіл стаціонарний MTB-050</g:title>
-      <g:description>MTB-050 — стаціонарний масажний стіл для кабінетів масажу та реабілітаційних центрів. Навантаження до 300 кг.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=massage2</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/mtb-050.jpg</g:image_link>
-      <g:price>18400.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>РњР°СЃР°Р¶РЅРёР№ СЃС‚С–Р» СЃС‚Р°С†С–РѕРЅР°СЂРЅРёР№ MTB-050</g:title>
+      <g:description>MTB-050 вЂ” СЃС‚Р°С†С–РѕРЅР°СЂРЅРёР№ РјР°СЃР°Р¶РЅРёР№ СЃС‚С–Р» РїС–РґРІРёС‰РµРЅРѕС— РјС–С†РЅРѕСЃС‚С– РґР»СЏ РєР°Р±С–РЅРµС‚С–РІ РјР°СЃР°Р¶Сѓ С‚Р° СЂРµР°Р±С–Р»С–С‚Р°С†С–Р№РЅРёС… С†РµРЅС‚СЂС–РІ. РЁРёСЂРѕРєРµ Р»РѕР¶Рµ С‚Р° Р·СЂСѓС‡РЅРёР№ РїС–РґРіРѕР»С–РІРЅРёРє Р·Р°Р±РµР·РїРµС‡СѓСЋС‚СЊ РєРѕРјС„РѕСЂС‚ РїР°С†С–С”РЅС‚Р°. Р’РёСЃРѕС‚Р°: 70 СЃРј. РЁРёСЂРёРЅР°: 65 СЃРј. РќР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ: РґРѕ 300 РєРі. РњР°С‚РµСЂС–Р°Р»: Р±СѓРє + РјРµРґРёС‡РЅР° С€РєС–СЂР°</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtb-050.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>18400 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>491</g:google_product_category>
       <g:product_type>Масажні столи та стільці</g:product_type>
+      <g:google_product_category>491</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>massage-chair</g:id>
-      <g:title>Масажний стілець для шийно-комірцевої зони MTB-052</g:title>
-      <g:description>MTB-052 — складний стілець для масажу шийно-комірцевої зони. Повний доступ до спини та шиї.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=massage-chair</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/mtb-052.jpg</g:image_link>
-      <g:price>7900.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>РњР°СЃР°Р¶РЅРёР№ СЃС‚С–Р»РµС†СЊ РґР»СЏ С€РёР№РЅРѕ-РєРѕРјС–СЂС†РµРІРѕС— Р·РѕРЅРё MTB-052</g:title>
+      <g:description>MTB-052 вЂ” РµСЂРіРѕРЅРѕРјС–С‡РЅРёР№ СЃРєР»Р°РґРЅРёР№ СЃС‚С–Р»РµС†СЊ РґР»СЏ СЃРµР°РЅСЃС–РІ РјР°СЃР°Р¶Сѓ С€РёР№РЅРѕ-РєРѕРјС–СЂС†РµРІРѕС— Р·РѕРЅРё. РџР°С†С–С”РЅС‚ СЃРёРґРёС‚СЊ РѕР±Р»РёС‡С‡СЏРј РґРѕ СЃРїРёРЅРєРё, С‰Рѕ Р·Р°Р±РµР·РїРµС‡СѓС” РїРѕРІРЅРёР№ РґРѕСЃС‚СѓРї РґРѕ СЃРїРёРЅРё С‚Р° С€РёС—. РџС–РґС…РѕРґРёС‚СЊ РґР»СЏ РІРёС—Р·РґСѓ. Р’Р°РіР°: 7 РєРі. РќР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ: РґРѕ 150 РєРі. РњР°С‚РµСЂС–Р°Р»: СЃС‚Р°Р»СЊ + РЅРµР№Р»РѕРЅ</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtb-052.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>7900 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>491</g:google_product_category>
       <g:product_type>Масажні столи та стільці</g:product_type>
+      <g:google_product_category>491</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>bars1</g:id>
-      <g:title>Паралельні бруси реабілітаційні MTB-016</g:title>
-      <g:description>MTB-016 — паралельні бруси з регульованою висотою та шириною для відновлення навичок ходіння.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=bars1</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/mtb-016.jpg</g:image_link>
-      <g:price>36250.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>РџР°СЂР°Р»РµР»СЊРЅС– Р±СЂСѓСЃРё СЂРµР°Р±С–Р»С–С‚Р°С†С–Р№РЅС– MTB-016</g:title>
+      <g:description>MTB-016 вЂ” РїР°СЂР°Р»РµР»СЊРЅС– Р±СЂСѓСЃРё Р· СЂРµРіСѓР»СЊРѕРІР°РЅРѕСЋ РІРёСЃРѕС‚РѕСЋ С‚Р° С€РёСЂРёРЅРѕСЋ. Р’РёРєРѕСЂРёСЃС‚РѕРІСѓСЋС‚СЊСЃСЏ РґР»СЏ РІС–РґРЅРѕРІР»РµРЅРЅСЏ РЅР°РІРёС‡РѕРє С…РѕРґС–РЅРЅСЏ РїС–СЃР»СЏ С‚СЂР°РІРј, С–РЅСЃСѓР»СЊС‚С–РІ С‚Р° РѕРїРµСЂР°С†С–Р№ РЅР° РЅРёР¶РЅС–С… РєС–РЅС†С–РІРєР°С…. Р”РѕРІР¶РёРЅР°: 200 СЃРј. Р’РёСЃРѕС‚Р°: 65вЂ“95 СЃРј. РЁРёСЂРёРЅР°: 55вЂ“90 СЃРј. РќР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ: РґРѕ 200 РєРі</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtb-016.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>36250 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499824</g:google_product_category>
       <g:product_type>Бруси та сходи</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>bars-mtb018</g:id>
-      <g:title>Бруси реабілітаційні з перешкодами MTB-018</g:title>
-      <g:description>MTB-018 — паралельні бруси з перешкодами для відпрацювання підняття ніг і відновлення координації.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=bars-mtb018</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/mtb-018.jpg</g:image_link>
-      <g:price>52000.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>Р‘СЂСѓСЃРё СЂРµР°Р±С–Р»С–С‚Р°С†С–Р№РЅС– Р· РїРµСЂРµС€РєРѕРґР°РјРё MTB-018</g:title>
+      <g:description>MTB-018 вЂ” РїР°СЂР°Р»РµР»СЊРЅС– Р±СЂСѓСЃРё Р· РІР±СѓРґРѕРІР°РЅРёРјРё РїРµСЂРµС€РєРѕРґР°РјРё РґР»СЏ РІС–РґРїСЂР°С†СЋРІР°РЅРЅСЏ РїС–РґРЅСЏС‚С‚СЏ РЅС–Рі РїС–Рґ С‡Р°СЃ С…РѕРґСЊР±Рё. Р’РёРєРѕСЂРёСЃС‚РѕРІСѓСЋС‚СЊСЃСЏ РЅР° РїС–Р·РЅС–С… РµС‚Р°РїР°С… СЂРµР°Р±С–Р»С–С‚Р°С†С–С— РґР»СЏ РІС–РґРЅРѕРІР»РµРЅРЅСЏ РєРѕРѕСЂРґРёРЅР°С†С–С—. Р”РѕРІР¶РёРЅР°: 200 СЃРј. Р— РїРµСЂРµС€РєРѕРґР°РјРё. РќР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ: РґРѕ 200 РєРі</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtb-018.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>52000 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499824</g:google_product_category>
       <g:product_type>Бруси та сходи</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>bars-mtb019</g:id>
-      <g:title>Бруси реабілітаційні дитячі з перешкодами MTB-019</g:title>
-      <g:description>MTB-019 — дитячі паралельні бруси з перешкодами для реабілітації дітей та при ДЦП.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=bars-mtb019</g:link>
-      <g:image_link>https://images.prom.ua/tnT-kEDki_nb_Hpsvao_I9nmrw4-vmwn9MydMl4KI40=/5493387883_brusi-dlya-vidnovlennya.jpg</g:image_link>
-      <g:price>48000.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>Р‘СЂСѓСЃРё СЂРµР°Р±С–Р»С–С‚Р°С†С–Р№РЅС– РґРёС‚СЏС‡С– Р· РїРµСЂРµС€РєРѕРґР°РјРё MTB-019</g:title>
+      <g:description>MTB-019 вЂ” Р·РјРµРЅС€РµРЅС– РїР°СЂР°Р»РµР»СЊРЅС– Р±СЂСѓСЃРё Р· РїРµСЂРµС€РєРѕРґР°РјРё, СЂРѕР·СЂРѕР±Р»РµРЅС– СЃРїРµС†С–Р°Р»СЊРЅРѕ РґР»СЏ РґРёС‚СЏС‡РѕС— СЂРµР°Р±С–Р»С–С‚Р°С†С–С—. Р”РѕРїРѕРјР°РіР°СЋС‚СЊ РґС–С‚СЏРј РІС–РґРЅРѕРІРёС‚Рё РЅР°РІРёС‡РєРё С…РѕРґСЊР±Рё РїС–СЃР»СЏ С‚СЂР°РІРј С‚Р° РїСЂРё Р”Р¦Рџ. Р”Р»СЏ РґС–С‚РµР№. Р— РїРµСЂРµС€РєРѕРґР°РјРё. Р РµРіСѓР»СЊРѕРІР°РЅР° РІРёСЃРѕС‚Р°</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtb-019.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>48000 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499824</g:google_product_category>
       <g:product_type>Бруси та сходи</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>bars-mtb020</g:id>
-      <g:title>Бруси реабілітаційні з перешкодами MTB-020</g:title>
-      <g:description>MTB-020 — бруси другого покоління з регульованими перешкодами для поступового ускладнення вправ.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=bars-mtb020</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/mtb-020v2.jpg</g:image_link>
-      <g:price>56000.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>Р‘СЂСѓСЃРё СЂРµР°Р±С–Р»С–С‚Р°С†С–Р№РЅС– Р· РїРµСЂРµС€РєРѕРґР°РјРё MTB-020</g:title>
+      <g:description>MTB-020 вЂ” РїР°СЂР°Р»РµР»СЊРЅС– Р±СЂСѓСЃРё РґСЂСѓРіРѕРіРѕ РїРѕРєРѕР»С–РЅРЅСЏ Р· СѓРґРѕСЃРєРѕРЅР°Р»РµРЅРѕСЋ СЃРёСЃС‚РµРјРѕСЋ РїРµСЂРµС€РєРѕРґ. Р РµРіСѓР»СЊРѕРІР°РЅР° РІРёСЃРѕС‚Р° РїРµСЂРµС€РєРѕРґ РґРѕР·РІРѕР»СЏС” РїРѕСЃС‚СѓРїРѕРІРѕ СѓСЃРєР»Р°РґРЅСЋРІР°С‚Рё РІРїСЂР°РІРё Сѓ С…РѕРґС– СЂРµР°Р±С–Р»С–С‚Р°С†С–С—. Р РµРіСѓР»СЊРѕРІР°РЅС– РїРµСЂРµС€РєРѕРґРё. Р”РѕРІР¶РёРЅР°: 200 СЃРј. РќР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ: РґРѕ 200 РєРі</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtb-020v2.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>56000 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499824</g:google_product_category>
       <g:product_type>Бруси та сходи</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>stairs1</g:id>
-      <g:title>Реабілітаційні сходи (3 сходинки) MTB-029</g:title>
-      <g:description>MTB-029 — реабілітаційні сходи з поручнями для відновлення після операцій на суглобах.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=stairs1</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/mtb-029.jpg</g:image_link>
-      <g:price>42500.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>Р РµР°Р±С–Р»С–С‚Р°С†С–Р№РЅС– СЃС…РѕРґРё (3 СЃС…РѕРґРёРЅРєРё) MTB-029</g:title>
+      <g:description>MTB-029 вЂ” СЂРµР°Р±С–Р»С–С‚Р°С†С–Р№РЅС– СЃС…РѕРґРё Р· РїРѕСЂСѓС‡РЅСЏРјРё Р· РѕР±РѕС… СЃС‚РѕСЂС–РЅ. Р”РѕРїРѕРјР°РіР°СЋС‚СЊ РїР°С†С–С”РЅС‚Р°Рј Р±РµР·РїРµС‡РЅРѕ РІС–РґРЅРѕРІРёС‚Рё РЅР°РІРёС‡РєСѓ РїС–РґС–Р№РјР°РЅРЅСЏ С‚Р° СЃРїСѓСЃРєР°РЅРЅСЏ СЃС…РѕРґР°РјРё РїС–СЃР»СЏ РѕРїРµСЂР°С†С–Р№ РЅР° РєРѕР»С–РЅРЅРёС… С‚Р° РєСѓР»СЊС€РѕРІРёС… СЃСѓРіР»РѕР±Р°С…. РљС–Р»СЊРєС–СЃС‚СЊ СЃС…РѕРґРёРЅРѕРє: 3. Р’РёСЃРѕС‚Р° РїРѕСЂСѓС‡РЅС–РІ: 90 СЃРј. РќР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ: РґРѕ 180 РєРі</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtb-029.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>42500 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499824</g:google_product_category>
       <g:product_type>Бруси та сходи</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>stairs-mtb028</g:id>
-      <g:title>Сходи з похилою рампою MTB-028</g:title>
-      <g:description>MTB-028 — реабілітаційні сходи з похилою рампою для пацієнтів з мінімальною рухливістю.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=stairs-mtb028</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/mtb-028.jpg</g:image_link>
-      <g:price>40000.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>РЎС…РѕРґРё Р· РїРѕС…РёР»РѕСЋ СЂР°РјРїРѕСЋ MTB-028</g:title>
+      <g:description>MTB-028 вЂ” РєРѕРјР±С–РЅРѕРІР°РЅС– СЂРµР°Р±С–Р»С–С‚Р°С†С–Р№РЅС– СЃС…РѕРґРё Р· РїРѕС…РёР»РѕСЋ СЂР°РјРїРѕСЋ. РџР°РЅРґСѓСЃ РґРѕР·РІРѕР»СЏС” РїРѕС‡РёРЅР°С‚Рё РІС–РґРЅРѕРІР»РµРЅРЅСЏ С…РѕРґСЊР±Рё РЅР°РІС–С‚СЊ РїР°С†С–С”РЅС‚Р°Рј С–Р· РјС–РЅС–РјР°Р»СЊРЅРѕСЋ СЂСѓС…Р»РёРІС–СЃС‚СЋ, РїРѕСЃС‚СѓРїРѕРІРѕ РїРµСЂРµС…РѕРґСЏС‡Рё РґРѕ СЃС…РѕРґРёРЅРѕРє. РЎС…РѕРґРё + РїР°РЅРґСѓСЃ. РџРѕСЂСѓС‡РЅС– Р· РґРІРѕС… СЃС‚РѕСЂС–РЅ. РќР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ: РґРѕ 180 РєРі</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtb-028.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>40000 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499824</g:google_product_category>
       <g:product_type>Бруси та сходи</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>stairs-mtb033</g:id>
-      <g:title>Сходи кутові з похилою рампою MTB-033</g:title>
-      <g:description>MTB-033 — кутові реабілітаційні сходи з рампою для тренування підйому різними кроками.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=stairs-mtb033</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/mtb-033.jpg</g:image_link>
-      <g:price>43500.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>РЎС…РѕРґРё РєСѓС‚РѕРІС– Р· РїРѕС…РёР»РѕСЋ СЂР°РјРїРѕСЋ MTB-033</g:title>
+      <g:description>MTB-033 вЂ” РєСѓС‚РѕРІС– СЂРµР°Р±С–Р»С–С‚Р°С†С–Р№РЅС– СЃС…РѕРґРё Р· РїРѕС…РёР»РѕСЋ СЂР°РјРїРѕСЋ. РљСѓС‚РѕРІР° С„РѕСЂРјР° РґРѕР·РІРѕР»СЏС” С‚СЂРµРЅСѓРІР°С‚Рё РїС–РґР№РѕРј СЏРє РїСЂСЏРјРёРјРё, С‚Р°Рє С– Р±С–С‡РЅРёРјРё РєСЂРѕРєР°РјРё, С‰Рѕ СЂРѕР·С€РёСЂСЋС” РїСЂРѕРіСЂР°РјСѓ СЂРµР°Р±С–Р»С–С‚Р°С†С–С—. РљСѓС‚РѕРІР° РєРѕРЅСЃС‚СЂСѓРєС†С–СЏ. Р Р°РјРїР° + СЃС…РѕРґРё. РќР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ: РґРѕ 180 РєРі</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtb-033.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>43500 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499824</g:google_product_category>
       <g:product_type>Бруси та сходи</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>mtv070</g:id>
-      <g:title>Універсальна кабіна МТВ-070</g:title>
-      <g:description>МТВ-070 — реабілітаційна кабіна: тренажер МТБ плюс шведська стінка плюс підвісна терапія в одній конструкції.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=mtv070</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/mtv-070.jpg</g:image_link>
-      <g:price>64000.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>РЈРЅС–РІРµСЂСЃР°Р»СЊРЅР° РєР°Р±С–РЅР° РњРўР’-070</g:title>
+      <g:description>РњРўР’-070 вЂ” РїРѕРІРЅРѕС†С–РЅРЅР° СЂРµР°Р±С–Р»С–С‚Р°С†С–Р№РЅР° РєР°Р±С–РЅР°, СЏРєР° РѕР±'С”РґРЅСѓС” С‚СЂРµРЅР°Р¶РµСЂ РњРўР‘, С€РІРµРґСЃСЊРєСѓ СЃС‚С–РЅРєСѓ С‚Р° РїС–РґРІС–СЃРЅСѓ С‚РµСЂР°РїС–СЋ РІ РѕРґРЅС–Р№ РєРѕРЅСЃС‚СЂСѓРєС†С–С—. РњР°РєСЃРёРјР°Р»СЊРЅР° С„СѓРЅРєС†С–РѕРЅР°Р»СЊРЅС–СЃС‚СЊ РЅР° РјС–РЅС–РјР°Р»СЊРЅС–Р№ РїР»РѕС‰С–. РњРўР‘ + С€РІРµРґСЃСЊРєР° СЃС‚С–РЅРєР°. РџС–РґРІС–СЃРЅР° С‚РµСЂР°РїС–СЏ. Р’СЃРµ РІ РѕРґРЅРѕРјСѓ</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtv-070.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>64000 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499824</g:google_product_category>
-      <g:product_type>Реабілітаційне обладнання</g:product_type>
+      <g:product_type>Інше реабілітаційне обладнання</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>mtv070-1</g:id>
-      <g:title>Шведська стінка для кабіни МТВ-070.1</g:title>
-      <g:description>МТВ-070.1 — додаткова шведська стінка для кабіни МТВ-070. Вправи на розтяжку та підтягування.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=mtv070-1</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/kzs013shl_mtb-3-scaled.jpg</g:image_link>
-      <g:price>6000.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>РЁРІРµРґСЃСЊРєР° СЃС‚С–РЅРєР° РґР»СЏ СѓРЅС–РІРµСЂСЃР°Р»СЊРЅРѕС— РєР°Р±С–РЅРё РњРўР’-070.1</g:title>
+      <g:description>РњРўР’-070.1 вЂ” РґРѕРґР°С‚РєРѕРІР° С€РІРµРґСЃСЊРєР° СЃС‚С–РЅРєР° РґР»СЏ СЂРѕР·С€РёСЂРµРЅРЅСЏ С„СѓРЅРєС†С–РѕРЅР°Р»Сѓ СѓРЅС–РІРµСЂСЃР°Р»СЊРЅРѕС— РєР°Р±С–РЅРё РњРўР’-070. Р”РѕР·РІРѕР»СЏС” РІРёРєРѕРЅСѓРІР°С‚Рё РІРїСЂР°РІРё РЅР° СЂРѕР·С‚СЏР¶РєСѓ, РїС–РґС‚СЏРіСѓРІР°РЅРЅСЏ С‚Р° РЅР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ РЅР° РІРµСЂС…РЅС– РєС–РЅС†С–РІРєРё. РџСЂРёСЃС‚Р°РІРєР° РґРѕ РњРўР’-070. РЁРІРµРґСЃСЊРєР° СЃС‚С–РЅРєР°. РњР°С‚РµСЂС–Р°Р»: СЃС‚Р°Р»СЊ</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/kzs013shl_mtb-3-scaled.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>6000 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499824</g:google_product_category>
-      <g:product_type>Реабілітаційне обладнання</g:product_type>
+      <g:product_type>Інше реабілітаційне обладнання</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>mtv070-2</g:id>
-      <g:title>Приставка для підвісної терапії МТВ-070.2</g:title>
-      <g:description>МТВ-070.2 — модуль підвісної терапії для кабіни МТВ-070. Для неврологічної реабілітації.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=mtv070-2</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/mtb-016.jpg</g:image_link>
-      <g:price>10500.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>РџСЂРёСЃС‚Р°РІРєР° РґР»СЏ РїС–РґРІС–СЃРЅРѕС— С‚РµСЂР°РїС–С— РњРўР’-070.2</g:title>
+      <g:description>РњРўР’-070.2 вЂ” РјРѕРґСѓР»СЊ РїС–РґРІС–СЃРЅРѕС— С‚РµСЂР°РїС–С— РґР»СЏ РєР°Р±С–РЅРё РњРўР’-070. Р”РѕР·РІРѕР»СЏС” РІРёРєРѕРЅСѓРІР°С‚Рё РІРїСЂР°РІРё РІ РїС–РґРІС–СЃС–, С‰Рѕ Р·РЅС–РјР°С” РЅР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ Р· С…СЂРµР±С‚Р° С‚Р° СЃСѓРіР»РѕР±С–РІ С– РµС„РµРєС‚РёРІРЅРѕ Р·Р°СЃС‚РѕСЃРѕРІСѓС”С‚СЊСЃСЏ РїСЂРё РЅРµРІСЂРѕР»РѕРіС–С‡РЅС–Р№ СЂРµР°Р±С–Р»С–С‚Р°С†С–С—. РџСЂРёСЃС‚Р°РІРєР° РґРѕ РњРўР’-070. РџС–РґРІС–СЃРЅР° С‚РµСЂР°РїС–СЏ. Р”Р»СЏ РЅРµРІСЂРѕР»РѕРіС–С‡РЅРѕС— СЂРµР°Р±С–Р»С–С‚Р°С†С–С—</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtb-016.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>10500 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499824</g:google_product_category>
-      <g:product_type>Реабілітаційне обладнання</g:product_type>
+      <g:product_type>Інше реабілітаційне обладнання</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>acc-handles</g:id>
-      <g:title>Ручка для тяги 46 см MTB-21</g:title>
-      <g:description>MTB-21 — стандартна ручка для тяги 46 см. Базовий аксесуар для тренажерів МТБ.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=acc-handles</g:link>
-      <g:image_link>https://images.prom.ua/pD9-tHBIuQL3XMm7zhSSn4xa8VjfuVCE5NQmIebWHKI=/5853422830_ruchka-dlya-tyagi.jpg</g:image_link>
-      <g:price>400.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>Р СѓС‡РєР° РґР»СЏ С‚СЏРіРё 46 СЃРј MTB-21</g:title>
+      <g:description>MTB-21 вЂ” СЃС‚Р°РЅРґР°СЂС‚РЅР° РєРѕСЂРѕС‚РєР° СЂСѓС‡РєР° РґР»СЏ С‚СЏРіРё РґРѕРІР¶РёРЅРѕСЋ 46 СЃРј. Р„ Р±Р°Р·РѕРІРёРј Р°РєСЃРµСЃСѓР°СЂРѕРј РґР»СЏ С‚СЂРµРЅР°Р¶РµСЂС–РІ РњРўР‘, РїС–РґС…РѕРґРёС‚СЊ РґР»СЏ Р±С–Р»СЊС€РѕСЃС‚С– РІРµСЂС…РЅС–С… С‚Р° РЅРёР¶РЅС–С… С‚СЏРі. Р’РёРіРѕС‚РѕРІР»РµРЅР° Р·С– СЃС‚Р°Р»С– Р· РїРѕРєСЂРёС‚С‚СЏРј. Р”РѕРІР¶РёРЅР°: 46 СЃРј. РњР°С‚РµСЂС–Р°Р»: СЃС‚Р°Р»СЊ. РЎСѓРјС–СЃРЅРѕ: РњРўР‘-1, РњРўР‘-2, РњРўР‘-4</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtb-21-scaled.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>400 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499824</g:google_product_category>
       <g:product_type>Аксесуари до МТБ</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>acc-carabiner</g:id>
-      <g:title>Ланцюг-подовжувач з карабіном MTB-16</g:title>
-      <g:description>MTB-16 — сталевий ланцюг-подовжувач 80 см із карабіном. Навантаження до 300 кг.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=acc-carabiner</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/mtv-16.jpg</g:image_link>
-      <g:price>200.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>Р›Р°РЅС†СЋРі-РїРѕРґРѕРІР¶СѓРІР°С‡ Р· РєР°СЂР°Р±С–РЅРѕРј MTB-16</g:title>
+      <g:description>MTB-16 вЂ” СЃС‚Р°Р»РµРІРёР№ Р»Р°РЅС†СЋРі-РїРѕРґРѕРІР¶СѓРІР°С‡ РґРѕРІР¶РёРЅРѕСЋ 80 СЃРј С–Р· РєР°СЂР°Р±С–РЅРѕРј РґР»СЏ С€РІРёРґРєРѕРіРѕ РїСЂРёС”РґРЅР°РЅРЅСЏ РґРѕ Р±Р»РѕРєСѓ РњРўР‘. Р”РѕР·РІРѕР»СЏС” Р·Р±С–Р»СЊС€РёС‚Рё СЂРѕР±РѕС‡Сѓ Р°РјРїР»С–С‚СѓРґСѓ РІРїСЂР°РІ Р°Р±Рѕ Р·'С”РґРЅР°С‚Рё РєС–Р»СЊРєР° Р°РєСЃРµСЃСѓР°СЂС–РІ. Р”РѕРІР¶РёРЅР°: 80 СЃРј. РњР°С‚РµСЂС–Р°Р»: СЃС‚Р°Р»СЊ. РќР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ: РґРѕ 300 РєРі</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtv-16.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>200 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499824</g:google_product_category>
       <g:product_type>Аксесуари до МТБ</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>mtb10</g:id>
-      <g:title>Манжети м'які MTB-10</g:title>
-      <g:description>MTB-10 — м'які манжети для кріплення рук або ніг до троса тренажера МТБ.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=mtb10</g:link>
-      <g:image_link>https://images.prom.ua/C8g6aZjwr452s4Q5UjSXYsJX-xPOi__C8CL7IAlT9vQ=/5799456011_manzheti-myaki-mtb-10.jpg</g:image_link>
-      <g:price>800.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>РњР°РЅР¶РµС‚Рё Рј'СЏРєС– MTB-10</g:title>
+      <g:description>MTB-10 вЂ” Рј'СЏРєС– РјР°РЅР¶РµС‚Рё РґР»СЏ РїСЂРёРєСЂС–РїР»РµРЅРЅСЏ СЂСѓРє Р°Р±Рѕ РЅС–Рі РґРѕ С‚СЂРѕСЃР° С‚СЂРµРЅР°Р¶РµСЂР° РњРўР‘. Р’РёРєРѕСЂРёСЃС‚РѕРІСѓСЋС‚СЊСЃСЏ РїСЂРё РІРїСЂР°РІР°С… РґРµ РїРѕС‚СЂС–Р±РµРЅ СЂС–РІРЅРѕРјС–СЂРЅРёР№ СЂРѕР·РїРѕРґС–Р» РЅР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ Р±РµР· СЂРёР·РёРєСѓ С‚СЂР°РІРјСѓРІР°РЅРЅСЏ Р·Р°Рї'СЏСЃС‚СЏ С‡Рё РіРѕРјС–Р»РєРё. Рњ'СЏРєРёР№ РјР°С‚РµСЂС–Р°Р». Р”Р»СЏ СЂСѓРє С– РЅС–Рі. РЈРЅС–РІРµСЂСЃР°Р»СЊРЅРёР№ СЂРѕР·РјС–СЂ</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtv-10.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>800 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499824</g:google_product_category>
       <g:product_type>Аксесуари до МТБ</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>mtb11</g:id>
-      <g:title>Манжети м'які дитячі MTB-11</g:title>
-      <g:description>MTB-11 — дитячі м'які манжети для занять кінезітерапією з дітьми від 5 років.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=mtb11</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/mtv-11.jpg</g:image_link>
-      <g:price>800.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>РњР°РЅР¶РµС‚Рё Рј'СЏРєС– РґРёС‚СЏС‡С– MTB-11</g:title>
+      <g:description>MTB-11 вЂ” РґРёС‚СЏС‡С– Рј'СЏРєС– РјР°РЅР¶РµС‚Рё Р·С– Р·РјРµРЅС€РµРЅРёРј РѕС…РѕРїР»РµРЅРЅСЏРј, СЂРѕР·СЂР°С…РѕРІР°РЅС– РЅР° РјР°Р»РµРЅСЊРєС– Р·Р°Рї'СЏСЃС‚СЏ С‚Р° РіРѕРјС–Р»РєРё. РџС–РґС…РѕРґСЏС‚СЊ РґР»СЏ Р·Р°РЅСЏС‚СЊ РєС–РЅРµР·С–С‚РµСЂР°РїС–С”СЋ Р· РґС–С‚СЊРјРё РІС–Рґ 5 СЂРѕРєС–РІ. Р”РёС‚СЏС‡РёР№ СЂРѕР·РјС–СЂ. Рњ'СЏРєРёР№ РјР°С‚РµСЂС–Р°Р». Р’С–Рґ 5 СЂРѕРєС–РІ</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtv-11.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>800 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499824</g:google_product_category>
       <g:product_type>Аксесуари до МТБ</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>mtb12</g:id>
-      <g:title>Манжети жорсткі MTB-12</g:title>
-      <g:description>MTB-12 — жорсткі манжети з надійним замком для вправ із великим навантаженням.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=mtb12</g:link>
-      <g:image_link>https://images.prom.ua/0sdydMFe-ciOjnVzW9lzh0tBZlmRyHgfxKZNa0YESIg=/5799476550_manzheti-zhorstki-mtv-12.jpg</g:image_link>
-      <g:price>1000.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>РњР°РЅР¶РµС‚Рё Р¶РѕСЂСЃС‚РєС– MTB-12</g:title>
+      <g:description>MTB-12 вЂ” Р¶РѕСЂСЃС‚РєС– РјР°РЅР¶РµС‚Рё Р· РЅР°РґС–Р№РЅРёРј Р·Р°РјРєРѕРј РґР»СЏ РєСЂС–РїР»РµРЅРЅСЏ РґРѕ С‚СЂРѕСЃР° РњРўР‘. Р—Р°Р±РµР·РїРµС‡СѓСЋС‚СЊ СЃС‚Р°Р±С–Р»СЊРЅРµ РїРѕР»РѕР¶РµРЅРЅСЏ СЂСѓРєРё Р°Р±Рѕ РЅРѕРіРё РїС–Рґ С‡Р°СЃ РІРїСЂР°РІ С–Р· РІРµР»РёРєРёРј РЅР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏРј. Р–РѕСЂСЃС‚РєР° РєРѕРЅСЃС‚СЂСѓРєС†С–СЏ. РќР°РґС–Р№РЅР° С„С–РєСЃР°С†С–СЏ. Р”Р»СЏ РІРµР»РёРєРёС… РЅР°РІР°РЅС‚Р°Р¶РµРЅСЊ</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtv-12.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>1000 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499824</g:google_product_category>
       <g:product_type>Аксесуари до МТБ</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>mtb13</g:id>
-      <g:title>Сандал реабілітаційний MTB-13</g:title>
-      <g:description>MTB-13 — безрозмірний сандал для кріплення стопи до троса МТБ. Для вправ на м'язи ніг.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=mtb13</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/mtv-13.jpg</g:image_link>
-      <g:price>800.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>РЎР°РЅРґР°Р» СЂРµР°Р±С–Р»С–С‚Р°С†С–Р№РЅРёР№ MTB-13</g:title>
+      <g:description>MTB-13 вЂ” Р±РµР·СЂРѕР·РјС–СЂРЅРёР№ СЂРµР°Р±С–Р»С–С‚Р°С†С–Р№РЅРёР№ СЃР°РЅРґР°Р» РґР»СЏ РїСЂРёРєСЂС–РїР»РµРЅРЅСЏ СЃС‚РѕРїРё РґРѕ С‚СЂРѕСЃР° С‚СЂРµРЅР°Р¶РµСЂР° РњРўР‘. Р’РёРєРѕСЂРёСЃС‚РѕРІСѓС”С‚СЊСЃСЏ РїСЂРё РІРїСЂР°РІР°С… РЅР° Рј'СЏР·Рё РЅС–Рі С‚Р° РІС–РґРЅРѕРІР»РµРЅРЅС– РїС–СЃР»СЏ С‚СЂР°РІРј РіРѕРјС–Р»РєРѕРІРѕСЃС‚РѕРїРЅРѕРіРѕ СЃСѓРіР»РѕР±Р°. Р‘РµР·СЂРѕР·РјС–СЂРЅРёР№. Р”Р»СЏ РєСЂС–РїР»РµРЅРЅСЏ СЃС‚РѕРїРё. РњР°С‚РµСЂС–Р°Р»: РЅРµР№Р»РѕРЅ</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtv-13.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>800 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499824</g:google_product_category>
       <g:product_type>Аксесуари до МТБ</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>mtb14</g:id>
-      <g:title>Сандал реабілітаційний дитячий MTB-14</g:title>
-      <g:description>MTB-14 — дитячий сандал для кріплення стопи до троса МТБ.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=mtb14</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/mtv-14.jpg</g:image_link>
-      <g:price>800.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>РЎР°РЅРґР°Р» СЂРµР°Р±С–Р»С–С‚Р°С†С–Р№РЅРёР№ РґРёС‚СЏС‡РёР№ MTB-14</g:title>
+      <g:description>MTB-14 вЂ” РґРёС‚СЏС‡РёР№ РІР°СЂС–Р°РЅС‚ СЂРµР°Р±С–Р»С–С‚Р°С†С–Р№РЅРѕРіРѕ СЃР°РЅРґР°Р»Р° РґР»СЏ РєСЂС–РїР»РµРЅРЅСЏ РґРёС‚СЏС‡РѕС— СЃС‚РѕРїРё РґРѕ С‚СЂРѕСЃР° С‚СЂРµРЅР°Р¶РµСЂР° РњРўР‘. Р РѕР·СЂРѕР±Р»РµРЅРёР№ Р· СѓСЂР°С…СѓРІР°РЅРЅСЏРј Р°РЅР°С‚РѕРјС–С— РґРёС‚СЏС‡РѕС— РЅРѕРіРё. Р”РёС‚СЏС‡РёР№ СЂРѕР·РјС–СЂ. Р”Р»СЏ РєСЂС–РїР»РµРЅРЅСЏ СЃС‚РѕРїРё. РњР°С‚РµСЂС–Р°Р»: РЅРµР№Р»РѕРЅ</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtv-14.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>800 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499824</g:google_product_category>
       <g:product_type>Аксесуари до МТБ</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>mtb15</g:id>
-      <g:title>Петля м'яка MTB-15</g:title>
-      <g:description>MTB-15 — м'яка нейлонова петля для альтернативних способів кріплення до троса МТБ.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=mtb15</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/mtv-15.jpg</g:image_link>
-      <g:price>140.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>РџРµС‚Р»СЏ Рј'СЏРєР° MTB-15</g:title>
+      <g:description>MTB-15 вЂ” Рј'СЏРєР° РЅРµР№Р»РѕРЅРѕРІР° РїРµС‚Р»СЏ РґР»СЏ Р°Р»СЊС‚РµСЂРЅР°С‚РёРІРЅРёС… СЃРїРѕСЃРѕР±С–РІ РєСЂС–РїР»РµРЅРЅСЏ РґРѕ С‚СЂРѕСЃР° РњРўР‘. Р—СЂСѓС‡РЅР° РїСЂРё РІРїСЂР°РІР°С… РґРµ РїРѕС‚СЂС–Р±РµРЅ РЅРµР№С‚СЂР°Р»СЊРЅРёР№ С…РІР°С‚ Р°Р±Рѕ РѕСЃРѕР±Р»РёРІРµ РїРѕР»РѕР¶РµРЅРЅСЏ РєРёСЃС‚С–. Рњ'СЏРєР° РїРµС‚Р»СЏ. РњР°С‚РµСЂС–Р°Р»: РЅРµР№Р»РѕРЅ. РќРµР№С‚СЂР°Р»СЊРЅРёР№ С…РІР°С‚</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtv-15.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>140 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499824</g:google_product_category>
       <g:product_type>Аксесуари до МТБ</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>mtb17</g:id>
-      <g:title>Ручка для тяги закрита MTB-17</g:title>
-      <g:description>MTB-17 — закрита ручка з нейтральним хватом. Зменшує навантаження на зап'ястя та лікті.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=mtb17</g:link>
-      <g:image_link>https://images.prom.ua/_eJ2uC8X1Yrm510-v1JrRFjbHckGFt8XlVNQfAoNyrI=/5853172529_ruchka-dlya-tyagi.jpg</g:image_link>
-      <g:price>400.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>Р СѓС‡РєР° РґР»СЏ С‚СЏРіРё Р·Р°РєСЂРёС‚Р° MTB-17</g:title>
+      <g:description>MTB-17 вЂ” Р·Р°РєСЂРёС‚Р° СЂСѓС‡РєР° Р· РЅРµР№С‚СЂР°Р»СЊРЅРёРј С…РІР°С‚РѕРј (РґРѕР»РѕРЅС– РїРѕРІРµСЂРЅРµРЅС– РѕРґРЅР° РґРѕ РѕРґРЅРѕС—). Р—РјРµРЅС€СѓС” РЅР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ РЅР° Р·Р°Рї'СЏСЃС‚СЏ С‚Р° Р»С–РєС‚С–, СЂРµРєРѕРјРµРЅРґРѕРІР°РЅР° РїСЂРё СЂРµР°Р±С–Р»С–С‚Р°С†С–С— РїС–СЃР»СЏ С‚СЂР°РІРј РІРµСЂС…РЅС–С… РєС–РЅС†С–РІРѕРє. РќРµР№С‚СЂР°Р»СЊРЅРёР№ С…РІР°С‚. РњР°С‚РµСЂС–Р°Р»: СЃС‚Р°Р»СЊ + РіСѓРјР°. Р—Р°РєСЂРёС‚Р° РєРѕРЅСЃС‚СЂСѓРєС†С–СЏ</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/kzs-401r-v1-scaled.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>400 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499824</g:google_product_category>
       <g:product_type>Аксесуари до МТБ</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>mtb18</g:id>
-      <g:title>Ручка для тяги закрита м'яка MTB-18</g:title>
-      <g:description>MTB-18 — м'яка закрита ручка з нейлоновим покриттям для комфортного хвату.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=mtb18</g:link>
-      <g:image_link>https://images.prom.ua/wFuWx7GWC0Q4fOEUKoYDo3_z0Om7eMykJlxCsH8wWnU=/5800025591_ruchka-dlya-tyagi.jpg</g:image_link>
-      <g:price>400.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>Р СѓС‡РєР° РґР»СЏ С‚СЏРіРё Р·Р°РєСЂРёС‚Р° Рј'СЏРєР° MTB-18</g:title>
+      <g:description>MTB-18 вЂ” Рј'СЏРєР° РІРµСЂСЃС–СЏ Р·Р°РєСЂРёС‚РѕС— СЂСѓС‡РєРё Р· РЅРµР№Р»РѕРЅРѕРІРёРј РїРѕРєСЂРёС‚С‚СЏРј. Р‘С–Р»СЊС€ РєРѕРјС„РѕСЂС‚РЅР° Сѓ РїРѕСЂС–РІРЅСЏРЅРЅС– Р·С– СЃС‚Р°Р»РµРІРѕСЋ, СЂРµРєРѕРјРµРЅРґРѕРІР°РЅР° РґР»СЏ РїРѕС‡Р°С‚РєС–РІС†С–РІ С‚Р° Р»СЋРґРµР№ Р· С‡СѓС‚Р»РёРІРѕСЋ С€РєС–СЂРѕСЋ РґРѕР»РѕРЅСЊ. РќРµР№Р»РѕРЅРѕРІРµ РїРѕРєСЂРёС‚С‚СЏ. Рњ'СЏРєС€РёР№ С…РІР°С‚. РќРµР№С‚СЂР°Р»СЊРЅРёР№ С…РІР°С‚</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtv-18.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>400 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499824</g:google_product_category>
       <g:product_type>Аксесуари до МТБ</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>mtb19</g:id>
-      <g:title>Ручка для тяги зверху 120 см MTB-19</g:title>
-      <g:description>MTB-19 — довга пряма ручка 120 см для тяги широким хватом. Розвиток широких м'язів спини.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=mtb19</g:link>
-      <g:image_link>https://images.prom.ua/nRI_WPqfGk3j7Rk0gGnd4DOEcgeAGagVG-Mcop1gx58=/5853188770_ruchka-dlya-tyagi.jpg</g:image_link>
-      <g:price>500.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>Р СѓС‡РєР° РґР»СЏ С‚СЏРіРё Р·РІРµСЂС…Сѓ 120 СЃРј MTB-19</g:title>
+      <g:description>MTB-19 вЂ” РґРѕРІРіР° РїСЂСЏРјР° СЂСѓС‡РєР° 120 СЃРј РґР»СЏ РІРёРєРѕРЅР°РЅРЅСЏ С‚СЏРіРё РІРµСЂС…РЅСЊРѕРіРѕ Р±Р»РѕРєСѓ С€РёСЂРѕРєРёРј С…РІР°С‚РѕРј. Р•С„РµРєС‚РёРІРЅР° РґР»СЏ СЂРѕР·РІРёС‚РєСѓ С€РёСЂРѕРєРёС… Рј'СЏР·С–РІ СЃРїРёРЅРё С‚Р° РєРѕСЂРµРєС†С–С— РїРѕСЃС‚Р°РІРё. Р”РѕРІР¶РёРЅР°: 120 СЃРј. РЁРёСЂРѕРєРёР№ С…РІР°С‚. РњР°С‚РµСЂС–Р°Р»: СЃС‚Р°Р»СЊ</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/kzs-404-v1-scaled.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>500 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499824</g:google_product_category>
       <g:product_type>Аксесуари до МТБ</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>mtb20</g:id>
-      <g:title>Ручка для тяги зверху 120 см внутрішній хват MTB-20</g:title>
-      <g:description>MTB-20 — ручка 120 см із зворотним хватом. Навантаження на широкі м'язи спини та біцепс.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=mtb20</g:link>
-      <g:image_link>https://images.prom.ua/BbMuTiYjAv9y4Ss-BmcU3QYCyu0q3wTcgcA8sXWlOgg=/4353642404_ruchka-tyagi-za.jpg</g:image_link>
-      <g:price>600.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>Р СѓС‡РєР° РґР»СЏ С‚СЏРіРё Р·РІРµСЂС…Сѓ 120 СЃРј (РІРЅСѓС‚СЂС–С€РЅС–Р№ С…РІР°С‚) MTB-20</g:title>
+      <g:description>MTB-20 вЂ” РґРѕРІРіР° СЂСѓС‡РєР° РґР»СЏ С‚СЏРіРё Р·РІРµСЂС…Сѓ Р· РІРЅСѓС‚СЂС–С€РЅС–Рј (Р·РІРѕСЂРѕС‚РЅРёРј) С…РІР°С‚РѕРј. РђРєС†РµРЅС‚СѓС” РЅР°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ РЅР° С–РЅС€С– С‡Р°СЃС‚РёРЅРё С€РёСЂРѕРєРёС… Рј'СЏР·С–РІ СЃРїРёРЅРё С‚Р° Р±С–С†РµРїСЃ, РґРѕРїРѕРІРЅСЋС” РњРўР‘-19. Р”РѕРІР¶РёРЅР°: 120 СЃРј. Р’РЅСѓС‚СЂС–С€РЅС–Р№ С…РІР°С‚. РњР°С‚РµСЂС–Р°Р»: СЃС‚Р°Р»СЊ</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtv-20.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>600 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499824</g:google_product_category>
       <g:product_type>Аксесуари до МТБ</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>mtb26</g:id>
-      <g:title>Ручка на трицепс MTB-26</g:title>
-      <g:description>MTB-26 — мотузкова ручка для ізольованих вправ на трицепс. Нейтральний хват.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=mtb26</g:link>
-      <g:image_link>https://images.prom.ua/ud4w9upWB8-2ASnpzCzgPcM-WFHuJtk6qRwPZRw-MPA=/5853562515_ruchka-dlya-tyagi.jpg</g:image_link>
-      <g:price>500.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>Р СѓС‡РєР° РЅР° С‚СЂРёС†РµРїСЃ MTB-26</g:title>
+      <g:description>MTB-26 вЂ” РјРѕС‚СѓР·РєРѕРІР° СЂСѓС‡РєР° РґР»СЏ С–Р·РѕР»СЊРѕРІР°РЅРёС… РІРїСЂР°РІ РЅР° С‚СЂРёС†РµРїСЃ. Р—Р°РІРґСЏРєРё РЅРµР№С‚СЂР°Р»СЊРЅРѕРјСѓ С…РІР°С‚Сѓ С‚Р° СЃРІРѕР±РѕРґС– СЂСѓС…Сѓ Р·Р°Рї'СЏСЃС‚СЏ, С” РѕРґРЅРёРј Р· РЅР°Р№РµС„РµРєС‚РёРІРЅС–С€РёС… Р°РєСЃРµСЃСѓР°СЂС–РІ РґР»СЏ РѕРїСЂР°С†СЋРІР°РЅРЅСЏ С‚СЂРёС†РµРїСЃР°. РњРѕС‚СѓР·РєРѕРІР°. Р”Р»СЏ С‚СЂРёС†РµРїСЃР°. РњР°С‚РµСЂС–Р°Р»: РЅРµР№Р»РѕРЅ + СЃС‚Р°Р»СЊ</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtv-26-v1-scaled.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>500 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499824</g:google_product_category>
       <g:product_type>Аксесуари до МТБ</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>    <item>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+    <item>
       <g:id>mtb27</g:id>
-      <g:title>Подовжувач м'який з карабіном MTB-27</g:title>
-      <g:description>MTB-27 — м'який нейлоновий подовжувач з карабіном. Не травмує руки та не брязкотить.</g:description>
-      <g:link>https://kinezis.com.ua/product.html?id=mtb27</g:link>
-      <g:image_link>https://kinezis.com.ua/images/products/mtv-27.jpg</g:image_link>
-      <g:price>160.00 UAH</g:price>
-      <g:availability>in_stock</g:availability>
+      <g:title>РџРѕРґРѕРІР¶СѓРІР°С‡ Рј'СЏРєРёР№ Р· РєР°СЂР°Р±С–РЅРѕРј MTB-27</g:title>
+      <g:description>MTB-27 вЂ” Рј'СЏРєРёР№ РЅРµР№Р»РѕРЅРѕРІРёР№ РїРѕРґРѕРІР¶СѓРІР°С‡ Р· РєР°СЂР°Р±С–РЅРѕРј. РќР° РІС–РґРјС–РЅСѓ РІС–Рґ Р»Р°РЅС†СЋРіРѕРІРѕРіРѕ Р°РЅР°Р»РѕРіР°, РЅРµ С‚СЂР°РІРјСѓС” СЂСѓРєРё С‚Р° РЅРµ Р±СЂСЏР·РєРѕС‚РёС‚СЊ. Р—СЂСѓС‡РЅРёР№ РїСЂРё РІРїСЂР°РІР°С… РґРµ С‚СЂРѕСЃ С‚РѕСЂРєР°С”С‚СЊСЃСЏ С‚С–Р»Р°. РњР°С‚РµСЂС–Р°Р»: РЅРµР№Р»РѕРЅ. Рњ'СЏРєР° РїРѕРІРµСЂС…РЅСЏ. Р— РєР°СЂР°Р±С–РЅРѕРј</g:description>
+      <g:link>https://kinezis.com.ua/catalog.html</g:link>
+      <g:image_link>images/products/mtv-27.jpg</g:image_link>
       <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>160 UAH</g:price>
       <g:brand>Сіверспорт</g:brand>
-      <g:google_product_category>499824</g:google_product_category>
       <g:product_type>Аксесуари до МТБ</g:product_type>
+      <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
-    </item>  </channel>
+      <g:shipping>
+        <g:country>UA</g:country>
+        <g:service>Нова Пошта</g:service>
+        <g:price>0 UAH</g:price>
+      </g:shipping>
+    </item>
+  </channel>
 </rss>
