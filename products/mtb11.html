@@ -167,10 +167,14 @@
 <script>
 (function(){
   // Related products
+  function relatedCardHTML(q){
+    var price=q.price?q.price.toLocaleString('uk-UA')+' грн':'';
+    return '<div class="product-card" data-id="'+q.id+'">'+(q.badge?'<div class="product-card__badge">'+q.badge+'</div>':'')+'<div class="product-card__img"><img src="../'+q.image+'" alt="'+q.name+'" loading="lazy"/></div><div class="product-card__body"><div class="product-card__name">'+q.name+'</div><div class="product-card__short">'+q.short+'</div><div class="product-card__footer"><div class="product-card__price">'+price+'</div><div class="product-card__actions"><a href="'+q.id+'.html" class="btn btn--outline btn--sm">Детальніше</a><button class="btn btn--primary btn--sm" onclick="addToCart(''+q.id+'',''+q.name.replace(/'/g,"\'")+'',' +q.price+')">В кошик</button></div></div></div></div>';
+  }
   var related = products.filter(function(q){return q.category==='accessories' && q.id!=='mtb11';}).slice(0,4);
   var grid = document.getElementById('relatedGrid');
-  if(related.length && typeof productCardHTML==='function'){
-    grid.innerHTML = related.map(productCardHTML).join('');
+  if(related.length){
+    grid.innerHTML = related.map(relatedCardHTML).join('');
   } else if(grid) { grid.closest('section').style.display='none'; }
   // Modals
   var modal=document.getElementById('orderModal'),tgLink=document.getElementById('modalTgLink');
