@@ -8,12 +8,12 @@
       <g:id>mtb1</g:id>
       <g:title>Тренажер МТБ-1 зі шведською стінкою (60×60)</g:title>
       <g:description>МТБ-1 зі шведською стінкою — комбінована установка для кінезітерапії та гімнастики. Профіль 60×60 мм забезпечує жорсткість конструкції, а шведська стінка розширює можливості для вправ на розтяжку та навантаження. Підходить для домашнього кабінету. Профіль: 60×60 мм. Навантаження: 5–80 кг. Шведська стінка включена. Вага: 35 кг</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtb_1-scaled.jpeg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/mtb1.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtb_1-scaled.jpeg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>52500 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Тренажери МТБ</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -27,12 +27,12 @@
       <g:id>mtv1-40</g:id>
       <g:title>Тренажер МТВ-1 Проф (профіль 40×40)</g:title>
       <g:description>МТВ-1 на профілі 40×40 мм — бюджетна модифікація одноблочного тренажера. Підходить для початківців та для використання з невеликим навантаженням. Компактний та простий у монтажі. Профіль: 40×40 мм. Навантаження: 5–60 кг. Один блок</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtv-1-profil-40_40.jpg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/mtv1-40.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtv-1-profil-40_40.jpg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>27500 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Тренажери МТБ</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -46,12 +46,12 @@
       <g:id>mtv1-reg</g:id>
       <g:title>Тренажер МТВ-1 з регульованим блоком (60×60)</g:title>
       <g:description>МТВ-1 з регульованим блоком дозволяє змінювати висоту точки кріплення троса, розширюючи кількість доступних вправ. Профіль 60×60 мм забезпечує підвищену жорсткість конструкції. Профіль: 60×60 мм. Регульований блок. Навантаження: 5–80 кг</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtv-1-reg.blok.jpg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/mtv1-reg.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtv-1-reg.blok.jpg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>33000 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Тренажери МТБ</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -65,12 +65,12 @@
       <g:id>mtb1-prof</g:id>
       <g:title>Тренажер МТБ-1 Проф з регульованим блоком (60×60)</g:title>
       <g:description>МТБ-1 Проф — одноблочний тренажер з регульованим блоком на посиленому профілі 60×60 мм. Підвищена жорсткість рами дозволяє працювати з більшими навантаженнями, рекомендований для реабілітаційних центрів. Профіль: 60×60 мм. Навантаження: до 100 кг. Регульований блок</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtb-1-prof80.jpg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/mtb1-prof.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtb-1-prof80.jpg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>30000 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Тренажери МТБ</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -84,12 +84,12 @@
       <g:id>mtb1-shvedska</g:id>
       <g:title>Тренажер Бубновського зі шведською стінкою (60×60)</g:title>
       <g:description>Тренажер за методом Бубновського зі шведською стінкою — повноцінна реабілітаційна установка для клінік та великих кабінетів. Профіль 60×60 мм, розширена функціональність для групових та індивідуальних занять. Шведська стінка інтегрована. Профіль: 60×60 мм. Для клінік. Висота: 220 см</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/kzs013shl_mtb-3-scaled.jpeg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/mtb1-shvedska.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/kzs013shl_mtb-3-scaled.jpeg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>116600 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Тренажери МТБ</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -103,12 +103,12 @@
       <g:id>mtb2</g:id>
       <g:title>Тренажер МТБ-2 (профіль 60×60)</g:title>
       <g:description>МТБ-2 — двоблочний тренажер з верхнім та нижнім блоком. Дозволяє виконувати значно більше вправ порівняно з одноблочною моделлю, підходить для лікування захворювань хребта, суглобів і загальної реабілітації. Профіль: 60×60 мм. Два блоки. Навантаження: 5–120 кг. Вага: 38 кг</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/products/mtb-2-prof80.jpg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/mtb2.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/products/mtb-2-prof80.jpg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>62500 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Тренажери МТБ</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -122,12 +122,12 @@
       <g:id>mtb2-40</g:id>
       <g:title>Тренажер МТБ-2 (профіль 40×40)</g:title>
       <g:description>МТБ-2 на профілі 40×40 мм — доступна двоблочна версія для тих, хто лише починає займатись кінезітерапією або обмежений у просторі. Зберігає весь функціонал двоблочного тренажера. Профіль: 40×40 мм. Два блоки. Навантаження: до 80 кг</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtv-2-profil-40_40.jpg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/mtb2-40.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtv-2-profil-40_40.jpg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>57500 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Тренажери МТБ</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -141,12 +141,12 @@
       <g:id>mtv2-reg</g:id>
       <g:title>Тренажер МТВ-2 з регульованим блоком (60×60)</g:title>
       <g:description>МТВ-2 з регульованими блоками — вдосконалена двоблочна модель. Завдяки можливості переміщення блоків по вертикальних напрямляючих, кількість доступних вправ значно зростає. Профіль: 60×60 мм. Регульовані блоки. Навантаження: до 120 кг</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtb-2-reg80-1.jpeg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/mtv2-reg.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtb-2-reg80-1.jpeg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>68500 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Тренажери МТБ</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -160,12 +160,12 @@
       <g:id>mtb4</g:id>
       <g:title>Тренажер МТБ-4 (профіль 60×60)</g:title>
       <g:description>МТБ-4 — профінструмент для кінезітерапевтів. Чотири незалежні блоки, підвищена вантажопідйомність, можливість одночасної роботи двох пацієнтів. Обов'язкове обладнання для кожного реабілітаційного центру. Профіль: 60×60 мм. Чотири блоки. Навантаження: до 200 кг. Вага: 85 кг</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtb-4-prof80.jpeg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/mtb4.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtb-4-prof80.jpeg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>126600 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Тренажери МТБ</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -179,12 +179,12 @@
       <g:id>mtb4-reg</g:id>
       <g:title>Тренажер МТБ-4 з регульованим блоком (60×60)</g:title>
       <g:description>Найбільш функціональна чотириблочна модель — усі блоки регулюються по висоті. Підходить для клінік де важлива гнучкість налаштування під різних пацієнтів з різними потребами. Профіль: 60×60 мм. 4 регульовані блоки. Для великих клінік</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtb-4-reg-scaled.jpeg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/mtb4-reg.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtb-4-reg-scaled.jpeg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>138600 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Тренажери МТБ</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -198,12 +198,12 @@
       <g:id>bench1</g:id>
       <g:title>Лавка реабілітаційна складна MTB-31</g:title>
       <g:description>MTB-31 — багатофункціональна реабілітаційна лавка з регульованим кутом спинки. Використовується для вправ на хребет, ноги та черевний прес, підходить для роботи з тренажером МТБ. Навантаження: до 180 кг. Кут нахилу: 0–80°. Вага: 18 кг. Розміри: 120×45×50 см</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtb-31v2.jpg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/bench1.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtb-31v2.jpg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>6500 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Лавки та гіперекстензії</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -217,12 +217,12 @@
       <g:id>bench-mtb30</g:id>
       <g:title>Лавка реабілітаційна пряма MTB-30</g:title>
       <g:description>MTB-30 — горизонтальна реабілітаційна лавка без регулювань. Надійна та проста у використанні, підходить для широкого кола вправ з тренажером МТБ та масажних процедур. Навантаження: до 180 кг. Горизонтальна. Для роботи з МТБ</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtb-30v2.jpg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/bench-mtb30.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtb-30v2.jpg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>3000 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Лавки та гіперекстензії</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -236,12 +236,12 @@
       <g:id>bench-vitjag</g:id>
       <g:title>Лавка для витягування хребта MTB-009</g:title>
       <g:description>MTB-009 — реабілітаційна лавка для витягування хребта. Дозволяє виконувати декомпресійні вправи, що знімають навантаження з міжхребцевих дисків. Незамінна при грижах та протрузіях. Декомпресія хребта. Регульований кут. Навантаження: до 150 кг</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtb-009v1.jpeg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/bench-vitjag.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtb-009v1.jpeg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>19800 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Лавки та гіперекстензії</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -255,12 +255,12 @@
       <g:id>hyperext1</g:id>
       <g:title>Гіперекстензія домашня SW-301</g:title>
       <g:description>SW-301 — зручна та надійна гіперекстензія для вправ на поперековий відділ хребта та м'язи-розгиначі спини. Регульована висота кріплення ніг дозволяє підлаштувати тренажер під зріст користувача. Навантаження: до 150 кг. Висота регулювання: 5 рівнів. Вага: 15 кг</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/sw301.jpeg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/hyperext1.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/sw301.jpeg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>5900 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Лавки та гіперекстензії</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -274,12 +274,12 @@
       <g:id>bench-sw300</g:id>
       <g:title>Лавка для преса комбінована SW-300</g:title>
       <g:description>SW-300 — багатофункціональна лавка з фіксатором ніг для виконання вправ на прес та інших базових рухів. Регульований кут нахилу спинки дає змогу варіювати інтенсивність навантаження. Регульований кут. Фіксатор ніг. Навантаження: до 150 кг</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/sw300.jpeg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/bench-sw300.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/sw300.jpeg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>4000 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Лавки та гіперекстензії</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -293,12 +293,12 @@
       <g:id>bench-sw303</g:id>
       <g:title>Лавка атлетична універсальна SW-303</g:title>
       <g:description>SW-303 — універсальна атлетична лавка з 5 положеннями спинки та 3 положеннями сидіння. Підходить для вправ із навантаженням, реабілітаційних комплексів та силових тренувань. 5 положень спинки. Навантаження: до 300 кг. Універсальна</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/sw303.jpeg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/bench-sw303.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/sw303.jpeg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>7000 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Лавки та гіперекстензії</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -312,12 +312,12 @@
       <g:id>bench-sw308</g:id>
       <g:title>Лавка профі SW-308</g:title>
       <g:description>SW-308 — професійна лавка для реабілітаційних центрів та фітнес-залів. Широке м'яке ложе, посилена рама та надійні фіксатори забезпечують безпеку та комфорт під час навантажень. Навантаження: до 400 кг. Посилена рама. Для клінік</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/sw308.jpeg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/bench-sw308.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/sw308.jpeg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>6600 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Лавки та гіперекстензії</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -331,12 +331,12 @@
       <g:id>bench-roman</g:id>
       <g:title>Римський стілець реабілітаційний SVS-112</g:title>
       <g:description>SVS-112 — реабілітаційний римський стілець з м'якими упорами для ніг та стегон. Ідеально підходить для відновлення після операцій на попереку та зміцнення розгиначів спини. Навантаження: до 140 кг. Матеріал: сталь + екошкіра. Вага: 12 кг</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/svs-112-scaled.jpeg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/bench-roman.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/svs-112-scaled.jpeg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>11900 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Лавки та гіперекстензії</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -350,12 +350,12 @@
       <g:id>bench-svs113</g:id>
       <g:title>Римський стілець регульований SVS-113</g:title>
       <g:description>SVS-113 — вдосконалена версія римського стільця з регулюванням кута нахилу корпусу та висоти упорів. Дозволяє точно підлаштовувати навантаження відповідно до стану пацієнта. Регульований кут. Навантаження: до 150 кг. Для клінік</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/svs-113-scaled.jpeg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/bench-svs113.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/svs-113-scaled.jpeg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>14750 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Лавки та гіперекстензії</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -369,12 +369,12 @@
       <g:id>bench-svs119</g:id>
       <g:title>Гіперекстензія горизонтальна SVS-119</g:title>
       <g:description>SVS-119 — горизонтальна гіперекстензія, де корпус розміщується паралельно підлозі. Такий кут забезпечує специфічне навантаження на сідничні м'язи та довгі розгиначі спини. Горизонтальне положення. Навантаження: до 150 кг. Матеріал: сталь</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/svs-1191-scaled.jpeg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/bench-svs119.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/svs-1191-scaled.jpeg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>12000 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Лавки та гіперекстензії</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -388,12 +388,12 @@
       <g:id>bench-svs127</g:id>
       <g:title>Гіперекстензія зворотна SVS-127</g:title>
       <g:description>SVS-127 — зворотна гіперекстензія, де фіксується торс а підіймаються ноги. Такий рух ефективно розвантажує хребет та зміцнює сідниці і задню поверхню стегон. Зворотний рух. Навантаження: до 120 кг. Для реабілітації поперека</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/svs-1271-scaled.jpeg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/bench-svs127.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/svs-1271-scaled.jpeg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>12000 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Лавки та гіперекстензії</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -407,12 +407,12 @@
       <g:id>bench-svs108</g:id>
       <g:title>Гіперекстензія регульована SVS-108</g:title>
       <g:description>SVS-108 — регульована гіперекстензія з кутом нахилу 45°. Класична конструкція з м'якими валиками для фіксації ніг, надійна та проста у використанні. Підходить для клінік та домашнього використання. Кут: 45°. Навантаження: до 150 кг. М'які валики</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/svs-108v1.jpg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/bench-svs108.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/svs-108v1.jpg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>16600 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Лавки та гіперекстензії</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -426,12 +426,12 @@
       <g:id>bench-svs145</g:id>
       <g:title>Лавка регульована SVS-145</g:title>
       <g:description>SVS-145 — сучасна регульована лавка з незалежним регулюванням кута спинки та сидіння. Широкий діапазон положень дозволяє використовувати її для десятків різних вправ у реабілітаційному процесі. Регульована спинка і сидіння. Навантаження: до 200 кг. Для клінік</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/svs-145-scaled.jpeg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/bench-svs145.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/svs-145-scaled.jpeg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>14780 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Лавки та гіперекстензії</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -445,12 +445,12 @@
       <g:id>massage1</g:id>
       <g:title>Масажний стіл складний (алюміній) MTB-051</g:title>
       <g:description>MTB-051 — алюмінієвий складний масажний стіл з регульованою висотою. Підходить для масажистів, фізіотерапевтів та реабілітологів. Легко транспортується у складеному стані. Висота: 60–85 см (регульована). Навантаження: до 250 кг. Вага: 11 кг. Матеріал: алюміній</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtb-051.jpg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/massage1.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtb-051.jpg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>11200 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Масажні столи та стільці</g:product_type>
       <g:google_product_category>491</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -464,12 +464,12 @@
       <g:id>massage2</g:id>
       <g:title>Масажний стіл стаціонарний MTB-050</g:title>
       <g:description>MTB-050 — стаціонарний масажний стіл підвищеної міцності для кабінетів масажу та реабілітаційних центрів. Широке ложе та зручний підголівник забезпечують комфорт пацієнта. Висота: 70 см. Ширина: 65 см. Навантаження: до 300 кг. Матеріал: бук + медична шкіра</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtb-050.jpg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/massage2.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtb-050.jpg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>18400 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Масажні столи та стільці</g:product_type>
       <g:google_product_category>491</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -483,12 +483,12 @@
       <g:id>massage-chair</g:id>
       <g:title>Масажний стілець для шийно-комірцевої зони MTB-052</g:title>
       <g:description>MTB-052 — ергономічний складний стілець для сеансів масажу шийно-комірцевої зони. Пацієнт сидить обличчям до спинки, що забезпечує повний доступ до спини та шиї. Підходить для виїзду. Вага: 7 кг. Навантаження: до 150 кг. Матеріал: сталь + нейлон</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtb-052.jpg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/massage-chair.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtb-052.jpg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>7900 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Масажні столи та стільці</g:product_type>
       <g:google_product_category>491</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -502,12 +502,12 @@
       <g:id>bars1</g:id>
       <g:title>Паралельні бруси реабілітаційні MTB-016</g:title>
       <g:description>MTB-016 — паралельні бруси з регульованою висотою та шириною. Використовуються для відновлення навичок ходіння після травм, інсультів та операцій на нижніх кінцівках. Довжина: 200 см. Висота: 65–95 см. Ширина: 55–90 см. Навантаження: до 200 кг</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtb-016.jpeg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/bars1.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtb-016.jpeg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>36250 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Бруси та сходи</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -521,12 +521,12 @@
       <g:id>bars-mtb018</g:id>
       <g:title>Бруси реабілітаційні з перешкодами MTB-018</g:title>
       <g:description>MTB-018 — паралельні бруси з вбудованими перешкодами для відпрацювання підняття ніг під час ходьби. Використовуються на пізніх етапах реабілітації для відновлення координації. Довжина: 200 см. З перешкодами. Навантаження: до 200 кг</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtb-018.jpeg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/bars-mtb018.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtb-018.jpeg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>52000 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Бруси та сходи</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -540,12 +540,12 @@
       <g:id>bars-mtb019</g:id>
       <g:title>Бруси реабілітаційні дитячі з перешкодами MTB-019</g:title>
       <g:description>MTB-019 — зменшені паралельні бруси з перешкодами, розроблені спеціально для дитячої реабілітації. Допомагають дітям відновити навички ходьби після травм та при ДЦП. Для дітей. З перешкодами. Регульована висота</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtb-019.png</g:image_link>
+      <g:link>https://kinezis.com.ua/products/bars-mtb019.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtb-019.png</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>48000 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Бруси та сходи</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -559,12 +559,12 @@
       <g:id>bars-mtb020</g:id>
       <g:title>Бруси реабілітаційні з перешкодами MTB-020</g:title>
       <g:description>MTB-020 — паралельні бруси другого покоління з удосконаленою системою перешкод. Регульована висота перешкод дозволяє поступово ускладнювати вправи у ході реабілітації. Регульовані перешкоди. Довжина: 200 см. Навантаження: до 200 кг</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtb-020v2.png</g:image_link>
+      <g:link>https://kinezis.com.ua/products/bars-mtb020.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtb-020v2.png</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>56000 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Бруси та сходи</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -578,12 +578,12 @@
       <g:id>stairs1</g:id>
       <g:title>Реабілітаційні сходи (3 сходинки) MTB-029</g:title>
       <g:description>MTB-029 — реабілітаційні сходи з поручнями з обох сторін. Допомагають пацієнтам безпечно відновити навичку підіймання та спускання сходами після операцій на колінних та кульшових суглобах. Кількість сходинок: 3. Висота поручнів: 90 см. Навантаження: до 180 кг</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtb-029.jpg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/stairs1.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtb-029.jpg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>42500 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Бруси та сходи</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -597,12 +597,12 @@
       <g:id>stairs-mtb028</g:id>
       <g:title>Сходи з похилою рампою MTB-028</g:title>
       <g:description>MTB-028 — комбіновані реабілітаційні сходи з похилою рампою. Пандус дозволяє починати відновлення ходьби навіть пацієнтам із мінімальною рухливістю, поступово переходячи до сходинок. Сходи + пандус. Поручні з двох сторін. Навантаження: до 180 кг</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtb-028.jpg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/stairs-mtb028.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtb-028.jpg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>40000 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Бруси та сходи</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -616,12 +616,12 @@
       <g:id>stairs-mtb033</g:id>
       <g:title>Сходи кутові з похилою рампою MTB-033</g:title>
       <g:description>MTB-033 — кутові реабілітаційні сходи з похилою рампою. Кутова форма дозволяє тренувати підйом як прямими, так і бічними кроками, що розширює програму реабілітації. Кутова конструкція. Рампа + сходи. Навантаження: до 180 кг</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtb-033.jpg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/stairs-mtb033.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtb-033.jpg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>43500 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Бруси та сходи</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -635,12 +635,12 @@
       <g:id>mtv070</g:id>
       <g:title>Універсальна кабіна МТВ-070</g:title>
       <g:description>МТВ-070 — повноцінна реабілітаційна кабіна, яка об'єднує тренажер МТБ, шведську стінку та підвісну терапію в одній конструкції. Максимальна функціональність на мінімальній площі. МТБ + шведська стінка. Підвісна терапія. Все в одному</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtv-070.jpeg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/mtv070.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtv-070.jpeg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>64000 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Інше реабілітаційне обладнання</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -654,12 +654,12 @@
       <g:id>mtv070-1</g:id>
       <g:title>Шведська стінка для універсальної кабіни МТВ-070.1</g:title>
       <g:description>МТВ-070.1 — додаткова шведська стінка для розширення функціоналу універсальної кабіни МТВ-070. Дозволяє виконувати вправи на розтяжку, підтягування та навантаження на верхні кінцівки. Приставка до МТВ-070. Шведська стінка. Матеріал: сталь</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/kzs013shl_mtb-3-scaled.jpeg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/mtv070-1.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/kzs013shl_mtb-3-scaled.jpeg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>6000 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Інше реабілітаційне обладнання</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -673,12 +673,12 @@
       <g:id>mtv070-2</g:id>
       <g:title>Приставка для підвісної терапії МТВ-070.2</g:title>
       <g:description>МТВ-070.2 — модуль підвісної терапії для кабіни МТВ-070. Дозволяє виконувати вправи в підвісі, що знімає навантаження з хребта та суглобів і ефективно застосовується при неврологічній реабілітації. Приставка до МТВ-070. Підвісна терапія. Для неврологічної реабілітації</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtb-016.jpeg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/mtv070-2.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtb-016.jpeg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>10500 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Інше реабілітаційне обладнання</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -692,12 +692,12 @@
       <g:id>acc-handles</g:id>
       <g:title>Ручка для тяги 46 см MTB-21</g:title>
       <g:description>MTB-21 — стандартна коротка ручка для тяги довжиною 46 см. Є базовим аксесуаром для тренажерів МТБ, підходить для більшості верхніх та нижніх тяг. Виготовлена зі сталі з покриттям. Довжина: 46 см. Матеріал: сталь. Сумісно: МТБ-1, МТБ-2, МТБ-4</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtb-21-scaled.jpeg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/acc-handles.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtb-21-scaled.jpeg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>400 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Аксесуари до МТБ</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -711,12 +711,12 @@
       <g:id>acc-carabiner</g:id>
       <g:title>Ланцюг-подовжувач з карабіном MTB-16</g:title>
       <g:description>MTB-16 — сталевий ланцюг-подовжувач довжиною 80 см із карабіном для швидкого приєднання до блоку МТБ. Дозволяє збільшити робочу амплітуду вправ або з'єднати кілька аксесуарів. Довжина: 80 см. Матеріал: сталь. Навантаження: до 300 кг</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtv-16.jpeg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/acc-carabiner.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtv-16.jpeg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>200 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Аксесуари до МТБ</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -730,12 +730,12 @@
       <g:id>mtb10</g:id>
       <g:title>Манжети м'які MTB-10</g:title>
       <g:description>MTB-10 — м'які манжети для прикріплення рук або ніг до троса тренажера МТБ. Використовуються при вправах де потрібен рівномірний розподіл навантаження без ризику травмування зап'ястя чи гомілки. М'який матеріал. Для рук і ніг. Універсальний розмір</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtv-10.jpeg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/mtb10.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtv-10.jpeg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>800 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Аксесуари до МТБ</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -749,12 +749,12 @@
       <g:id>mtb11</g:id>
       <g:title>Манжети м'які дитячі MTB-11</g:title>
       <g:description>MTB-11 — дитячі м'які манжети зі зменшеним охопленням, розраховані на маленькі зап'ястя та гомілки. Підходять для занять кінезітерапією з дітьми від 5 років. Дитячий розмір. М'який матеріал. Від 5 років</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtv-11.jpeg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/mtb11.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtv-11.jpeg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>800 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Аксесуари до МТБ</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -768,12 +768,12 @@
       <g:id>mtb12</g:id>
       <g:title>Манжети жорсткі MTB-12</g:title>
       <g:description>MTB-12 — жорсткі манжети з надійним замком для кріплення до троса МТБ. Забезпечують стабільне положення руки або ноги під час вправ із великим навантаженням. Жорстка конструкція. Надійна фіксація. Для великих навантажень</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtv-12.jpeg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/mtb12.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtv-12.jpeg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>1000 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Аксесуари до МТБ</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -787,12 +787,12 @@
       <g:id>mtb13</g:id>
       <g:title>Сандал реабілітаційний MTB-13</g:title>
       <g:description>MTB-13 — безрозмірний реабілітаційний сандал для прикріплення стопи до троса тренажера МТБ. Використовується при вправах на м'язи ніг та відновленні після травм гомілковостопного суглоба. Безрозмірний. Для кріплення стопи. Матеріал: нейлон</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtv-13.jpeg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/mtb13.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtv-13.jpeg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>800 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Аксесуари до МТБ</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -806,12 +806,12 @@
       <g:id>mtb14</g:id>
       <g:title>Сандал реабілітаційний дитячий MTB-14</g:title>
       <g:description>MTB-14 — дитячий варіант реабілітаційного сандала для кріплення дитячої стопи до троса тренажера МТБ. Розроблений з урахуванням анатомії дитячої ноги. Дитячий розмір. Для кріплення стопи. Матеріал: нейлон</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtv-14.jpeg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/mtb14.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtv-14.jpeg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>800 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Аксесуари до МТБ</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -825,12 +825,12 @@
       <g:id>mtb15</g:id>
       <g:title>Петля м'яка MTB-15</g:title>
       <g:description>MTB-15 — м'яка нейлонова петля для альтернативних способів кріплення до троса МТБ. Зручна при вправах де потрібен нейтральний хват або особливе положення кисті. М'яка петля. Матеріал: нейлон. Нейтральний хват</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtv-15.jpeg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/mtb15.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtv-15.jpeg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>140 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Аксесуари до МТБ</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -844,12 +844,12 @@
       <g:id>mtb17</g:id>
       <g:title>Ручка для тяги закрита MTB-17</g:title>
       <g:description>MTB-17 — закрита ручка з нейтральним хватом (долоні повернені одна до одної). Зменшує навантаження на зап'ястя та лікті, рекомендована при реабілітації після травм верхніх кінцівок. Нейтральний хват. Матеріал: сталь + гума. Закрита конструкція</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/kzs-401r-v1-scaled.jpeg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/mtb17.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/kzs-401r-v1-scaled.jpeg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>400 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Аксесуари до МТБ</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -863,12 +863,12 @@
       <g:id>mtb18</g:id>
       <g:title>Ручка для тяги закрита м'яка MTB-18</g:title>
       <g:description>MTB-18 — м'яка версія закритої ручки з нейлоновим покриттям. Більш комфортна у порівнянні зі сталевою, рекомендована для початківців та людей з чутливою шкірою долонь. Нейлонове покриття. М'якший хват. Нейтральний хват</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtv-18.jpeg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/mtb18.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtv-18.jpeg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>400 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Аксесуари до МТБ</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -882,12 +882,12 @@
       <g:id>mtb19</g:id>
       <g:title>Ручка для тяги зверху 120 см MTB-19</g:title>
       <g:description>MTB-19 — довга пряма ручка 120 см для виконання тяги верхнього блоку широким хватом. Ефективна для розвитку широких м'язів спини та корекції постави. Довжина: 120 см. Широкий хват. Матеріал: сталь</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/kzs-404-v1-scaled.jpeg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/mtb19.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/kzs-404-v1-scaled.jpeg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>500 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Аксесуари до МТБ</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -901,12 +901,12 @@
       <g:id>mtb20</g:id>
       <g:title>Ручка для тяги зверху 120 см (внутрішній хват) MTB-20</g:title>
       <g:description>MTB-20 — довга ручка для тяги зверху з внутрішнім (зворотним) хватом. Акцентує навантаження на інші частини широких м'язів спини та біцепс, доповнює МТБ-19. Довжина: 120 см. Внутрішній хват. Матеріал: сталь</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtv-20.jpeg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/mtb20.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtv-20.jpeg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>600 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Аксесуари до МТБ</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -920,12 +920,12 @@
       <g:id>mtb26</g:id>
       <g:title>Ручка на трицепс MTB-26</g:title>
       <g:description>MTB-26 — мотузкова ручка для ізольованих вправ на трицепс. Завдяки нейтральному хвату та свободі руху зап'ястя, є одним з найефективніших аксесуарів для опрацювання трицепса. Мотузкова. Для трицепса. Матеріал: нейлон + сталь</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtv-26-v1-scaled.jpeg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/mtb26.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtv-26-v1-scaled.jpeg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>500 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Аксесуари до МТБ</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>
@@ -939,12 +939,12 @@
       <g:id>mtb27</g:id>
       <g:title>Подовжувач м'який з карабіном MTB-27</g:title>
       <g:description>MTB-27 — м'який нейлоновий подовжувач з карабіном. На відміну від ланцюгового аналога, не травмує руки та не брязкотить. Зручний при вправах де трос торкається тіла. Матеріал: нейлон. М'яка поверхня. З карабіном</g:description>
-      <g:link>https://kinezis.com.ua/catalog.html</g:link>
-      <g:image_link>images/towari/mtv-27.jpeg</g:image_link>
+      <g:link>https://kinezis.com.ua/products/mtb27.html</g:link>
+      <g:image_link>https://kinezis.com.ua/images/towari/mtv-27.jpeg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>160 UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>Аксесуари до МТБ</g:product_type>
       <g:google_product_category>990</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>

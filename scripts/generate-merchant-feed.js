@@ -42,18 +42,19 @@ const items = products.map(p => {
   const googleCat = googleCategories[p.category] || '990';
   const specs = (p.specs || []).join('. ');
   const desc = esc(p.description || p.short || p.name) + (specs ? ` ${esc(specs)}` : '');
-  const productUrl = `https://kinezis.com.ua/catalog.html`;
+  const productUrl = `https://kinezis.com.ua/products/${p.id}.html`;
+  const imageUrl = p.image ? `https://kinezis.com.ua/${p.image}` : '';
 
   return `    <item>
       <g:id>${esc(p.id)}</g:id>
       <g:title>${esc(p.name)}</g:title>
       <g:description>${desc}</g:description>
       <g:link>${productUrl}</g:link>
-      <g:image_link>${esc(p.image)}</g:image_link>
+      <g:image_link>${esc(imageUrl)}</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>${p.price || 0} UAH</g:price>
-      <g:brand>Сіверспорт</g:brand>
+      <g:brand>Кінезіс</g:brand>
       <g:product_type>${esc(catName)}</g:product_type>
       <g:google_product_category>${googleCat}</g:google_product_category>
       <g:identifier_exists>no</g:identifier_exists>

@@ -17,7 +17,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, follow" />
   <title>Товар — Кінезіс</title>
+  <script>
+    // Redirect to static product page for SEO and bookmarks
+    (function() {
+      var id = new URLSearchParams(window.location.search).get('id');
+      if (id) window.location.replace('products/' + id + '.html');
+    })();
+  </script>
   <link rel="icon" href="logo.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Unbounded:wght@400;600;700&display=swap" rel="stylesheet" />
