@@ -1,32 +1,32 @@
-// Reads data.js and generates hotline.xml (Hotline.ua / Prom.ua YML feed)
+// Generates hotline.xml in Hotline.ua proprietary XML format (not YML)
 const fs = require('fs');
 const path = require('path');
+const vm = require('vm');
 
 const dataContent = fs.readFileSync(path.join(__dirname, '..', 'data.js'), 'utf-8');
-
-// Evaluate data.js in a sandboxed context with stubs for browser globals
-const vm = require('vm');
 const ctx = { TELEGRAM_BOT: '', window: { open: () => {} }, console, __out: {} };
 vm.createContext(ctx);
 vm.runInContext(dataContent + '\n__out.products = products;\n__out.categories = categories;', ctx);
 const { products } = ctx.__out;
+
+const BASE_URL = 'https://kinezis.com.ua';
 
 const categoryIds = {
   mtb: 1,
   benches: 2,
   massage: 3,
   stairs: 4,
-  accessories: 5,
-  other: 6,
+  other: 5,
+  accessories: 6,
 };
 
 const categoryNames = {
   mtb: 'Тренажери МТБ',
   benches: 'Лавки та гіперекстензії',
   massage: 'Масажні столи та стільці',
-  stairs: 'Бруси та сходи',
-  accessories: 'Аксесуари до МТБ',
+  stairs: 'Бруси та реабілітаційні сходи',
   other: 'Інше реабілітаційне обладнання',
+  accessories: 'Аксесуари до МТБ',
 };
 
 function esc(str) {
@@ -39,49 +39,48 @@ function esc(str) {
 
 const now = new Date();
 const pad = n => String(n).padStart(2, '0');
-const dateStr = `${pad(now.getDate())}.${pad(now.getMonth()+1)}.${now.getFullYear()} ${pad(now.getHours())}:${pad(now.getMinutes())}`;
+const dateStr = `${now.getFullYear()}-${pad(now.getMonth()+1)}-${pad(now.getDate())} ${pad(now.getHours())}:${pad(now.getMinutes())}`;
 
 const catXml = Object.entries(categoryIds)
-  .map(([key, id]) => `      <category id="${id}">${esc(categoryNames[key])}</category>`)
+  .map(([key, id]) => `    <category>\n      <id>${id}</id>\n      <name>${esc(categoryNames[key])}</name>\n    </category>`)
   .join('\n');
 
-const offersXml = products.map(p => {
+const itemsXml = products.map(p => {
   const catId = categoryIds[p.category] || 1;
   const specs = (p.specs || []).join('; ');
   const desc = esc((p.description || p.short || '') + (specs ? ` Характеристики: ${specs}` : ''));
-  return `      <offer id="${esc(p.id)}" available="true">
-        <url>https://kinezis.com.ua/catalog.html</url>
-        <price>${p.price || 0}</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>${catId}</categoryId>
-        <picture>${esc(p.image)}</picture>
-        <vendor>Сіверспорт</vendor>
-        <name>${esc(p.name)}</name>
-        <description>${desc}</description>
-      </offer>`;
+  const imageUrl = p.image ? `${BASE_URL}/${p.image}` : '';
+  return `    <item>
+      <id>${esc(p.id)}</id>
+      <categoryId>${catId}</categoryId>
+      <vendor>Кінезіс</vendor>
+      <name>${esc(p.name)}</name>
+      <description>${desc}</description>
+      <url>${BASE_URL}/product.html?id=${esc(p.id)}</url>
+      <image>${esc(imageUrl)}</image>
+      <priceRUAH>${p.price || 0}</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>`;
 }).join('\n');
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE yml_catalog SYSTEM "shops.dtd">
-<yml_catalog date="${dateStr}">
-  <shop>
-    <name>Кінезіс</name>
-    <company>Кінезіс</company>
-    <url>https://kinezis.com.ua</url>
-    <phone>+380992662688</phone>
-    <currencies>
-      <currency id="UAH" rate="1"/>
-    </currencies>
-    <categories>
+<price>
+  <date>${dateStr}</date>
+  <firmName>Кінезіс</firmName>
+  <firmId>43544</firmId>
+
+  <categories>
 ${catXml}
-    </categories>
-    <offers>
-${offersXml}
-    </offers>
-  </shop>
-</yml_catalog>
+  </categories>
+
+  <items>
+${itemsXml}
+  </items>
+</price>
 `;
 
 const outPath = path.join(__dirname, '..', 'hotline.xml');
 fs.writeFileSync(outPath, xml, 'utf-8');
-console.log(`Generated hotline.xml — ${products.length} products, ${dateStr}`);
+console.log(`Generated hotline.xml — ${products.length} items, ${dateStr}`);
