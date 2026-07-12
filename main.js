@@ -59,7 +59,7 @@ function productCardHTML(p) {
             ${formatPrice(p.price)}
           </div>
           <div class="product-card__actions">
-            <a href="product.html?id=${p.id}" class="btn btn--outline btn--sm">Детальніше</a>
+            <a href="products/${p.id}.html" class="btn btn--outline btn--sm">Детальніше</a>
             <button class="btn btn--primary btn--sm" onclick="addToCart('${p.id}','${p.name.replace(/'/g,"\\'")}',${p.price})">В кошик</button>
           </div>
         </div>

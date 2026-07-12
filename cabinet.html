@@ -569,7 +569,7 @@ async function loadWishlist() {
           '<div class="wishlist-item__name">' + p.name + '</div>' +
           '<div class="wishlist-item__price">' + p.price.toLocaleString('uk-UA') + ' грн</div>' +
           '<div class="wishlist-item__actions">' +
-            '<a href="product.html?id=' + p.id + '" class="btn btn--outline btn--sm">Детальніше</a>' +
+            '<a href="products/' + p.id + '.html" class="btn btn--outline btn--sm">Детальніше</a>' +
             '<button class="btn btn--primary btn--sm" onclick="addToCart(\'' + p.id + '\',\'' + n + '\',' + p.price + ')">В кошик</button>' +
             '<button class="wishlist-remove" onclick="removeFromWishlist(\'' + p.id + '\')" title="Видалити">×</button>' +
           '</div>' +
