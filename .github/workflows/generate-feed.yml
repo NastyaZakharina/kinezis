@@ -1,4 +1,4 @@
-name: Generate Hotline XML Feed
+name: Generate Feeds and Product Pages
 
 on:
   push:
@@ -7,6 +7,7 @@ on:
       - 'data.js'
       - 'scripts/generate-feed.js'
       - 'scripts/generate-merchant-feed.js'
+      - 'scripts/generate-product-pages.js'
   workflow_dispatch:
 
 permissions:
@@ -23,15 +24,16 @@ jobs:
         with:
           node-version: '24'
 
-      - name: Generate feeds
+      - name: Generate feeds and product pages
         run: |
           node scripts/generate-feed.js
           node scripts/generate-merchant-feed.js
+          node scripts/generate-product-pages.js
 
-      - name: Commit feeds
+      - name: Commit generated files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add hotline.xml merchant.xml
-          git diff --cached --quiet || git commit -m "Auto-update hotline.xml and merchant.xml [skip ci]"
+          git add hotline.xml merchant.xml products/
+          git diff --cached --quiet || git commit -m "Auto-update feeds and product pages [skip ci]"
           git push
