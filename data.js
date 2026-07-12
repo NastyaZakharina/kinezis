@@ -1,4 +1,4 @@
-﻿// Product database for Kinezis website
+// Product database for Kinezis website
 const TELEGRAM_BOT = 'https://t.me/Kineziss_bot';
 
 const products = [
