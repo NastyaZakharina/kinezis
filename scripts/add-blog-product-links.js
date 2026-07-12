@@ -7,12 +7,12 @@ const BASE = '..';
 // Product info for the block
 const PRODUCTS = {
   mtb1:       { name: 'Тренажер МТБ-1', price: 'від 44 500 грн', url: '../products/mtb1.html', img: '../images/towari/mtb_1-scaled.jpeg' },
-  mtb2:       { name: 'Тренажер МТБ-2', price: 'від 57 500 грн', url: '../products/mtb2.html', img: '../images/towari/mtb-2-prof80.jpeg' },
+  mtb2:       { name: 'Тренажер МТБ-2', price: 'від 57 500 грн', url: '../products/mtb2.html', img: '../images/towari/mtb-2-reg80-1.jpeg' },
   mtb4:       { name: 'Тренажер МТБ-4', price: 'від 126 600 грн', url: '../products/mtb4.html', img: '../images/towari/mtb-4-prof80.jpeg' },
-  bench1:     { name: 'Лавка горизонтальна', price: 'від 8 400 грн', url: '../products/bench1.html', img: '../images/towari/lavka-gorizontalna.jpg' },
-  hyperext1:  { name: 'Гіперекстензія', price: 'від 9 600 грн', url: '../products/hyperext1.html', img: '../images/towari/giperekstenzija.jpg' },
-  massage1:   { name: 'Масажний стіл', price: 'від 7 200 грн', url: '../products/massage1.html', img: '../images/towari/massazhnyi-stil.jpg' },
-  stairs1:    { name: 'Реабілітаційні сходи', price: 'від 6 500 грн', url: '../products/stairs1.html', img: '../images/towari/reabilitacijni-shody.jpg' },
+  bench1:     { name: 'Лавка реабілітаційна MTB-31', price: 'від 6 500 грн', url: '../products/bench1.html', img: '../images/towari/mtb-31v2.jpg' },
+  hyperext1:  { name: 'Гіперекстензія SW-301', price: 'від 9 600 грн', url: '../products/hyperext1.html', img: '../images/towari/sw301.jpeg' },
+  massage1:   { name: 'Масажний стіл', price: 'від 7 200 грн', url: '../products/massage1.html', img: '../images/towari/mtb-051.jpg' },
+  stairs1:    { name: 'Реабілітаційні сходи', price: 'від 6 500 грн', url: '../products/stairs1.html', img: '../images/towari/mtb-029.jpg' },
   mtv070:     { name: 'МТВ-070', price: 'від 18 900 грн', url: '../products/mtv070.html', img: '../images/towari/mtv-070.jpeg' },
 };
 
