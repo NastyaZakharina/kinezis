@@ -1,622 +1,737 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<yml_catalog date="2026-07-12 13:00">
-  <shop>
-    <name>Кінезіс</name>
-    <company>Кінезіс</company>
-    <url>https://kinezis.com.ua</url>
-    <currencies>
-      <currency id="UAH" rate="1"/>
-    </currencies>
-    <categories>
-      <category id="1">Тренажери МТБ</category>
-      <category id="2">Лавки та гіперекстензії</category>
-      <category id="3">Масажні столи та стільці</category>
-      <category id="4">Бруси та сходи</category>
-      <category id="5">Інше реабілітаційне обладнання</category>
-      <category id="6">Аксесуари до МТБ</category>
-    </categories>
-    <offers>
+<price>
+  <date>2026-07-12 13:00</date>
+  <firmName>Кінезіс</firmName>
+  <firmId>ВСТАВТЕ_ID_МАГАЗИНУ</firmId>
 
-      <offer id="mtb1" available="true">
-        <url>https://kinezis.com.ua/product.html?id=mtb1</url>
-        <price>52500</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>1</categoryId>
-        <picture>https://kinezis.com.ua/images/products/mtb_1-scaled.jpg</picture>
-        <name>Тренажер МТБ-1 зі шведською стінкою (профіль 60×60)</name>
-        <description>МТБ-1 зі шведською стінкою — комбінована установка для кінезітерапії та гімнастики. Профіль 60×60 мм забезпечує жорсткість конструкції, шведська стінка розширює можливості для вправ на розтяжку та навантаження. Підходить для домашнього кабінету.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+  <categories>
+    <category>
+      <id>1</id>
+      <name>Тренажери МТБ</name>
+    </category>
+    <category>
+      <id>2</id>
+      <name>Лавки та гіперекстензії</name>
+    </category>
+    <category>
+      <id>3</id>
+      <name>Масажні столи та стільці</name>
+    </category>
+    <category>
+      <id>4</id>
+      <name>Бруси та реабілітаційні сходи</name>
+    </category>
+    <category>
+      <id>5</id>
+      <name>Інше реабілітаційне обладнання</name>
+    </category>
+    <category>
+      <id>6</id>
+      <name>Аксесуари до МТБ</name>
+    </category>
+  </categories>
 
-      <offer id="mtv1-40" available="true">
-        <url>https://kinezis.com.ua/product.html?id=mtv1-40</url>
-        <price>27500</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>1</categoryId>
-        <picture>https://kinezis.com.ua/images/products/mtv-1-profil-40_40.jpg</picture>
-        <name>Тренажер МТБ-1 Проф (профіль 40×40)</name>
-        <description>МТБ-1 на профілі 40×40 мм — бюджетна модифікація одноблочного тренажера. Підходить для початківців та для використання з невеликим навантаженням. Компактний та простий у монтажі.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+  <items>
 
-      <offer id="mtv1-reg" available="true">
-        <url>https://kinezis.com.ua/product.html?id=mtv1-reg</url>
-        <price>33000</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>1</categoryId>
-        <picture>https://kinezis.com.ua/images/products/mtv-1-reg.blok.jpg</picture>
-        <name>Тренажер МТБ-1 з регульованим блоком (профіль 60×60)</name>
-        <description>МТБ-1 з регульованим блоком дозволяє змінювати висоту точки кріплення троса, розширюючи кількість доступних вправ. Профіль 60×60 мм забезпечує підвищену жорсткість конструкції.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>mtb1</id>
+      <categoryId>1</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Тренажер МТБ-1 зі шведською стінкою (профіль 60×60)</name>
+      <description>МТБ-1 зі шведською стінкою — комбінована установка для кінезітерапії та гімнастики. Профіль 60×60 мм забезпечує жорсткість конструкції, шведська стінка розширює можливості для вправ на розтяжку та навантаження. Підходить для домашнього кабінету. Навантаження: 5–80 кг. Вага: 35 кг.</description>
+      <url>https://kinezis.com.ua/product.html?id=mtb1</url>
+      <image>https://kinezis.com.ua/images/products/mtb_1-scaled.jpg</image>
+      <priceRUAH>52500</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="mtb1-prof" available="true">
-        <url>https://kinezis.com.ua/product.html?id=mtb1-prof</url>
-        <price>30000</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>1</categoryId>
-        <picture>https://kinezis.com.ua/images/products/mtb-1-prof80.jpg</picture>
-        <name>Тренажер МТБ-1 Проф з регульованим блоком (профіль 60×60)</name>
-        <description>МТБ-1 Проф — однoblochний тренажер з регульованим блоком на посиленому профілі 60×60 мм. Підвищена жорсткість рами дозволяє працювати з більшими навантаженнями, рекомендований для реабілітаційних центрів.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>mtv1-40</id>
+      <categoryId>1</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Тренажер МТБ-1 Проф (профіль 40×40)</name>
+      <description>МТБ-1 на профілі 40×40 мм — бюджетна модифікація одноблочного тренажера. Підходить для початківців та для використання з невеликим навантаженням. Навантаження: 5–60 кг.</description>
+      <url>https://kinezis.com.ua/product.html?id=mtv1-40</url>
+      <image>https://kinezis.com.ua/images/products/mtv-1-profil-40_40.jpg</image>
+      <priceRUAH>27500</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="mtb1-shvedska" available="true">
-        <url>https://kinezis.com.ua/product.html?id=mtb1-shvedska</url>
-        <price>116600</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>1</categoryId>
-        <picture>https://kinezis.com.ua/images/products/kzs013shl_mtb-3-scaled.jpg</picture>
-        <name>Тренажер Бубновського зі шведською стінкою (профіль 60×60)</name>
-        <description>Тренажер за методом Бубновського зі шведською стінкою — повноцінна реабілітаційна установка для клінік та великих кабінетів. Профіль 60×60 мм, розширена функціональність для групових та індивідуальних занять. Висота 220 см.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>mtv1-reg</id>
+      <categoryId>1</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Тренажер МТБ-1 з регульованим блоком (профіль 60×60)</name>
+      <description>МТБ-1 з регульованим блоком дозволяє змінювати висоту точки кріплення троса, розширюючи кількість доступних вправ. Профіль 60×60 мм. Навантаження: 5–80 кг.</description>
+      <url>https://kinezis.com.ua/product.html?id=mtv1-reg</url>
+      <image>https://kinezis.com.ua/images/products/mtv-1-reg.blok.jpg</image>
+      <priceRUAH>33000</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="mtb2" available="true">
-        <url>https://kinezis.com.ua/product.html?id=mtb2</url>
-        <price>62500</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>1</categoryId>
-        <picture>https://kinezis.com.ua/images/products/mtb-2-prof80.jpg</picture>
-        <name>Тренажер МТБ-2 двоблочний (профіль 60×60)</name>
-        <description>МТБ-2 — двоблочний тренажер з верхнім та нижнім блоком. Дозволяє виконувати значно більше вправ порівняно з однoblochною моделлю, підходить для лікування захворювань хребта, суглобів і загальної реабілітації.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>mtb1-prof</id>
+      <categoryId>1</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Тренажер МТБ-1 Проф з регульованим блоком (профіль 60×60)</name>
+      <description>МТБ-1 Проф — одноблочний тренажер з регульованим блоком на посиленому профілі 60×60 мм. Підвищена жорсткість рами. Навантаження: до 100 кг.</description>
+      <url>https://kinezis.com.ua/product.html?id=mtb1-prof</url>
+      <image>https://kinezis.com.ua/images/products/mtb-1-prof80.jpg</image>
+      <priceRUAH>30000</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="mtb2-40" available="true">
-        <url>https://kinezis.com.ua/product.html?id=mtb2-40</url>
-        <price>57500</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>1</categoryId>
-        <picture>https://kinezis.com.ua/images/products/mtv-2-profil-40_40.jpg</picture>
-        <name>Тренажер МТБ-2 двоблочний (профіль 40×40)</name>
-        <description>МТБ-2 на профілі 40×40 мм — доступна двоблочна версія для тих, хто лише починає займатись кінезітерапією або обмежений у просторі. Зберігає весь функціонал двоблочного тренажера.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>mtb1-shvedska</id>
+      <categoryId>1</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Тренажер Бубновського зі шведською стінкою (профіль 60×60)</name>
+      <description>Тренажер за методом Бубновського зі шведською стінкою — повноцінна реабілітаційна установка для клінік та великих кабінетів. Профіль 60×60 мм. Висота 220 см.</description>
+      <url>https://kinezis.com.ua/product.html?id=mtb1-shvedska</url>
+      <image>https://kinezis.com.ua/images/products/kzs013shl_mtb-3-scaled.jpg</image>
+      <priceRUAH>116600</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="mtv2-reg" available="true">
-        <url>https://kinezis.com.ua/product.html?id=mtv2-reg</url>
-        <price>68500</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>1</categoryId>
-        <picture>https://images.prom.ua/fwMnsep7KyVDkFcSETFUC5QVTBR4pSol_DxQ2LEswrc=/5493371859_trenazher-dlya-kineziterapiyi.jpg</picture>
-        <name>Тренажер МТБ-2 з регульованими блоками (профіль 60×60)</name>
-        <description>МТБ-2 з регульованими блоками — вдосконалена двоблочна модель. Завдяки можливості переміщення блоків по вертикальних напрямляючих, кількість доступних вправ значно зростає.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>mtb2</id>
+      <categoryId>1</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Тренажер МТБ-2 двоблочний (профіль 60×60)</name>
+      <description>МТБ-2 — двоблочний тренажер з верхнім та нижнім блоком. Дозволяє виконувати значно більше вправ, підходить для лікування захворювань хребта та суглобів. Навантаження: 5–120 кг. Вага: 38 кг.</description>
+      <url>https://kinezis.com.ua/product.html?id=mtb2</url>
+      <image>https://kinezis.com.ua/images/products/mtb-2-prof80.jpg</image>
+      <priceRUAH>62500</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="mtb4" available="true">
-        <url>https://kinezis.com.ua/product.html?id=mtb4</url>
-        <price>126600</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>1</categoryId>
-        <picture>https://kinezis.com.ua/images/products/mtb-4-prof80.jpg</picture>
-        <name>Тренажер МТБ-4 чотириблочний (профіль 60×60)</name>
-        <description>МТБ-4 — профінструмент для кінезітерапевтів. Чотири незалежних блоки, підвищена вантажопідйомність, можливість одночасної роботи двох пацієнтів. Обов'язкове оснащення для кожного реабілітаційного центру.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>mtb2-40</id>
+      <categoryId>1</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Тренажер МТБ-2 двоблочний (профіль 40×40)</name>
+      <description>МТБ-2 на профілі 40×40 мм — доступна двоблочна версія для початківців або обмеженого простору. Навантаження: до 80 кг.</description>
+      <url>https://kinezis.com.ua/product.html?id=mtb2-40</url>
+      <image>https://kinezis.com.ua/images/products/mtv-2-profil-40_40.jpg</image>
+      <priceRUAH>57500</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="mtb4-reg" available="true">
-        <url>https://kinezis.com.ua/product.html?id=mtb4-reg</url>
-        <price>138600</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>1</categoryId>
-        <picture>https://kinezis.com.ua/images/products/mtb-4-reg-scaled.jpg</picture>
-        <name>Тренажер МТБ-4 з регульованими блоками (профіль 60×60)</name>
-        <description>Найбільш функціональна чотириблочна модель — всі блоки регулюються по висоті. Підходить для клінік де важлива гнучкість налаштування під різних пацієнтів з різними потребами.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>mtv2-reg</id>
+      <categoryId>1</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Тренажер МТБ-2 з регульованими блоками (профіль 60×60)</name>
+      <description>МТБ-2 з регульованими блоками — вдосконалена двоблочна модель. Переміщення блоків по вертикальних напрямляючих значно розширює кількість доступних вправ. Навантаження: до 120 кг.</description>
+      <url>https://kinezis.com.ua/product.html?id=mtv2-reg</url>
+      <image>https://images.prom.ua/fwMnsep7KyVDkFcSETFUC5QVTBR4pSol_DxQ2LEswrc=/5493371859_trenazher-dlya-kineziterapiyi.jpg</image>
+      <priceRUAH>68500</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="bench1" available="true">
-        <url>https://kinezis.com.ua/product.html?id=bench1</url>
-        <price>6500</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>2</categoryId>
-        <picture>https://images.prom.ua/IKoqDfRB0X8FI3eIU2nSJj91GXOYgClfl5jqpphZn-8=/5701824407_lavka-dlya-reabilitatsiyi.jpg</picture>
-        <name>Лавка реабілітаційна складна MTB-31</name>
-        <description>Складна реабілітаційна лавка MTB-31 для кінезітерапії. Регулюється кут нахилу, компактно складається для зберігання. Підходить для домашнього використання та невеликих кабінетів.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>mtb4</id>
+      <categoryId>1</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Тренажер МТБ-4 чотириблочний (профіль 60×60)</name>
+      <description>МТБ-4 — профінструмент для кінезітерапевтів. Чотири незалежних блоки, можливість одночасної роботи двох пацієнтів. Навантаження: до 200 кг. Вага: 85 кг.</description>
+      <url>https://kinezis.com.ua/product.html?id=mtb4</url>
+      <image>https://kinezis.com.ua/images/products/mtb-4-prof80.jpg</image>
+      <priceRUAH>126600</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="bench-mtb30" available="true">
-        <url>https://kinezis.com.ua/product.html?id=bench-mtb30</url>
-        <price>3000</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>2</categoryId>
-        <picture>https://images.prom.ua/bkCe_N4lSk3A-HAw4Zd83uFb_OcMy78f4YduFSbIdsA=/5701938127_lavka-pryama-mtb-30.jpg</picture>
-        <name>Лавка реабілітаційна пряма MTB-30</name>
-        <description>Проста пряма реабілітаційна лавка MTB-30. Міцна конструкція для базових вправ кінезітерапії. Оптимальний вибір для стаціонарного використання в домашньому залі.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>mtb4-reg</id>
+      <categoryId>1</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Тренажер МТБ-4 з регульованими блоками (профіль 60×60)</name>
+      <description>Найбільш функціональна чотириблочна модель — всі блоки регулюються по висоті. Для клінік де важлива гнучкість налаштування під різних пацієнтів.</description>
+      <url>https://kinezis.com.ua/product.html?id=mtb4-reg</url>
+      <image>https://kinezis.com.ua/images/products/mtb-4-reg-scaled.jpg</image>
+      <priceRUAH>138600</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="bench-vitjag" available="true">
-        <url>https://kinezis.com.ua/product.html?id=bench-vitjag</url>
-        <price>19800</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>2</categoryId>
-        <picture>https://kinezis.com.ua/images/products/mtb-009v1.jpg</picture>
-        <name>Лавка для витягування хребта MTB-009</name>
-        <description>Спеціалізована лавка MTB-009 для витягування та декомпресії хребта. Ефективна при міжхребцевих грижах та остеохондрозі. Регульований кут нахилу дозволяє дозувати навантаження.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>bench1</id>
+      <categoryId>2</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Лавка реабілітаційна складна MTB-31</name>
+      <description>Складна реабілітаційна лавка MTB-31 для кінезітерапії. Регулюється кут нахилу, компактно складається для зберігання.</description>
+      <url>https://kinezis.com.ua/product.html?id=bench1</url>
+      <image>https://images.prom.ua/IKoqDfRB0X8FI3eIU2nSJj91GXOYgClfl5jqpphZn-8=/5701824407_lavka-dlya-reabilitatsiyi.jpg</image>
+      <priceRUAH>6500</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="hyperext1" available="true">
-        <url>https://kinezis.com.ua/product.html?id=hyperext1</url>
-        <price>5900</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>2</categoryId>
-        <picture>https://kinezis.com.ua/images/products/sw301.jpg</picture>
-        <name>Гіперекстензія домашня SW-301</name>
-        <description>Компактна гіперекстензія SW-301 для домашнього використання. Ефективна для зміцнення м'язів спини, сідниць та задньої поверхні стегна. Регульована висота роликів.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>bench-mtb30</id>
+      <categoryId>2</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Лавка реабілітаційна пряма MTB-30</name>
+      <description>Пряма реабілітаційна лавка MTB-30 для базових вправ кінезітерапії. Міцна конструкція для стаціонарного використання.</description>
+      <url>https://kinezis.com.ua/product.html?id=bench-mtb30</url>
+      <image>https://images.prom.ua/bkCe_N4lSk3A-HAw4Zd83uFb_OcMy78f4YduFSbIdsA=/5701938127_lavka-pryama-mtb-30.jpg</image>
+      <priceRUAH>3000</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="bench-sw300" available="true">
-        <url>https://kinezis.com.ua/product.html?id=bench-sw300</url>
-        <price>4000</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>2</categoryId>
-        <picture>https://images.prom.ua/NyB9yulXc21b7K-VXOVGdjiHkjJ53_tGSoS8aNc2ui8=/4349634412_lavka-dlya-presa.jpg</picture>
-        <name>Лавка для преса комбінована SW-300</name>
-        <description>Комбінована лавка SW-300 для вправ на прес і спину. Регульований кут нахилу дозволяє змінювати інтенсивність навантаження. Підходить для домашніх тренувань.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>bench-vitjag</id>
+      <categoryId>2</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Лавка для витягування хребта MTB-009</name>
+      <description>Спеціалізована лавка MTB-009 для витягування та декомпресії хребта. Ефективна при міжхребцевих грижах та остеохондрозі.</description>
+      <url>https://kinezis.com.ua/product.html?id=bench-vitjag</url>
+      <image>https://kinezis.com.ua/images/products/mtb-009v1.jpg</image>
+      <priceRUAH>19800</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="bench-sw303" available="true">
-        <url>https://kinezis.com.ua/product.html?id=bench-sw303</url>
-        <price>7000</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>2</categoryId>
-        <picture>https://kinezis.com.ua/images/products/sw303.jpg</picture>
-        <name>Лавка атлетична універсальна SW-303</name>
-        <description>Універсальна атлетична лавка SW-303 для різноманітних вправ з обтяженням. Стійка конструкція, регулюється положення спинки. Підходить як для домашнього, так і для комерційного використання.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>hyperext1</id>
+      <categoryId>2</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Гіперекстензія домашня SW-301</name>
+      <description>Компактна гіперекстензія SW-301 для домашнього використання. Ефективна для зміцнення м'язів спини, сідниць та задньої поверхні стегна.</description>
+      <url>https://kinezis.com.ua/product.html?id=hyperext1</url>
+      <image>https://kinezis.com.ua/images/products/sw301.jpg</image>
+      <priceRUAH>5900</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="bench-sw308" available="true">
-        <url>https://kinezis.com.ua/product.html?id=bench-sw308</url>
-        <price>6600</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>2</categoryId>
-        <picture>https://kinezis.com.ua/images/products/sw308.jpg</picture>
-        <name>Лавка профі SW-308</name>
-        <description>Профійна спортивна лавка SW-308 підвищеної міцності. Широке регульоване сидіння, посилена рама. Для серйозних тренувань та реабілітаційних занять.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>bench-sw300</id>
+      <categoryId>2</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Лавка для преса комбінована SW-300</name>
+      <description>Комбінована лавка SW-300 для вправ на прес і спину. Регульований кут нахилу для зміни інтенсивності навантаження.</description>
+      <url>https://kinezis.com.ua/product.html?id=bench-sw300</url>
+      <image>https://images.prom.ua/NyB9yulXc21b7K-VXOVGdjiHkjJ53_tGSoS8aNc2ui8=/4349634412_lavka-dlya-presa.jpg</image>
+      <priceRUAH>4000</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="bench-roman" available="true">
-        <url>https://kinezis.com.ua/product.html?id=bench-roman</url>
-        <price>11900</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>2</categoryId>
-        <picture>https://kinezis.com.ua/images/products/svs-112-scaled.jpg</picture>
-        <name>Римський стілець реабілітаційний SVS-112</name>
-        <description>Реабілітаційний римський стілець SVS-112 для зміцнення м'язів спини та поперекового відділу. Зручна конструкція з м'якими роликами. Ефективний при профілактиці та лікуванні остеохондрозу.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>bench-sw303</id>
+      <categoryId>2</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Лавка атлетична універсальна SW-303</name>
+      <description>Універсальна атлетична лавка SW-303 для різноманітних вправ з обтяженням. Регулюється положення спинки.</description>
+      <url>https://kinezis.com.ua/product.html?id=bench-sw303</url>
+      <image>https://kinezis.com.ua/images/products/sw303.jpg</image>
+      <priceRUAH>7000</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="bench-svs113" available="true">
-        <url>https://kinezis.com.ua/product.html?id=bench-svs113</url>
-        <price>14750</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>2</categoryId>
-        <picture>https://kinezis.com.ua/images/products/svs-113-scaled.jpg</picture>
-        <name>Римський стілець регульований SVS-113</name>
-        <description>Регульований римський стілець SVS-113 з можливістю налаштування висоти та кута нахилу. Підходить для людей різного зросту. Ефективний для реабілітації спини та зміцнення корпусу.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>bench-sw308</id>
+      <categoryId>2</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Лавка профі SW-308</name>
+      <description>Профійна спортивна лавка SW-308 підвищеної міцності. Широке регульоване сидіння, посилена рама для серйозних тренувань.</description>
+      <url>https://kinezis.com.ua/product.html?id=bench-sw308</url>
+      <image>https://kinezis.com.ua/images/products/sw308.jpg</image>
+      <priceRUAH>6600</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="bench-svs119" available="true">
-        <url>https://kinezis.com.ua/product.html?id=bench-svs119</url>
-        <price>12000</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>2</categoryId>
-        <picture>https://kinezis.com.ua/images/products/svs-1191-scaled.jpg</picture>
-        <name>Гіперекстензія горизонтальна SVS-119</name>
-        <description>Горизонтальна гіперекстензія SVS-119 для глибокого опрацювання м'язів спини. Рівна робоча площина забезпечує рівномірний розподіл навантаження по всьому хребту.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>bench-roman</id>
+      <categoryId>2</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Римський стілець реабілітаційний SVS-112</name>
+      <description>Реабілітаційний римський стілець SVS-112 для зміцнення м'язів спини та поперекового відділу. Ефективний при профілактиці та лікуванні остеохондрозу.</description>
+      <url>https://kinezis.com.ua/product.html?id=bench-roman</url>
+      <image>https://kinezis.com.ua/images/products/svs-112-scaled.jpg</image>
+      <priceRUAH>11900</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="bench-svs127" available="true">
-        <url>https://kinezis.com.ua/product.html?id=bench-svs127</url>
-        <price>12000</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>2</categoryId>
-        <picture>https://kinezis.com.ua/images/products/svs-1271-scaled.jpg</picture>
-        <name>Гіперекстензія зворотна SVS-127</name>
-        <description>Зворотна гіперекстензія SVS-127 — ефективна для декомпресії поперекового відділу хребта. Вправи в режимі зворотної гіперекстензії знімають навантаження з міжхребцевих дисків.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>bench-svs113</id>
+      <categoryId>2</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Римський стілець регульований SVS-113</name>
+      <description>Регульований римський стілець SVS-113 з можливістю налаштування висоти та кута нахилу. Підходить для людей різного зросту.</description>
+      <url>https://kinezis.com.ua/product.html?id=bench-svs113</url>
+      <image>https://kinezis.com.ua/images/products/svs-113-scaled.jpg</image>
+      <priceRUAH>14750</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="bench-svs108" available="true">
-        <url>https://kinezis.com.ua/product.html?id=bench-svs108</url>
-        <price>16600</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>2</categoryId>
-        <picture>https://kinezis.com.ua/images/products/svs-108v1.jpg</picture>
-        <name>Гіперекстензія регульована SVS-108</name>
-        <description>Регульована гіперекстензія SVS-108 з широким діапазоном налаштувань. Підходить для пацієнтів різного зросту та фізичної підготовки. Якісна оббивка, надійна конструкція.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>bench-svs119</id>
+      <categoryId>2</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Гіперекстензія горизонтальна SVS-119</name>
+      <description>Горизонтальна гіперекстензія SVS-119 для глибокого опрацювання м'язів спини. Рівна робоча площина забезпечує рівномірний розподіл навантаження.</description>
+      <url>https://kinezis.com.ua/product.html?id=bench-svs119</url>
+      <image>https://kinezis.com.ua/images/products/svs-1191-scaled.jpg</image>
+      <priceRUAH>12000</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="bench-svs145" available="true">
-        <url>https://kinezis.com.ua/product.html?id=bench-svs145</url>
-        <price>14780</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>2</categoryId>
-        <picture>https://kinezis.com.ua/images/products/svs-145-scaled.jpg</picture>
-        <name>Лавка регульована SVS-145</name>
-        <description>Регульована реабілітаційна лавка SVS-145 із широким діапазоном положень. Універсальна конструкція для різних вправ на зміцнення м'язів спини, преса та кінцівок.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>bench-svs127</id>
+      <categoryId>2</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Гіперекстензія зворотна SVS-127</name>
+      <description>Зворотна гіперекстензія SVS-127 для декомпресії поперекового відділу хребта. Знімає навантаження з міжхребцевих дисків.</description>
+      <url>https://kinezis.com.ua/product.html?id=bench-svs127</url>
+      <image>https://kinezis.com.ua/images/products/svs-1271-scaled.jpg</image>
+      <priceRUAH>12000</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="massage1" available="true">
-        <url>https://kinezis.com.ua/product.html?id=massage1</url>
-        <price>11200</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>3</categoryId>
-        <picture>https://kinezis.com.ua/images/products/mtb-051.jpg</picture>
-        <name>Масажний стіл складний алюмінієвий MTB-051</name>
-        <description>Легкий складний масажний стіл MTB-051 з алюмінієвою рамою. Ідеальний для виїзних масажистів та невеликих кабінетів. Регульована висота, підголівник, отвір для обличчя.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>bench-svs108</id>
+      <categoryId>2</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Гіперекстензія регульована SVS-108</name>
+      <description>Регульована гіперекстензія SVS-108 з широким діапазоном налаштувань. Підходить для пацієнтів різного зросту та фізичної підготовки.</description>
+      <url>https://kinezis.com.ua/product.html?id=bench-svs108</url>
+      <image>https://kinezis.com.ua/images/products/svs-108v1.jpg</image>
+      <priceRUAH>16600</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="massage2" available="true">
-        <url>https://kinezis.com.ua/product.html?id=massage2</url>
-        <price>18400</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>3</categoryId>
-        <picture>https://kinezis.com.ua/images/products/mtb-050.jpg</picture>
-        <name>Масажний стіл стаціонарний MTB-050</name>
-        <description>Стаціонарний масажний стіл MTB-050 підвищеної міцності для кабінетів масажу та реабілітаційних центрів. Широка робоча поверхня, якісна оббивка, стійка основа.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>bench-svs145</id>
+      <categoryId>2</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Лавка регульована SVS-145</name>
+      <description>Регульована реабілітаційна лавка SVS-145 із широким діапазоном положень для різних вправ на зміцнення м'язів спини, преса та кінцівок.</description>
+      <url>https://kinezis.com.ua/product.html?id=bench-svs145</url>
+      <image>https://kinezis.com.ua/images/products/svs-145-scaled.jpg</image>
+      <priceRUAH>14780</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="massage-chair" available="true">
-        <url>https://kinezis.com.ua/product.html?id=massage-chair</url>
-        <price>7900</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>3</categoryId>
-        <picture>https://kinezis.com.ua/images/products/mtb-052.jpg</picture>
-        <name>Масажний стілець для шийно-комірцевої зони MTB-052</name>
-        <description>Спеціалізований масажний стілець MTB-052 для масажу шийно-комірцевої зони. Зручна підтримка для рук і голови, регульована висота. Ідеальний для офісного масажу та корпоративного обслуговування.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>massage1</id>
+      <categoryId>3</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Масажний стіл складний алюмінієвий MTB-051</name>
+      <description>Легкий складний масажний стіл MTB-051 з алюмінієвою рамою. Ідеальний для виїзних масажистів та невеликих кабінетів. Регульована висота, підголівник.</description>
+      <url>https://kinezis.com.ua/product.html?id=massage1</url>
+      <image>https://kinezis.com.ua/images/products/mtb-051.jpg</image>
+      <priceRUAH>11200</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="bars1" available="true">
-        <url>https://kinezis.com.ua/product.html?id=bars1</url>
-        <price>36250</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>4</categoryId>
-        <picture>https://kinezis.com.ua/images/products/mtb-016.jpg</picture>
-        <name>Паралельні бруси реабілітаційні MTB-016</name>
-        <description>Реабілітаційні паралельні бруси MTB-016 для відновлення ходи та рівноваги після травм і операцій. Регульована ширина та висота, нескользяча основа. Незамінні для постінсультної та постопераційної реабілітації.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>massage2</id>
+      <categoryId>3</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Масажний стіл стаціонарний MTB-050</name>
+      <description>Стаціонарний масажний стіл MTB-050 підвищеної міцності для кабінетів масажу та реабілітаційних центрів. Широка робоча поверхня, якісна оббивка.</description>
+      <url>https://kinezis.com.ua/product.html?id=massage2</url>
+      <image>https://kinezis.com.ua/images/products/mtb-050.jpg</image>
+      <priceRUAH>18400</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="bars-mtb018" available="true">
-        <url>https://kinezis.com.ua/product.html?id=bars-mtb018</url>
-        <price>52000</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>4</categoryId>
-        <picture>https://kinezis.com.ua/images/products/mtb-018.jpg</picture>
-        <name>Бруси реабілітаційні з перешкодами MTB-018</name>
-        <description>Реабілітаційні бруси MTB-018 з вбудованими перешкодами для відпрацювання складних рухових паттернів. Підходять для реабілітації після ЧМТ, інсульту та ортопедичних операцій.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>massage-chair</id>
+      <categoryId>3</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Масажний стілець для шийно-комірцевої зони MTB-052</name>
+      <description>Спеціалізований масажний стілець MTB-052 для масажу шийно-комірцевої зони. Зручна підтримка для рук і голови, регульована висота.</description>
+      <url>https://kinezis.com.ua/product.html?id=massage-chair</url>
+      <image>https://kinezis.com.ua/images/products/mtb-052.jpg</image>
+      <priceRUAH>7900</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="bars-mtb019" available="true">
-        <url>https://kinezis.com.ua/product.html?id=bars-mtb019</url>
-        <price>48000</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>4</categoryId>
-        <picture>https://images.prom.ua/tnT-kEDki_nb_Hpsvao_I9nmrw4-vmwn9MydMl4KI40=/5493387883_brusi-dlya-vidnovlennya.jpg</picture>
-        <name>Бруси реабілітаційні дитячі з перешкодами MTB-019</name>
-        <description>Дитячі реабілітаційні бруси MTB-019 з перешкодами — для відновлення рухових функцій у дітей після ДЦП, травм та операцій. Регульована висота під зріст дитини.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>bars1</id>
+      <categoryId>4</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Паралельні бруси реабілітаційні MTB-016</name>
+      <description>Реабілітаційні паралельні бруси MTB-016 для відновлення ходи та рівноваги після травм і операцій. Регульована ширина та висота, нескользяча основа.</description>
+      <url>https://kinezis.com.ua/product.html?id=bars1</url>
+      <image>https://kinezis.com.ua/images/products/mtb-016.jpg</image>
+      <priceRUAH>36250</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="bars-mtb020" available="true">
-        <url>https://kinezis.com.ua/product.html?id=bars-mtb020</url>
-        <price>56000</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>4</categoryId>
-        <picture>https://kinezis.com.ua/images/products/mtb-020v2.jpg</picture>
-        <name>Бруси реабілітаційні з перешкодами MTB-020</name>
-        <description>Розширені реабілітаційні бруси MTB-020 з різноманітними перешкодами для комплексного відновлення координації та балансу. Для реабілітаційних центрів та клінік.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>bars-mtb018</id>
+      <categoryId>4</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Бруси реабілітаційні з перешкодами MTB-018</name>
+      <description>Реабілітаційні бруси MTB-018 з вбудованими перешкодами для відпрацювання складних рухових паттернів після ЧМТ, інсульту та ортопедичних операцій.</description>
+      <url>https://kinezis.com.ua/product.html?id=bars-mtb018</url>
+      <image>https://kinezis.com.ua/images/products/mtb-018.jpg</image>
+      <priceRUAH>52000</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="stairs1" available="true">
-        <url>https://kinezis.com.ua/product.html?id=stairs1</url>
-        <price>42500</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>4</categoryId>
-        <picture>https://kinezis.com.ua/images/products/mtb-029.jpg</picture>
-        <name>Реабілітаційні сходи 3 сходинки MTB-029</name>
-        <description>Реабілітаційні сходи MTB-029 з трьома сходинками для відпрацювання підйому та спуску після операцій на суглобах. Поручні з обох боків, нескользяча поверхня. Обов'язкове обладнання ортопедичних клінік.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>bars-mtb019</id>
+      <categoryId>4</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Бруси реабілітаційні дитячі з перешкодами MTB-019</name>
+      <description>Дитячі реабілітаційні бруси MTB-019 для відновлення рухових функцій у дітей після ДЦП, травм та операцій. Регульована висота під зріст дитини.</description>
+      <url>https://kinezis.com.ua/product.html?id=bars-mtb019</url>
+      <image>https://images.prom.ua/tnT-kEDki_nb_Hpsvao_I9nmrw4-vmwn9MydMl4KI40=/5493387883_brusi-dlya-vidnovlennya.jpg</image>
+      <priceRUAH>48000</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="stairs-mtb028" available="true">
-        <url>https://kinezis.com.ua/product.html?id=stairs-mtb028</url>
-        <price>40000</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>4</categoryId>
-        <picture>https://kinezis.com.ua/images/products/mtb-028.jpg</picture>
-        <name>Сходи з похилою рампою MTB-028</name>
-        <description>Реабілітаційні сходи MTB-028 з похилою рампою для поступового переходу від ходьби по рівній поверхні до підйому сходами. Для постінсультної та ортопедичної реабілітації.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>bars-mtb020</id>
+      <categoryId>4</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Бруси реабілітаційні з перешкодами MTB-020</name>
+      <description>Розширені реабілітаційні бруси MTB-020 з різноманітними перешкодами для комплексного відновлення координації та балансу.</description>
+      <url>https://kinezis.com.ua/product.html?id=bars-mtb020</url>
+      <image>https://kinezis.com.ua/images/products/mtb-020v2.jpg</image>
+      <priceRUAH>56000</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="stairs-mtb033" available="true">
-        <url>https://kinezis.com.ua/product.html?id=stairs-mtb033</url>
-        <price>43500</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>4</categoryId>
-        <picture>https://kinezis.com.ua/images/products/mtb-033.jpg</picture>
-        <name>Сходи кутові з похилою рампою MTB-033</name>
-        <description>Кутові реабілітаційні сходи MTB-033 з похилою рампою — для відпрацювання обох напрямів підйому. Ефективні при реабілітації після ендопротезування та переломів нижніх кінцівок.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>stairs1</id>
+      <categoryId>4</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Реабілітаційні сходи 3 сходинки MTB-029</name>
+      <description>Реабілітаційні сходи MTB-029 з трьома сходинками для відпрацювання підйому та спуску після операцій на суглобах. Поручні з обох боків, нескользяча поверхня.</description>
+      <url>https://kinezis.com.ua/product.html?id=stairs1</url>
+      <image>https://kinezis.com.ua/images/products/mtb-029.jpg</image>
+      <priceRUAH>42500</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="mtv070" available="true">
-        <url>https://kinezis.com.ua/product.html?id=mtv070</url>
-        <price>64000</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>5</categoryId>
-        <picture>https://kinezis.com.ua/images/products/mtv-070.jpg</picture>
-        <name>Універсальна кабіна МТБ-070</name>
-        <description>Багатофункціональна реабілітаційна кабіна МТБ-070 для комплексних занять кінезітерапією. Поєднує можливості тренажера МТБ, шведської стінки та підвісної системи в одній установці.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>stairs-mtb028</id>
+      <categoryId>4</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Сходи з похилою рампою MTB-028</name>
+      <description>Реабілітаційні сходи MTB-028 з похилою рампою для поступового переходу від ходьби до підйому сходами після інсульту або операцій.</description>
+      <url>https://kinezis.com.ua/product.html?id=stairs-mtb028</url>
+      <image>https://kinezis.com.ua/images/products/mtb-028.jpg</image>
+      <priceRUAH>40000</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="mtv070-1" available="true">
-        <url>https://kinezis.com.ua/product.html?id=mtv070-1</url>
-        <price>6000</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>5</categoryId>
-        <picture>https://kinezis.com.ua/images/products/kzs013shl_mtb-3-scaled.jpg</picture>
-        <name>Шведська стінка для кабіни МТБ-070.1</name>
-        <description>Шведська стінка МТБ-070.1 — додаткова секція для розширення функціоналу універсальної кабіни МТБ-070. Дозволяє виконувати вправи на розтяжку та навантаження на верхній плечовий пояс.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>stairs-mtb033</id>
+      <categoryId>4</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Сходи кутові з похилою рампою MTB-033</name>
+      <description>Кутові реабілітаційні сходи MTB-033 з похилою рампою для відпрацювання обох напрямів підйому. Для реабілітації після ендопротезування та переломів.</description>
+      <url>https://kinezis.com.ua/product.html?id=stairs-mtb033</url>
+      <image>https://kinezis.com.ua/images/products/mtb-033.jpg</image>
+      <priceRUAH>43500</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="mtv070-2" available="true">
-        <url>https://kinezis.com.ua/product.html?id=mtv070-2</url>
-        <price>10500</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>5</categoryId>
-        <picture>https://kinezis.com.ua/images/products/mtb-016.jpg</picture>
-        <name>Приставка для підвісної терапії МТБ-070.2</name>
-        <description>Приставка МТБ-070.2 для підвісної терапії та розвантажувальних вправ. Дозволяє виконувати вправи в горизонтальному підвісному положенні для декомпресії хребта та суглобів.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>mtv070</id>
+      <categoryId>5</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Універсальна кабіна МТБ-070</name>
+      <description>Багатофункціональна реабілітаційна кабіна МТБ-070. Поєднує тренажер МТБ, шведську стінку та підвісну систему в одній установці.</description>
+      <url>https://kinezis.com.ua/product.html?id=mtv070</url>
+      <image>https://kinezis.com.ua/images/products/mtv-070.jpg</image>
+      <priceRUAH>64000</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="acc-handles" available="true">
-        <url>https://kinezis.com.ua/product.html?id=acc-handles</url>
-        <price>400</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>6</categoryId>
-        <picture>https://images.prom.ua/pD9-tHBIuQL3XMm7zhSSn4xa8VjfuVCE5NQmIebWHKI=/5853422830_ruchka-dlya-tyagi.jpg</picture>
-        <name>Ручка для тяги 46 см MTB-21</name>
-        <description>Ручка для тяги MTB-21 довжиною 46 см для тренажерів МТБ. Двосторонній хват, якісна металева конструкція. Підходить для вправ на широчайні м'язи спини та біцепс.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>mtv070-1</id>
+      <categoryId>5</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Шведська стінка для кабіни МТБ-070.1</name>
+      <description>Додаткова секція шведської стінки МТБ-070.1 для розширення функціоналу кабіни МТБ-070. Вправи на розтяжку та верхній плечовий пояс.</description>
+      <url>https://kinezis.com.ua/product.html?id=mtv070-1</url>
+      <image>https://kinezis.com.ua/images/products/kzs013shl_mtb-3-scaled.jpg</image>
+      <priceRUAH>6000</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="acc-carabiner" available="true">
-        <url>https://kinezis.com.ua/product.html?id=acc-carabiner</url>
-        <price>200</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>6</categoryId>
-        <picture>https://kinezis.com.ua/images/products/mtv-16.jpg</picture>
-        <name>Ланцюг-подовжувач з карабіном MTB-16</name>
-        <description>Ланцюг-подовжувач MTB-16 з карабіном для збільшення довжини троса тренажера МТБ. Міцна сталева конструкція, надійне кріплення. Дозволяє розширити амплітуду вправ.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>mtv070-2</id>
+      <categoryId>5</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Приставка для підвісної терапії МТБ-070.2</name>
+      <description>Приставка МТБ-070.2 для підвісної терапії та розвантажувальних вправ. Декомпресія хребта та суглобів у горизонтальному підвісному положенні.</description>
+      <url>https://kinezis.com.ua/product.html?id=mtv070-2</url>
+      <image>https://kinezis.com.ua/images/products/mtb-016.jpg</image>
+      <priceRUAH>10500</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="mtb10" available="true">
-        <url>https://kinezis.com.ua/product.html?id=mtb10</url>
-        <price>800</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>6</categoryId>
-        <picture>https://images.prom.ua/C8g6aZjwr452s4Q5UjSXYsJX-xPOi__C8CL7IAlT9vQ=/5799456011_manzheti-myaki-mtb-10.jpg</picture>
-        <name>Манжети м'які MTB-10</name>
-        <description>М'які манжети MTB-10 для кріплення на гомілці або зап'ясті при роботі на тренажері МТБ. Зручні у використанні, не травмують шкіру. Підходять для реабілітаційних вправ на нижні та верхні кінцівки.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>acc-handles</id>
+      <categoryId>6</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Ручка для тяги 46 см MTB-21</name>
+      <description>Ручка для тяги MTB-21 (46 см) для тренажерів МТБ. Двосторонній хват. Підходить для вправ на широчайні м'язи спини та біцепс.</description>
+      <url>https://kinezis.com.ua/product.html?id=acc-handles</url>
+      <image>https://images.prom.ua/pD9-tHBIuQL3XMm7zhSSn4xa8VjfuVCE5NQmIebWHKI=/5853422830_ruchka-dlya-tyagi.jpg</image>
+      <priceRUAH>400</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="mtb11" available="true">
-        <url>https://kinezis.com.ua/product.html?id=mtb11</url>
-        <price>800</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>6</categoryId>
-        <picture>https://kinezis.com.ua/images/products/mtv-11.jpg</picture>
-        <name>Манжети м'які дитячі MTB-11</name>
-        <description>Дитячі м'які манжети MTB-11 меншого розміру для роботи на тренажері МТБ. Зручне кріплення на дитячій нозі або руці, м'який матеріал не натирає шкіру.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>acc-carabiner</id>
+      <categoryId>6</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Ланцюг-подовжувач з карабіном MTB-16</name>
+      <description>Ланцюг-подовжувач MTB-16 з карабіном для збільшення довжини троса тренажера МТБ. Міцна сталева конструкція.</description>
+      <url>https://kinezis.com.ua/product.html?id=acc-carabiner</url>
+      <image>https://kinezis.com.ua/images/products/mtv-16.jpg</image>
+      <priceRUAH>200</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="mtb12" available="true">
-        <url>https://kinezis.com.ua/product.html?id=mtb12</url>
-        <price>1000</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>6</categoryId>
-        <picture>https://images.prom.ua/0sdydMFe-ciOjnVzW9lzh0tBZlmRyHgfxKZNa0YESIg=/5799476550_manzheti-zhorstki-mtv-12.jpg</picture>
-        <name>Манжети жорсткі MTB-12</name>
-        <description>Жорсткі манжети MTB-12 з надійною фіксацією для інтенсивних тренувань на МТБ. Підходять для роботи з більшими навантаженнями, не ковзають при вправах.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>mtb10</id>
+      <categoryId>6</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Манжети м'які MTB-10</name>
+      <description>М'які манжети MTB-10 для кріплення на гомілці або зап'ясті при роботі на тренажері МТБ. Зручні у використанні, не травмують шкіру.</description>
+      <url>https://kinezis.com.ua/product.html?id=mtb10</url>
+      <image>https://images.prom.ua/C8g6aZjwr452s4Q5UjSXYsJX-xPOi__C8CL7IAlT9vQ=/5799456011_manzheti-myaki-mtb-10.jpg</image>
+      <priceRUAH>800</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="mtb13" available="true">
-        <url>https://kinezis.com.ua/product.html?id=mtb13</url>
-        <price>800</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>6</categoryId>
-        <picture>https://kinezis.com.ua/images/products/mtv-13.jpg</picture>
-        <name>Сандаль реабілітаційний MTB-13</name>
-        <description>Реабілітаційний сандаль MTB-13 для кріплення стопи до троса тренажера МТБ. Дозволяє виконувати вправи на згинання та розгинання стопи, відновлення після травм гомілковостопного суглоба.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>mtb11</id>
+      <categoryId>6</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Манжети м'які дитячі MTB-11</name>
+      <description>Дитячі м'які манжети MTB-11 меншого розміру для роботи на тренажері МТБ.</description>
+      <url>https://kinezis.com.ua/product.html?id=mtb11</url>
+      <image>https://kinezis.com.ua/images/products/mtv-11.jpg</image>
+      <priceRUAH>800</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="mtb14" available="true">
-        <url>https://kinezis.com.ua/product.html?id=mtb14</url>
-        <price>800</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>6</categoryId>
-        <picture>https://kinezis.com.ua/images/products/mtv-14.jpg</picture>
-        <name>Сандаль реабілітаційний дитячий MTB-14</name>
-        <description>Дитячий реабілітаційний сандаль MTB-14 меншого розміру для вправ на стопу у дітей. Використовується при реабілітації після травм, ДЦП та плоскостопості.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>mtb12</id>
+      <categoryId>6</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Манжети жорсткі MTB-12</name>
+      <description>Жорсткі манжети MTB-12 з надійною фіксацією для інтенсивних тренувань на МТБ. Підходять для роботи з більшими навантаженнями.</description>
+      <url>https://kinezis.com.ua/product.html?id=mtb12</url>
+      <image>https://images.prom.ua/0sdydMFe-ciOjnVzW9lzh0tBZlmRyHgfxKZNa0YESIg=/5799476550_manzheti-zhorstki-mtv-12.jpg</image>
+      <priceRUAH>1000</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="mtb15" available="true">
-        <url>https://kinezis.com.ua/product.html?id=mtb15</url>
-        <price>140</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>6</categoryId>
-        <picture>https://kinezis.com.ua/images/products/mtv-15.jpg</picture>
-        <name>Петля м'яка MTB-15</name>
-        <description>М'яка петля MTB-15 для кріплення кінцівки або тулуба до троса тренажера МТБ. Універсальна, підходить для різноманітних вправ кінезітерапії.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>mtb13</id>
+      <categoryId>6</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Сандаль реабілітаційний MTB-13</name>
+      <description>Реабілітаційний сандаль MTB-13 для кріплення стопи до троса тренажера МТБ. Вправи на відновлення після травм гомілковостопного суглоба.</description>
+      <url>https://kinezis.com.ua/product.html?id=mtb13</url>
+      <image>https://kinezis.com.ua/images/products/mtv-13.jpg</image>
+      <priceRUAH>800</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="mtb17" available="true">
-        <url>https://kinezis.com.ua/product.html?id=mtb17</url>
-        <price>400</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>6</categoryId>
-        <picture>https://images.prom.ua/_eJ2uC8X1Yrm510-v1JrRFjbHckGFt8XlVNQfAoNyrI=/5853172529_ruchka-dlya-tyagi.jpg</picture>
-        <name>Ручка для тяги закрита MTB-17</name>
-        <description>Закрита ручка для тяги MTB-17 з фіксованим хватом для вправ на тренажері МТБ. Ергономічна форма, зручна для вправ на спину та плечі.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>mtb14</id>
+      <categoryId>6</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Сандаль реабілітаційний дитячий MTB-14</name>
+      <description>Дитячий реабілітаційний сандаль MTB-14 меншого розміру для вправ на стопу у дітей. Для реабілітації після травм, ДЦП та плоскостопості.</description>
+      <url>https://kinezis.com.ua/product.html?id=mtb14</url>
+      <image>https://kinezis.com.ua/images/products/mtv-14.jpg</image>
+      <priceRUAH>800</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="mtb18" available="true">
-        <url>https://kinezis.com.ua/product.html?id=mtb18</url>
-        <price>400</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>6</categoryId>
-        <picture>https://images.prom.ua/wFuWx7GWC0Q4fOEUKoYDo3_z0Om7eMykJlxCsH8wWnU=/5800025591_ruchka-dlya-tyagi.jpg</picture>
-        <name>Ручка для тяги закрита мала MTB-18</name>
-        <description>Мала закрита ручка MTB-18 для односторонніх тяг на тренажері МТБ. Зручна для ізольованих вправ на одну руку при реабілітації плечового суглоба та ліктя.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>mtb15</id>
+      <categoryId>6</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Петля м'яка MTB-15</name>
+      <description>М'яка петля MTB-15 для кріплення кінцівки або тулуба до троса тренажера МТБ. Універсальна для різноманітних вправ кінезітерапії.</description>
+      <url>https://kinezis.com.ua/product.html?id=mtb15</url>
+      <image>https://kinezis.com.ua/images/products/mtv-15.jpg</image>
+      <priceRUAH>140</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="mtb19" available="true">
-        <url>https://kinezis.com.ua/product.html?id=mtb19</url>
-        <price>500</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>6</categoryId>
-        <picture>https://images.prom.ua/nRI_WPqfGk3j7Rk0gGnd4DOEcgeAGagVG-Mcop1gx58=/5853188770_ruchka-dlya-tyagi.jpg</picture>
-        <name>Ручка для тяги зверху 120 см MTB-19</name>
-        <description>Довга горизонтальна ручка MTB-19 (120 см) для тяги зверху широким хватом. Ефективна для розвитку широчайніх м'язів спини та для реабілітації плечового пояса.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>mtb17</id>
+      <categoryId>6</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Ручка для тяги закрита MTB-17</name>
+      <description>Закрита ручка для тяги MTB-17 для тренажера МТБ. Ергономічна форма для вправ на спину та плечі.</description>
+      <url>https://kinezis.com.ua/product.html?id=mtb17</url>
+      <image>https://images.prom.ua/_eJ2uC8X1Yrm510-v1JrRFjbHckGFt8XlVNQfAoNyrI=/5853172529_ruchka-dlya-tyagi.jpg</image>
+      <priceRUAH>400</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="mtb20" available="true">
-        <url>https://kinezis.com.ua/product.html?id=mtb20</url>
-        <price>600</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>6</categoryId>
-        <picture>https://images.prom.ua/BbMuTiYjAv9y4Ss-BmcU3QYCyu0q3wTcgcA8sXWlOgg=/4353642404_ruchka-tyagi-za.jpg</picture>
-        <name>Ручка для тяги зверху внутрішній хват MTB-20</name>
-        <description>Ручка MTB-20 (120 см) для тяги зверху вузьким внутрішнім хватом. Акцентує навантаження на нижні пучки широчайніх та ромбоподібні м'язи. Підходить для реабілітації після операцій на хребті.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>mtb18</id>
+      <categoryId>6</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Ручка для тяги закрита мала MTB-18</name>
+      <description>Мала закрита ручка MTB-18 для односторонніх тяг. Для ізольованих вправ при реабілітації плечового суглоба та ліктя.</description>
+      <url>https://kinezis.com.ua/product.html?id=mtb18</url>
+      <image>https://images.prom.ua/wFuWx7GWC0Q4fOEUKoYDo3_z0Om7eMykJlxCsH8wWnU=/5800025591_ruchka-dlya-tyagi.jpg</image>
+      <priceRUAH>400</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="mtb26" available="true">
-        <url>https://kinezis.com.ua/product.html?id=mtb26</url>
-        <price>500</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>6</categoryId>
-        <picture>https://images.prom.ua/ud4w9upWB8-2ASnpzCzgPcM-WFHuJtk6qRwPZRw-MPA=/5853562515_ruchka-dlya-tyagi.jpg</picture>
-        <name>Ручка на трицепс MTB-26</name>
-        <description>Спеціальна ручка MTB-26 для ізольованих вправ на трицепс на тренажері МТБ. V-подібна форма забезпечує оптимальне положення рук при розгинанні ліктя.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>mtb19</id>
+      <categoryId>6</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Ручка для тяги зверху 120 см MTB-19</name>
+      <description>Довга горизонтальна ручка MTB-19 (120 см) для тяги зверху широким хватом. Для широчайніх м'язів спини та реабілітації плечового пояса.</description>
+      <url>https://kinezis.com.ua/product.html?id=mtb19</url>
+      <image>https://images.prom.ua/nRI_WPqfGk3j7Rk0gGnd4DOEcgeAGagVG-Mcop1gx58=/5853188770_ruchka-dlya-tyagi.jpg</image>
+      <priceRUAH>500</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-      <offer id="mtb27" available="true">
-        <url>https://kinezis.com.ua/product.html?id=mtb27</url>
-        <price>160</price>
-        <currencyId>UAH</currencyId>
-        <categoryId>6</categoryId>
-        <picture>https://kinezis.com.ua/images/products/mtv-27.jpg</picture>
-        <name>Подовжувач м'який MTB-27</name>
-        <description>М'який подовжувач MTB-27 для збільшення довжини з'єднання між трос тренажера МТБ та аксесуаром. Гнучкий і міцний, підходить для всіх видів аксесуарів.</description>
-        <vendor>Сіверспорт</vendor>
-        <available>true</available>
-      </offer>
+    <item>
+      <id>mtb20</id>
+      <categoryId>6</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Ручка для тяги зверху внутрішній хват MTB-20</name>
+      <description>Ручка MTB-20 (120 см) для тяги зверху вузьким внутрішнім хватом. Акцентує навантаження на нижні пучки широчайніх та ромбоподібні м'язи.</description>
+      <url>https://kinezis.com.ua/product.html?id=mtb20</url>
+      <image>https://images.prom.ua/BbMuTiYjAv9y4Ss-BmcU3QYCyu0q3wTcgcA8sXWlOgg=/4353642404_ruchka-tyagi-za.jpg</image>
+      <priceRUAH>600</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
 
-    </offers>
-  </shop>
-</yml_catalog>
+    <item>
+      <id>mtb26</id>
+      <categoryId>6</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Ручка на трицепс MTB-26</name>
+      <description>Спеціальна ручка MTB-26 для ізольованих вправ на трицепс на тренажері МТБ. V-подібна форма для оптимального положення рук.</description>
+      <url>https://kinezis.com.ua/product.html?id=mtb26</url>
+      <image>https://images.prom.ua/ud4w9upWB8-2ASnpzCzgPcM-WFHuJtk6qRwPZRw-MPA=/5853562515_ruchka-dlya-tyagi.jpg</image>
+      <priceRUAH>500</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
+
+    <item>
+      <id>mtb27</id>
+      <categoryId>6</categoryId>
+      <vendor>Сіверспорт</vendor>
+      <name>Подовжувач м'який MTB-27</name>
+      <description>М'який подовжувач MTB-27 для збільшення довжини з'єднання між тросом тренажера МТБ та аксесуаром. Гнучкий і міцний.</description>
+      <url>https://kinezis.com.ua/product.html?id=mtb27</url>
+      <image>https://kinezis.com.ua/images/products/mtv-27.jpg</image>
+      <priceRUAH>160</priceRUAH>
+      <stock>В наявності</stock>
+      <shipping>0</shipping>
+      <region>Чернігів</region>
+    </item>
+
+  </items>
+</price>
