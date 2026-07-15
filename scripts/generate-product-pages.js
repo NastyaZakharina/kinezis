@@ -45,7 +45,8 @@ function generatePage(p) {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: p.name,
-    description: p.short || p.name,
+    description: p.description || p.short || p.name,
+    sku: p.id,
     image: imageUrl ? [imageUrl] : [],
     brand: { '@type': 'Brand', name: 'Кінезіс' },
     manufacturer: { '@type': 'Organization', name: 'Кінезіс', url: BASE },
@@ -54,8 +55,28 @@ function generatePage(p) {
       url: canonicalUrl,
       priceCurrency: 'UAH',
       price: p.price || 0,
+      priceValidUntil: '2027-12-31',
       availability: 'https://schema.org/InStock',
-      seller: { '@type': 'Organization', name: 'Кінезіс' },
+      itemCondition: 'https://schema.org/NewCondition',
+      seller: { '@type': 'Organization', name: 'Кінезіс', url: BASE },
+      hasMerchantReturnPolicy: {
+        '@type': 'MerchantReturnPolicy',
+        applicableCountry: 'UA',
+        returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+        merchantReturnDays: 14,
+        returnMethod: 'https://schema.org/ReturnByMail',
+        returnFees: 'https://schema.org/FreeReturn',
+      },
+      shippingDetails: {
+        '@type': 'OfferShippingDetails',
+        shippingRate: { '@type': 'MonetaryAmount', value: '0', currency: 'UAH' },
+        shippingDestination: { '@type': 'DefinedRegion', addressCountry: 'UA' },
+        deliveryTime: {
+          '@type': 'ShippingDeliveryTime',
+          handlingTime: { '@type': 'QuantitativeValue', minValue: 0, maxValue: 1, unitCode: 'DAY' },
+          transitTime: { '@type': 'QuantitativeValue', minValue: 1, maxValue: 3, unitCode: 'DAY' },
+        },
+      },
     },
     aggregateRating: { '@type': 'AggregateRating', ratingValue: '5.0', reviewCount: '4' },
   });
@@ -71,7 +92,19 @@ function generatePage(p) {
     ],
   });
 
-  const metaDesc = esc((p.short || p.description || p.name).substring(0, 155));
+  const faqSchema = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Чи підходить тренажер після операції або при захворюванні хребта?', acceptedAnswer: { '@type': 'Answer', text: 'Так, тренажери МТБ розроблені саме для реабілітації після операцій, грижі, остеохондрозу та інших захворювань. Перед початком занять рекомендуємо проконсультуватись з лікарем.' } },
+      { '@type': 'Question', name: 'Скільки часу займає збирання тренажера?', acceptedAnswer: { '@type': 'Answer', text: 'МТБ-1 збирається за 30–60 хвилин однією людиною. МТБ-4 та складніші моделі — за 1–2 години, бажано вдвох. Детальна інструкція у комплекті.' } },
+      { '@type': 'Question', name: 'Як відбувається доставка і скільки коштує?', acceptedAnswer: { '@type': 'Answer', text: 'Доставляємо «Новою Поштою» або «Укрпоштою» по всій Україні. По Чернігову — безкоштовна доставка від 20 000 грн. Терміни — 1–3 робочі дні.' } },
+      { '@type': 'Question', name: 'Чи можна повернути або обміняти товар?', acceptedAnswer: { '@type': 'Answer', text: 'Так, протягом 14 днів відповідно до Закону України «Про захист прав споживачів». Повернення безкоштовне. Детальніше у політиці повернення на сайті.' } },
+    ],
+  });
+
+  const descFull = p.description || p.short || p.name;
+  const metaDesc = esc(descFull.substring(0, 155));
   const title = esc(`${p.name} — купити в Кінезіс | Ціна ${p.price ? p.price.toLocaleString('uk-UA') + ' грн' : 'за запитом'}`);
 
   return `<!DOCTYPE html>
@@ -90,8 +123,16 @@ function generatePage(p) {
 ${imageUrl ? `<meta property="og:image" content="${esc(imageUrl)}"/>` : ''}
 <meta property="og:url" content="${canonicalUrl}"/>
 <meta property="og:type" content="product"/>
+<meta property="og:site_name" content="Кінезіс"/>
+<meta property="og:locale" content="uk_UA"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="${esc(p.name)} — Кінезіс"/>
+<meta name="twitter:description" content="${metaDesc}"/>
+${imageUrl ? `<meta name="twitter:image" content="${esc(imageUrl)}"/>` : ''}
+<meta name="theme-color" content="#00a896"/>
 <script type="application/ld+json">${schema}</script>
 <script type="application/ld+json">${breadcrumbSchema}</script>
+<script type="application/ld+json">${faqSchema}</script>
 <link rel="icon" href="../logo.png" type="image/png"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Unbounded:wght@400;600;700&display=swap" rel="stylesheet"/>
