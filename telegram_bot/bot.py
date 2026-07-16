@@ -425,27 +425,31 @@ async def callback_sold(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     if query.from_user.id not in load_managers():
         await query.answer('❌ Спочатку виконайте /addmanager', show_alert=True)
         return
-    await query.answer()
     try:
         _, client_id, product_id = query.data.split(':', 2)
         client_id = int(client_id)
     except Exception:
-        await query.edit_message_reply_markup(reply_markup=None)
+        await query.answer('❌ Помилка даних кнопки', show_alert=True)
         return
     program = get_program(product_id)
     if not program:
-        await query.answer('Програма для цього товару не знайдена', show_alert=True)
+        await query.answer('❌ Програму для цього товару не знайдено', show_alert=True)
         return
     product_name = PRODUCTS.get(product_id, product_id)
     intro = f'🎉 Вітаємо з покупкою *{product_name}*!\n\nОсь ваша базова програма вправ:\n\n'
     try:
         await ctx.bot.send_message(client_id, intro + program, parse_mode='Markdown')
+        await query.answer('✅ Програму надіслано!')
         await query.edit_message_reply_markup(reply_markup=InlineKeyboardMarkup([[
             InlineKeyboardButton('✅ Програму надіслано клієнту', callback_data='noop')
         ]]))
         logging.info(f'Program sent to client {client_id} for product {product_id}')
     except Exception as e:
-        await query.answer(f'Помилка: {e}', show_alert=True)
+        err = str(e)
+        if 'bot was blocked' in err or 'chat not found' in err or 'user is deactivated' in err:
+            await query.answer('❌ Клієнт не відкривав бота — надіслати програму неможливо. Поділіться вручну.', show_alert=True)
+        else:
+            await query.answer(f'❌ Помилка: {err}', show_alert=True)
         logging.warning(f'send program to {client_id}: {e}')
 
 async def callback_noop(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
