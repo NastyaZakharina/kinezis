@@ -40,13 +40,13 @@ function injectHeaderBtn(user) {
   if (user) {
     const name = user.displayName ? user.displayName.split(' ')[0] : 'Кабінет';
     const initials = (user.displayName || user.email || '?').charAt(0).toUpperCase();
-    btn.href = 'cabinet.html';
+    btn.href = '/cabinet.html';
     btn.style.cssText = 'display:flex;align-items:center;gap:8px;padding:7px 14px 7px 7px;background:var(--teal-light);border-radius:40px;text-decoration:none;color:var(--teal);font-weight:600;font-size:14px;flex-shrink:0;transition:background .2s';
     btn.innerHTML = user.photoURL
       ? '<img src="' + user.photoURL + '" style="width:30px;height:30px;border-radius:50%;object-fit:cover" alt=""/><span>' + name + '</span>'
       : '<div style="width:30px;height:30px;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0">' + initials + '</div><span>' + name + '</span>';
   } else {
-    btn.href = 'login.html';
+    btn.href = '/login.html';
     btn.style.cssText = 'display:flex;align-items:center;gap:6px;padding:8px 16px;border:1.5px solid var(--border);border-radius:40px;text-decoration:none;color:var(--body);font-weight:600;font-size:14px;flex-shrink:0;transition:all .2s';
     btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>Увійти';
   }
