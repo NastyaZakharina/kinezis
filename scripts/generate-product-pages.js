@@ -55,6 +55,7 @@ function generatePage(p) {
       url: canonicalUrl,
       priceCurrency: 'UAH',
       price: p.price || 0,
+      validFrom: '2024-01-01',
       priceValidUntil: '2027-12-31',
       availability: 'https://schema.org/InStock',
       itemCondition: 'https://schema.org/NewCondition',
