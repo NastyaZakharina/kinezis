@@ -86,9 +86,9 @@ function generatePage(p) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Головна', item: BASE + '/index.html' },
+      { '@type': 'ListItem', position: 1, name: 'Головна', item: BASE + '/' },
       { '@type': 'ListItem', position: 2, name: 'Каталог', item: BASE + '/catalog.html' },
-      { '@type': 'ListItem', position: 3, name: catName, item: `${BASE}/catalog.html?cat=${p.category}` },
+      { '@type': 'ListItem', position: 3, name: catName, item: BASE + '/catalog.html' },
       { '@type': 'ListItem', position: 4, name: p.name, item: canonicalUrl },
     ],
   });
@@ -185,7 +185,7 @@ ${imageUrl ? `<meta name="twitter:image" content="${esc(imageUrl)}"/>` : ''}
         <div class="product-info__actions">
           <div style="display:flex;gap:12px;flex-wrap:wrap">
             <button class="btn btn--primary btn--lg" style="flex:1;min-width:160px" onclick="addToCart('${esc(p.id)}','${p.name.replace(/'/g,"\\'").replace(/\\/g,'\\\\')}',${p.price || 0})">🛒 В кошик</button>
-            <button class="btn btn--orange btn--lg" style="flex:1;min-width:160px" onclick="showOrderModal('${esc(p.id)}','${p.name.replace(/'/g,"\\'").replace(/\\/g,'\\\\')}')">Замовити зараз</button>
+            <a href="https://t.me/Kineziss_bot?start=${esc(p.id)}" target="_blank" rel="noopener" class="btn btn--orange btn--lg" style="flex:1;min-width:160px;text-align:center;text-decoration:none">Замовити зараз</a>
           </div>
           <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
             <a href="https://t.me/Kineziss_bot" target="_blank" class="btn btn--outline btn--sm">Запитати в Telegram</a>
