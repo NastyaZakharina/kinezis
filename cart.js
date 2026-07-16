@@ -139,7 +139,15 @@ function checkoutViaTelegram() {
   }).join('\n');
   const total = cartTotal().toLocaleString('uk-UA');
   const text = encodeURIComponent('Привіт! Хочу замовити:\n\n' + lines + '\n\nРазом: ' + total + ' грн');
-  window.open('https://t.me/Kineziss_bot?text=' + text, '_blank');
+  const url = 'https://t.me/Kineziss_bot?text=' + text;
+  // Use <a> click instead of window.open — avoids mobile popup blockers (iOS Safari, Android Chrome)
+  const a = document.createElement('a');
+  a.href = url;
+  a.target = '_blank';
+  a.rel = 'noopener';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
 }
 
 // ── Init ─────────────────────────────────────────────────────────────────────
