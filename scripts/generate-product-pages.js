@@ -105,8 +105,14 @@ function generatePage(p) {
   });
 
   const descFull = p.description || p.short || p.name;
-  const metaDesc = esc(descFull.substring(0, 155));
-  const title = esc(`${p.name} — купити в Кінезіс | Ціна ${p.price ? p.price.toLocaleString('uk-UA') + ' грн' : 'за запитом'}`);
+  const isMtb = p.category === 'mtb' || p.category === 'accessories';
+  const hasBubnovskyInName = p.name.toLowerCase().includes('бубновськ');
+  const titleName = (isMtb && !hasBubnovskyInName) ? `${p.name} Бубновського` : p.name;
+  const metaDescRaw = (isMtb && !descFull.toLowerCase().includes('бубновськ'))
+    ? `${descFull} Тренажер системи Бубновського для кінезітерапії та реабілітації.`
+    : descFull;
+  const metaDesc = esc(metaDescRaw.substring(0, 155));
+  const title = esc(`${titleName} — купити в Кінезіс | Ціна ${p.price ? p.price.toLocaleString('uk-UA') + ' грн' : 'за запитом'}`);
 
   return `<!DOCTYPE html>
 <html lang="uk">
