@@ -95,7 +95,7 @@
       <h1>⚙️ Адмін-панель Кінезіс</h1>
       <div style="display:flex;gap:20px;align-items:center">
         <span id="adminEmail" style="font-size:13px;opacity:.7"></span>
-        <a href="index.html">← На сайт</a>
+        <a href="/">← На сайт</a>
         <a href="#" onclick="doLogout()" style="color:#ff6b6b">Вийти</a>
       </div>
     </div>
@@ -212,7 +212,7 @@ onAuthStateChanged(auth, async user => {
   }
   const emailLower = user.email.toLowerCase();
   if (!ADMIN_EMAILS.map(e => e.toLowerCase()).includes(emailLower)) {
-    document.getElementById('authGate').innerHTML = '<div class="auth-gate-card"><div style="font-size:48px;margin-bottom:16px">🚫</div><h2>Доступ заборонено</h2><p style="color:var(--muted);font-size:14px;margin:12px 0">Ваш email: ' + user.email + '</p><a href="index.html" class="btn btn--primary" style="display:inline-block;margin-top:8px">На головну</a></div>';
+    document.getElementById('authGate').innerHTML = '<div class="auth-gate-card"><div style="font-size:48px;margin-bottom:16px">🚫</div><h2>Доступ заборонено</h2><p style="color:var(--muted);font-size:14px;margin:12px 0">Ваш email: ' + user.email + '</p><a href="/" class="btn btn--primary" style="display:inline-block;margin-top:8px">На головну</a></div>';
     return;
   }
   document.getElementById('authGate').style.display = 'none';
