@@ -44,11 +44,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </a>
     <nav class="nav" id="nav">
       <a href="/" class="nav__link">Головна</a>
-      <a href="catalog.html" class="nav__link active">Каталог</a>
-      <a href="blog.html" class="nav__link">Блог</a>
-      <a href="cases.html" class="nav__link">Кейси</a>
-      <a href="about.html" class="nav__link">Про нас</a>
-      <a href="contacts.html" class="nav__link">Контакти</a>
+      <a href="catalog" class="nav__link active">Каталог</a>
+      <a href="blog" class="nav__link">Блог</a>
+      <a href="cases" class="nav__link">Кейси</a>
+      <a href="about" class="nav__link">Про нас</a>
+      <a href="contacts" class="nav__link">Контакти</a>
     </nav>
     <a href="https://t.me/Kineziss_bot" target="_blank" class="btn btn--primary header__cta">Написати в Telegram</a>
     <button class="burger" id="burger" aria-label="Меню">
@@ -61,7 +61,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="breadcrumb" id="breadcrumb">
     <a href="/">Головна</a>
     <span>/</span>
-    <a href="catalog.html">Каталог</a>
+    <a href="catalog">Каталог</a>
     <span>/</span>
     <span id="breadcrumbProduct">Товар</span>
   </div>
@@ -133,9 +133,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="footer__nav">
       <h4>Навігація</h4>
       <a href="/">Головна</a>
-      <a href="catalog.html">Каталог</a>
-      <a href="about.html">Про нас</a>
-      <a href="contacts.html">Контакти</a>
+      <a href="catalog">Каталог</a>
+      <a href="about">Про нас</a>
+      <a href="contacts">Контакти</a>
     </div>
     <div class="footer__nav">
       <h4>Категорії</h4>
@@ -154,7 +154,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="footer__bottom">
     <div class="container">
       <span>© 2026 Кінезіс. Усі права захищені.</span>
-      <span style="display:flex;gap:16px;align-items:center"><a href="privacy-policy.html" style="color:rgba(255,255,255,.6);text-decoration:none;font-size:13px">Політика конфіденційності</a><a href="return-policy.html" style="color:rgba(255,255,255,.6);text-decoration:none;font-size:13px">Повернення</a><span>Зроблено в Україні 🇺🇦</span></span>
+      <span style="display:flex;gap:16px;align-items:center"><a href="privacy-policy" style="color:rgba(255,255,255,.6);text-decoration:none;font-size:13px">Політика конфіденційності</a><a href="return-policy" style="color:rgba(255,255,255,.6);text-decoration:none;font-size:13px">Повернення</a><span>Зроблено в Україні 🇺🇦</span></span>
     </div>
   </div>
 </footer>
@@ -171,7 +171,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   const layout = document.getElementById('productLayout');
 
   if (!product) {
-    layout.innerHTML = '<div class="empty-state"><h3>Товар не знайдено</h3><p><a href="catalog.html" class="btn btn--primary">До каталогу</a></p></div>';
+    layout.innerHTML = '<div class="empty-state"><h3>Товар не знайдено</h3><p><a href="catalog" class="btn btn--primary">До каталогу</a></p></div>';
     return;
   }
 
@@ -260,7 +260,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     "brand":{"@type":"Brand","name":"Кінезіс"},
     "offers":{"@type":"Offer","price": product.price,"priceCurrency":"UAH",
       "availability":"https://schema.org/InStock",
-      "url": "https://kinezis.com.ua/product.html?id=" + product.id,
+      "url": "https://kinezis.com.ua/product?id=" + product.id,
       "seller":{"@type":"Organization","name":"Кінезіс","url":"https://kinezis.com.ua"}}
   });
   document.head.appendChild(schema);
@@ -332,11 +332,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </details>
       <details class="faq-item">
         <summary class="faq-item__q">Чи можна повернути або обміняти товар?</summary>
-        <p class="faq-item__a">Так, протягом 14 днів відповідно до Закону України «Про захист прав споживачів» — за умови збереження товарного вигляду та комплектації. Детальніше у <a href="return-policy.html" style="color:var(--teal)">політиці повернення</a>.</p>
+        <p class="faq-item__a">Так, протягом 14 днів відповідно до Закону України «Про захист прав споживачів» — за умови збереження товарного вигляду та комплектації. Детальніше у <a href="return-policy" style="color:var(--teal)">політиці повернення</a>.</p>
       </details>
       <details class="faq-item">
         <summary class="faq-item__q">Чи є відеоінструкції з вправ?</summary>
-        <p class="faq-item__a">Після покупки наш фахівець у Telegram надішле базову програму вправ. Також рекомендуємо розділ <a href="blog.html" style="color:var(--teal)">Блог</a> — там понад 50 статей з конкретними вправами для різних діагнозів.</p>
+        <p class="faq-item__a">Після покупки наш фахівець у Telegram надішле базову програму вправ. Також рекомендуємо розділ <a href="blog" style="color:var(--teal)">Блог</a> — там понад 50 статей з конкретними вправами для різних діагнозів.</p>
       </details>
     </div>
   `;
@@ -397,7 +397,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     btn.disabled = true;
     btn.textContent = 'Надсилаємо...';
     const text = `📞 ЗАМОВЛЕННЯ ДЗВІНКА\n\nІм'я: ${name}\nТелефон: ${phone}\nТовар: ${product}\nЧас: ${new Date().toLocaleString('uk-UA')}`;
-    const adminUrl = 'https://kinezis.com.ua/admin.html';
+    const adminUrl = 'https://kinezis.com.ua/admin';
     fetch('https://api.telegram.org/bot8873990753:AAHmzAkTR64xftJytnWqaMf-H7PqVEKC6tc/sendMessage', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},

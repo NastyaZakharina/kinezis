@@ -33,8 +33,8 @@ function formatPrice(p) {
 
 function generatePage(p) {
   const catName = catNames[p.category] || 'Каталог';
-  const catUrl = `../catalog.html?cat=${p.category}`;
-  const canonicalUrl = `${BASE}/products/${p.id}.html`;
+  const catUrl = `../catalog?cat=${p.category}`;
+  const canonicalUrl = `${BASE}/products/${p.id}`;
   const imageUrl = p.image ? `${BASE}/${p.image}` : '';
   const specsHtml = p.specs && p.specs.length
     ? `<ul class="product-info__specs-list">${p.specs.map(s => `<li>${esc(s)}</li>`).join('')}</ul>`
@@ -87,8 +87,8 @@ function generatePage(p) {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Головна', item: BASE + '/' },
-      { '@type': 'ListItem', position: 2, name: 'Каталог', item: BASE + '/catalog.html' },
-      { '@type': 'ListItem', position: 3, name: catName, item: BASE + '/catalog.html' },
+      { '@type': 'ListItem', position: 2, name: 'Каталог', item: BASE + '/catalog' },
+      { '@type': 'ListItem', position: 3, name: catName, item: BASE + '/catalog' },
       { '@type': 'ListItem', position: 4, name: p.name, item: canonicalUrl },
     ],
   });
@@ -152,11 +152,11 @@ ${imageUrl ? `<meta name="twitter:image" content="${esc(imageUrl)}"/>` : ''}
     <a href="/" class="header__logo"><img src="../logo.png" alt="Кінезіс" class="header__logo-img"/></a>
     <nav class="nav" id="nav">
       <a href="/" class="nav__link">Головна</a>
-      <a href="../catalog.html" class="nav__link active">Каталог</a>
-      <a href="../blog.html" class="nav__link">Блог</a>
-      <a href="../cases.html" class="nav__link">Кейси</a>
-      <a href="../about.html" class="nav__link">Про нас</a>
-      <a href="../contacts.html" class="nav__link">Контакти</a>
+      <a href="../catalog" class="nav__link active">Каталог</a>
+      <a href="../blog" class="nav__link">Блог</a>
+      <a href="../cases" class="nav__link">Кейси</a>
+      <a href="../about" class="nav__link">Про нас</a>
+      <a href="../contacts" class="nav__link">Контакти</a>
     </nav>
     <a href="https://t.me/Kineziss_bot" target="_blank" class="btn btn--primary header__cta">Написати в Telegram</a>
     <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
@@ -166,7 +166,7 @@ ${imageUrl ? `<meta name="twitter:image" content="${esc(imageUrl)}"/>` : ''}
 <div class="container">
   <div class="breadcrumb" style="padding:16px 0">
     <a href="/">Головна</a><span>/</span>
-    <a href="../catalog.html">Каталог</a><span>/</span>
+    <a href="../catalog">Каталог</a><span>/</span>
     <a href="${catUrl}">${esc(catName)}</a><span>/</span>
     <span>${esc(p.name)}</span>
   </div>
@@ -230,7 +230,7 @@ ${imageUrl ? `<meta name="twitter:image" content="${esc(imageUrl)}"/>` : ''}
         <details class="faq-item"><summary class="faq-item__q">Чи підходить тренажер після операції або при захворюванні хребта?</summary><p class="faq-item__a">Так, тренажери МТБ розроблені саме для реабілітації після операцій, грижі, остеохондрозу та інших захворювань. Перед початком занять рекомендуємо проконсультуватись з лікарем.</p></details>
         <details class="faq-item"><summary class="faq-item__q">Скільки часу займає збирання?</summary><p class="faq-item__a">МТБ-1 збирається за 30–60 хвилин однією людиною. МТБ-4 та складніші моделі — за 1–2 години, бажано вдвох. Детальна інструкція у комплекті.</p></details>
         <details class="faq-item"><summary class="faq-item__q">Як відбувається доставка і скільки коштує?</summary><p class="faq-item__a">Доставляємо «Новою Поштою» або «Укрпоштою» по всій Україні. По Чернігову — безкоштовна доставка від 20 000 грн. Терміни — 1–3 робочі дні.</p></details>
-        <details class="faq-item"><summary class="faq-item__q">Чи можна повернути або обміняти товар?</summary><p class="faq-item__a">Так, протягом 14 днів відповідно до Закону України «Про захист прав споживачів». Детальніше у <a href="../return-policy.html" style="color:var(--teal)">політиці повернення</a>.</p></details>
+        <details class="faq-item"><summary class="faq-item__q">Чи можна повернути або обміняти товар?</summary><p class="faq-item__a">Так, протягом 14 днів відповідно до Закону України «Про захист прав споживачів». Детальніше у <a href="../return-policy" style="color:var(--teal)">політиці повернення</a>.</p></details>
       </div>
     </div>
   </div>
@@ -277,11 +277,11 @@ ${imageUrl ? `<meta name="twitter:image" content="${esc(imageUrl)}"/>` : ''}
 <footer class="footer">
   <div class="container footer__inner">
     <div class="footer__brand"><span class="footer__logo-text">Кінезіс</span><p>Обладнання для реабілітації та кінезітерапії.</p></div>
-    <div class="footer__nav"><h4>Навігація</h4><a href="/">Головна</a><a href="../catalog.html">Каталог</a><a href="../about.html">Про нас</a><a href="../contacts.html">Контакти</a></div>
-    <div class="footer__nav"><h4>Категорії</h4><a href="../catalog.html?cat=mtb">Тренажери МТБ</a><a href="../catalog.html?cat=benches">Лавки та гіперекстензії</a><a href="../catalog.html?cat=massage">Масажні столи</a><a href="../catalog.html?cat=stairs">Бруси та сходи</a></div>
+    <div class="footer__nav"><h4>Навігація</h4><a href="/">Головна</a><a href="../catalog">Каталог</a><a href="../about">Про нас</a><a href="../contacts">Контакти</a></div>
+    <div class="footer__nav"><h4>Категорії</h4><a href="../catalog?cat=mtb">Тренажери МТБ</a><a href="../catalog?cat=benches">Лавки та гіперекстензії</a><a href="../catalog?cat=massage">Масажні столи</a><a href="../catalog?cat=stairs">Бруси та сходи</a></div>
     <div class="footer__contact"><h4>Контакти</h4><a href="tel:+380992662688">+38 (099) 266-26-88</a><a href="mailto:sport_ok@ukr.net">sport_ok@ukr.net</a></div>
   </div>
-  <div class="footer__bottom"><div class="container"><span>© 2026 Кінезіс. Усі права захищені.</span><span style="display:flex;gap:16px;align-items:center"><a href="../privacy-policy.html" style="color:rgba(255,255,255,.6);text-decoration:none;font-size:13px">Політика конфіденційності</a><a href="../return-policy.html" style="color:rgba(255,255,255,.6);text-decoration:none;font-size:13px">Повернення</a><span>Зроблено в Україні 🇺🇦</span></span></div></div>
+  <div class="footer__bottom"><div class="container"><span>© 2026 Кінезіс. Усі права захищені.</span><span style="display:flex;gap:16px;align-items:center"><a href="../privacy-policy" style="color:rgba(255,255,255,.6);text-decoration:none;font-size:13px">Політика конфіденційності</a><a href="../return-policy" style="color:rgba(255,255,255,.6);text-decoration:none;font-size:13px">Повернення</a><span>Зроблено в Україні 🇺🇦</span></span></div></div>
 </footer>
 
 <script src="../data.js"></script>
@@ -293,7 +293,7 @@ ${imageUrl ? `<meta name="twitter:image" content="${esc(imageUrl)}"/>` : ''}
   // Related products
   function relatedCardHTML(q){
     var price=q.price?q.price.toLocaleString('uk-UA')+' грн':'';
-    return '<div class="product-card" data-id="'+q.id+'">'+(q.badge?'<div class="product-card__badge">'+q.badge+'</div>':'')+'<div class="product-card__img"><img src="../'+q.image+'" alt="'+q.name+'" loading="lazy"/></div><div class="product-card__body"><div class="product-card__name">'+q.name+'</div><div class="product-card__short">'+q.short+'</div><div class="product-card__footer"><div class="product-card__price">'+price+'</div><div class="product-card__actions"><a href="'+q.id+'.html" class="btn btn--outline btn--sm">Детальніше</a><button class="btn btn--primary btn--sm" onclick="addToCart(\''+q.id+'\',\''+q.name.replace(/'/g,"\\'")+'\',' +q.price+')">В кошик</button></div></div></div></div>';
+    return '<div class="product-card" data-id="'+q.id+'">'+(q.badge?'<div class="product-card__badge">'+q.badge+'</div>':'')+'<div class="product-card__img"><img src="../'+q.image+'" alt="'+q.name+'" loading="lazy"/></div><div class="product-card__body"><div class="product-card__name">'+q.name+'</div><div class="product-card__short">'+q.short+'</div><div class="product-card__footer"><div class="product-card__price">'+price+'</div><div class="product-card__actions"><a href="'+q.id+'" class="btn btn--outline btn--sm">Детальніше</a><button class="btn btn--primary btn--sm" onclick="addToCart(\''+q.id+'\',\''+q.name.replace(/'/g,"\\'")+'\',' +q.price+')">В кошик</button></div></div></div></div>';
   }
   var related = products.filter(function(q){return q.category==='${p.category}' && q.id!=='${p.id}';}).slice(0,4);
   var grid = document.getElementById('relatedGrid');

@@ -105,7 +105,7 @@ function renderCartPanel() {
   if (!body) return;
   const cart = getCart();
   if (cart.length === 0) {
-    body.innerHTML = '<div style="text-align:center;padding:40px 20px;color:var(--muted)"><div style="font-size:48px;margin-bottom:12px">&#128722;</div><p>Кошик порожній</p><a href="catalog.html" class="btn btn--primary" onclick="closeCart()" style="margin-top:12px;display:inline-block">Перейти до каталогу</a></div>';
+    body.innerHTML = '<div style="text-align:center;padding:40px 20px;color:var(--muted)"><div style="font-size:48px;margin-bottom:12px">&#128722;</div><p>Кошик порожній</p><a href="catalog" class="btn btn--primary" onclick="closeCart()" style="margin-top:12px;display:inline-block">Перейти до каталогу</a></div>';
     document.getElementById('cartCheckoutBtn').style.display = 'none';
     document.getElementById('cartTotal').style.display = 'none';
     return;
@@ -224,7 +224,7 @@ function renderCrossSell(currentProduct) {
         '<div class="product-card__footer">' +
           '<div class="product-card__price">' + formatPrice(p.price) + '</div>' +
           '<div class="product-card__actions">' +
-            '<a href="products/' + p.id + '.html" class="btn btn--outline btn--sm">Детальніше</a>' +
+            '<a href="products/' + p.id + '" class="btn btn--outline btn--sm">Детальніше</a>' +
             '<button class="btn btn--primary btn--sm" onclick="addToCart(\'' + p.id + '\',\'' + name + '\',' + p.price + ')">В кошик</button>' +
           '</div>' +
         '</div>' +
