@@ -294,7 +294,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   }
 
   // Send to Railway bot endpoint
-  const FORM_ENDPOINT = 'https://worker-production-9e2d.up.railway.app';
+  const FORM_ENDPOINT = 'https://kinezis-bot.nastiazaharina.workers.dev';
   if (FORM_ENDPOINT) {
     fetch(FORM_ENDPOINT + '/contact', {
       method: 'POST',
