@@ -100,9 +100,11 @@
   const db = getFirestore(app);
   const provider = new GoogleAuthProvider();
 
+  let registering = false;
+
   // Redirect if already logged in
   onAuthStateChanged(auth, user => {
-    if (user) {
+    if (user && !registering) {
       const next = new URLSearchParams(location.search).get('next') || 'cabinet.html';
       window.location.href = next;
     }
@@ -167,16 +169,20 @@
     const pass = document.getElementById('regPassword').value;
     if (!name || !email || !pass) return showError('registerError', 'Заповніть обов\'язкові поля');
     if (pass.length < 6) return showError('registerError', 'Пароль мінімум 6 символів');
+    registering = true;
     try {
       const cred = await createUserWithEmailAndPassword(auth, email, pass);
       await updateProfile(cred.user, { displayName: name });
       await ensureUserDoc(cred.user, { name, phone });
-      fetch('https://kinezis-bot.nastiazaharina.workers.dev/register-notify', {
+      await fetch('https://kinezis-bot.nastiazaharina.workers.dev/register-notify', {
         method: 'POST', headers: {'Content-Type':'application/json'},
         body: JSON.stringify({ name, email }),
         keepalive: true
       }).catch(() => {});
+      const next = new URLSearchParams(location.search).get('next') || 'cabinet.html';
+      window.location.href = next;
     } catch(e) {
+      registering = false;
       const msgs = { 'auth/email-already-in-use': 'Цей email вже використовується', 'auth/invalid-email': 'Невірний email' };
       showError('registerError', msgs[e.code] || 'Помилка реєстрації');
     }
