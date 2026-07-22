@@ -98,30 +98,64 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-// Callback form — override to use Cloudflare Worker (works on all product pages)
+// Callback modal + form (all product pages)
 document.addEventListener('DOMContentLoaded', function() {
-  const callbackForm = document.getElementById('callbackForm');
-  if (!callbackForm) return;
+  const callbackModal = document.getElementById('callbackModal');
+  const callbackClose = document.getElementById('callbackClose');
+  const callbackForm  = document.getElementById('callbackForm');
+  if (!callbackModal) return;
 
-  callbackForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    e.stopImmediatePropagation();
-    const name = (document.getElementById('callbackName') || {}).value || '';
-    const phone = (document.getElementById('callbackPhone') || {}).value || '';
-    const product = (document.getElementById('callbackProduct') || {}).value || '';
-    const btn = document.getElementById('callbackSubmitBtn');
-    const msg = document.getElementById('callbackMsg');
-    if (btn) { btn.disabled = true; btn.textContent = 'Надсилаємо...'; }
-    fetch('https://kinezis-bot.nastiazaharina.workers.dev/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, phone, product, message: '📞 Замовлення дзвінка' }),
-      keepalive: true
-    }).then(function(r) { return r.json(); }).then(function(d) {
-      window.location.href = '/thank-you.html';
-    }).catch(function() {
-      if (msg) { msg.style.display = 'block'; msg.style.color = '#dc2626'; msg.textContent = '❌ Помилка. Зателефонуйте: +38 (099) 266-26-88'; }
-      if (btn) { btn.disabled = false; btn.textContent = '📞 Передзвоніть мені'; }
+  // Open modal — attach to every "Замовити дзвінок" button
+  document.querySelectorAll('[onclick*="showCallbackModal"]').forEach(function(btn) {
+    btn.removeAttribute('onclick');
+    btn.addEventListener('click', function() {
+      callbackModal.classList.add('open');
+      document.body.style.overflow = 'hidden';
     });
-  }, true);
+  });
+
+  // Also keep window.showCallbackModal working (used elsewhere)
+  window.showCallbackModal = function() {
+    callbackModal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+
+  // Close modal
+  if (callbackClose) {
+    callbackClose.addEventListener('click', function() {
+      callbackModal.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  }
+  callbackModal.addEventListener('click', function(e) {
+    if (e.target === callbackModal) {
+      callbackModal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+
+  // Submit form via Cloudflare Worker
+  if (callbackForm) {
+    callbackForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      const name    = (document.getElementById('callbackName')    || {}).value || '';
+      const phone   = (document.getElementById('callbackPhone')   || {}).value || '';
+      const product = (document.getElementById('callbackProduct') || {}).value || '';
+      const btn = document.getElementById('callbackSubmitBtn');
+      const msg = document.getElementById('callbackMsg');
+      if (btn) { btn.disabled = true; btn.textContent = 'Надсилаємо...'; }
+      fetch('https://kinezis-bot.nastiazaharina.workers.dev/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, phone, product, message: '📞 Замовлення дзвінка' }),
+        keepalive: true
+      }).then(function(r) { return r.json(); }).then(function() {
+        window.location.href = '/thank-you.html';
+      }).catch(function() {
+        if (msg) { msg.style.display = 'block'; msg.style.color = '#dc2626'; msg.textContent = '❌ Помилка. Зателефонуйте: +38 (099) 266-26-88'; }
+        if (btn) { btn.disabled = false; btn.textContent = '📞 Передзвоніть мені'; }
+      });
+    }, true);
+  }
 });
