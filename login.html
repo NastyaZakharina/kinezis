@@ -173,7 +173,8 @@
       await ensureUserDoc(cred.user, { name, phone });
       fetch('https://kinezis-bot.nastiazaharina.workers.dev/register-notify', {
         method: 'POST', headers: {'Content-Type':'application/json'},
-        body: JSON.stringify({ name, email })
+        body: JSON.stringify({ name, email }),
+        keepalive: true
       }).catch(() => {});
     } catch(e) {
       const msgs = { 'auth/email-already-in-use': 'Цей email вже використовується', 'auth/invalid-email': 'Невірний email' };
