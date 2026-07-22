@@ -97,3 +97,31 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
+
+// Callback form — override to use Cloudflare Worker (works on all product pages)
+document.addEventListener('DOMContentLoaded', function() {
+  const callbackForm = document.getElementById('callbackForm');
+  if (!callbackForm) return;
+
+  callbackForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    const name = (document.getElementById('callbackName') || {}).value || '';
+    const phone = (document.getElementById('callbackPhone') || {}).value || '';
+    const product = (document.getElementById('callbackProduct') || {}).value || '';
+    const btn = document.getElementById('callbackSubmitBtn');
+    const msg = document.getElementById('callbackMsg');
+    if (btn) { btn.disabled = true; btn.textContent = 'Надсилаємо...'; }
+    fetch('https://kinezis-bot.nastiazaharina.workers.dev/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, phone, product, message: '📞 Замовлення дзвінка' }),
+      keepalive: true
+    }).then(function(r) { return r.json(); }).then(function(d) {
+      window.location.href = '/thank-you.html';
+    }).catch(function() {
+      if (msg) { msg.style.display = 'block'; msg.style.color = '#dc2626'; msg.textContent = '❌ Помилка. Зателефонуйте: +38 (099) 266-26-88'; }
+      if (btn) { btn.disabled = false; btn.textContent = '📞 Передзвоніть мені'; }
+    });
+  }, true);
+});

@@ -60,6 +60,8 @@ ul { list-style: none; }
   transition: var(--transition);
   border: 2px solid transparent;
   white-space: nowrap;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 .btn--primary { background: var(--teal); color: #fff; }
 .btn--primary:hover { background: var(--teal-dark); transform: translateY(-1px); box-shadow: var(--shadow-md); }
