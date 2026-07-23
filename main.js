@@ -105,13 +105,14 @@ document.addEventListener('DOMContentLoaded', function() {
   const callbackForm  = document.getElementById('callbackForm');
   if (!callbackModal) return;
 
-  // Open modal — attach to every "Замовити дзвінок" button
+  // Replace "Замовити дзвінок" button with phone link
   document.querySelectorAll('[onclick*="showCallbackModal"]').forEach(function(btn) {
-    btn.removeAttribute('onclick');
-    btn.addEventListener('click', function() {
-      callbackModal.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    });
+    const phoneLink = document.createElement('a');
+    phoneLink.href = 'tel:+380992662688';
+    phoneLink.className = btn.className;
+    phoneLink.style.cssText = 'text-align:center;text-decoration:none;justify-content:center';
+    phoneLink.innerHTML = '📞 +38 (099) 266-26-88';
+    btn.parentNode.replaceChild(phoneLink, btn);
   });
 
   // Also keep window.showCallbackModal working (used elsewhere)
