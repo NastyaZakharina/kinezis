@@ -54,5 +54,20 @@
 </footer>
 <script src="main.js"></script>
 <script type="module" src="auth.js"></script>
+<script>
+  // Google Ads conversion — fires on every thank-you page visit
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'conversion', {
+      'send_to': 'AW-XXXXXXXXXX/YYYYYYYYYYY', // ← замінити на свій ID конверсії з Google Ads
+      'value': 1.0,
+      'currency': 'UAH'
+    });
+    // GA4 event
+    gtag('event', 'generate_lead', {
+      'event_category': 'lead',
+      'event_label': 'thank_you_page'
+    });
+  }
+</script>
 </body>
 </html>
