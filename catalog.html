@@ -1,6 +1,12 @@
 ﻿<!DOCTYPE html>
 <html lang="uk">
 <head>
+<script>
+// Redirect catalog.html → catalog (preserve query string for SEO deduplication)
+if (location.pathname.endsWith('.html')) {
+  location.replace(location.pathname.replace('.html','') + location.search + location.hash);
+}
+</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HWBDHK3FPX"></script>
 <script>

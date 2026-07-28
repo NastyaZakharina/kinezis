@@ -89,6 +89,24 @@ function productCardHTML(p) {
   document.head.appendChild(script);
 })();
 
+// Related products card HTML (used in all product pages)
+function relatedCardHTML(q) {
+  var price = q.price ? q.price.toLocaleString('uk-UA') + ' грн' : '';
+  var safeName = (q.name || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+  return '<div class="product-card" data-id="' + q.id + '">' +
+    (q.badge ? '<div class="product-card__badge">' + q.badge + '</div>' : '') +
+    '<div class="product-card__img"><img src="../' + q.image + '" alt="' + (q.name || '') + '" loading="lazy"/></div>' +
+    '<div class="product-card__body">' +
+    '<div class="product-card__name">' + (q.name || '') + '</div>' +
+    '<div class="product-card__short">' + (q.short || '') + '</div>' +
+    '<div class="product-card__footer">' +
+    '<div class="product-card__price">' + price + '</div>' +
+    '<div class="product-card__actions">' +
+    '<a href="' + q.id + '" class="btn btn--outline btn--sm">Детальніше</a>' +
+    '<button class="btn btn--primary btn--sm" onclick="addToCart(\'' + q.id + '\',\'' + safeName + '\',' + q.price + ')">В кошик</button>' +
+    '</div></div></div></div>';
+}
+
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {

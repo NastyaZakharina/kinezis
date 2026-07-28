@@ -128,8 +128,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta name="twitter:image" content="https://kinezis.com.ua/logo.png"/>
   <meta name="theme-color" content="#00a896"/>
   <link rel="icon" href="logo.png" type="image/png" />
+  <!-- Preload LCP image -->
+  <link rel="preload" as="image" href="images/towari/mtb_1-scaled.jpeg" fetchpriority="high" />
+  <!-- Fonts: preconnect + async load to avoid render-blocking -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Unbounded:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Unbounded:wght@400;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Unbounded:wght@400;600;700&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Unbounded:wght@400;600;700&display=swap" /></noscript>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -231,7 +237,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="categories__grid">
       <a href="catalog.html?cat=mtb" class="cat-card">
         <div class="cat-card__img">
-          <img src="images/towari/mtb_1-scaled.jpeg" alt="Тренажери МТБ" />
+          <img src="images/towari/mtb_1-scaled.jpeg" alt="Тренажери МТБ" fetchpriority="high" width="400" height="300" />
         </div>
         <div class="cat-card__body">
           <h3>Тренажери МТБ</h3>
@@ -241,7 +247,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </a>
       <a href="catalog.html?cat=benches" class="cat-card">
         <div class="cat-card__img">
-          <img src="images/towari/mtb-31v2.jpg" alt="Лавки та гіперекстензії" />
+          <img src="images/towari/mtb-31v2.jpg" alt="Лавки та гіперекстензії" loading="lazy" width="400" height="300" />
         </div>
         <div class="cat-card__body">
           <h3>Лавки та гіперекстензії</h3>
@@ -251,7 +257,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </a>
       <a href="catalog.html?cat=massage" class="cat-card">
         <div class="cat-card__img">
-          <img src="images/towari/mtb-051.jpg" alt="Масажні столи" />
+          <img src="images/towari/mtb-051.jpg" alt="Масажні столи" loading="lazy" width="400" height="300" />
         </div>
         <div class="cat-card__body">
           <h3>Масажні столи та стільці</h3>
@@ -261,7 +267,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </a>
       <a href="catalog.html?cat=stairs" class="cat-card">
         <div class="cat-card__img">
-          <img src="images/towari/mtb-016.jpeg" alt="Бруси та сходи" />
+          <img src="images/towari/mtb-016.jpeg" alt="Бруси та сходи" loading="lazy" width="400" height="300" />
         </div>
         <div class="cat-card__body">
           <h3>Реабілітаційні бруси та сходи</h3>
@@ -271,7 +277,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </a>
       <a href="catalog.html?cat=accessories" class="cat-card">
         <div class="cat-card__img">
-          <img src="images/towari/kzs-404-v1-scaled.jpeg" alt="Аксесуари" />
+          <img src="images/towari/kzs-404-v1-scaled.jpeg" alt="Аксесуари" loading="lazy" width="400" height="300" />
         </div>
         <div class="cat-card__body">
           <h3>Аксесуари до МТБ</h3>
@@ -281,7 +287,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </a>
       <a href="catalog.html?cat=other" class="cat-card">
         <div class="cat-card__img">
-          <img src="images/towari/mtv-070.jpeg" alt="Інше обладнання" />
+          <img src="images/towari/mtv-070.jpeg" alt="Інше обладнання" loading="lazy" width="400" height="300" />
         </div>
         <div class="cat-card__body">
           <h3>Інше реабілітаційне обладнання</h3>
