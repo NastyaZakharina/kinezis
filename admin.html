@@ -225,14 +225,20 @@ async function loadAll() {
   await Promise.all([loadUsers(), loadOrders()]);
 }
 
+
 window.loadUsers = async function() {
-  const snap = await getDocs(collection(db, 'users'));
-  allUsers = [];
-  snap.forEach(d => allUsers.push({ id: d.id, ...d.data() }));
-  allUsers.sort((a, b) => (b.points || 0) - (a.points || 0));
-  document.getElementById('statTotalUsers').textContent = allUsers.length;
-  document.getElementById('statVipUsers').textContent = allUsers.filter(u => (u.points || 0) >= 150).length;
-  renderUsers(allUsers);
+  try {
+    const snap = await getDocs(collection(db, 'users'));
+    allUsers = [];
+    snap.forEach(d => allUsers.push({ id: d.id, ...d.data() }));
+    allUsers.sort((a, b) => (b.points || 0) - (a.points || 0));
+    document.getElementById('statTotalUsers').textContent = allUsers.length;
+    document.getElementById('statVipUsers').textContent = allUsers.filter(u => (u.points || 0) >= 150).length;
+    renderUsers(allUsers);
+  } catch(e) {
+    console.error('loadUsers error:', e);
+    document.getElementById('usersTableBody').innerHTML = '<tr><td colspan="5" style="color:red;text-align:center;padding:24px">❌ Помилка: ' + e.message + '</td></tr>';
+  }
 };
 
 function getTier(pts) {
@@ -298,30 +304,36 @@ window.setPoints = async function(uid, name) {
 };
 
 async function loadOrders() {
-  const snap = await getDocs(query(collection(db, 'orders'), orderBy('createdAt', 'desc'), limit(20)));
-  let orders = [];
-  snap.forEach(d => orders.push({ id: d.id, ...d.data() }));
-  document.getElementById('statTotalOrders').textContent = orders.length;
   const el = document.getElementById('recentOrdersList');
-  if (!orders.length) { el.innerHTML = '<div style="color:var(--muted);font-size:14px">Заявок ще немає</div>'; return; }
-  el.innerHTML = orders.map(o => {
-    const date = o.createdAt ? new Date(o.createdAt.seconds * 1000).toLocaleDateString('uk-UA') : '—';
-    const status = o.status || 'new';
-    const statusMap = { new: ['status-new', 'Нова'], processing: ['status-processing', 'В обробці'], done: ['status-done', 'Виконано'] };
-    const [cls, label] = statusMap[status] || statusMap.new;
-    return `<div class="order-row">
-      <div class="order-row__icon">${o.type === 'callback' ? '📞' : '🛍️'}</div>
-      <div class="order-row__info">
-        <div class="order-row__product">${o.product || 'Консультація'}</div>
-        <div class="order-row__meta">${date}${o.phone ? ' · ' + o.phone : ''}</div>
-      </div>
-      <select class="order-status ${cls}" onchange="updateOrderStatus('${o.id}', this)">
-        <option value="new" ${status==='new'?'selected':''}>Нова</option>
-        <option value="processing" ${status==='processing'?'selected':''}>В обробці</option>
-        <option value="done" ${status==='done'?'selected':''}>Виконано</option>
-      </select>
-    </div>`;
-  }).join('');
+  try {
+    const snap = await getDocs(query(collection(db, 'orders'), orderBy('createdAt', 'desc'), limit(20)));
+    let orders = [];
+    snap.forEach(d => orders.push({ id: d.id, ...d.data() }));
+    document.getElementById('statTotalOrders').textContent = orders.length;
+    if (!orders.length) { el.innerHTML = '<div style="color:var(--muted);font-size:14px">Заявок ще немає</div>'; return; }
+    el.innerHTML = orders.map(o => {
+      const date = o.createdAt ? new Date(o.createdAt.seconds * 1000).toLocaleDateString('uk-UA') : '—';
+      const status = o.status || 'new';
+      const statusMap = { new: ['status-new', 'Нова'], processing: ['status-processing', 'В обробці'], done: ['status-done', 'Виконано'] };
+      const [cls, label] = statusMap[status] || statusMap.new;
+      return `<div class="order-row">
+        <div class="order-row__icon">${o.type === 'callback' ? '📞' : '🛍️'}</div>
+        <div class="order-row__info">
+          <div class="order-row__product">${o.product || 'Консультація'}</div>
+          <div class="order-row__meta">${date}${o.phone ? ' · ' + o.phone : ''}</div>
+        </div>
+        <select class="order-status ${cls}" onchange="updateOrderStatus('${o.id}', this)">
+          <option value="new" ${status==='new'?'selected':''}>Нова</option>
+          <option value="processing" ${status==='processing'?'selected':''}>В обробці</option>
+          <option value="done" ${status==='done'?'selected':''}>Виконано</option>
+        </select>
+      </div>`;
+    }).join('');
+  } catch(e) {
+    console.error('loadOrders error:', e);
+    el.innerHTML = '<div style="color:red;font-size:14px">❌ Помилка: ' + e.message + '</div>';
+    document.getElementById('statTotalOrders').textContent = '!';
+  }
 }
 
 window.updateOrderStatus = async function(oid, select) {
