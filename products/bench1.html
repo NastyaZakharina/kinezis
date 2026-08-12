@@ -191,7 +191,7 @@
     e.preventDefault();
     var name=document.getElementById('callbackName').value.trim(),phone=document.getElementById('callbackPhone').value.trim(),btn=document.getElementById('callbackSubmitBtn'),msg=document.getElementById('callbackMsg');
     btn.disabled=true;btn.textContent='Надсилаємо...';
-    fetch('https://api.telegram.org/bot8873990753:AAHdXts-RFHyfHmV2q7mhSwIns7SsxScfVk/sendMessage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:'690819904',text:'📞 ЗАМОВЛЕННЯ ДЗВІНКА\n\nІм\'я: '+name+'\nТелефон: '+phone+'\nТовар: Лавка реабілітаційна складна MTB-31\nЧас: '+new Date().toLocaleString('uk-UA')})})
+    fetch('https://kinezis-bot.nastiazaharina.workers.dev/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:name,phone:phone,product:'Лавка реабілітаційна складна MTB-31',message:'Запит на передзвін з сайту'})})
     .then(function(r){return r.json();}).then(function(d){if(d.ok){window.location.href='/thank-you.html';}else{throw new Error();}}).catch(function(){msg.style.display='block';msg.style.color='#dc2626';msg.textContent='❌ Помилка. Зателефонуйте: +38 (099) 266-26-88';btn.disabled=false;btn.textContent='📞 Передзвоніть мені';});
   });
 })();
