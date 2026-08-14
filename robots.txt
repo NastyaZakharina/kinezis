@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 
+Disallow: /cdn-cgi/
 Disallow: /admin.html
 Disallow: /cabinet.html
 Disallow: /login.html

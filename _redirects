@@ -33,6 +33,11 @@
 /ruchka-dlya-trenazhera-mtb-dlya-tyagi-snizu                    /products/acc-handles  301
 /petelnaya-ruchka-udlinennaya                                   /products/acc-handles  301
 /how-to-choose-mtb.html                                         /blog                  301
+/how-to-choose-mtb                                              /blog                  301
+
+# Missing blog pages → redirect to blog
+/blog/stroke-rehabilitation    /blog    301
+/blog/cervical-osteochondrosis /blog    301
 /trenazher-dlya-kineziterapii-stek-105-kg-shag-gruzov-1-2-3-4-5-kg-ili-2-po-25-kg-visota-2-20-sm  /products/mtb10  301
 /gimnasticheskaya-skamya-zdorovaya-spina  /products/bench1  301
 
