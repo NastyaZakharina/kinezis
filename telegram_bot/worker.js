@@ -737,7 +737,7 @@ async function handleContactForm(token, env, request) {
 // ── Головний обробник Worker ──────────────────────────────────────────────────
 
 export default {
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
     const url = new URL(request.url);
     const token = env.BOT_TOKEN;
 
@@ -767,10 +767,47 @@ export default {
       return new Response(null, { status: 204, headers: { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type' } });
     }
 
-    // Telegram webhook
-    if (url.pathname === '/webhook' && request.method === 'POST') {
+    // ── Заявка з форми на сторінці товару ─────────────────────────────────────
+    const cors = { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type' };
+
+    if (url.pathname === '/lead' && request.method === 'OPTIONS') {
+      return new Response(null, { status: 204, headers: cors });
+    }
+
+    if (url.pathname === '/lead' && request.method === 'POST') {
       try {
-        const update = await request.json();
+        const data    = await request.json();
+        const name    = (data.name    || '').trim() || '—';
+        const phone   = (data.phone   || '').trim() || '—';
+        const page    = (data.page    || '').trim() || '—';
+        const comment = (data.comment || '').trim();
+
+        const text = [
+          '🛒 *Нова заявка з сайту*',
+          '',
+          `👤 Ім'я: ${name}`,
+          `📞 Телефон: ${phone}`,
+          `📦 Товар: ${page}`,
+          comment ? `💬 Коментар: ${comment}` : '',
+          `🕐 Час: ${nowUkraine()}`,
+        ].filter(l => l !== '').join('\n');
+
+        const mgrs = await getManagers(env);
+        for (const mid of mgrs) {
+          try { await sendMessage(token, mid, text, { parse_mode: 'Markdown' }); } catch { /* ok */ }
+        }
+        return new Response(JSON.stringify({ ok: true }), { headers: { 'Content-Type': 'application/json', ...cors } });
+      } catch (e) {
+        return new Response(JSON.stringify({ ok: false, error: String(e) }), { status: 500, headers: { 'Content-Type': 'application/json', ...cors } });
+      }
+    }
+
+    // Telegram webhook — відповідаємо одразу, обробку ставимо у фон
+    if (url.pathname === '/webhook' && request.method === 'POST') {
+      const body = await request.text();
+      ctx.waitUntil((async () => {
+      try {
+        const update = JSON.parse(body);
 
         // Callback query (inline кнопки)
         if (update.callback_query) {
@@ -780,12 +817,12 @@ export default {
           } else if (q.data?.startsWith('sold:')) {
             await handleCallbackSold(token, env, q);
           }
-          return new Response('OK');
+          return;
         }
 
         // Звичайне повідомлення
         const msg = update.message;
-        if (!msg?.text && !msg?.contact) return new Response('OK');
+        if (!msg?.text && !msg?.contact) return;
 
         // Клієнт поділився контактом через кнопку
         if (msg.contact && !msg.text) {
@@ -800,13 +837,15 @@ export default {
           await sendMessage(token, msg.chat.id,
             'Дякуємо! Менеджер зателефонує вам найближчим часом 🙏',
             { reply_markup: MAIN_KB });
-          return new Response('OK');
+          return;
         }
 
         const txt = msg.text || '';
 
         // Команди
-        if (txt.startsWith('/start')) {
+        if (txt === '/myid') {
+          await sendMessage(token, msg.chat.id, `Your ID: ${msg.from.id}\nChat ID: ${msg.chat.id}`);
+        } else if (txt.startsWith('/start')) {
           const args = txt.split(' ').slice(1);
           await handleStart(token, env, msg, args);
         } else if (txt.startsWith('/addmanager')) {
@@ -825,6 +864,7 @@ export default {
       } catch (e) {
         console.error('Worker error:', e);
       }
+      })());
       return new Response('OK');
     }
 
