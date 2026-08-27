@@ -5,7 +5,7 @@
 (function () {
   'use strict';
 
-  var WORKER_URL = 'https://kinezis-bot.nastyazakharina.workers.dev/lead';
+  var WORKER_URL = 'https://kinezis-bot.nastiazaharina.workers.dev/lead';
 
   // ── Стилі ──────────────────────────────────────────────────────────────────
   var css = `
