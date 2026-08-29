@@ -342,7 +342,7 @@ async function handleStart(token, env, msg, args) {
 }
 
 async function handleAddManager(token, env, msg, args) {
-  const pass = env.MGR_PASS || 'kinezis2024';
+  const pass = env.MGR_PASS || '';  // секрет задається через: wrangler secret put MGR_PASS
   if (args[0] === pass) {
     const uid = msg.from.id;
     const mgrs = await getManagers(env);
@@ -775,17 +775,32 @@ export default {
     }
 
     if (url.pathname === '/lead' && request.method === 'POST') {
+      // ── Rate limiting: не більше 5 запитів з одного IP за 10 хвилин ──────────
+      const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
+      const ratKey = `rl_lead_${ip}`;
+      const ratRaw = await env.KV.get(ratKey);
+      const ratCount = ratRaw ? parseInt(ratRaw) : 0;
+      if (ratCount >= 5) {
+        return new Response(JSON.stringify({ ok: false, error: 'Too many requests' }), {
+          status: 429, headers: { 'Content-Type': 'application/json', ...cors },
+        });
+      }
+      await env.KV.put(ratKey, String(ratCount + 1), { expirationTtl: 600 });
+
       try {
         const data    = await request.json();
-        const name    = (data.name    || '').trim() || '—';
-        const phone   = (data.phone   || '').trim() || '—';
-        const page    = (data.page    || '').trim() || '—';
-        const comment = (data.comment || '').trim();
+        // Обрізаємо і прибираємо будь-які спецсимволи Markdown
+        const sanitize = s => String(s || '').trim().slice(0, 500);
+        const name    = sanitize(data.name)    || '—';
+        const phone   = sanitize(data.phone)   || '—';
+        const page    = sanitize(data.page)    || '—';
+        const comment = sanitize(data.comment);
 
+        // Без parse_mode — простий текст, жодних ін'єкцій
         const text = [
-          '🛒 *Нова заявка з сайту*',
+          '🛒 Нова заявка з сайту',
           '',
-          `👤 Ім'я: ${name}`,
+          `👤 Імʼя: ${name}`,
           `📞 Телефон: ${phone}`,
           `📦 Товар: ${page}`,
           comment ? `💬 Коментар: ${comment}` : '',
@@ -794,7 +809,7 @@ export default {
 
         const mgrs = await getManagers(env);
         for (const mid of mgrs) {
-          try { await sendMessage(token, mid, text, { parse_mode: 'Markdown' }); } catch { /* ok */ }
+          try { await sendMessage(token, mid, text); } catch { /* ok */ }
         }
         return new Response(JSON.stringify({ ok: true }), { headers: { 'Content-Type': 'application/json', ...cors } });
       } catch (e) {
