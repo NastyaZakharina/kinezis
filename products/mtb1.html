@@ -1,13 +1,12 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="uk">
 <head>
-<script>if(location.pathname.endsWith(".html")){location.replace(location.pathname.slice(0,-5)+location.search+location.hash)}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HWBDHK3FPX"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-HWBDHK3FPX');</script>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MN3MS74H');</script>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Тренажер МТБ-1 зі шведською стінкою (60×60) Бубновського — купити в Кінезіс | Ціна 52 500 грн</title>
-<meta name="description" content="Купити тренажер МТБ-1 Бубновського зі шведською стінкою. Реабілітація хребта, остеохондроз, грижа — ціна 52 500 грн. Доставка по Україні від Кінезіс."/>
+<meta name="description" content="МТБ-1 зі шведською стінкою — комбінована установка для кінезітерапії та гімнастики. Профіль 60×60 мм забезпечує жорсткість конструкції, а шведська стінка р"/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://kinezis.com.ua/products/mtb1"/>
 <meta property="og:title" content="Тренажер МТБ-1 зі шведською стінкою (60×60) — Кінезіс"/>
@@ -68,7 +67,7 @@
       <div class="product-info">
         <div class="product-info__badge">Хіт</div>
         <h1 class="product-info__name">Тренажер МТБ-1 зі шведською стінкою (60×60)</h1>
-        <p class="product-info__short">Тренажер Бубновського МТБ-1 зі шведською стінкою — для реабілітації хребта вдома</p>
+        <p class="product-info__short">МТБ-1 інтегрований зі шведською стінкою на посиленому профілі</p>
         <div class="product-info__price-block">
           <div class="product-info__price">52 500 грн</div>
           <div class="product-info__price-note">Ціна вказана з ПДВ. Доставка по всій Україні.</div>
@@ -76,7 +75,7 @@
         <div class="product-info__actions">
           <div style="display:flex;gap:12px;flex-wrap:wrap">
             <button class="btn btn--primary btn--lg" style="flex:1;min-width:160px" onclick="addToCart('mtb1','Тренажер МТБ-1 зі шведською стінкою (60×60)',52500)">🛒 В кошик</button>
-            <button onclick="openLeadModal('Тренажер МТБ-1 зі шведською стінкою (60×60) Бубновського')" class="btn btn--orange btn--lg" style="flex:1;min-width:160px">Замовити зараз</button>
+            <a href="https://t.me/Kineziss_bot?start=mtb1" target="_blank" rel="noopener" class="btn btn--orange btn--lg" style="flex:1;min-width:160px;text-align:center;text-decoration:none">Замовити зараз</a>
           </div>
           <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
             <a href="https://t.me/Kineziss_bot" target="_blank" class="btn btn--outline btn--sm">Запитати в Telegram</a>
@@ -89,7 +88,7 @@
 
     <div class="product-description" style="margin-top:40px">
       <h2>Опис товару</h2>
-      <p>МТБ-1 — тренажер Бубновського зі вбудованою шведською стінкою для кінезітерапії та гімнастики вдома. Посилений профіль 60×60 мм забезпечує надійність навіть при щоденних тренуваннях. Підходить для реабілітації після операцій на хребті, лікування грижі, остеохондрозу та зміцнення м'язів спини. Шведська стінка розширює можливості для вправ на розтяжку — все в одній компактній установці.</p>
+      <p>МТБ-1 зі шведською стінкою — комбінована установка для кінезітерапії та гімнастики. Профіль 60×60 мм забезпечує жорсткість конструкції, а шведська стінка розширює можливості для вправ на розтяжку та навантаження. Підходить для домашнього кабінету.</p>
       <div style="display:flex;gap:20px;flex-wrap:wrap;margin-top:24px">
         <div style="background:var(--teal-light);border-radius:12px;padding:16px 20px;flex:1;min-width:160px">
           <div style="font-size:22px;margin-bottom:4px">🚚</div>
@@ -176,6 +175,10 @@
 <script>
 (function(){
   // Related products
+  function relatedCardHTML(q){
+    var price=q.price?q.price.toLocaleString('uk-UA')+' грн':'';
+    return '<div class="product-card" data-id="'+q.id+'">'+(q.badge?'<div class="product-card__badge">'+q.badge+'</div>':'')+'<div class="product-card__img"><img src="../'+q.image+'" alt="'+q.name+'" loading="lazy"/></div><div class="product-card__body"><div class="product-card__name">'+q.name+'</div><div class="product-card__short">'+q.short+'</div><div class="product-card__footer"><div class="product-card__price">'+price+'</div><div class="product-card__actions"><a href="'+q.id+'" class="btn btn--outline btn--sm">Детальніше</a><button class="btn btn--primary btn--sm" onclick="addToCart(''+q.id+'',''+q.name.replace(/'/g,"\'")+'',' +q.price+')">В кошик</button></div></div></div></div>';
+  }
   var related = products.filter(function(q){return q.category==='mtb' && q.id!=='mtb1';}).slice(0,4);
   var grid = document.getElementById('relatedGrid');
   if(related.length){
@@ -191,11 +194,10 @@
     e.preventDefault();
     var name=document.getElementById('callbackName').value.trim(),phone=document.getElementById('callbackPhone').value.trim(),btn=document.getElementById('callbackSubmitBtn'),msg=document.getElementById('callbackMsg');
     btn.disabled=true;btn.textContent='Надсилаємо...';
-    fetch('https://kinezis-bot.nastiazaharina.workers.dev/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:name,phone:phone,product:'Тренажер МТБ-1 зі шведською стінкою (60×60) Бубновського',message:'Запит на передзвін з сайту'})})
+    fetch('https://kinezis-bot.nastiazaharina.workers.dev/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:name,phone:phone,page:'Тренажер МТБ-1 зі шведською стінкою (60×60)',comment:''})})
     .then(function(r){return r.json();}).then(function(d){if(d.ok){window.location.href='/thank-you.html';}else{throw new Error();}}).catch(function(){msg.style.display='block';msg.style.color='#dc2626';msg.textContent='❌ Помилка. Зателефонуйте: +38 (099) 266-26-88';btn.disabled=false;btn.textContent='📞 Передзвоніть мені';});
   });
 })();
 </script>
-<script src="../lead-form.js"></script>
 </body>
 </html>
