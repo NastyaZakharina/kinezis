@@ -310,7 +310,7 @@ ${imageUrl ? `<meta name="twitter:image" content="${esc(imageUrl)}"/>` : ''}
     e.preventDefault();
     var name=document.getElementById('callbackName').value.trim(),phone=document.getElementById('callbackPhone').value.trim(),btn=document.getElementById('callbackSubmitBtn'),msg=document.getElementById('callbackMsg');
     btn.disabled=true;btn.textContent='Надсилаємо...';
-    fetch('https://api.telegram.org/bot8873990753:AAHmzAkTR64xftJytnWqaMf-H7PqVEKC6tc/sendMessage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:'690819904',text:'📞 ЗАМОВЛЕННЯ ДЗВІНКА\\n\\nІм\\'я: '+name+'\\nТелефон: '+phone+'\\nТовар: ${p.name.replace(/'/g,"\\'")}\\nЧас: '+new Date().toLocaleString('uk-UA')})})
+    fetch('https://kinezis-bot.nastiazaharina.workers.dev/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:name,phone:phone,page:'${p.name.replace(/'/g,"\\'")}',comment:''})})
     .then(function(r){return r.json();}).then(function(d){if(d.ok){window.location.href='/thank-you.html';}else{throw new Error();}}).catch(function(){msg.style.display='block';msg.style.color='#dc2626';msg.textContent='❌ Помилка. Зателефонуйте: +38 (099) 266-26-88';btn.disabled=false;btn.textContent='📞 Передзвоніть мені';});
   });
 })();
