@@ -6,7 +6,7 @@
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MN3MS74H');</script>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Дякуємо за заявку — Кінезіс</title>
+<title>Дякуємо за замовлення — Кінезіс</title>
 <meta name="robots" content="noindex, nofollow"/>
 <link rel="icon" href="logo.png" type="image/png"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -33,9 +33,9 @@
 
 <section class="section" style="min-height:70vh;display:flex;align-items:center">
   <div class="container" style="text-align:center;max-width:600px;margin:0 auto">
-    <div style="font-size:72px;margin-bottom:24px">✅</div>
-    <h1 style="font-size:clamp(28px,5vw,42px);margin-bottom:16px">Дякуємо за заявку!</h1>
-    <p style="color:var(--muted);font-size:18px;margin-bottom:32px;line-height:1.6">Ми отримали ваш запит і передзвонимо протягом 30 хвилин у робочий час (пн–пт, 9:00–18:00).</p>
+    <div style="font-size:72px;margin-bottom:24px">🎉</div>
+    <h1 style="font-size:clamp(28px,5vw,42px);margin-bottom:16px">Дякуємо за покупку!</h1>
+    <p style="color:var(--muted);font-size:18px;margin-bottom:32px;line-height:1.6">Ваше замовлення прийнято. Менеджер зв'яжеться з вами протягом 30 хвилин у робочий час (пн–пт, 9:00–18:00).</p>
     <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
       <a href="catalog" class="btn btn--primary btn--lg">Переглянути каталог</a>
       <a href="/" class="btn btn--outline btn--lg">На головну</a>
@@ -55,18 +55,36 @@
 <script src="main.js"></script>
 <script type="module" src="auth.js"></script>
 <script>
-  // Google Ads conversion — fires on every thank-you page visit
+  // GA4 — purchase conversion event
   if (typeof gtag !== 'undefined') {
-    gtag('event', 'conversion', {
-      'send_to': 'AW-XXXXXXXXXX/YYYYYYYYYYY', // ← замінити на свій ID конверсії з Google Ads
-      'value': 1.0,
-      'currency': 'UAH'
+    // Зчитуємо товар з URL параметра ?product=... (якщо є)
+    var urlParams = new URLSearchParams(window.location.search);
+    var productName = urlParams.get('product') || 'Замовлення';
+
+    // ✅ Основна подія — purchase (відстежується у GA4 як конверсія)
+    gtag('event', 'purchase', {
+      'transaction_id': 'order_' + Date.now(),
+      'currency': 'UAH',
+      'value': 0,           // реальна сума невідома до підтвердження — ставимо 0
+      'items': [{
+        'item_name': productName,
+        'item_category': 'Реабілітаційне обладнання'
+      }]
     });
-    // GA4 event
+
+    // ✅ Додаткова подія — generate_lead (для звіту по лідах)
     gtag('event', 'generate_lead', {
-      'event_category': 'lead',
-      'event_label': 'thank_you_page'
+      'currency': 'UAH',
+      'value': 0,
+      'lead_source': 'order_form'
     });
+
+    // Google Ads конверсія — розкоментуйте і вставте свій ID після запуску кампаній:
+    // gtag('event', 'conversion', {
+    //   'send_to': 'AW-XXXXXXXXXX/YYYYYYYYYYY',
+    //   'value': 0,
+    //   'currency': 'UAH'
+    // });
   }
 </script>
 </body>

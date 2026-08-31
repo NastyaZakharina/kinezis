@@ -40,17 +40,17 @@
 <div id="lf-overlay" role="dialog" aria-modal="true" aria-labelledby="lf-title">
   <div id="lf-box">
     <button id="lf-close" aria-label="Закрити">&times;</button>
-    <p id="lf-title">Залишити заявку</p>
-    <p id="lf-subtitle">Менеджер зателефонує протягом робочого дня</p>
+    <p id="lf-title">🛒 Оформлення замовлення</p>
+    <p id="lf-subtitle">Залиште контакти — менеджер зателефонує і підтвердить замовлення</p>
     <form id="lf-form" novalidate>
       <label for="lf-name">Ваше ім'я *</label>
       <input id="lf-name" type="text" placeholder="Наприклад: Іван" autocomplete="given-name" required/>
       <label for="lf-phone">Номер телефону *</label>
       <input id="lf-phone" type="tel" placeholder="+38 099 000 00 00" autocomplete="tel" required/>
       <label for="lf-comment">Коментар (необов'язково)</label>
-      <textarea id="lf-comment" placeholder="Запитання, побажання..."></textarea>
+      <textarea id="lf-comment" placeholder="Питання щодо товару, зручний час дзвінка..."></textarea>
       <div id="lf-error">Будь ласка, вкажіть ім'я та номер телефону</div>
-      <button id="lf-btn" type="submit">Надіслати заявку</button>
+      <button id="lf-btn" type="submit">✅ Підтвердити замовлення</button>
     </form>
     <p id="lf-tg">або <a href="https://t.me/Kineziss_bot" target="_blank" rel="noopener">написати в Telegram</a></p>
   </div>
