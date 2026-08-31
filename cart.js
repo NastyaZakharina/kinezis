@@ -32,7 +32,26 @@ function addToCart(id, name, price) {
   }
   saveCart(cart);
   updateCartBadge();
+  animateCartBtn();
   showCartNotification(name);
+}
+
+function animateCartBtn() {
+  const btn = document.querySelector('.cart-btn');
+  const badge = document.getElementById('cartBadge');
+  if (!btn) return;
+  // pulse button
+  btn.classList.remove('cart-btn--added');
+  void btn.offsetWidth; // reflow to restart animation
+  btn.classList.add('cart-btn--added');
+  btn.addEventListener('animationend', () => btn.classList.remove('cart-btn--added'), { once: true });
+  // bounce badge
+  if (badge) {
+    badge.classList.remove('cart-badge--pop');
+    void badge.offsetWidth;
+    badge.classList.add('cart-badge--pop');
+    badge.addEventListener('animationend', () => badge.classList.remove('cart-badge--pop'), { once: true });
+  }
 }
 
 function removeFromCart(id) {
