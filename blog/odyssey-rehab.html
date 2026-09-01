@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HWBDHK3FPX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-HWBDHK3FPX');</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!+'dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MN3MS74H');</script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Одіссея очима реабілітолога: хто з героїв Гомера — наш клієнт — Кінезіс Блог</title>
+<meta name="description" content="Одіссей, Пенелопа, Лаерт, Сцилла і Сирени — розбираємо діагнози героїв давньогрецького епосу і підбираємо реабілітаційне обладнання."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://kinezis.com.ua/blog/odyssey-rehab"/>
+<meta property="og:title" content="Одіссея очима реабілітолога: хто з героїв Гомера — наш клієнт"/>
+<meta property="og:description" content="20 років війни і мандрів, ткацтво вручну, шість голів на довгих шиях — розбираємо діагнози героїв Гомера з медичної точки зору."/>
+<meta property="og:image" content="https://kinezis.com.ua/images/blog/odyssey-rehab.jpg"/>
+<meta property="og:url" content="https://kinezis.com.ua/blog/odyssey-rehab"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="Кінезіс"/>
+<link rel="icon" href="../logo.png" type="image/png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Unbounded:wght@400;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../style.css"/>
+<style>
+  .hero-card {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    border-radius: 24px;
+    padding: 48px 40px;
+    margin-bottom: 48px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-card::before {
+    content: '⚡';
+    position: absolute;
+    font-size: 120px;
+    opacity: .05;
+    top: -10px; right: -10px;
+    line-height: 1;
+  }
+  .hero-card .emoji-big { font-size: 64px; display: block; margin-bottom: 16px; }
+  .hero-card h1 { font-size: clamp(20px,4vw,34px); margin: 0 0 12px; color: #fff; }
+  .hero-card p { color: rgba(255,255,255,.75); font-size: 17px; margin: 0; line-height: 1.6; }
+  .hero-card .tag {
+    display: inline-block;
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 13px;
+    color: rgba(255,255,255,.8);
+    margin-bottom: 20px;
+  }
+
+  .character-block {
+    background: var(--bg-card);
+    border-radius: 20px;
+    border: 1.5px solid var(--border);
+    padding: 32px;
+    margin-bottom: 32px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+  .character-block__emoji {
+    font-size: 56px;
+    line-height: 1;
+    text-align: center;
+    min-width: 80px;
+  }
+  .character-block__title {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0 0 4px;
+  }
+  .character-block__subtitle {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 0 0 14px;
+    font-style: italic;
+  }
+  .character-block__quote {
+    background: rgba(100,100,200,.07);
+    border-left: 3px solid #6366f1;
+    border-radius: 0 8px 8px 0;
+    padding: 10px 14px;
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 14px;
+    font-style: italic;
+  }
+  .character-block__diagnosis {
+    background: rgba(220,38,38,.08);
+    border-left: 3px solid #dc2626;
+    border-radius: 0 8px 8px 0;
+    padding: 10px 14px;
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+  .character-block__diagnosis strong { color: #dc2626; }
+  .character-block__text { font-size: 15px; line-height: 1.75; color: var(--text); margin-bottom: 16px; }
+  .character-block__rec {
+    background: rgba(0,168,150,.1);
+    border-left: 3px solid var(--teal);
+    border-radius: 0 8px 8px 0;
+    padding: 10px 14px;
+    font-size: 14px;
+    color: var(--text);
+  }
+  .character-block__rec strong { color: var(--teal); }
+  .character-block__rec a { color: var(--teal); text-decoration: underline; }
+
+  .special-block {
+    background: linear-gradient(135deg, #fdf4ff 0%, #faf5ff 100%);
+    border: 1.5px solid #e9d5ff;
+    border-radius: 20px;
+    padding: 28px 32px;
+    margin-bottom: 32px;
+  }
+  @media (prefers-color-scheme: dark) {
+    .special-block { background: rgba(139,92,246,.08); border-color: rgba(139,92,246,.25); }
+  }
+  :root[data-theme="dark"] .special-block { background: rgba(139,92,246,.08); border-color: rgba(139,92,246,.25); }
+
+  .verdict-box {
+    background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+    border-radius: 20px;
+    padding: 36px 32px;
+    text-align: center;
+    color: #fff;
+    margin: 40px 0;
+  }
+  .verdict-box h2 { color: #fff; margin-bottom: 12px; }
+  .verdict-box p { color: rgba(255,255,255,.8); font-size: 16px; line-height: 1.7; margin-bottom: 24px; }
+
+  .series-box {
+    background: var(--bg-card);
+    border: 2px dashed var(--border);
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin: 40px 0;
+    text-align: center;
+  }
+  .series-box h3 { margin: 0 0 10px; font-size: 18px; }
+  .series-box p { color: var(--muted); font-size: 14px; margin: 0 0 16px; }
+  .series-links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .series-links a {
+    background: var(--bg);
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    transition: border-color .2s;
+  }
+  .series-links a:hover { border-color: var(--teal); color: var(--teal); }
+
+  @media(max-width:600px) {
+    .character-block { grid-template-columns: 1fr; }
+    .character-block__emoji { text-align: left; }
+    .hero-card { padding: 32px 20px; }
+  }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MN3MS74H" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="/" class="header__logo"><img src="../logo.png" alt="Кінезіс" class="header__logo-img"/></a>
+    <nav class="nav" id="nav">
+      <a href="/" class="nav__link">Головна</a>
+      <a href="../catalog" class="nav__link">Каталог</a>
+      <a href="../blog" class="nav__link active">Блог</a>
+      <a href="../cases" class="nav__link">Кейси</a>
+      <a href="../about" class="nav__link">Про нас</a>
+      <a href="../contacts" class="nav__link">Контакти</a>
+    </nav>
+    <a href="https://t.me/Kineziss_bot" target="_blank" class="btn btn--primary header__cta">Написати в Telegram</a>
+    <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="container" style="padding-top:24px">
+  <div class="breadcrumb">
+    <a href="/">Головна</a><span>/</span>
+    <a href="../blog">Блог</a><span>/</span>
+    <span>Одіссея очима реабілітолога</span>
+  </div>
+</div>
+
+<article class="container" style="max-width:820px;padding-bottom:60px">
+
+  <div class="hero-card" style="margin-top:24px">
+    <span class="tag">📚 Серія «Пацієнти з минулого»</span>
+    <span class="emoji-big">🏛️</span>
+    <h1>Одіссея очима реабілітолога: хто з героїв Гомера — наш клієнт</h1>
+    <p>20 років війни і мандрів, ткацтво вручну, шість голів на довгих шиях — розбираємо діагнози давньогрецьких героїв. Серйозно.</p>
+  </div>
+
+  <p style="font-size:17px;line-height:1.8;color:var(--muted);margin-bottom:12px">
+    Гомер написав «Одіссею» близько 800 року до нашої ери. Але якби в той час існувала кінезітерапія — половина персонажів вже стояла б у черзі на прийом. Розберімо по черзі.
+  </p>
+  <p style="font-size:15px;color:var(--muted);margin-bottom:40px;font-style:italic">
+    ⚠️ Усі діагнози поставлені на підставі тексту епосу. Гомер не надав медичних карток, тому ми самостійно інтерпретуємо симптоматику.
+  </p>
+
+  <!-- 1. Одіссей -->
+  <div class="character-block">
+    <div class="character-block__emoji">⚓</div>
+    <div>
+      <div class="character-block__title">Одіссей</div>
+      <div class="character-block__subtitle">Цар Ітаки. Відсутній 20 років. Веслував, бився, тонув, знову веслував.</div>
+      <div class="character-block__quote">
+        «Він сидів на березі і плакав, як завжди, мучачи серце сльозами, зітханнями і тугою» — Гомер, пісня V
+      </div>
+      <div class="character-block__diagnosis">
+        <strong>Діагноз:</strong> Хронічний больовий синдром (поперековий і грудний відділи), перевантаження плечового поясу після тривалого веслування, ПТСР, дефіцит вітаміну D після семи років на острові Каліпсо
+      </div>
+      <p class="character-block__text">
+        10 років Троянської війни — це щоденні бойові навантаження, сон на землі, носіння важких обладунків. Потім ще 10 років мандрів морем: веслування, шторми, падіння з кораблів, боротьба з чудовиськами. До моменту повернення на Ітаку Одіссей мав би пересуватися виключно в зігнутому положенні. Але він натягнув лук, якого не міг натягнути ніхто інший. Або він дійсно займався підтримуючою терапією у Каліпсо і Цирцеї — або Гомер дещо перебільшив.
+      </p>
+      <div class="character-block__rec">
+        <strong>Рекомендуємо:</strong> <a href="../products/mtb1">МТБ-1</a> — відновлення м'язового корсету хребта після тривалих навантажень. <a href="../catalog?cat=benches">Лікувальна лава</a> — декомпресія поперекового відділу. Курс — не менше 3 місяців щоденно. І нарешті лягти спати в нормальному ліжку.
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Лаерт -->
+  <div class="character-block">
+    <div class="character-block__emoji">👴</div>
+    <div>
+      <div class="character-block__title">Лаерт</div>
+      <div class="character-block__subtitle">Батько Одіссея. Чекав сина 20 років. Буквально постарів від горя.</div>
+      <div class="character-block__quote">
+        «Він знайшов батька свого на добре зораному полі — він підрізав лозу і був одягнений у брудну латану сорочку» — пісня XXIV
+      </div>
+      <div class="character-block__diagnosis">
+        <strong>Діагноз:</strong> Виражена вікова саркопенія (атрофія м'язів), остеопороз, депресивний стан із фізичною детренованістю, можлива деменція початкового ступеня
+      </div>
+      <p class="character-block__text">
+        Гомер описує Лаерта як людину, яка «знемоглася від туги» — і це не метафора. Хронічний стрес і бездіяльність протягом двох десятиліть призводять саме до такого результату: м'язи атрофуються, кістки слабшають, постава руйнується. При цьому дідусь все одно копає город — що, власне, і є базовим принципом кінезітерапії. Просто без методики.
+      </p>
+      <div class="character-block__rec">
+        <strong>Рекомендуємо:</strong> Програма для літніх пацієнтів: <a href="../products/mtb2">МТБ-2</a> з мінімальними вагами для відновлення м'язового тонусу + <a href="../catalog?cat=massage">масажне обладнання</a> для покращення кровообігу. Поступово, без різких навантажень — саме так і працює геріатрична кінезітерапія.
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Пенелопа -->
+  <div class="character-block">
+    <div class="character-block__emoji">🧶</div>
+    <div>
+      <div class="character-block__title">Пенелопа</div>
+      <div class="character-block__subtitle">Дружина Одіссея. 20 років ткала і розпускала. Щоночі вручну.</div>
+      <div class="character-block__quote">
+        «Вдень вона ткала на великому верстаті, а вночі розпускала зіткане при світлі смолоскипів» — пісня II
+      </div>
+      <div class="character-block__diagnosis">
+        <strong>Діагноз:</strong> Синдром карпального каналу (тунельний синдром зап'ясть) обох рук, шийний остеохондроз від тривалої роботи з нахиленою головою, хронічне м'язове напруження трапецієподібних м'язів
+      </div>
+      <p class="character-block__text">
+        Двадцять років монотонної ручної роботи — це класика офісного травматизму, тільки без офісу. Ткацтво вимагає постійного нахилу голови вперед, статичного напруження плечового поясу і повторюваних рухів кистями. Сучасний еквівалент — людина, яка 20 років без перерви набирала текст на клавіатурі. Пенелопа заслуговує на реабілітацію хоча б за вірність.
+      </p>
+      <div class="character-block__rec">
+        <strong>Рекомендуємо:</strong> <a href="../products/mtb1">МТБ-1</a> для роботи з шийно-грудним відділом. <a href="../catalog?cat=massage">Масажне обладнання</a> для зняття м'язового напруження трапецієподібних м'язів. І найголовніше — перестати ткати вночі.
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Сцилла -->
+  <div class="character-block">
+    <div class="character-block__emoji">🐍</div>
+    <div>
+      <div class="character-block__title">Сцилла</div>
+      <div class="character-block__subtitle">Морське чудовисько. Дванадцять ніг, шість голів на довгих шиях.</div>
+      <div class="character-block__quote">
+        «У неї шість голів на довгих шиях, і в кожній пащі — три ряди зубів» — пісня XII
+      </div>
+      <div class="character-block__diagnosis">
+        <strong>Діагноз:</strong> Шийна мієлопатія × 6, компресія нервових корінців на кожному рівні, нестабільність шийного відділу внаслідок надмірної довжини шиї і надмірного навантаження
+      </div>
+      <p class="character-block__text">
+        Шість голів на шиях — це шість окремих шийних відділів хребта з повним набором міжхребцевих дисків. При тому що кожна голова важить щонайменше 5–7 кг, а шиї «довгі» (за словами Гомера) — навантаження на хребці просто катастрофічне. Не дивно, що вона весь час сидить у печері і не рухається: при такій анатомії ходьба — це справжній подвиг.
+      </p>
+      <div class="character-block__rec">
+        <strong>Рекомендуємо:</strong> <a href="../products/mtb4">МТБ-4</a> для декомпресії всіх шийних відділів одночасно. Ізометричні вправи для зміцнення м'язів-розгиначів шиї. Це складний випадок — але кінезітерапія працює навіть з нестандартною анатомією.
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Сирени -->
+  <div class="character-block">
+    <div class="character-block__emoji">🧜</div>
+    <div>
+      <div class="character-block__title">Сирени</div>
+      <div class="character-block__subtitle">Сидять на острові. Співають. Більше нічого не роблять. Взагалі.</div>
+      <div class="character-block__quote">
+        «Вони сидять на лузі, а навкруги них — купа кісток та гнилих людських шкур» — пісня XII
+      </div>
+      <div class="character-block__diagnosis">
+        <strong>Діагноз:</strong> Критична гіподинамія, повна атрофія м'язів нижніх кінцівок, застій у судинах малого тазу, декондиціонування серцево-судинної системи
+      </div>
+      <p class="character-block__text">
+        Сирени — найсерйозніший випадок у цьому огляді. Вони буквально нікуди не ходять. Їжа сама приходить до них (у вигляді загіпнотизованих моряків). Ніяких пересувань, ніяких навантажень. Це крайній ступінь гіподинамії, який у сучасній медицині спостерігається у лежачих пацієнтів після тривалого постільного режиму. Дивно, що вони взагалі ще живі.
+      </p>
+      <div class="character-block__rec">
+        <strong>Рекомендуємо:</strong> <a href="../catalog?cat=stairs">Реабілітаційні сходи</a> і <a href="../catalog?cat=bars">паралельні бруси</a> — вчитися ходити заново, з нуля. Поступове збільшення навантаження. Щоденний режим. І, мабуть, змінити харчування.
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. Поліфем -->
+  <div class="character-block">
+    <div class="character-block__emoji">👁️</div>
+    <div>
+      <div class="character-block__title">Поліфем</div>
+      <div class="character-block__subtitle">Циклоп. Після зустрічі з Одіссеєм — незрячий. Один. В печері.</div>
+      <div class="character-block__quote">
+        «Він сліпо бродив навколо, простягаючи руки, намацуючи камінь за каменем» — пісня IX
+      </div>
+      <div class="character-block__diagnosis">
+        <strong>Діагноз:</strong> Повна сліпота, порушення просторової орієнтації та рівноваги, висока ймовірність падінь, ізольований спосіб життя як фактор ризику
+      </div>
+      <p class="character-block__text">
+        Втрата зору — це завжди і порушення рівноваги. Людина орієнтується в просторі на 80% завдяки зору, і коли цей канал вимикається — вестибулярна система та пропріорецептори мають компенсувати весь дефіцит. У Поліфема немає реабілітолога, немає паличок, немає нічого. Він просто бродить по печері і кричить на море. Типова клінічна картина без реабілітаційної підтримки.
+      </p>
+      <div class="character-block__rec">
+        <strong>Рекомендуємо:</strong> <a href="../catalog?cat=bars">Паралельні бруси</a> для відновлення рівноваги і безпечного пересування. Програма вестибулярної реабілітації. Вихід з печери — обов'язковий етап терапії.
+      </div>
+    </div>
+  </div>
+
+  <!-- Бонус -->
+  <div class="special-block">
+    <h3 style="margin:0 0 8px;color:var(--text)">🏅 Бонусний клієнт: Харибда</h3>
+    <p style="font-size:15px;line-height:1.7;color:var(--text);margin-bottom:12px">
+      Харибда тричі на день поглинає і викидає морську воду. Це не чудовисько — це хронічна дихальна дисфункція з порушенням ритму дихання. <strong>Рекомендуємо:</strong> дихальну гімнастику і стабілізацію дихального патерну. Буде непросто пояснити вправи воронці завбільшки з кілька кварталів — але ми пробуємо.
+    </p>
+  </div>
+
+  <!-- Серія -->
+  <div class="series-box">
+    <h3>📚 Серія «Пацієнти з минулого»</h3>
+    <p>Реальні діагнози — вигаданим персонажам. Тому що реабілітація потрібна всім.</p>
+    <div class="series-links">
+      <a href="movie-characters-rehab">🎬 Частина 1: Кіногерої</a>
+      <a href="odyssey-rehab" style="border-color:var(--teal);color:var(--teal)">🏛️ Частина 2: Одіссея</a>
+    </div>
+  </div>
+
+  <!-- Висновок -->
+  <h2>А якщо серйозно...</h2>
+  <p style="font-size:16px;line-height:1.8;color:var(--text);margin-bottom:16px">
+    Гомер жив у світі, де не було реабілітаційного обладнання. Але проблеми, які він описував — перевантаження хребта, атрофія м'язів від бездіяльності, порушення рівноваги, наслідки травм — нікуди не зникли. Вони просто перебралися з давньогрецьких печер і морів у наші офіси, лікарняні палати і квартири.
+  </p>
+  <p style="font-size:16px;line-height:1.8;color:var(--text);margin-bottom:32px">
+    Кінезітерапія — метод лікування рухом — існує саме для цього. Відновити те, що зруйнував час, хвороба або бездіяльність. І добра новина: на відміну від Одіссея, вам не доведеться чекати 20 років.
+  </p>
+
+  <div class="verdict-box">
+    <h2>Нехай ваша Одіссея закінчиться швидше</h2>
+    <p>Підберемо реабілітаційне обладнання під ваш випадок — без чудовиськ і двадцятирічних мандрів.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a href="../catalog" class="btn btn--lg" style="background:#fff;color:#0f3460;font-weight:700;display:inline-block">Переглянути каталог</a>
+      <a href="https://t.me/Kineziss_bot" target="_blank" class="btn btn--lg" style="background:rgba(255,255,255,.15);color:#fff;font-weight:700;border:2px solid rgba(255,255,255,.35);display:inline-block">Написати в Telegram</a>
+    </div>
+  </div>
+
+  <!-- Пов'язані статті -->
+  <div style="margin-top:48px">
+    <h3 style="font-size:20px;margin-bottom:20px">Читайте також</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px">
+      <a href="movie-characters-rehab" style="display:block;background:var(--bg-card);border:1.5px solid var(--border);border-radius:14px;padding:20px;text-decoration:none;color:var(--text);transition:border-color .2s" onmouseover="this.style.borderColor='var(--teal)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size:24px;margin-bottom:8px">🎬</div>
+        <div style="font-weight:600;margin-bottom:6px">7 кіногероїв, яким потрібна реабілітація</div>
+        <div style="font-size:13px;color:var(--muted)">Маклейн, Рокі, Форрест та інші</div>
+      </a>
+      <a href="kinezitherapy-what-is" style="display:block;background:var(--bg-card);border:1.5px solid var(--border);border-radius:14px;padding:20px;text-decoration:none;color:var(--text);transition:border-color .2s" onmouseover="this.style.borderColor='var(--teal)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size:24px;margin-bottom:8px">🏋️</div>
+        <div style="font-weight:600;margin-bottom:6px">Кінезітерапія: що це і як працює</div>
+        <div style="font-size:13px;color:var(--muted)">Метод, принципи, відмінність від ЛФК</div>
+      </a>
+      <a href="lower-back-pain" style="display:block;background:var(--bg-card);border:1.5px solid var(--border);border-radius:14px;padding:20px;text-decoration:none;color:var(--text);transition:border-color .2s" onmouseover="this.style.borderColor='var(--teal)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size:24px;margin-bottom:8px">🔙</div>
+        <div style="font-weight:600;margin-bottom:6px">Біль у попереку: вправи вдома</div>
+        <div style="font-size:13px;color:var(--muted)">Комплекс при хронічному болю</div>
+      </a>
+    </div>
+  </div>
+
+</article>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand"><span class="footer__logo-text">Кінезіс</span><p>Обладнання для реабілітації та кінезітерапії. Виробляємо в Україні.</p></div>
+    <div class="footer__nav"><h4>Навігація</h4><a href="/">Головна</a><a href="../catalog">Каталог</a><a href="../blog">Блог</a><a href="../about">Про нас</a><a href="../contacts">Контакти</a></div>
+    <div class="footer__contact"><h4>Контакти</h4><a href="tel:+380992662688">+38 (099) 266-26-88 — Андрій</a><a href="mailto:sport_ok@ukr.net">sport_ok@ukr.net</a></div>
+  </div>
+  <div class="footer__bottom"><div class="container"><span>© 2026 Кінезіс. Усі права захищені.</span><span style="display:flex;gap:16px;align-items:center"><a href="/privacy-policy" style="color:rgba(255,255,255,.6);text-decoration:none;font-size:13px">Політика конфіденційності</a><a href="/return-policy" style="color:rgba(255,255,255,.6);text-decoration:none;font-size:13px">Повернення</a><span>Зроблено в Україні 🇺🇦</span></span></div></div>
+</footer>
+
+<script src="../main.js"></script>
+<script src="../cart.js"></script>
+<script src="../lead-form.js"></script>
+</body>
+</html>
