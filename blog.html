@@ -1464,8 +1464,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     if (currentPage > 1) prevBtn.addEventListener('click', function(){ currentPage--; renderPage(true); });
     paginationEl.appendChild(prevBtn);
 
+    // Smart pagination: show first, last, current ±1, and ellipsis in between
+    function makeDots() {
+      var dots = document.createElement('span');
+      dots.textContent = '…';
+      dots.style.cssText = 'padding:0 4px;color:var(--muted);line-height:40px;display:inline-block';
+      return dots;
+    }
+    var pages = [];
     for (var i = 1; i <= totalPages; i++) {
-      paginationEl.appendChild(makeBtn(String(i), i, i === currentPage, false));
+      if (i === 1 || i === totalPages || (i >= currentPage - 1 && i <= currentPage + 1)) {
+        pages.push(i);
+      }
+    }
+    var prev = 0;
+    for (var j = 0; j < pages.length; j++) {
+      if (pages[j] - prev > 1) paginationEl.appendChild(makeDots());
+      paginationEl.appendChild(makeBtn(String(pages[j]), pages[j], pages[j] === currentPage, false));
+      prev = pages[j];
     }
 
     var nextBtn = makeBtn('→', currentPage + 1, false, currentPage === totalPages);
