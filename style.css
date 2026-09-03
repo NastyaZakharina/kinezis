@@ -328,7 +328,8 @@ ul { list-style: none; }
 /* Makes the whole card clickable (opens the product page) while keeping
    "В кошик" and "Детальніше" — both sit above it via .product-card__actions'
    z-index — independently clickable. */
-.product-card__stretched-link { position: absolute; inset: 0; z-index: 1; }
+.product-card__stretched-link { position: absolute; inset: 0; z-index: 1; cursor: pointer; }
+.product-card:hover .product-card__name { color: var(--teal); }
 
 /* ---- HOW IT WORKS ---- */
 .how__steps {
