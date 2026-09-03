@@ -150,23 +150,26 @@ function renderCartPanel() {
   btn.style.display = 'block';
 }
 
-function checkoutViaTelegram() {
+function checkoutViaForm() {
   const cart = getCart();
   if (!cart.length) return;
+  // Build cart summary for the comment field
   const lines = cart.map(function(i) {
     return i.name + ' x' + i.qty + ' = ' + (i.price * i.qty).toLocaleString('uk-UA') + ' грн';
   }).join('\n');
   const total = cartTotal().toLocaleString('uk-UA');
-  const text = encodeURIComponent('Привіт! Хочу замовити:\n\n' + lines + '\n\nРазом: ' + total + ' грн');
-  const url = 'https://t.me/Kineziss_bot?text=' + text;
-  // Use <a> click instead of window.open — avoids mobile popup blockers (iOS Safari, Android Chrome)
-  const a = document.createElement('a');
-  a.href = url;
-  a.target = '_blank';
-  a.rel = 'noopener';
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
+  const summary = 'Замовлення з кошика:\n' + lines + '\nРазом: ' + total + ' грн';
+  // Pass context to lead-form.js
+  window._pendingCartComment = summary;
+  window._clearCartAfterOrder = true;
+  // Open lead modal with cart label as product name
+  const productLabel = cart.length === 1
+    ? cart[0].name
+    : cart.length + ' товари — ' + total + ' грн';
+  if (typeof openLeadModal === 'function') {
+    closeCart();
+    openLeadModal(productLabel);
+  }
 }
 
 // ── Init ─────────────────────────────────────────────────────────────────────
@@ -197,7 +200,7 @@ function initCart() {
       '<div id="cartPanelBody" class="cart-panel__body"></div>' +
       '<div class="cart-panel__footer">' +
         '<div id="cartTotal" class="cart-panel__total" style="display:none"></div>' +
-        '<button id="cartCheckoutBtn" class="btn btn--primary btn--full btn--lg" onclick="checkoutViaTelegram()" style="display:none">Оформити через Telegram</button>' +
+        '<button id="cartCheckoutBtn" class="btn btn--primary btn--full btn--lg" onclick="checkoutViaForm()" style="display:none">🛒 Оформити замовлення</button>' +
       '</div>' +
     '</div>';
   document.body.appendChild(panel);

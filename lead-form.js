@@ -75,8 +75,13 @@
     currentProduct = productName || document.title;
     errDiv.style.display = 'none';
     btn.disabled = false;
-    btn.textContent = 'Надіслати заявку';
+    btn.textContent = '✅ Підтвердити замовлення';
     form.reset();
+    // Pre-fill comment if cart checkout triggered the modal
+    if (window._pendingCartComment) {
+      document.getElementById('lf-comment').value = window._pendingCartComment;
+      window._pendingCartComment = '';
+    }
     overlay.classList.add('open');
     document.body.style.overflow = 'hidden';
     setTimeout(function () { document.getElementById('lf-name').focus(); }, 100);
@@ -119,6 +124,11 @@
       .then(function (d) {
         if (d.ok) {
           closeModal();
+          // If checkout came from cart — clear it
+          if (window._clearCartAfterOrder) {
+            window._clearCartAfterOrder = false;
+            if (typeof clearCart === 'function') clearCart();
+          }
           window.location.href = '/thank-you.html';
         } else {
           btn.disabled = false;
