@@ -119,7 +119,7 @@
       .then(function (d) {
         if (d.ok) {
           closeModal();
-          window.location.href = '/thank-you';
+          window.location.href = '/thank-you.html';
         } else {
           btn.disabled = false;
           btn.textContent = 'Надіслати заявку';
