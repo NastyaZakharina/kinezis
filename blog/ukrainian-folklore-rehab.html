@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HWBDHK3FPX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-HWBDHK3FPX');</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MN3MS74H');</script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Герої українських казок очима реабілітолога — Кінезіс Блог</title>
+<meta name="description" content="Котигорошко, Кирило Кожум'яка, козак Мамай — розбираємо 'діагнози' героїв українського фольклору з медичної точки зору і підбираємо їм реабілітацію."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://kinezis.com.ua/blog/ukrainian-folklore-rehab"/>
+<meta property="og:title" content="Герої українських казок очима реабілітолога"/>
+<meta property="og:description" content="Розбираємо 'діагнози' героїв українського фольклору з медичної точки зору. Серйозний підхід до казкових травм."/>
+<meta property="og:image" content="https://kinezis.com.ua/logo.png"/>
+<meta property="og:url" content="https://kinezis.com.ua/blog/ukrainian-folklore-rehab"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="Кінезіс"/>
+<link rel="icon" href="../logo.png" type="image/png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Unbounded:wght@400;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../style.css"/>
+<style>
+  .hero-card {
+    background: linear-gradient(135deg, #0b2120 0%, #1a6b5b 100%);
+    border-radius: 24px;
+    padding: 48px 40px;
+    margin-bottom: 48px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-card::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 200px; height: 200px;
+    background: rgba(255,255,255,.04);
+    border-radius: 50%;
+  }
+  .hero-card .emoji-big { font-size: 64px; display: block; margin-bottom: 16px; }
+  .hero-card h1 { font-size: clamp(22px,4vw,36px); margin: 0 0 12px; color: #fff; }
+  .hero-card p { color: rgba(255,255,255,.75); font-size: 17px; margin: 0; line-height: 1.6; }
+
+  .character-block {
+    background: var(--bg-card);
+    border-radius: 20px;
+    border: 1.5px solid var(--border);
+    padding: 32px;
+    margin-bottom: 32px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+  .character-block__emoji {
+    font-size: 56px;
+    line-height: 1;
+    text-align: center;
+    min-width: 80px;
+  }
+  .character-block__title {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0 0 4px;
+  }
+  .character-block__movie {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 0 0 14px;
+    font-style: italic;
+  }
+  .character-block__diagnosis {
+    background: rgba(220,38,38,.08);
+    border-left: 3px solid #dc2626;
+    border-radius: 0 8px 8px 0;
+    padding: 10px 14px;
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+  .character-block__diagnosis strong { color: #dc2626; }
+  .character-block__text { font-size: 15px; line-height: 1.7; color: var(--text); margin-bottom: 16px; }
+  .character-block__rec {
+    background: rgba(0,168,150,.1);
+    border-left: 3px solid var(--teal);
+    border-radius: 0 8px 8px 0;
+    padding: 10px 14px;
+    font-size: 14px;
+    color: var(--text);
+  }
+  .character-block__rec strong { color: var(--teal); }
+  .character-block__rec a { color: var(--teal); text-decoration: underline; }
+
+  .verdict-box {
+    background: linear-gradient(135deg, var(--teal) 0%, #1a8a78 100%);
+    border-radius: 20px;
+    padding: 36px 32px;
+    text-align: center;
+    color: #fff;
+    margin: 40px 0;
+  }
+  .verdict-box h2 { color: #fff; margin-bottom: 12px; }
+  .verdict-box p { color: rgba(255,255,255,.85); font-size: 16px; line-height: 1.7; margin-bottom: 24px; }
+  .verdict-box .btn { background: #fff; color: var(--teal); font-weight: 700; }
+  .verdict-box .btn:hover { background: rgba(255,255,255,.9); }
+
+  .share-hint {
+    background: var(--bg-card);
+    border: 1.5px solid var(--border);
+    border-radius: 16px;
+    padding: 20px 24px;
+    text-align: center;
+    font-size: 15px;
+    color: var(--muted);
+    margin: 32px 0;
+  }
+  .share-hint strong { color: var(--text); }
+
+  @media(max-width: 600px) {
+    .character-block { grid-template-columns: 1fr; }
+    .character-block__emoji { text-align: left; }
+    .hero-card { padding: 32px 20px; }
+  }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MN3MS74H" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="/" class="header__logo"><img src="../logo.png" alt="Кінезіс" class="header__logo-img"/></a>
+    <nav class="nav" id="nav">
+      <a href="/" class="nav__link">Головна</a>
+      <a href="../catalog" class="nav__link">Каталог</a>
+      <a href="../blog" class="nav__link active">Блог</a>
+      <a href="../cases" class="nav__link">Кейси</a>
+      <a href="../about" class="nav__link">Про нас</a>
+      <a href="../contacts" class="nav__link">Контакти</a>
+    </nav>
+    <a href="https://t.me/Kineziss_bot" target="_blank" class="btn btn--primary header__cta">Написати в Telegram</a>
+    <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="container" style="padding-top:24px">
+  <div class="breadcrumb">
+    <a href="/">Головна</a><span>/</span>
+    <a href="../blog">Блог</a><span>/</span>
+    <span>Герої українських казок очима реабілітолога</span>
+  </div>
+</div>
+
+<article class="container" style="max-width:820px;padding-bottom:60px">
+
+  <div class="hero-card" style="margin-top:24px">
+    <span class="emoji-big">🌾</span>
+    <h1>Герої українських казок очима реабілітолога</h1>
+    <p>Богатирська сила — це чудово. А ось спина, суглоби й сухожилля в наших казкових героїв мали б своє окреме життя.</p>
+  </div>
+
+  <p style="font-size:17px;line-height:1.8;color:var(--muted);margin-bottom:32px">
+    Ми вже дивилися очима реабілітолога на героїв Гомера. Тепер черга рідного фольклору. Український казковий герой — це часто важка фізична праця з дитинства, надлюдські навантаження й жодного вихідного. Розбираємо, кому з них найбільше потрібна була б кінезітерапія.
+  </p>
+
+  <!-- 1. Котигорошко -->
+  <div class="character-block">
+    <div class="character-block__emoji">🫛</div>
+    <div>
+      <div class="character-block__title">Котигорошко</div>
+      <div class="character-block__movie">Кидає велетенську булаву в небо однією рукою</div>
+      <div class="character-block__diagnosis">
+        <strong>Діагноз:</strong> Асиметрична гіпертрофія плечового поясу, ризик сколіотичної постави, перевантаження домінантного плеча
+      </div>
+      <p class="character-block__text">
+        Головний прийом Котигорошка — метнути важезну булаву вгору «під хмари» тією самою рукою. Роками односторонньої надпотужної роботи одне плече й половина спини переростають іншу. Тіло компенсує перекіс — і формується стійка асиметрія, з якою в реальному житті працюють кінезітерапевти.
+      </p>
+      <div class="character-block__rec">
+        <strong>Рекомендуємо:</strong> <a href="../products/mtb2">МТБ-2</a> для симетричного двобічного навантаження, що вирівнює м'язовий дисбаланс — детальніше у статті про <a href="scoliosis-guide">сколіоз</a>.
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Кирило Кожум'яка -->
+  <div class="character-block">
+    <div class="character-block__emoji">🐂</div>
+    <div>
+      <div class="character-block__title">Кирило Кожум'яка</div>
+      <div class="character-block__movie">Роками м'яв волові шкіри голими руками</div>
+      <div class="character-block__diagnosis">
+        <strong>Діагноз:</strong> Хронічний епікондиліт обох ліктів, перевантаження сухожиль кисті, ризик тунельного синдрому
+      </div>
+      <p class="character-block__text">
+        Ремесло Кирила — щодня м'яти й розтягувати десятки важких шкур руками. Це постійне силове стискання і скручування — пряма дорога до запалення сухожиль передпліччя й ліктя. У сучасній медицині це «лікоть тенісиста», тільки причина не ракетка, а вичинка шкіри.
+      </p>
+      <div class="character-block__rec">
+        <strong>Рекомендуємо:</strong> <a href="../products/acc-handles">Ручку для тяги MTB-21</a> для дозованих вправ на передпліччя — протокол у статті про <a href="elbow-epicondylitis">тенісний лікоть (епікондиліт)</a>.
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Козак Мамай -->
+  <div class="character-block">
+    <div class="character-block__emoji">🐎</div>
+    <div>
+      <div class="character-block__title">Козак Мамай</div>
+      <div class="character-block__movie">Пів життя в сідлі, у походах</div>
+      <div class="character-block__diagnosis">
+        <strong>Діагноз:</strong> Хронічний біль у попереку, бурсит кульшового суглоба, скорочення м'язів-згиначів стегна від тривалого сидіння верхи
+      </div>
+      <p class="character-block__text">
+        Роки верхи — це роки в напівзігнутому положенні стегон і постійної вібрації на поперек. У вершників це дає передбачуваний набір: скорочені м'язи-згиначі стегна, хронічний біль у попереку і запалення в ділянці кульшового суглоба. Мамай на картинах завжди сидить — можливо, просто інакше вже незручно.
+      </p>
+      <div class="character-block__rec">
+        <strong>Рекомендуємо:</strong> <a href="../products/mtb1">МТБ-1</a> для зміцнення м'язового корсету попереку і роботи над розтягненням згиначів стегна — теми розкриті у статтях про <a href="back-pain">біль у спині</a> і <a href="hip-bursitis">бурсит кульшового суглоба</a>.
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Івасик-Телесик -->
+  <div class="character-block">
+    <div class="character-block__emoji">🌳</div>
+    <div>
+      <div class="character-block__title">Івасик-Телесик</div>
+      <div class="character-block__movie">Тікає босоніж через ліс і поля</div>
+      <div class="character-block__diagnosis">
+        <strong>Діагноз:</strong> Підошвенний фасціїт, забої й мікротравми стоп, перевантаження склепіння стопи
+      </div>
+      <p class="character-block__text">
+        Довгий біг босоніж по нерівній поверхні без жодної підготовки — це навантаження, до якого стопа не готова. Класичний результат — запалення підошвенної фасції: різкий біль у п'яті, особливо після відпочинку. Казковим героям щастить, реальним бігунам — не завжди.
+      </p>
+      <div class="character-block__rec">
+        <strong>Рекомендуємо:</strong> Вправи на зміцнення й розтягнення стопи і гомілки — протокол у статтях про <a href="plantar-fasciitis">підошвенний фасціїт</a> і <a href="flat-feet-treatment">плоскостопість</a>.
+      </div>
+    </div>
+  </div>
+
+  <div class="share-hint">
+    🌾 <strong>Поділіться з другом</strong>, який виріс на цих казках і жодного разу не задумувався, як почувалася спина козака Мамая.
+  </div>
+
+  <!-- Висновок -->
+  <h2 style="margin-top:40px">А якщо серйозно...</h2>
+  <p style="font-size:16px;line-height:1.8;color:var(--text);margin-bottom:16px">
+    За казковими образами — цілком реальні професійні перевантаження: одностороння силова робота, ремесла з навантаженням на кисті й лікті, багато годин у положенні сидячи, надмірний біг без підготовки. Це не міфи — це те, з чим щодня приходять на прийом до кінезітерапевта.
+  </p>
+  <p style="font-size:16px;line-height:1.8;color:var(--text);margin-bottom:32px">
+    Хороша новина: усі ці стани добре піддаються корекції рухом. Симетричне навантаження вирівнює перекоси, дозовані вправи гасять запалення сухожиль, робота над гнучкістю знімає біль у попереку.
+  </p>
+
+  <div class="verdict-box">
+    <h2>Ваша робота теж залишає слід на тілі</h2>
+    <p>Одностороннє навантаження, робота руками, багато сидіння — усе це можна компенсувати правильними вправами. Підкажемо, з чого почати.</p>
+    <a href="../catalog" class="btn btn--lg" style="background:#fff;color:var(--teal);font-weight:700;display:inline-block;margin-right:12px">Переглянути каталог</a>
+    <a href="https://t.me/Kineziss_bot" target="_blank" class="btn btn--lg" style="background:rgba(255,255,255,.15);color:#fff;font-weight:700;border:2px solid rgba(255,255,255,.4);display:inline-block">Написати в Telegram</a>
+  </div>
+
+  <!-- Статті по темі -->
+  <div style="margin-top:48px">
+    <h3 style="font-size:20px;margin-bottom:20px">Читайте також</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px">
+      <a href="odyssey-rehab" style="display:block;background:var(--bg-card);border:1.5px solid var(--border);border-radius:14px;padding:20px;text-decoration:none;color:var(--text);transition:border-color .2s" onmouseover="this.style.borderColor='var(--teal)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size:24px;margin-bottom:8px">🏺</div>
+        <div style="font-weight:600;margin-bottom:6px">Одіссея очима реабілітолога</div>
+        <div style="font-size:13px;color:var(--muted)">Діагнози героїв Гомера</div>
+      </a>
+      <a href="elbow-epicondylitis" style="display:block;background:var(--bg-card);border:1.5px solid var(--border);border-radius:14px;padding:20px;text-decoration:none;color:var(--text);transition:border-color .2s" onmouseover="this.style.borderColor='var(--teal)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size:24px;margin-bottom:8px">💪</div>
+        <div style="font-weight:600;margin-bottom:6px">Тенісний лікоть (епікондиліт)</div>
+        <div style="font-size:13px;color:var(--muted)">Лікування і вправи</div>
+      </a>
+      <a href="back-pain" style="display:block;background:var(--bg-card);border:1.5px solid var(--border);border-radius:14px;padding:20px;text-decoration:none;color:var(--text);transition:border-color .2s" onmouseover="this.style.borderColor='var(--teal)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-size:24px;margin-bottom:8px">🔙</div>
+        <div style="font-weight:600;margin-bottom:6px">Біль у спині: причини і що робити</div>
+        <div style="font-size:13px;color:var(--muted)">Хронічний біль у попереку</div>
+      </a>
+    </div>
+  </div>
+
+</article>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand"><span class="footer__logo-text">Кінезіс</span><p>Обладнання для реабілітації та кінезітерапії. Виробляємо в Україні.</p></div>
+    <div class="footer__nav"><h4>Навігація</h4><a href="/">Головна</a><a href="../catalog">Каталог</a><a href="../blog">Блог</a><a href="../about">Про нас</a><a href="../contacts">Контакти</a></div>
+    <div class="footer__contact"><h4>Контакти</h4><a href="tel:+380992662688">+38 (099) 266-26-88 — Андрій</a><a href="mailto:sport_ok@ukr.net">sport_ok@ukr.net</a></div>
+  </div>
+  <div class="footer__bottom"><div class="container"><span>© 2026 Кінезіс. Усі права захищені.</span><span style="display:flex;gap:16px;align-items:center"><a href="/privacy-policy" style="color:rgba(255,255,255,.6);text-decoration:none;font-size:13px">Політика конфіденційності</a><a href="/return-policy" style="color:rgba(255,255,255,.6);text-decoration:none;font-size:13px">Повернення</a><span>Зроблено в Україні 🇺🇦</span></span></div></div>
+</footer>
+
+<script src="../main.js"></script>
+<script src="../cart.js"></script>
+<script src="../lead-form.js"></script>
+</body>
+</html>
