@@ -47,6 +47,7 @@ if (featuredGrid && typeof products !== 'undefined') {
 function productCardHTML(p) {
   return `
     <div class="product-card" data-id="${p.id}">
+      <a href="products/${p.id}" class="product-card__stretched-link" aria-label="${p.name.replace(/"/g,'&quot;')}"></a>
       ${p.badge ? `<div class="product-card__badge">${p.badge}</div>` : ''}
       <div class="product-card__img">
         <img src="${p.image}" alt="${p.name}" loading="lazy" />
@@ -94,6 +95,7 @@ function relatedCardHTML(q) {
   var price = q.price ? q.price.toLocaleString('uk-UA') + ' грн' : '';
   var safeName = (q.name || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'");
   return '<div class="product-card" data-id="' + q.id + '">' +
+    '<a href="' + q.id + '" class="product-card__stretched-link" aria-label="' + (q.name || '').replace(/"/g, '&quot;') + '"></a>' +
     (q.badge ? '<div class="product-card__badge">' + q.badge + '</div>' : '') +
     '<div class="product-card__img"><img src="../' + q.image + '" alt="' + (q.name || '') + '" loading="lazy"/></div>' +
     '<div class="product-card__body">' +
