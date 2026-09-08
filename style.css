@@ -458,6 +458,30 @@ ul { list-style: none; }
 .article-body ul, .article-body ol { padding-left: 24px; margin: 0 0 16px; }
 .article-body li { margin-bottom: 8px; }
 .article-body strong { color: var(--dark); }
+
+/* "Коротка відповідь" / TL;DR block — extractable summary for search & AI answers */
+.answer-box {
+  background: var(--teal-light);
+  border: 1px solid rgba(61,122,122,.25);
+  border-left: 4px solid var(--teal);
+  border-radius: 14px;
+  padding: 20px 24px;
+  margin: 0 0 28px;
+}
+.answer-box__label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .8px;
+  color: var(--teal-dark);
+  margin-bottom: 8px;
+}
+.answer-box p { margin: 0 0 8px; font-size: 15px; line-height: 1.7; color: var(--dark); }
+.answer-box p:last-child { margin-bottom: 0; }
+.answer-box ul { margin: 4px 0 0; padding-left: 20px; }
+.answer-box li { font-size: 15px; line-height: 1.6; }
+.article-updated { font-size: 13px; color: var(--muted); margin: -12px 0 24px; }
 .footer__social { display: flex; gap: 12px; margin-top: 16px; }
 .footer__social a {
   width: 36px; height: 36px;
