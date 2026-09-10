@@ -28,6 +28,14 @@
 
 html { scroll-behavior: smooth; scrollbar-gutter: stable; }
 
+/* Smooth cross-document navigation — header no longer flashes/jumps between
+   page loads on browsers that support MPA View Transitions (Chrome/Edge 111+,
+   Safari 18.2+); older browsers navigate normally. */
+@view-transition { navigation: auto; }
+/* Keep the fixed header steady during the transition instead of cross-fading it */
+.header { view-transition-name: site-header; }
+::view-transition-group(site-header) { animation-duration: 0s; }
+
 body {
   font-family: 'Inter', system-ui, sans-serif;
   font-size: 16px;
@@ -94,7 +102,7 @@ ul { list-style: none; }
   height: 72px;
 }
 .header__logo { display: flex; align-items: center; }
-.header__logo-img { height: 68px; width: auto; }
+.header__logo-img { height: 68px; width: 68px; object-fit: contain; }
 .nav { display: flex; gap: 4px; margin-left: auto; }
 .nav__link {
   padding: 8px 14px;
@@ -967,7 +975,7 @@ ul { list-style: none; }
   .section__more { position: static; font-size: 14px; }
   .header__cta { display: none; }
   .header__logo { flex-shrink: 0; }
-  .header__logo-img { height: 48px; }
+  .header__logo-img { height: 48px; width: 48px; }
   .nav { display: none; position: fixed; left: 0; right: 0; top: 72px; background: #fff; flex-direction: column; align-items: stretch; padding: 12px 16px 20px; z-index: 9999; gap: 2px; box-shadow: 0 8px 24px rgba(0,0,0,.12); border-top: 3px solid var(--teal); }
   .nav.open { display: flex; }
   .nav__link { padding: 13px 16px; font-size: 16px; border-radius: 10px; font-weight: 500; }

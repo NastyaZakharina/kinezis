@@ -180,3 +180,24 @@ document.addEventListener('DOMContentLoaded', function() {
     }, true);
   }
 });
+
+/* Speculation Rules — Chrome/Edge prerender same-origin pages when the user
+   shows intent (hover / touchstart), so clicking a link opens instantly with
+   no white flash or header repaint. Ignored by browsers without support. */
+(function () {
+  if (!HTMLScriptElement.supports || !HTMLScriptElement.supports('speculationrules')) return;
+  var rules = {
+    prerender: [{
+      where: { and: [
+        { href_matches: '/*' },
+        { not: { href_matches: '/*\\.(pdf|xml|csv|zip|jpg|jpeg|png|webp)' } },
+        { not: { selector_matches: '[href*="/admin"], [href*="/cabinet"], [href*="/login"], [href*="t.me"], [target="_blank"]' } }
+      ] },
+      eagerness: 'moderate'
+    }]
+  };
+  var s = document.createElement('script');
+  s.type = 'speculationrules';
+  s.textContent = JSON.stringify(rules);
+  document.body.appendChild(s);
+})();
