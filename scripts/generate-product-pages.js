@@ -10,6 +10,10 @@ vm.runInContext(dataContent + '\n__out.products = products;\n__out.categories = 
 const { products } = ctx.__out;
 
 const BASE = 'https://kinezis.com.ua';
+
+// "Compare MTB-1 / MTB-2 / MTB-4" link shown under the specs block on trainer pages
+const COMPARE_LINK_IDS = new Set(['mtb1','mtb1-prof','mtb1-shvedska','mtb2','mtb2-40','mtb4','mtb4-reg','mtv1-40','mtv1-reg','mtv2-reg','mtv070']);
+const COMPARE_LINK_HTML = '\n        <a href="../compare" class="btn btn--outline btn--sm" style="margin-top:12px;display:inline-flex;align-items:center;gap:6px">⚖️ Порівняти МТБ-1, МТБ-2 і МТБ-4</a>';
 const OUT_DIR = path.join(__dirname, '..', 'products');
 if (!fs.existsSync(OUT_DIR)) fs.mkdirSync(OUT_DIR);
 
@@ -141,8 +145,8 @@ ${imageUrl ? `<meta name="twitter:image" content="${esc(imageUrl)}"/>` : ''}
 <script type="application/ld+json">${breadcrumbSchema}</script>
 <script type="application/ld+json">${faqSchema}</script>
 <link rel="icon" href="../logo.png" type="image/png"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Unbounded:wght@400;600;700&display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Unbounded:wght@400;600;700&display=optional" rel="stylesheet"/>
 <link rel="stylesheet" href="../style.css"/>
 </head>
 <body>
@@ -191,14 +195,14 @@ ${imageUrl ? `<meta name="twitter:image" content="${esc(imageUrl)}"/>` : ''}
         <div class="product-info__actions">
           <div style="display:flex;gap:12px;flex-wrap:wrap">
             <button class="btn btn--primary btn--lg" style="flex:1;min-width:160px" onclick="addToCart('${esc(p.id)}','${p.name.replace(/'/g,"\\'").replace(/\\/g,'\\\\')}',${p.price || 0})">🛒 В кошик</button>
-            <a href="https://t.me/Kineziss_bot?start=${esc(p.id)}" target="_blank" rel="noopener" class="btn btn--orange btn--lg" style="flex:1;min-width:160px;text-align:center;text-decoration:none">Замовити зараз</a>
+            <button onclick="openLeadModal(typeof product!=='undefined'?product.name:document.title)" class="btn btn--orange btn--lg" style="flex:1;min-width:160px;text-align:center">Замовити зараз</button>
           </div>
           <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
             <a href="https://t.me/Kineziss_bot" target="_blank" class="btn btn--outline btn--sm">Запитати в Telegram</a>
             <button class="btn btn--outline btn--sm" onclick="showCallbackModal('${esc(p.id)}','${p.name.replace(/'/g,"\\'").replace(/\\/g,'\\\\')}')">📞 Замовити дзвінок</button>
           </div>
         </div>
-        ${p.specs && p.specs.length ? `<div class="product-info__specs"><div class="product-info__specs-title">Характеристики</div>${specsHtml}</div>` : ''}
+        ${p.specs && p.specs.length ? `<div class="product-info__specs"><div class="product-info__specs-title">Характеристики</div>${specsHtml}</div>` : ''}${COMPARE_LINK_IDS.has(p.id) ? COMPARE_LINK_HTML : ''}
       </div>
     </div>
 
@@ -277,7 +281,7 @@ ${imageUrl ? `<meta name="twitter:image" content="${esc(imageUrl)}"/>` : ''}
 <footer class="footer">
   <div class="container footer__inner">
     <div class="footer__brand"><span class="footer__logo-text">Кінезіс</span><p>Обладнання для реабілітації та кінезітерапії.</p></div>
-    <div class="footer__nav"><h4>Навігація</h4><a href="/">Головна</a><a href="../catalog">Каталог</a><a href="../about">Про нас</a><a href="../contacts">Контакти</a></div>
+    <div class="footer__nav"><h4>Навігація</h4><a href="/">Головна</a><a href="../catalog">Каталог</a><a href="../about">Про нас</a><a href="../contacts">Контакти</a><a href="../faq">Питання і відповіді</a></div>
     <div class="footer__nav"><h4>Категорії</h4><a href="../catalog?cat=mtb">Тренажери МТБ</a><a href="../catalog?cat=benches">Лавки та гіперекстензії</a><a href="../catalog?cat=massage">Масажні столи</a><a href="../catalog?cat=stairs">Бруси та сходи</a></div>
     <div class="footer__contact"><h4>Контакти</h4><a href="tel:+380992662688">+38 (099) 266-26-88</a><a href="mailto:sport_ok@ukr.net">sport_ok@ukr.net</a></div>
   </div>
@@ -286,15 +290,11 @@ ${imageUrl ? `<meta name="twitter:image" content="${esc(imageUrl)}"/>` : ''}
 
 <script src="../data.js"></script>
 <script src="../main.js"></script>
-<script src="../cart.js"></script>
+<script src="../cart.js"></script><script src="../lead-form.js"></script>
 <script type="module" src="../auth.js"></script>
 <script>
 (function(){
   // Related products
-  function relatedCardHTML(q){
-    var price=q.price?q.price.toLocaleString('uk-UA')+' грн':'';
-    return '<div class="product-card" data-id="'+q.id+'">'+(q.badge?'<div class="product-card__badge">'+q.badge+'</div>':'')+'<div class="product-card__img"><img src="../'+q.image+'" alt="'+q.name+'" loading="lazy"/></div><div class="product-card__body"><div class="product-card__name">'+q.name+'</div><div class="product-card__short">'+q.short+'</div><div class="product-card__footer"><div class="product-card__price">'+price+'</div><div class="product-card__actions"><a href="'+q.id+'" class="btn btn--outline btn--sm">Детальніше</a><button class="btn btn--primary btn--sm" onclick="addToCart(\''+q.id+'\',\''+q.name.replace(/'/g,"\\'")+'\',' +q.price+')">В кошик</button></div></div></div></div>';
-  }
   var related = products.filter(function(q){return q.category==='${p.category}' && q.id!=='${p.id}';}).slice(0,4);
   var grid = document.getElementById('relatedGrid');
   if(related.length){
