@@ -1,3 +1,8 @@
+# NOTE: this file is NOT applied — the site is served by GitHub Pages behind Cloudflare,
+# which ignores _redirects (a Cloudflare Pages / Netlify feature). Old WordPress URLs are
+# redirected with stub pages in the repo root (meta refresh + canonical) instead.
+# Intentionally left as 404: /basket/, /registration/, /remindpassword/, /page/N/, /* (dead WP pages).
+
 # Redirects for Cloudflare Pages
 # Format: /old-url  /new-url  status-code
 
