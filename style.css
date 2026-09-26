@@ -520,6 +520,27 @@ ul { list-style: none; }
   color: rgba(255,255,255,.4);
 }
 
+/* Agency credit line under the copyright bar */
+.footer__credit {
+  border-top: 1px solid rgba(255,255,255,.06);
+  padding: 14px 16px 18px;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: .2px;
+  color: rgba(255,255,255,.4);
+}
+.footer__credit a {
+  color: rgba(255,255,255,.85);
+  font-weight: 600;
+  text-decoration: none;
+  padding-bottom: 1px;
+  border-bottom: 1px solid rgba(139,196,74,.55);
+  transition: color var(--transition), border-color var(--transition);
+}
+.footer__credit a::after { content: " ↗"; font-size: 11px; color: var(--green); }
+.footer__credit a:hover { color: var(--green); border-bottom-color: var(--green); }
+
+
 /* ============================================================
    CATALOG PAGE
    ============================================================ */
