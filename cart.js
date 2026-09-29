@@ -236,7 +236,7 @@ function renderCrossSell(currentProduct) {
   else document.querySelector('footer').before(section);
 
   document.getElementById('crossSellGrid').innerHTML = items.map(function(p) {
-    var name = p.name.replace(/'/g, "\\'");
+    var name = p.name.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
     return '<div class="product-card" data-id="' + p.id + '">' +
       (p.badge ? '<div class="product-card__badge">' + p.badge + '</div>' : '') +
       '<div class="product-card__img"><img src="' + p.image + '" alt="' + p.name + '" loading="lazy"/></div>' +

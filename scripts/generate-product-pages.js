@@ -194,12 +194,12 @@ ${imageUrl ? `<meta name="twitter:image" content="${esc(imageUrl)}"/>` : ''}
         </div>
         <div class="product-info__actions">
           <div style="display:flex;gap:12px;flex-wrap:wrap">
-            <button class="btn btn--primary btn--lg" style="flex:1;min-width:160px" onclick="addToCart('${esc(p.id)}','${p.name.replace(/'/g,"\\'").replace(/\\/g,'\\\\')}',${p.price || 0})">🛒 В кошик</button>
+            <button class="btn btn--primary btn--lg" style="flex:1;min-width:160px" onclick="addToCart('${esc(p.id)}','${p.name.replace(/\\/g,'\\\\').replace(/'/g,"\\'")}',${p.price || 0})">🛒 В кошик</button>
             <button onclick="openLeadModal(typeof product!=='undefined'?product.name:document.title)" class="btn btn--orange btn--lg" style="flex:1;min-width:160px;text-align:center">Замовити зараз</button>
           </div>
           <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
             <a href="https://t.me/Kineziss_bot" target="_blank" class="btn btn--outline btn--sm">Запитати в Telegram</a>
-            <button class="btn btn--outline btn--sm" onclick="showCallbackModal('${esc(p.id)}','${p.name.replace(/'/g,"\\'").replace(/\\/g,'\\\\')}')">📞 Замовити дзвінок</button>
+            <button class="btn btn--outline btn--sm" onclick="showCallbackModal('${esc(p.id)}','${p.name.replace(/\\/g,'\\\\').replace(/'/g,"\\'")}')">📞 Замовити дзвінок</button>
           </div>
         </div>
         ${p.specs && p.specs.length ? `<div class="product-info__specs"><div class="product-info__specs-title">Характеристики</div>${specsHtml}</div>` : ''}${COMPARE_LINK_IDS.has(p.id) ? COMPARE_LINK_HTML : ''}
