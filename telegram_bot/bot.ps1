@@ -5,7 +5,7 @@ $DIR        = "C:\Users\user\Kinezis\telegram_bot"
 $MgrFile    = "$DIR\managers.json"
 $OrdersFile = "$DIR\orders.csv"   # всі замовлення для ремаркетингу
 $MapFile    = "$DIR\user_map.json" # forwarded_msg_id -> user_id (для відповідей)
-$PASS       = "kinezis2024"
+$PASS       = $env:MGR_PASS    # never hardcode: set MGR_PASS in the environment
 $SITE       = "https://nastyazakharina.github.io/kinezis"
 
 $Products = @{

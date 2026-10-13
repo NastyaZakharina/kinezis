@@ -11,7 +11,7 @@ from telegram.ext import (Application, CommandHandler, CallbackQueryHandler,
 logging.basicConfig(format='%(asctime)s %(levelname)s %(message)s', level=logging.INFO)
 
 TOKEN = os.environ.get('BOT_TOKEN')
-PASS  = os.environ.get('MGR_PASS', 'kinezis2024')
+PASS  = os.environ.get('MGR_PASS')  # no default: must be set in the environment
 SITE  = 'https://kinezis.com.ua'
 if not TOKEN:
     raise ValueError("BOT_TOKEN environment variable is not set")

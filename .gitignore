@@ -9,3 +9,12 @@
 
 # Logs
 *.log
+
+# Never commit credentials or local bot data
+.env
+.env.*
+.dev.vars
+*.pem
+*.key
+telegram_bot/managers.json
+telegram_bot/orders.csv

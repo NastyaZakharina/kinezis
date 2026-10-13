@@ -128,6 +128,37 @@ for (const file of files) {
   }
 }
 
+
+// ---------- 4. no secrets in the (public) repo ----------
+// The Telegram bot token once sat in this public repo and was abused for spam.
+// Fails the build if anything that looks like a credential is committed.
+// Firebase web apiKey (firebase-config.js) is public by design and allowed.
+const { execSync } = require('child_process');
+const SECRET_PATTERNS = [
+  [/\b\d{8,10}:AA[A-Za-z0-9_-]{30,}\b/, 'Telegram bot token'],
+  [/\bghp_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{30,}/, 'GitHub token'],
+  [/\bsk-[A-Za-z0-9_-]{20,}/, 'API secret key (sk-...)'],
+  [/\bxox[baprs]-[A-Za-z0-9-]{10,}/, 'Slack token'],
+  [/\bAKIA[0-9A-Z]{16}\b/, 'AWS access key'],
+  [/-----BEGIN [A-Z ]*PRIVATE KEY-----/, 'private key'],
+  [/\b(?:PASS|PASSWORD|MGR_PASS|SECRET|TOKEN|API_?KEY)\b["']?\s*[:=]\s*["'][^"'\s$]{6,}["']/i, 'hardcoded password/secret assignment'],
+];
+const SECRET_ALLOW_FILES = new Set(['scripts/check-site.js', 'firebase-config.js']); // firebase web apiKey is public by design
+let tracked = [];
+try { tracked = execSync('git ls-files', { cwd: ROOT, encoding: 'utf-8' }).split('\n').filter(Boolean); } catch (e) { /* not a git checkout */ }
+for (const rel of tracked) {
+  if (SECRET_ALLOW_FILES.has(rel) || /\.(jpe?g|png|webp|gif|ico|pdf|woff2?|mp4|zip|rss)$/i.test(rel)) continue;
+  let text;
+  try { text = fs.readFileSync(path.join(ROOT, rel), 'utf-8'); } catch { continue; }
+  const lines = text.split('\n');
+  lines.forEach((ln, i) => {
+    if (/type="password"|placeholder|env\.|process\.env|\$env:|os\.environ/.test(ln)) return;
+    for (const [re, label] of SECRET_PATTERNS) {
+      if (re.test(ln)) errors.push(`[secret] ${rel}:${i + 1}  looks like a ${label} (value hidden)`);
+    }
+  });
+}
+
 // ---------- report ----------
 console.log(`Checked ${files.length} HTML files.`);
 if (errors.length) {
@@ -135,5 +166,5 @@ if (errors.length) {
   for (const e of errors) console.log(' - ' + e);
   process.exitCode = 1;
 } else {
-  console.log('All checks passed: onclick handlers valid, JSON-LD valid, internal links resolve.');
+  console.log('All checks passed: onclick handlers valid, JSON-LD valid, internal links resolve, no secrets found.');
 }
