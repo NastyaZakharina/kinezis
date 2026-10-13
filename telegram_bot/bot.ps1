@@ -1,5 +1,5 @@
 # Telegram-bot Kinezis (@Kineziss_bot)
-$TOKEN      = "8873990753:AAHmzAkTR64xftJytnWqaMf-H7PqVEKC6tc"
+$TOKEN      = $env:BOT_TOKEN   # never hardcode: set BOT_TOKEN in the environment
 $API        = "https://api.telegram.org/bot$TOKEN"
 $DIR        = "C:\Users\user\Kinezis\telegram_bot"
 $MgrFile    = "$DIR\managers.json"
