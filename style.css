@@ -1279,24 +1279,59 @@ ul { list-style: none; }
   .cart-panel__drawer { width: 100vw; }
 }
 
-/* ---- Promo banner (see main.js) ---- */
+/* ---- Promo banner (see main.js) ----
+   Responsive: card bottom-right on tablet/desktop, compact bar-style card on
+   phones, slim two-line card in landscape; respects notches (safe-area),
+   big touch targets, text zoom and reduced motion. */
 .promo-banner {
-  position: fixed; right: 20px; bottom: 20px; z-index: 400;
-  width: min(340px, calc(100vw - 32px));
+  position: fixed; z-index: 400;
+  right: max(20px, env(safe-area-inset-right)); bottom: max(20px, env(safe-area-inset-bottom));
+  width: min(340px, calc(100vw - 40px)); max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); overflow-y: auto;
   background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--teal);
   border-radius: 14px; padding: 18px 20px 20px; box-shadow: 0 12px 36px rgba(30,44,44,.18);
   opacity: 0; transform: translateY(16px); transition: opacity .3s ease, transform .3s ease;
+  overscroll-behavior: contain;
 }
 .promo-banner--in { opacity: 1; transform: none; }
-.promo-banner__title { display: block; font-size: 16px; line-height: 1.35; color: var(--dark); padding-right: 24px; margin-bottom: 6px; }
+.promo-banner__title { display: block; font-size: 16px; line-height: 1.35; color: var(--dark); padding-right: 28px; margin-bottom: 6px; }
 .promo-banner__text { margin: 0 0 14px; font-size: 14px; line-height: 1.55; color: var(--muted); }
-.promo-banner__btn { display: inline-flex; width: 100%; justify-content: center; text-decoration: none; }
+.promo-banner__btn { display: inline-flex; width: 100%; justify-content: center; text-align: center; text-decoration: none; }
 .promo-banner__close {
-  position: absolute; top: 6px; right: 8px; width: 32px; height: 32px; border: 0; background: transparent;
+  position: absolute; top: 6px; right: 6px; width: 32px; height: 32px; border: 0; background: transparent;
   font-size: 24px; line-height: 1; color: var(--muted); cursor: pointer; border-radius: 8px;
 }
 .promo-banner__close:hover { color: var(--dark); background: var(--bg-tint); }
-@media (max-width: 600px) { .promo-banner { left: 16px; right: 16px; bottom: 16px; width: auto; padding: 16px 16px 16px 18px; } }
+.promo-banner__close:focus-visible, .promo-banner__btn:focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; }
+@media (pointer: coarse) { .promo-banner__close { width: 44px; height: 44px; top: 2px; right: 2px; } }
+
+/* wide monitors: a bit more room */
+@media (min-width: 1600px) { .promo-banner { width: 372px; right: 32px; bottom: 32px; padding: 20px 22px 22px; } .promo-banner__title { font-size: 17px; } .promo-banner__text { font-size: 15px; } }
+
+/* phones (portrait): compact, full width minus gutters, sits above the home indicator */
+@media (max-width: 600px) {
+  .promo-banner {
+    left: max(12px, env(safe-area-inset-left)); right: max(12px, env(safe-area-inset-right));
+    bottom: max(12px, env(safe-area-inset-bottom)); width: auto; max-height: 60vh; max-height: 60dvh;
+    padding: 14px 14px 14px 16px; border-radius: 16px;
+  }
+  .promo-banner__title { font-size: 15px; margin-bottom: 4px; }
+  .promo-banner__text { font-size: 13px; line-height: 1.45; margin-bottom: 10px; }
+  .promo-banner__btn { padding: 11px 16px; font-size: 14px; min-height: 44px; }
+}
+/* small phones (iPhone SE / 320-360px): tighter still, drop the long sentence */
+@media (max-width: 360px) {
+  .promo-banner { padding: 12px 12px 12px 14px; }
+  .promo-banner__title { font-size: 14px; padding-right: 36px; }
+  .promo-banner__text { display: none; }
+}
+/* landscape phones / very short windows: one slim row, no description */
+@media (max-height: 480px) and (orientation: landscape) {
+  .promo-banner { width: min(440px, calc(100vw - 40px)); padding: 10px 14px 10px 16px; max-height: calc(100vh - 24px); max-height: calc(100dvh - 24px); display: grid; grid-template-columns: 1fr auto; align-items: center; column-gap: 12px; right: max(12px, env(safe-area-inset-right)); left: auto; bottom: max(10px, env(safe-area-inset-bottom)); }
+  .promo-banner__title { margin: 0; padding-right: 0; font-size: 14px; }
+  .promo-banner__text { display: none; }
+  .promo-banner__btn { width: auto; min-height: 40px; padding: 8px 16px; white-space: nowrap; }
+  .promo-banner__close { top: -14px; right: -10px; width: 32px; height: 32px; background: #fff; border: 1px solid var(--border); border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,.12); font-size: 20px; }
+}
 @media (prefers-reduced-motion: reduce) { .promo-banner { transition: none; transform: none; } }
 @media print { .promo-banner { display: none; } }
 
@@ -1310,3 +1345,33 @@ ul { list-style: none; }
   .article-body [style*="min-width:200px"] { min-width: 0 !important; }
   .article-body { overflow-wrap: anywhere; }
 }
+
+/* ---- Header fit on every screen ----
+   769–1100px (iPad portrait, phones in landscape, small laptops): the 6-link nav
+   + Telegram CTA need ~1000px, so use the same burger menu as phones.
+   ≤380px: tighter gaps so logo + login + cart + burger fit a 320px screen. */
+@media (min-width: 769px) and (max-width: 1100px) {
+  .header__cta { display: none; }
+  .header__logo { flex-shrink: 0; }
+  .nav { display: none; position: fixed; left: 0; right: 0; top: 72px; background: #fff; flex-direction: column; align-items: stretch; padding: 12px 24px 20px; z-index: 9999; gap: 2px; box-shadow: 0 8px 24px rgba(0,0,0,.12); border-top: 3px solid var(--teal); }
+  .nav.open { display: flex; }
+  .nav__link { padding: 13px 16px; font-size: 16px; border-radius: 10px; font-weight: 500; }
+  .burger { display: flex; }
+}
+@media (max-width: 380px) {
+  .header__inner { gap: 12px; }
+}
+/* reviews: 3 cards need ~830px, so use 2 columns on small tablets */
+@media (min-width: 769px) and (max-width: 900px) {
+  .reviews__grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+/* very small phones (320px): grids/forms/buttons may never exceed the screen */
+@media (max-width: 360px) {
+  #blog-grid { grid-template-columns: minmax(0, 1fr) !important; }
+  .btn { white-space: normal; max-width: 100%; text-align: center; }
+  .contacts-grid > *, .about-grid > *, .product-layout > * { min-width: 0; }
+  input, textarea, select { max-width: 100%; box-sizing: border-box; }
+}
+/* long Ukrainian words in big headings must never push the page wider than the screen */
+h1, h2 { overflow-wrap: break-word; }
+@media (max-width: 360px) { .about-hero h1 { font-size: clamp(22px, 7.4vw, 30px); } }
