@@ -1299,3 +1299,14 @@ ul { list-style: none; }
 @media (max-width: 600px) { .promo-banner { left: 16px; right: 16px; bottom: 16px; width: auto; padding: 16px 16px 16px 18px; } }
 @media (prefers-reduced-motion: reduce) { .promo-banner { transition: none; transform: none; } }
 @media print { .promo-banner { display: none; } }
+
+/* Phone fixes for article pages: nothing may be wider than the screen */
+@media (max-width: 700px) {
+  .article-body table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .container [style*="grid-template-columns:repeat(5,1fr)"] { grid-template-columns: repeat(auto-fit, minmax(104px, 1fr)) !important; }
+  .container [style*="grid-template-columns:repeat(4,1fr)"] { grid-template-columns: repeat(2, 1fr) !important; }
+  .container [style*="grid-template-columns:1fr 1fr;gap:16px"] { grid-template-columns: 1fr !important; }
+  .article-body .btn, .article-body a.btn { white-space: normal; max-width: 100%; box-sizing: border-box; }
+  .article-body [style*="min-width:200px"] { min-width: 0 !important; }
+  .article-body { overflow-wrap: anywhere; }
+}
