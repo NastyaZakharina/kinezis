@@ -201,3 +201,82 @@ document.addEventListener('DOMContentLoaded', function() {
   s.textContent = JSON.stringify(rules);
   document.body.appendChild(s);
 })();
+
+/* Promo banner — small non-modal card (bottom corner) with one offer.
+   EDIT THE TEXT BELOW to change the offer. Shows once after ~20s or 50% scroll,
+   and stays hidden for 14 days after being closed (30 after the button click).
+   Preview any time with ?promo=1 in the URL. Never shown on admin/cabinet/login
+   pages. Not a full-screen interstitial, so it does not hurt SEO or UX. */
+(function () {
+  var PROMO = {
+    title: 'Не знаєте, який тренажер обрати?',
+    text: 'Безкоштовно підберемо під ваш діагноз і бюджет. Напишіть нам у Telegram, відповімо в робочий час.',
+    button: 'Отримати підбір',
+    href: 'https://t.me/Kineziss_bot',
+    delayMs: 20000,
+    hideDaysClosed: 14,
+    hideDaysClicked: 30
+  };
+  var KEY = 'kz_promo_hidden_until';
+  var path = location.pathname;
+  if (/^\/(admin|cabinet|login|thank-you)(\.html)?\/?$/.test(path)) return;
+  var force = /[?&]promo=1\b/.test(location.search);
+
+  function store(get, val) {
+    try { return get ? localStorage.getItem(KEY) : localStorage.setItem(KEY, val); } catch (e) { return null; }
+  }
+  if (!force && Number(store(true)) > Date.now()) return;
+
+  var shown = false, el;
+  function track(name) {
+    try { (window.dataLayer = window.dataLayer || []).push({ event: name, promo_page: path }); } catch (e) {}
+  }
+  function hideFor(days) { store(false, String(Date.now() + days * 864e5)); }
+  function close(days) {
+    if (!el) return;
+    hideFor(days);
+    el.classList.remove('promo-banner--in');
+    setTimeout(function () { if (el && el.parentNode) el.parentNode.removeChild(el); el = null; }, 300);
+    document.removeEventListener('keydown', onKey);
+  }
+  function onKey(e) { if (e.key === 'Escape') close(PROMO.hideDaysClosed); }
+
+  function show() {
+    if (shown) return;
+    // do not interrupt checkout: cart drawer or a modal is open -> try again later
+    var busy = document.querySelector('.cart-panel.open') ||
+      Array.prototype.some.call(document.querySelectorAll('.modal-overlay'), function (m) {
+        var cs = getComputedStyle(m); // closed modals are opacity:0 + pointer-events:none, not display:none
+        return cs.display !== 'none' && cs.visibility !== 'hidden' && cs.pointerEvents !== 'none' && parseFloat(cs.opacity) > 0;
+      });
+    if (busy) { setTimeout(show, 8000); return; }
+    shown = true;
+    el = document.createElement('aside');
+    el.className = 'promo-banner';
+    el.setAttribute('role', 'complementary');
+    el.setAttribute('aria-label', 'Пропозиція');
+    el.innerHTML =
+      '<button type="button" class="promo-banner__close" aria-label="Закрити">&times;</button>' +
+      '<strong class="promo-banner__title"></strong>' +
+      '<p class="promo-banner__text"></p>' +
+      '<a class="btn btn--primary promo-banner__btn" target="_blank" rel="noopener"></a>';
+    el.querySelector('.promo-banner__title').textContent = PROMO.title;
+    el.querySelector('.promo-banner__text').textContent = PROMO.text;
+    var a = el.querySelector('.promo-banner__btn');
+    a.textContent = PROMO.button; a.href = PROMO.href;
+    a.addEventListener('click', function () { track('promo_banner_click'); close(PROMO.hideDaysClicked); });
+    el.querySelector('.promo-banner__close').addEventListener('click', function () { track('promo_banner_close'); close(PROMO.hideDaysClosed); });
+    document.body.appendChild(el);
+    requestAnimationFrame(function () { requestAnimationFrame(function () { el.classList.add('promo-banner--in'); }); });
+    document.addEventListener('keydown', onKey);
+    track('promo_banner_view');
+  }
+
+  function onScroll() {
+    var h = document.documentElement;
+    if ((h.scrollTop + window.innerHeight) / h.scrollHeight > 0.5) { window.removeEventListener('scroll', onScroll); show(); }
+  }
+  if (force) { setTimeout(show, 600); return; }
+  setTimeout(show, PROMO.delayMs);
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();

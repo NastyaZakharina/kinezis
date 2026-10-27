@@ -1278,3 +1278,24 @@ ul { list-style: none; }
 @media (max-width: 480px) {
   .cart-panel__drawer { width: 100vw; }
 }
+
+/* ---- Promo banner (see main.js) ---- */
+.promo-banner {
+  position: fixed; right: 20px; bottom: 20px; z-index: 400;
+  width: min(340px, calc(100vw - 32px));
+  background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--teal);
+  border-radius: 14px; padding: 18px 20px 20px; box-shadow: 0 12px 36px rgba(30,44,44,.18);
+  opacity: 0; transform: translateY(16px); transition: opacity .3s ease, transform .3s ease;
+}
+.promo-banner--in { opacity: 1; transform: none; }
+.promo-banner__title { display: block; font-size: 16px; line-height: 1.35; color: var(--dark); padding-right: 24px; margin-bottom: 6px; }
+.promo-banner__text { margin: 0 0 14px; font-size: 14px; line-height: 1.55; color: var(--muted); }
+.promo-banner__btn { display: inline-flex; width: 100%; justify-content: center; text-decoration: none; }
+.promo-banner__close {
+  position: absolute; top: 6px; right: 8px; width: 32px; height: 32px; border: 0; background: transparent;
+  font-size: 24px; line-height: 1; color: var(--muted); cursor: pointer; border-radius: 8px;
+}
+.promo-banner__close:hover { color: var(--dark); background: var(--bg-tint); }
+@media (max-width: 600px) { .promo-banner { left: 16px; right: 16px; bottom: 16px; width: auto; padding: 16px 16px 16px 18px; } }
+@media (prefers-reduced-motion: reduce) { .promo-banner { transition: none; transform: none; } }
+@media print { .promo-banner { display: none; } }

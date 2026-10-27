@@ -4,8 +4,20 @@
     {
       "name": "Kinezis Website",
       "runtimeExecutable": "C:\\Program Files\\Git\\usr\\bin\\perl.exe",
-      "runtimeArgs": ["C:\\Users\\user\\Kinezis\\serve.pl"],
+      "runtimeArgs": [
+        "C:\\Users\\user\\Kinezis\\serve.pl"
+      ],
       "port": 3000
+    },
+    {
+      "name": "Kinezis static (mac)",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8123"
+      ],
+      "port": 8123
     }
   ]
 }
