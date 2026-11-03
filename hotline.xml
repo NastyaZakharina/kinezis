@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <price>
-  <date>2026-09-29 07:57</date>
+  <date>2026-11-03 14:13</date>
   <firmName>Кінезіс</firmName>
   <firmId>43544</firmId>
 
@@ -335,11 +335,11 @@
       <id>massage1</id>
       <categoryId>3</categoryId>
       <vendor>Кінезіс</vendor>
-      <name>Масажний стіл складний (алюміній) MTB-051</name>
-      <description>MTB-051 — алюмінієвий складний масажний стіл з регульованою висотою. Підходить для масажистів, фізіотерапевтів та реабілітологів. Легко транспортується у складеному стані. Характеристики: Висота: 60–85 см (регульована); Навантаження: до 250 кг; Вага: 11 кг; Матеріал: алюміній</description>
+      <name>Масажний стіл складний MTB-051</name>
+      <description>MTB-051 — складний масажний стіл з регульованою висотою. Підходить для масажистів, фізіотерапевтів та реабілітологів. Легко транспортується у складеному стані. Характеристики: Висота: 60–85 см (регульована); Навантаження: до 250 кг; Вага: 11 кг</description>
       <url>https://kinezis.com.ua/product.html?id=massage1</url>
       <image>https://kinezis.com.ua/images/towari/mtb-051.jpg</image>
-      <priceRUAH>11200</priceRUAH>
+      <priceRUAH>13800</priceRUAH>
       <stock>В наявності</stock>
       <shipping>0</shipping>
       <region>Чернігів</region>
