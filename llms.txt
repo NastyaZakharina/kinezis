@@ -25,7 +25,7 @@
 
 - [Головна](https://kinezis.com.ua/)
 - [Каталог обладнання](https://kinezis.com.ua/catalog)
-- [Блог про реабілітацію](https://kinezis.com.ua/blog) — ~150 статей
+- [Блог про реабілітацію](https://kinezis.com.ua/blog) — 190+ статей
 - [Реалізовані проєкти (кейси)](https://kinezis.com.ua/cases)
 - [Про компанію](https://kinezis.com.ua/about)
 - [Контакти](https://kinezis.com.ua/contacts)
@@ -115,6 +115,11 @@
 - [Біль збоку й знизу коліна: бурсит «гусячої лапки» — симптоми, вправи, лікування](https://kinezis.com.ua/blog/pes-anserine-bursitis-knee-pain)
 - [Артроз пальців рук: вузлики Гебердена й Бушара, біль біля великого пальця — вправи і лікування](https://kinezis.com.ua/blog/hand-osteoarthritis-finger-exercises)
 - [Планка, «кор» і біль у спині: які вправи на стабілізацію безпечні і як їх дозувати](https://kinezis.com.ua/blog/core-stability-back-pain-exercises)
+- [Префабілітація: як підготувати тіло до операції (коліно, стегно, хребет)](https://kinezis.com.ua/blog/prehabilitation-before-surgery)
+- [Вправи для плечей на блочному тренажері: зовнішня ротація, тяга до обличчя і до пояса](https://kinezis.com.ua/blog/cable-shoulder-rehab-exercises)
+- [Підвісна терапія (слінг): що це, кому підходить і чим відрізняється від звичайних вправ](https://kinezis.com.ua/blog/suspension-therapy-sling-exercises)
+- [Метод Маккензі: вправи на розгинання при болі в спині — кому допомагають і кому шкодять](https://kinezis.com.ua/blog/mckenzie-extension-exercises-back-pain)
+- [Тендинопатія: ексцентричні, ізометричні й повільні силові вправи — що обрати при болі в сухожилку](https://kinezis.com.ua/blog/tendinopathy-loading-exercises)
 
 ## Примітка
 
