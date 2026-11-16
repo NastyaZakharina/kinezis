@@ -1542,4 +1542,10 @@
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://kinezis.com.ua/blog/ice-skating-injury-prevention</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
